@@ -1,0 +1,79 @@
+div.footer{
+    nav.footernav{
+        width: 100%;
+        min-height: 30vh;
+        padding: 1em 2em;
+        display: flex;
+        justify-content: flex-end;
+        flex-flow: row wrap;
+        ul{
+            display: flex;
+            justify-content: space-evenly;
+            flex-flow: row wrap;
+            div{
+                display: flex;
+                justify-content: flex-end;
+                flex-flow: row wrap;
+                &:first-child{
+                    justify-content: flex-start;
+                }
+                li{
+                    padding: 0 0.5em;
+                    &:first-child{
+                        padding: 0 0.5em 0 0;
+                    }
+                    &:last-child{
+                        padding: 0 0 0 0.5em;
+                    }
+                }
+            }
+        }
+    }
+    nav.mentions{
+        width: 100%;
+        min-height: 40vh;
+        display: flex;
+        justify-content: space-evenly;
+        flex-flow: row wrap;
+        align-items: flex-end;
+        padding: 1em 2em;
+        ul{
+            display: flex;
+            justify-content: space-evenly;
+            flex-flow: row wrap;
+            li:last-child{
+                text-align: right;
+            }
+        }
+    }
+}
+
+@media #{$mobile}{
+    div.footer * {
+        flex-basis: 100%;
+        padding: 0;
+        text-align: center;
+    }
+    div.footer nav.footernav ul div li:first-child, 
+    div.footer nav.footernav ul div li:last-child,
+    div.footer nav.mentions ul li:last-child 
+    {
+        padding: 0 0 0 0;
+        margin: 0 0 0 0;
+        text-align: center;
+    }
+}
+
+@media #{$tablet}{
+    div.footer {
+        flex-basis: 100%;
+        *{
+        padding: 0;
+        text-align: center;
+        }
+    } 
+    div.footer nav.mentions ul li:last-child 
+    {
+        text-align: center;
+    }
+}

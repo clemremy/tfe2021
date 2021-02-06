@@ -1,8 +1,11 @@
 @import url(https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap);
 nav.navbar {
-  width: 100%;
   z-index: 300;
+  width: 100%;
   position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  flex-flow: row wrap;
 }
 nav.navbar ul {
   display: flex;
@@ -227,6 +230,82 @@ nav.navbar ul li a.icon:hover::after, nav.navbar ul li a.logo:hover::after {
   }
 }
 
+div.footer nav.footernav {
+  width: 100%;
+  min-height: 30vh;
+  padding: 1em 2em;
+  display: flex;
+  justify-content: flex-end;
+  flex-flow: row wrap;
+}
+div.footer nav.footernav ul {
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
+}
+div.footer nav.footernav ul div {
+  display: flex;
+  justify-content: flex-end;
+  flex-flow: row wrap;
+}
+div.footer nav.footernav ul div:first-child {
+  justify-content: flex-start;
+}
+div.footer nav.footernav ul div li {
+  padding: 0 0.5em;
+}
+div.footer nav.footernav ul div li:first-child {
+  padding: 0 0.5em 0 0;
+}
+div.footer nav.footernav ul div li:last-child {
+  padding: 0 0 0 0.5em;
+}
+div.footer nav.mentions {
+  width: 100%;
+  min-height: 40vh;
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
+  align-items: flex-end;
+  padding: 1em 2em;
+}
+div.footer nav.mentions ul {
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
+}
+div.footer nav.mentions ul li:last-child {
+  text-align: right;
+}
+
+@media all and (max-width: 767px) {
+  div.footer * {
+    flex-basis: 100%;
+    padding: 0;
+    text-align: center;
+  }
+
+  div.footer nav.footernav ul div li:first-child,
+div.footer nav.footernav ul div li:last-child,
+div.footer nav.mentions ul li:last-child {
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    text-align: center;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  div.footer {
+    flex-basis: 100%;
+  }
+  div.footer * {
+    padding: 0;
+    text-align: center;
+  }
+
+  div.footer nav.mentions ul li:last-child {
+    text-align: center;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -238,4 +317,98 @@ body {
   min-height: 100vh;
   font: normal normal 1em/1 "Roboto", sans-serif;
   background-color: #7a7a7a;
+}
+
+.col-12 {
+  flex-basis: 100%;
+}
+
+.col-8 {
+  flex-basis: 66.6666%;
+}
+
+.col-6 {
+  flex-basis: 50%;
+}
+
+.col-4 {
+  flex-basis: 33.3333%;
+}
+
+.col-3 {
+  flex-basis: 25%;
+}
+
+.col-2 {
+  flex-basis: 16.6666%;
+}
+
+.col-1 {
+  flex-basis: 8.3333%;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .col-12 {
+    flex-basis: 100%;
+  }
+
+  .col-8 {
+    flex-basis: 50%;
+  }
+
+  .col-6 {
+    flex-basis: 50%;
+  }
+
+  .col-4 {
+    flex-basis: 50%;
+  }
+
+  .col-3 {
+    flex-basis: 50%;
+  }
+
+  .col-2 {
+    flex-basis: 33.3333%;
+  }
+
+  .col-1 {
+    flex-basis: 16.6666%;
+  }
+}
+@media all and (max-width: 767px) {
+  .col-12 {
+    flex-basis: 100%;
+  }
+
+  .col-8 {
+    flex-basis: 100%;
+  }
+
+  .col-6 {
+    flex-basis: 100%;
+  }
+
+  .col-4 {
+    flex-basis: 100%;
+  }
+
+  .col-3 {
+    flex-basis: 100%;
+  }
+
+  .col-2 {
+    flex-basis: 100%;
+  }
+
+  .col-1 {
+    flex-basis: 100%;
+  }
+}
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
 }

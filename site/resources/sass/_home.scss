@@ -39,40 +39,40 @@
             -webkit-animation-duration: 10s;
             animation-duration: 10s;
             animation-timing-function: cubic-bezier(.17,.67,.83,.67);
-            .bgone{
-                -webkit-animation-name: slide;
-            animation-name: slide;
-            }
-                @-webkit-keyframes slide {
-                    100% {transform: scale(1.1);} 
-                }
-                @keyframes slide {
-                    100% {transform: scale(1.1);} 
-                }
-            .bgtwo{
-                transform: scale(1.1);
-                -webkit-animation-name: slidetwo;
-                animation-name: slidetwo;
-                object-position: right bottom;
-            }
-                @-webkit-keyframes slidetwo {
-                    100% {transform: scale(1.2) translate(-100px);}
-                }
-                @keyframes slidetwo {
-                    100% {transform: scale(1.2) translate(-100px);}
-                }
-            .bgthree{
-                transform: scale(1.2);
-                -webkit-animation-name: slidethree;
-                animation-name: slidethree;
-            }
-                @-webkit-keyframes slidethree {
-                    100% {transform: scale(1);} 
-                }
-                @keyframes slidethree {
-                    100% {transform: scale(1);} 
-                }
         }
+        .bgone{
+            -webkit-animation-name: slide;
+        animation-name: slide;
+        }
+            @-webkit-keyframes slide {
+                100% {transform: scale(1.1);} 
+            }
+            @keyframes slide {
+                100% {transform: scale(1.1);} 
+            }
+        .bgtwo{
+            transform: scale(1.1);
+            -webkit-animation-name: slidetwo;
+            animation-name: slidetwo;
+            object-position: right bottom;
+        }
+            @-webkit-keyframes slidetwo {
+                100% {transform: scale(1.2) translate(-100px);}
+            }
+            @keyframes slidetwo {
+                100% {transform: scale(1.2) translate(-100px);}
+            }
+        .bgthree{
+            transform: scale(1.2);
+            -webkit-animation-name: slidethree;
+            animation-name: slidethree;
+        }
+            @-webkit-keyframes slidethree {
+                100% {transform: scale(1);} 
+            }
+            @keyframes slidethree {
+                100% {transform: scale(1);} 
+            }
     }
     @-webkit-keyframes fade {
         from {opacity: .9} 

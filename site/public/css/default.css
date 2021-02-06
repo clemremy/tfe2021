@@ -106,7 +106,7 @@ nav.navbar ul li a.icon:hover::after, nav.navbar ul li a.logo:hover::after {
   -webkit-animation-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
           animation-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
 }
-.slideshow-container .fade img .bgone {
+.slideshow-container .fade .bgone {
   -webkit-animation-name: slide;
   animation-name: slide;
 }
@@ -120,7 +120,7 @@ nav.navbar ul li a.icon:hover::after, nav.navbar ul li a.logo:hover::after {
     transform: scale(1.1);
   }
 }
-.slideshow-container .fade img .bgtwo {
+.slideshow-container .fade .bgtwo {
   transform: scale(1.1);
   -webkit-animation-name: slidetwo;
   animation-name: slidetwo;
@@ -137,7 +137,7 @@ nav.navbar ul li a.icon:hover::after, nav.navbar ul li a.logo:hover::after {
     transform: scale(1.2) translate(-100px);
   }
 }
-.slideshow-container .fade img .bgthree {
+.slideshow-container .fade .bgthree {
   transform: scale(1.2);
   -webkit-animation-name: slidethree;
   animation-name: slidethree;

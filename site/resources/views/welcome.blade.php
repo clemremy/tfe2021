@@ -31,15 +31,15 @@
     <!-- end of scroll-->
 
     <div class="mySlides fade">
-        <img src="img/1.jpg" style="width:100%" class="bgone"/>
+        <img src="{{ asset('images/1.jpg') }}" style="width:100%" class="bgone"/>
     </div>
 
     <div class="mySlides fade">
-        <img src="img/2b.jpg" style="width:100%" class="bgtwo"/>
+        <img src="{{ asset('images/2b.jpg') }}" style="width:100%" class="bgtwo"/>
     </div>
 
     <div class="mySlides fade">
-        <img src="img/3.jpg" style="width:100%" class="bgthree"/>
+        <img src="{{ asset('images/3.jpg') }}" style="width:100%" class="bgthree"/>
     </div>
 </div>
 

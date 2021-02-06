@@ -6,25 +6,25 @@
             </a>
         </li>
         <li>
-            <a href="">A propos</a>
+            <a href="/user/apropos">A propos</a>
         </li>
         <li>
-            <a href="">Contact</a>
+            <a href="/user/contact">Contact</a>
         </li>
         <li>
-            <a href="">Ateliers</a>
+            <a href="/user/ateliers">Ateliers</a>
         </li>
         <li>
-            <a href="">Produits</a>
+            <a href="/user/produits">Produits</a>
         </li>
         <li>
-            <a href="" class="icon"><i class="fas fa-user-alt fa-lg"></i></a>
+            <a href="/user/profil" class="icon"><i class="fas fa-user-alt fa-lg"></i></a>
         </li>
         <li>
-            <a href="" class="icon"><i class="fas fa-heart fa-lg"></i></a>
+            <a href="/user/favoris" class="icon"><i class="fas fa-heart fa-lg"></i></a>
         </li>
         <li>
-            <a href="" class="icon"><i class="fas fa-shopping-basket fa-lg"></i></a>
+            <a href="/user/panier" class="icon"><i class="fas fa-shopping-basket fa-lg"></i></a>
         </li>  
     </ul>
 </nav>

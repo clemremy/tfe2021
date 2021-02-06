@@ -1,0 +1,135 @@
+.slideshow-container {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    /* Dot image change */
+    .dot {
+        height: 8px;
+        width: 8px;
+        background-color: $white;
+        border-radius: 50%;
+        display: inline-block;
+        text-align:center;
+        z-index: 200;
+        position: absolute;
+        bottom: 2em;
+        right: 4em;
+    }
+    .two{
+        right: 3em;
+    }
+    .three{
+        right: 2em;
+    }
+    .active {
+        background-color: $black;
+    }
+    /* End of dot image change */
+
+    /* Fading animation */
+    .fade {
+        -webkit-animation-name: fade;
+        animation-name: fade;
+        -webkit-animation-duration: 2s;
+        animation-duration: 2s;
+        img{
+            object-fit: cover;
+            height: 100vh;
+            backface-visibility: hidden;
+            -webkit-animation-duration: 10s;
+            animation-duration: 10s;
+            animation-timing-function: cubic-bezier(.17,.67,.83,.67);
+            .bgone{
+                -webkit-animation-name: slide;
+            animation-name: slide;
+            }
+                @-webkit-keyframes slide {
+                    100% {transform: scale(1.1);} 
+                }
+                @keyframes slide {
+                    100% {transform: scale(1.1);} 
+                }
+            .bgtwo{
+                transform: scale(1.1);
+                -webkit-animation-name: slidetwo;
+                animation-name: slidetwo;
+                object-position: right bottom;
+            }
+                @-webkit-keyframes slidetwo {
+                    100% {transform: scale(1.2) translate(-100px);}
+                }
+                @keyframes slidetwo {
+                    100% {transform: scale(1.2) translate(-100px);}
+                }
+            .bgthree{
+                transform: scale(1.2);
+                -webkit-animation-name: slidethree;
+                animation-name: slidethree;
+            }
+                @-webkit-keyframes slidethree {
+                    100% {transform: scale(1);} 
+                }
+                @keyframes slidethree {
+                    100% {transform: scale(1);} 
+                }
+        }
+    }
+    @-webkit-keyframes fade {
+        from {opacity: .9} 
+        to {opacity: 1}
+    }
+    @keyframes fade {
+        from {opacity: .9} 
+        to {opacity: 1}
+    }
+    /* End of fading animation */
+
+
+    /* Scroll */
+    div.scrollone{
+        height: 100vh;
+        position: absolute;
+        z-index: 200;
+        left: 2em;
+        .scroll-indicator {
+            position: absolute;
+            bottom: 0px;
+            .scroll {
+                width: 2px;
+                height: 65px;
+                background-color:$white;
+                position: relative;
+                overflow: hidden;
+                .scroll-line{
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                    background: linear-gradient(to bottom, $black 50%, rgba($black, 0) 50%);
+                    background-position: 0 750px;
+                    background-size: 100% 200%;
+                    animation: scrolldown 2s cubic-bezier(0.76, 0, 0.3, 1) forwards infinite;
+                }
+            }
+            span{
+                position: absolute;
+                right: -65px;
+                top: 0;
+                letter-spacing: 1px;
+                color: $white;
+                font: $sans-serif-normal;
+                font-size: 0.8em;
+            }
+        }
+    }
+    @-webkit-keyframes scrolldown {
+        0%{background-position: 0 65px;}
+        75% {background-position: 0 0;}
+        100%{background-position: 0 65px;}
+    }
+    @keyframes scrolldown {
+        0%{background-position: 0 65px;}
+        75% {background-position: 0 0;}
+        100%{background-position: 0 65px;}
+    }
+    /* End of scroll */
+}

@@ -1,8 +1,8 @@
 <nav class="navbar">
     <ul>
         <li>
-            <a href="" class="logo">
-                <img src="" class="imglogo" alt=""/>
+            <a href="/" class="logo">
+                <img src="{{ asset('images/logo_02_white.svg') }}" class="imglogo" alt="Logo Glück Design"/>
             </a>
         </li>
         <li>

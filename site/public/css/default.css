@@ -49,7 +49,7 @@ nav.navbar ul li a:hover::after {
   width: 50%;
   left: 0;
 }
-nav.navbar ul li a img.logo {
+nav.navbar ul li a img.imglogo {
   width: 150px;
   height: auto;
 }

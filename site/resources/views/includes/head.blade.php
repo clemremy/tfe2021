@@ -5,6 +5,8 @@
 <meta name="copyright" content="Glück Design">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<script src="https://kit.fontawesome.com/3ccbb8d23f.js" crossorigin="anonymous"></script>
+
 <title>Glück Design</title>
 
 <!-- favicon -->

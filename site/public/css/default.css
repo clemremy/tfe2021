@@ -2,31 +2,30 @@
 nav.navbar {
   z-index: 300;
   width: 100%;
+  height: 8vh;
   position: absolute;
   display: flex;
   justify-content: flex-end;
   flex-flow: row wrap;
+  padding: 1em 2em;
+}
+nav.navbar div.logo img.imglogo {
+  width: 150px;
+  height: auto;
 }
 nav.navbar ul {
   display: flex;
   justify-content: flex-end;
   flex-flow: row wrap;
-  margin: 1em 2em;
 }
 nav.navbar ul li {
   list-style-type: none;
   align-self: center;
   padding: 0 0.5em;
-}
-nav.navbar ul li:first-child {
-  margin: 0;
-  margin-right: auto;
-}
-nav.navbar ul li:nth-of-type(5) {
-  margin-right: 4em;
-}
-nav.navbar ul li:not(:first-of-type) {
   margin-top: 15px;
+}
+nav.navbar ul li:nth-of-type(4) {
+  margin-right: 4em;
 }
 nav.navbar ul li:last-child {
   padding: 0 0 0 0.5em;
@@ -52,14 +51,94 @@ nav.navbar ul li a:hover::after {
   width: 50%;
   left: 0;
 }
-nav.navbar ul li a img.imglogo {
-  width: 150px;
-  height: auto;
-}
 nav.navbar ul li a.icon:hover::after, nav.navbar ul li a.logo:hover::after {
   width: 0;
 }
+nav.navbar div.burger {
+  display: none;
+  padding: 0.5em;
+  cursor: pointer;
+}
+nav.navbar div.burger div.line {
+  height: 2px;
+  width: 35px;
+  margin: 0.5em 0;
+  background: #ffffff;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
 
+nav.navbar.show div.burger div.line1 {
+  transform: translate(-10px) rotate(45deg) translate(15px);
+  background: #000000;
+}
+
+nav.navbar.show div.burger div.line2 {
+  opacity: 0;
+  background: #000000;
+}
+
+nav.navbar.show div.burger div.line3 {
+  transform: translate(-10px) rotate(-45deg) translate(15px);
+  background: #000000;
+}
+
+nav.navbar.show ul.navlinks {
+  transform: translateX(0%);
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  nav.navbar {
+    justify-content: space-between;
+  }
+  nav.navbar div.burger {
+    display: block;
+    z-index: 400;
+  }
+  nav.navbar ul.navlinks {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    background: #f1f0e8;
+    transform: translateX(100%);
+    transition: transform 1s ease;
+  }
+  nav.navbar ul.navlinks li a {
+    color: #000000;
+  }
+}
+@media all and (max-width: 767px) {
+  nav.navbar {
+    justify-content: space-between;
+  }
+  nav.navbar div.logo {
+    flex-basis: auto;
+  }
+  nav.navbar div.burger {
+    display: block;
+    z-index: 400;
+  }
+  nav.navbar ul.navlinks {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    background: #f1f0e8;
+    transform: translateX(100%);
+    transition: transform 1s ease;
+  }
+  nav.navbar ul.navlinks li a {
+    color: #000000;
+  }
+}
 .slideshow-container {
   height: 100vh;
   width: 100%;
@@ -316,7 +395,7 @@ body {
   width: 100%;
   min-height: 100vh;
   font: normal normal 1em/1 "Roboto", sans-serif;
-  background-color: #7a7a7a;
+  background-color: #f1f0e8;
 }
 
 .col-12 {

@@ -3,16 +3,12 @@
 @section('content')
     <article class="contactpage">
         <div class=image>
-            <img src="{{ asset('images/1.jpg') }}" style="width:100%"/>
+            <img src="{{ asset('images/1.jpg') }}" style="height: 100px"/>
         </div>
-        <div class="text">
+        <div class="title">
             <h1>
-                Titre
+                Une question?
             </h1>
-            <h3>
-                Une question? Une demande particuclière? Un avis?
-                Écrivez-moi et je me charge du reste!
-            </h3>
         </div>
         <form class="contact">
             <p>
@@ -50,7 +46,7 @@
             </div>
             <div>
                 <i class="fa-lg"></i>
-                <a href="https://goo.gl/maps/uXqaj33p7eq69ZSw5">gluckdesign@gmail.com</a>
+                <a href="https://goo.gl/maps/uXqaj33p7eq69ZSw5">adresse</a>
             </div>
         </div>
     </article>

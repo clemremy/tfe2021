@@ -11,10 +11,10 @@
             </div>
             <div class="col-8">
                 <li>
-                    <a href="/user/apropos">A propos</a>
+                    <a href="{{ url('/apropos') }}">A propos</a>
                 </li>
                 <li>
-                    <a href="/user/contact">Contact</a>
+                    <a href="{{ url('/contact') }}">Contact</a>
                 </li>
                 <li>
                     <a href="/user/ateliers">Ateliers</a>

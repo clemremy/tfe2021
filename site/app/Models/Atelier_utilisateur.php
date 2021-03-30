@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Atelier_utilisateur extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'nb_personne'
+    ];
 }

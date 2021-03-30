@@ -3,7 +3,7 @@
 @section('content')
 <div class="slideshow-container">
     <!--
-    <div class="text">
+    <div class="title">
         <h1>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
         </h1>

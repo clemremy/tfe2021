@@ -1,0 +1,65 @@
+article{
+    div.title{
+        h1{
+            text-align: center;
+        }
+    }
+    div.history{
+        display: flex;
+        flex-flow: row wrap;
+        div.author{
+            flex-basis: 50%;
+            p.rotatingtext{
+                
+            }
+        }
+        div.text{
+            flex-basis: 50%;
+        }
+    }
+    div.galerie{
+        margin: 10em 5em;
+        div{
+            flex-basis: 100%;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-end;
+            figure{
+                padding: 1em;
+            }
+            figure.small{
+                width: 50%;
+                img{
+                    width: 60%;
+                    & :first-of-type{
+                        margin-right: auto;
+                        text-align: right;
+                    }
+                }
+            }
+            figure.big{
+                width: 50%;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    form.newsletter{
+        width: 40%;
+        height: auto;
+        text-align: center;
+        margin: 0 auto;
+        label{
+            margin: 0 auto;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        input{
+            margin: 1em auto;
+            width: 100%;
+            padding: 1em;
+            outline: none;
+        }
+    }
+}

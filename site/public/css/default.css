@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap);
 nav.navbar {
   z-index: 300;
   width: 100%;
@@ -35,7 +35,7 @@ nav.navbar ul li a {
   color: #ffffff;
   position: relative;
   padding: 0 10px 10px 0;
-  font: normal normal 1em/1 "Roboto", sans-serif;
+  font: normal 400 0.9em/1 "Open Sans", sans-serif;
 }
 nav.navbar ul li a::after {
   bottom: 0;
@@ -103,7 +103,7 @@ nav.navbar.show ul.navlinks {
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-around;
-    background: #f1f0e8;
+    background: #F5F5F5;
     transform: translateX(100%);
     transition: transform 1s ease;
   }
@@ -131,12 +131,91 @@ nav.navbar.show ul.navlinks {
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-around;
-    background: #f1f0e8;
+    background: #F5F5F5;
     transform: translateX(100%);
     transition: transform 1s ease;
   }
   nav.navbar ul.navlinks li a {
     color: #000000;
+  }
+}
+div.footer {
+  margin-top: 10em;
+}
+div.footer nav.footernav {
+  width: 100%;
+  min-height: 30vh;
+  padding: 1em 2em;
+  display: flex;
+  justify-content: flex-end;
+  flex-flow: row wrap;
+}
+div.footer nav.footernav ul {
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
+}
+div.footer nav.footernav ul div {
+  display: flex;
+  justify-content: flex-end;
+  flex-flow: row wrap;
+}
+div.footer nav.footernav ul div:first-child {
+  justify-content: flex-start;
+}
+div.footer nav.footernav ul div li {
+  padding: 0 0.5em;
+}
+div.footer nav.footernav ul div li:first-child {
+  padding: 0 0.5em 0 0;
+}
+div.footer nav.footernav ul div li:last-child {
+  padding: 0 0 0 0.5em;
+}
+div.footer nav.mentions {
+  width: 100%;
+  min-height: 40vh;
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
+  align-items: flex-end;
+  padding: 1em 2em;
+}
+div.footer nav.mentions ul {
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
+}
+div.footer nav.mentions ul li:last-child {
+  text-align: right;
+}
+
+@media all and (max-width: 767px) {
+  div.footer * {
+    flex-basis: 100%;
+    padding: 0;
+    text-align: center;
+  }
+
+  div.footer nav.footernav ul div li:first-child,
+div.footer nav.footernav ul div li:last-child,
+div.footer nav.mentions ul li:last-child {
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    text-align: center;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  div.footer {
+    flex-basis: 100%;
+  }
+  div.footer * {
+    padding: 0;
+    text-align: center;
+  }
+
+  div.footer nav.mentions ul li:last-child {
+    text-align: center;
   }
 }
 .slideshow-container {
@@ -283,7 +362,7 @@ nav.navbar.show ul.navlinks {
   top: 0;
   letter-spacing: 1px;
   color: #ffffff;
-  font: normal normal 1em/1 "Roboto", sans-serif;
+  font: normal 400 0.9em/1 "Open Sans", sans-serif;
   font-size: 0.8em;
 }
 @-webkit-keyframes scrolldown {
@@ -309,82 +388,65 @@ nav.navbar.show ul.navlinks {
   }
 }
 
-div.footer nav.footernav {
-  width: 100%;
-  min-height: 30vh;
-  padding: 1em 2em;
+article div.title h1 {
+  text-align: center;
+}
+article div.history {
   display: flex;
+  flex-flow: row wrap;
+}
+article div.history div.author {
+  flex-basis: 50%;
+}
+article div.history div.text {
+  flex-basis: 50%;
+}
+article div.galerie {
+  margin: 10em 5em;
+}
+article div.galerie div {
+  flex-basis: 100%;
+  display: flex;
+  flex-flow: row wrap;
   justify-content: flex-end;
-  flex-flow: row wrap;
 }
-div.footer nav.footernav ul {
-  display: flex;
-  justify-content: space-evenly;
-  flex-flow: row wrap;
+article div.galerie div figure {
+  padding: 1em;
 }
-div.footer nav.footernav ul div {
-  display: flex;
-  justify-content: flex-end;
-  flex-flow: row wrap;
+article div.galerie div figure.small {
+  width: 50%;
 }
-div.footer nav.footernav ul div:first-child {
-  justify-content: flex-start;
+article div.galerie div figure.small img {
+  width: 60%;
 }
-div.footer nav.footernav ul div li {
-  padding: 0 0.5em;
-}
-div.footer nav.footernav ul div li:first-child {
-  padding: 0 0.5em 0 0;
-}
-div.footer nav.footernav ul div li:last-child {
-  padding: 0 0 0 0.5em;
-}
-div.footer nav.mentions {
-  width: 100%;
-  min-height: 40vh;
-  display: flex;
-  justify-content: space-evenly;
-  flex-flow: row wrap;
-  align-items: flex-end;
-  padding: 1em 2em;
-}
-div.footer nav.mentions ul {
-  display: flex;
-  justify-content: space-evenly;
-  flex-flow: row wrap;
-}
-div.footer nav.mentions ul li:last-child {
+article div.galerie div figure.small img :first-of-type {
+  margin-right: auto;
   text-align: right;
 }
-
-@media all and (max-width: 767px) {
-  div.footer * {
-    flex-basis: 100%;
-    padding: 0;
-    text-align: center;
-  }
-
-  div.footer nav.footernav ul div li:first-child,
-div.footer nav.footernav ul div li:last-child,
-div.footer nav.mentions ul li:last-child {
-    padding: 0 0 0 0;
-    margin: 0 0 0 0;
-    text-align: center;
-  }
+article div.galerie div figure.big {
+  width: 50%;
 }
-@media (min-width: 768px) and (max-width: 1023px) {
-  div.footer {
-    flex-basis: 100%;
-  }
-  div.footer * {
-    padding: 0;
-    text-align: center;
-  }
-
-  div.footer nav.mentions ul li:last-child {
-    text-align: center;
-  }
+article div.galerie div figure.big img {
+  width: 100%;
 }
+article form.newsletter {
+  width: 40%;
+  height: auto;
+  text-align: center;
+  margin: 0 auto;
+}
+article form.newsletter label {
+  margin: 0 auto;
+  text-align: center;
+  text-transform: uppercase;
+}
+article form.newsletter input {
+  margin: 1em auto;
+  width: 100%;
+  padding: 1em;
+  outline: none;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -394,8 +456,8 @@ div.footer nav.mentions ul li:last-child {
 body {
   width: 100%;
   min-height: 100vh;
-  font: normal normal 1em/1 "Roboto", sans-serif;
-  background-color: #f1f0e8;
+  font: normal 400 0.9em/1 "Open Sans", sans-serif;
+  background-color: #F5F5F5;
 }
 
 .col-12 {

@@ -17,8 +17,8 @@ class CreateReservationsTable extends Migration
             $table->id();
             $table->float('prix_htva');
             $table->float('tva');
-            $table->datetime('date_debut');
-            $table->datetime('date_fin');
+            $table->datetime('date_commande');
+            $table->datetime('date_livraison');
             $table->boolean('acompte');
 
             $table->unsignedBigInteger('status_id');

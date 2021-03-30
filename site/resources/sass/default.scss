@@ -1,8 +1,10 @@
 @import 'variables';
 @import 'navbar';
-@import 'home';
 @import 'footer';
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import 'pages/home';
+@import 'pages/contact';
+@import 'pages/apropos';
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap');
 
 *{
     box-sizing: border-box;

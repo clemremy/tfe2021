@@ -6,25 +6,25 @@
     </div>
     <ul class="navlinks col-8">
         <li>
-            <a href="/user/apropos">A propos</a>
+            <a href="{{ url('/apropos') }}">A propos</a>
         </li>
         <li>
-            <a href="/user/contact">Contact</a>
+            <a href="{{ url('/contact') }}">Contact</a>
         </li>
         <li>
-            <a href="/user/ateliers">Ateliers</a>
+            <a href="/pages/ateliers">Ateliers</a>
         </li>
         <li>
-            <a href="/user/produits">Produits</a>
+            <a href="/pages/produits">Produits</a>
         </li>
         <li>
-            <a href="/user/profil" class="icon"><i class="fas fa-user-alt fa-lg"></i></a>
+            <a href="/pages/profil" class="icon"><i class="fas fa-user-alt fa-lg"></i></a>
         </li>
         <li>
-            <a href="/user/favoris" class="icon"><i class="fas fa-heart fa-lg"></i></a>
+            <a href="/pages/favoris" class="icon"><i class="fas fa-heart fa-lg"></i></a>
         </li>
         <li>
-            <a href="/user/panier" class="icon"><i class="fas fa-shopping-basket fa-lg"></i></a>
+            <a href="/pages/panier" class="icon"><i class="fas fa-shopping-basket fa-lg"></i></a>
         </li>  
     </ul>
     <div class="burger">

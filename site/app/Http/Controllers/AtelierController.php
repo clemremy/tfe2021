@@ -14,7 +14,8 @@ class AtelierController extends Controller
      */
     public function index()
     {
-        //
+        $ateliers = Atelier::all();
+        return view('pages.ateliers.list', ['ateliers'=> $ateliers]);
     }
 
     /**
@@ -46,7 +47,7 @@ class AtelierController extends Controller
      */
     public function show(Atelier $atelier)
     {
-        //
+        return view('user.ateliers', ['atelier'=>$atelier]);
     }
 
     /**

@@ -13,12 +13,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
+
+// REDIRECT PAGE
+// Page d'acccueil
+Route::get('/', function () {
+    return view('welcome');
+});
+// Page a propos
+Route::get('/apropos', function()
+{
+return View::make('pages.apropos');
+});
+// Page contact
+Route::get('/contact', function()
+{
+return View::make('pages.contact');
+});

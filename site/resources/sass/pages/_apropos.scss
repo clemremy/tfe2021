@@ -1,65 +1,70 @@
-article{
-    div.title{
-        h1{
-            text-align: center;
+article.apropospage{
+    .first-slide{
+        .img-background{
+            background-image: url("../../../public/images/1.jpg");
+            right: 0;
         }
     }
-    div.history{
-        display: flex;
-        flex-flow: row wrap;
-        div.author{
-            flex-basis: 50%;
-            p.rotatingtext{
-                
-            }
-        }
-        div.text{
-            flex-basis: 50%;
-        }
-    }
-    div.galerie{
-        margin: 10em 5em;
-        div{
-            flex-basis: 100%;
+    .container {
+        div.history{
+            width: 100%;
+            height: 100vh;
+            margin: 0 auto;
             display: flex;
             flex-flow: row wrap;
-            justify-content: flex-end;
-            figure{
-                padding: 1em;
+            padding: 2em;
+            & > div{
+                padding: 2em;
             }
-            figure.small{
-                width: 50%;
-                img{
-                    width: 60%;
-                    & :first-of-type{
-                        margin-right: auto;
-                        text-align: right;
+            .author{
+                text-align: center;
+                figure{
+                    height: 90%;
+                    width: 100%;
+                    img{
+                        height: 100%;
+                        width: 100%;
+                        display: block;
+                        object-fit: cover;
                     }
                 }
             }
-            figure.big{
-                width: 50%;
-                img{
-                    width: 100%;
+            .text{
+                text-align: justify;
+                align-self: center;
+            }
+        }
+        div.galerie{
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-flow: row wrap;
+            ul{
+                padding: 2em;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-around;
+                li{
+                    list-style-type: none;
+                    flex-grow: 1;
+                    margin: 2em;
+                    img{
+                        max-width: 100%;
+                        height: auto;
+                    }
                 }
             }
         }
-    }
-    form.newsletter{
-        width: 40%;
-        height: auto;
-        text-align: center;
-        margin: 0 auto;
-        label{
-            margin: 0 auto;
+        form.newsletter{
+            width: 50%;
+            height: auto;
             text-align: center;
-            text-transform: uppercase;
-        }
-        input{
-            margin: 1em auto;
-            width: 100%;
-            padding: 1em;
-            outline: none;
+            margin: 0 auto;
+            padding: 10em 0;
+            label{
+                margin: 0 auto;
+                text-align: center;
+            }
         }
     }
 }

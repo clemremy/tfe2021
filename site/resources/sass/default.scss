@@ -110,6 +110,9 @@ div.first-slide{
 
 a{
     text-decoration: none;
+    &:hover, &:focus{
+        color: $hover;  
+    }
 }
 
 li{

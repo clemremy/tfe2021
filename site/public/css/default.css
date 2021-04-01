@@ -140,80 +140,103 @@ nav.navbar.show ul.navlinks {
     color: #000000;
   }
 }
-div.footer nav.footernav {
+div.footer {
+  height: 100vh;
   width: 100%;
-  min-height: 30vh;
-  padding: 1em 2em;
+  padding: 3em 5em;
+  background-color: #ffffff;
   display: flex;
-  justify-content: flex-end;
   flex-flow: row wrap;
 }
-div.footer nav.footernav ul {
+div.footer nav.footer-nav ul li {
   display: flex;
-  justify-content: space-evenly;
   flex-flow: row wrap;
+  align-items: center;
+  transition: all 0.3s;
 }
-div.footer nav.footernav ul div {
-  display: flex;
-  justify-content: flex-end;
-  flex-flow: row wrap;
+div.footer nav.footer-nav ul li:hover, div.footer nav.footer-nav ul li:focus {
+  padding: 0 1em;
 }
-div.footer nav.footernav ul div:first-child {
-  justify-content: flex-start;
+div.footer nav.footer-nav ul li p {
+  width: 10%;
 }
-div.footer nav.footernav ul div li {
-  padding: 0 0.5em;
+div.footer nav.footer-nav ul li p:first-of-type {
+  border-top: 1px solid gray;
+  padding: 1em 0;
 }
-div.footer nav.footernav ul div li:first-child {
-  padding: 0 0.5em 0 0;
+div.footer nav.footer-nav ul li a {
+  font: normal 400 1em/1 "Cormorant Garamond", serif;
+  font-size: 2.7em;
+  line-height: 2em;
+  padding: 0 1em;
+  color: #000000;
 }
-div.footer nav.footernav ul div li:last-child {
-  padding: 0 0 0 0.5em;
+div.footer .footer-info div {
+  margin-bottom: 2em;
+}
+div.footer .footer-info div p {
+  border-bottom: 1px solid gray;
+  width: 50%;
+  text-transform: uppercase;
+  padding: 1em 0;
+  margin: 0 0 1.5em 0;
+}
+div.footer .footer-info div a {
+  color: #000000;
+}
+div.footer .footer-info div a:hover, div.footer .footer-info div a:focus {
+  color: #CBD5CC;
+}
+div.footer .footer-info div address {
+  font-style: normal;
+}
+div.footer .footer-info div address a {
+  color: #000000;
 }
 div.footer nav.mentions {
   width: 100%;
-  min-height: 40vh;
   display: flex;
-  justify-content: space-evenly;
   flex-flow: row wrap;
   align-items: flex-end;
-  padding: 1em 2em;
+  font-size: 0.8em;
 }
 div.footer nav.mentions ul {
   display: flex;
-  justify-content: space-evenly;
   flex-flow: row wrap;
+  align-items: flex-end;
 }
-div.footer nav.mentions ul li:last-child {
-  text-align: right;
+div.footer nav.mentions ul li {
+  margin-right: 2em;
+  color: #808080;
+}
+div.footer nav.mentions ul li strong {
+  font-weight: normal;
+}
+div.footer nav.mentions ul li a {
+  color: #808080;
+}
+div.footer nav.mentions ul li a:hover, div.footer nav.mentions ul li a:focus {
+  color: #CBD5CC;
 }
 
 @media all and (max-width: 767px) {
-  div.footer * {
-    flex-basis: 100%;
-    padding: 0;
-    text-align: center;
+  .footer {
+    height: auto;
   }
-
-  div.footer nav.footernav ul div li:first-child,
-div.footer nav.footernav ul div li:last-child,
-div.footer nav.mentions ul li:last-child {
-    padding: 0 0 0 0;
-    margin: 0 0 0 0;
-    text-align: center;
+  .footer nav.footer-nav {
+    display: none;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   div.footer {
     flex-basis: 100%;
+    height: auto;
   }
   div.footer * {
     padding: 0;
-    text-align: center;
   }
-
-  div.footer nav.mentions ul li:last-child {
-    text-align: center;
+  div.footer nav.mentions {
+    height: auto;
   }
 }
 .slideshow-container {
@@ -613,6 +636,9 @@ div.first-slide div.title h1 {
 }
 a {
   text-decoration: none;
+}
+a:hover, a:focus {
+  color: #CBD5CC;
 }
 
 li {

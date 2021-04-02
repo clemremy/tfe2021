@@ -5,4 +5,32 @@ article.contactpage{
             left: 0;
         }
     }
+    .container{
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-end;
+        position: relative;
+        top: -20em;
+        height: auto;
+        .info address
+        {
+            text-align: center;
+            a{
+                color: $black;
+                font: $sans-serif-normal;
+                font-size: 1.2em;
+                &:hover, &:focus{
+                    color: $hover;  
+                }
+            }
+        }
+        .contact{
+            margin-left: 0;
+            padding: 0 3em 0 3em;
+            p{
+                margin: 1em 0 0 0;
+            }
+        }
+    }
+
 }

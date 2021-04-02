@@ -57,7 +57,7 @@
         <ul>
             <li>
                 &copy; Glück Design 2021 |
-                <a href=""><strong>Clem Remy</strong></a>
+                <a href="mailto:clemremypro@gmail.com"><strong>Clem Remy</strong></a>
             </li>
             <li>
                 <a href="">Politiques de confidéntialité</a>

@@ -20,11 +20,21 @@
                         Valentine
                     </h2>
                     <figure>
-                        <img src="{{ asset('images/1.jpg') }}" alt="" ></img>
+                        <img src="{{ asset('images/1.jpg') }}" alt="" >
+                        <svg width="150" height="150" class="rotating-text">
+                            <path id="curve" fill="transparent" 
+                            d="
+                                M 37.5, 75
+                                a 37.5,37.5 0 1,1 75,0
+                                a 37.5,37.5 0 1,1 -75,0
+                            " />
+                            <text width="1000" font-size="1em" class="svg-text" >
+                                <textPath xlink:href="#curve" >
+                                    fondatrice - fondatrice -  
+                                </textPath>
+                            </text>
+                        </svg>
                     </figure>
-                    <p class="rotatingtext">
-                        fondatrice - fondatrice -
-                    </p>
                 </div>
                 <div class="text col-6">
                     <p>
@@ -40,18 +50,16 @@
             </div>
             <div class="galerie">
                 <ul class="col-12">
-                    <li class="col-4">
+                    <li class="col-6">
                         <img src="{{ asset('images/1.jpg') }}" />
                     </li>
-                    <li class="col-4">
+                    <li class="col-6">
                         <img src="{{ asset('images/2b.jpg') }}" />
                     </li>
-                </ul>
-                <ul>
-                    <li class="col-4">
+                    <li class="col-6">
                         <img src="{{ asset('images/3.jpg') }}" />
                     </li>
-                    <li class="col-4">
+                    <li class="col-6">
                         <img src="{{ asset('images/1.jpg') }}" />
                     </li>
                 </ul>
@@ -59,7 +67,10 @@
             <form class="newsletter" >
                 <label>Restez informé</label>
                 <br/>
-                <input type="email" name="email" value="" placeholder="catherinemoulin@gmail.com"  ><a></a>
+                <p>
+                <input type="email" name="email" value="" placeholder="catherinemoulin@gmail.com" >
+                <input type="submit" value="&#10230;">
+                </p>
             </form>
         </div>
     </article>

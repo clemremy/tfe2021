@@ -494,26 +494,60 @@ article.apropospage .container div.history .text {
 article.apropospage .container div.galerie {
   width: 100%;
   margin: 0 auto;
+  height: 100vh;
   display: flex;
   flex-flow: row wrap;
 }
-article.apropospage .container div.galerie ul {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
+article.apropospage .container div.galerie div {
+  padding: 4em 2em;
 }
-article.apropospage .container div.galerie ul li {
-  padding: 2em;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  list-style-type: none;
-  margin: 0;
-  width: 100%;
-  height: 500px;
+article.apropospage .container div.galerie .picture-one {
+  background: url("/images/3.jpg") no-repeat;
+  background-size: cover;
+  background-origin: content-box;
+  width: 50%;
+  height: 50%;
 }
-article.apropospage .container div.galerie ul li img {
-  max-width: 100%;
+article.apropospage .container div.galerie .picture-one:hover {
+  background: url("/images/1.jpg") no-repeat;
+  background-size: cover;
+  background-origin: content-box;
+}
+article.apropospage .container div.galerie .picture-two {
+  background: url("/images/3.jpg") no-repeat;
+  background-size: cover;
+  background-origin: content-box;
+  width: 50%;
+  height: 50%;
+}
+article.apropospage .container div.galerie .picture-two:hover {
+  background: url("/images/1.jpg") no-repeat;
+  background-size: cover;
+  background-origin: content-box;
+}
+article.apropospage .container div.galerie .picture-three {
+  background: url("/images/3.jpg") no-repeat;
+  background-size: cover;
+  background-origin: content-box;
+  width: 50%;
+  height: 50%;
+}
+article.apropospage .container div.galerie .picture-three:hover {
+  background: url("/images/1.jpg") no-repeat;
+  background-size: cover;
+  background-origin: content-box;
+}
+article.apropospage .container div.galerie .picture-four {
+  background: url("/images/3.jpg") no-repeat;
+  background-size: cover;
+  background-origin: content-box;
+  width: 50%;
+  height: 50%;
+}
+article.apropospage .container div.galerie .picture-four:hover {
+  background: url("/images/1.jpg") no-repeat;
+  background-size: cover;
+  background-origin: content-box;
 }
 article.apropospage .container form.newsletter {
   width: 50%;
@@ -553,8 +587,68 @@ article.apropospage .container form.newsletter p input:last-child:hover {
 }
 
 @media all and (max-width: 767px) {
-  article.apropospage .container form.newsletter {
+  article.apropospage .container {
+    margin: 0;
+  }
+  article.apropospage .container div.history .author figure .rotating-text {
+    display: none;
+  }
+  article.apropospage .container .galerie .picture-one {
     width: 100%;
+    height: 100%;
+  }
+  article.apropospage .container .galerie .picture-two {
+    width: 100%;
+    height: 100%;
+  }
+  article.apropospage .container .galerie .picture-three {
+    width: 100%;
+    height: 100%;
+  }
+  article.apropospage .container .galerie .picture-four {
+    width: 100%;
+    height: 100%;
+  }
+  article.apropospage .container form.newsletter {
+    width: 90%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  article.apropospage {
+    max-width: 100%;
+  }
+  article.apropospage .container {
+    margin: 0;
+  }
+  article.apropospage .container div.history .author figure .rotating-text {
+    display: none;
+  }
+  article.apropospage .container .galerie {
+    margin: 0;
+    padding: 0;
+  }
+  article.apropospage .container .galerie div {
+    margin: 0;
+    padding: 1em;
+  }
+  article.apropospage .container .galerie .picture-one {
+    width: 100%;
+    height: 50%;
+  }
+  article.apropospage .container .galerie .picture-two {
+    width: 100%;
+    height: 50%;
+  }
+  article.apropospage .container .galerie .picture-three {
+    width: 100%;
+    height: 50%;
+  }
+  article.apropospage .container .galerie .picture-four {
+    width: 100%;
+    height: 50%;
+  }
+  article.apropospage .container form.newsletter {
+    width: 90%;
   }
 }
 * {

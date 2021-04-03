@@ -50,24 +50,58 @@ article.apropospage{
         div.galerie{
             width: 100%;
             margin: 0 auto;
+            height: 100vh;
             display: flex;
             flex-flow: row wrap;
-            ul{
-                display: flex;
-                flex-flow: row wrap;
-                justify-content: space-around;
-                li{
-                    padding: 2em;
-                    display: flex;
-                    flex-flow: row wrap;
-                    justify-content: space-around;
-                    list-style-type: none;
-                    margin: 0;
-                    width: 100%;
-                    height: 500px;
-                    img{
-                        max-width: 100%;
-                    }
+            div{
+                padding: 4em 2em;
+            }
+            .picture-one{
+                background: url("/images/3.jpg") no-repeat;
+                background-size: cover;
+                background-origin: content-box;
+                width: 50%;
+                height: 50%;
+                &:hover{
+                    background: url("/images/1.jpg") no-repeat;
+                    background-size: cover;
+                    background-origin: content-box;
+                }
+            }
+            .picture-two{
+                background: url("/images/3.jpg") no-repeat;
+                background-size: cover;
+                background-origin: content-box;
+                width: 50%;
+                height: 50%;
+                &:hover{
+                    background: url("/images/1.jpg") no-repeat;
+                    background-size: cover;
+                    background-origin: content-box;
+                }
+            }
+            .picture-three{
+                background: url("/images/3.jpg") no-repeat;
+                background-size: cover;
+                background-origin: content-box;
+                width: 50%;
+                height: 50%;
+                &:hover{
+                    background: url("/images/1.jpg") no-repeat;
+                    background-size: cover;
+                    background-origin: content-box;
+                }
+            }
+            .picture-four{
+                background: url("/images/3.jpg") no-repeat;
+                background-size: cover;
+                background-origin: content-box;
+                width: 50%;
+                height: 50%;
+                &:hover{
+                    background: url("/images/1.jpg") no-repeat;
+                    background-size: cover;
+                    background-origin: content-box;
                 }
             }
         }
@@ -114,12 +148,82 @@ article.apropospage{
 @media #{$mobile}{
     article.apropospage{
         .container{
+            margin: 0;
+            div.history{
+                .author{
+                    figure{
+                        .rotating-text {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .galerie{
+                .picture-one{
+                    width: 100%;
+                    height: 100%;
+                }
+                .picture-two{
+                    width: 100%;
+                    height: 100%;
+                }
+                .picture-three{
+                    width: 100%;
+                    height: 100%;
+                }
+                .picture-four{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
             form.newsletter{
-                width: 100%;
+                width: 90%;
             }
         }
     }
 }
 
 @media #{$tablet}{
+    article.apropospage{
+        max-width: 100%;
+        .container{
+            margin: 0;
+            div.history{
+                .author{
+                    figure{
+                        .rotating-text {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .galerie{
+                margin: 0;
+                padding: 0;
+                div{
+                    margin: 0;
+                    padding: 1em;
+                }
+                .picture-one{
+                    width: 100%;
+                    height: 50%;
+                }
+                .picture-two{
+                    width: 100%;
+                    height: 50%;
+                }
+                .picture-three{
+                    width: 100%;
+                    height: 50%;
+                }
+                .picture-four{
+                    width: 100%;
+                    height: 50%;
+                }
+            }
+            form.newsletter{
+                width: 90%;
+            }
+        }
+    }
 }

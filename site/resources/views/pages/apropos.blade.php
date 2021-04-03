@@ -49,20 +49,10 @@
                 </div>
             </div>
             <div class="galerie">
-                <ul class="col-12">
-                    <li class="col-6">
-                        <img src="{{ asset('images/1.jpg') }}" />
-                    </li>
-                    <li class="col-6">
-                        <img src="{{ asset('images/2b.jpg') }}" />
-                    </li>
-                    <li class="col-6">
-                        <img src="{{ asset('images/3.jpg') }}" />
-                    </li>
-                    <li class="col-6">
-                        <img src="{{ asset('images/1.jpg') }}" />
-                    </li>
-                </ul>
+                <div class="picture-one"></div>
+                <div class="picture-two"></div>
+                <div class="picture-three"></div>
+                <div class="picture-four"></div>
             </div>
             <form class="newsletter" >
                 <label>Restez informé</label>

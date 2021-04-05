@@ -45,11 +45,13 @@
         <div class="adresse">
             <p>Adresse</p>
             <address>
-                28 Rue des Hannetons
-                <br/>
-                1170 Boitsfort
-                <br/>
-                Belgium
+                <a href="https://goo.gl/maps/uXqaj33p7eq69ZSw5">
+                    28 Rue des Hannetons
+                    <br/>
+                    1170 Boitsfort
+                    <br/>
+                    Belgium
+                </a>
             </address>
         </div>
     </div>
@@ -60,10 +62,10 @@
                 <a href="mailto:clemremypro@gmail.com"><strong>Clem Remy</strong></a>
             </li>
             <li>
-                <a href="">Politiques de confidéntialité</a>
+                <a href="{{ url('/politique-de-confidentialite') }}">Politique de confidentialité</a>
             </li>
             <li>
-                <a href="">Conditions générales de ventes</a>
+                <a href="{{ url('/conditions-generales-de-vente') }}">Conditions générales de vente</a>
             </li>
         </ul>
     </nav>

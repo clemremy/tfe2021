@@ -31,14 +31,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/apropos', function()
+Route::get('/a-propos', function()
 {
-return View::make('pages.apropos');
+    return View::make('pages.apropos');
 });
 
 Route::get('/contact', function()
 {
-return View::make('pages.contact');
+    return View::make('pages.contact');
 });
 
 Route::resource('ateliers', AtelierController::class);
@@ -50,3 +50,13 @@ Route::resource('profil', UtilisateurController::class);
 Route::resource('favoris', FavorisController::class);
 
 Route::resource('panier', ReservationController::class);
+
+Route::get('/politique-de-confidentialite', function()
+{
+    return View::make('pages.politique');
+});
+
+Route::get('/conditions-generales-de-vente', function()
+{
+    return View::make('pages.cgv');
+});

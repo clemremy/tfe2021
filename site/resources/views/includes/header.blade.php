@@ -6,7 +6,7 @@
     </div>
     <ul class="navlinks col-8">
         <li>
-            <a href="{{ url('/apropos') }}">A propos</a>
+            <a href="{{ url('/a-propos') }}">A propos</a>
         </li>
         <li>
             <a href="{{ url('/contact') }}">Contact</a>

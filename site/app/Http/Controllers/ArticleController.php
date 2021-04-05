@@ -14,7 +14,8 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        //
+        $articles = Article::all();
+        return view('mobilier.list', ['articles'=> $articles]);
     }
 
     /**
@@ -24,7 +25,7 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        //
+        return view('mobilier.form', ['articles'=>$articles]);
     }
 
     /**
@@ -46,7 +47,7 @@ class ArticleController extends Controller
      */
     public function show(Article $article)
     {
-        //
+        return view('mobilier.one', ['article'=>$article]);
     }
 
     /**

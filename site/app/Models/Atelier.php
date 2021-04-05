@@ -17,4 +17,8 @@ class Atelier extends Model
         'nb_places',
         'actif'
     ];
+
+    public function utilisateurs () {
+        return $this->belongsToMany(Utilisateur::class);
+    }
 }

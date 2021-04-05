@@ -14,7 +14,8 @@ class FavorisController extends Controller
      */
     public function index()
     {
-        //
+        $favoris = Favoris::all();
+        return view('favoris.list', ['favoris'=> $favoris]);
     }
 
     /**
@@ -24,7 +25,7 @@ class FavorisController extends Controller
      */
     public function create()
     {
-        //
+        return view('favoris.form', ['favoris'=>$favoris]);
     }
 
     /**
@@ -46,7 +47,7 @@ class FavorisController extends Controller
      */
     public function show(Favoris $favoris)
     {
-        //
+        return view('favoris.one', ['favoris'=>$favoris]);
     }
 
     /**

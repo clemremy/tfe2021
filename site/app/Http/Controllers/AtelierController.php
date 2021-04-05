@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Atelier;
+use App\Models\Utilisateur;
 use Illuminate\Http\Request;
 
 class AtelierController extends Controller
@@ -15,7 +16,7 @@ class AtelierController extends Controller
     public function index()
     {
         $ateliers = Atelier::all();
-        return view('pages.ateliers.list', ['ateliers'=> $ateliers]);
+        return view('ateliers.list', ['ateliers'=> $ateliers]);
     }
 
     /**
@@ -25,7 +26,8 @@ class AtelierController extends Controller
      */
     public function create()
     {
-        //
+        $utilisateurs = Utilisateur::all();
+        return view('ateliers.form', ['utilisateurs'=>$utilisateurs]);
     }
 
     /**
@@ -47,7 +49,7 @@ class AtelierController extends Controller
      */
     public function show(Atelier $atelier)
     {
-        return view('user.ateliers', ['atelier'=>$atelier]);
+        return view('ateliers.one', ['ateliers'=>$atelier]);
     }
 
     /**

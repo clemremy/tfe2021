@@ -2,6 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\AtelierController;
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\ReservationController;
+use App\Http\Controllers\UtilisateurController;
+use App\Http\Controllers\FavorisController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,18 +26,27 @@ Route::get('/dashboard', function () {
 require __DIR__.'/auth.php';
 
 
-// REDIRECT PAGE
-// Page d'acccueil
+/// ------- REDIRECT PAGE ------- ///
 Route::get('/', function () {
     return view('welcome');
 });
-// Page a propos
+
 Route::get('/apropos', function()
 {
 return View::make('pages.apropos');
 });
-// Page contact
+
 Route::get('/contact', function()
 {
 return View::make('pages.contact');
 });
+
+Route::resource('ateliers', AtelierController::class);
+
+Route::resource('mobilier', ArticleController::class);
+
+Route::resource('profil', UtilisateurController::class);
+
+Route::resource('favoris', FavorisController::class);
+
+Route::resource('panier', ReservationController::class);

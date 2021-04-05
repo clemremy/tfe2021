@@ -12,19 +12,19 @@
             <a href="{{ url('/contact') }}">Contact</a>
         </li>
         <li>
-            <a href="/pages/ateliers">Ateliers</a>
+            <a href="/ateliers">Atelier</a>
         </li>
         <li>
-            <a href="/pages/produits">Produits</a>
+            <a href="/mobilier">Mobilier</a>
         </li>
         <li>
-            <a href="/pages/profil" class="icon"><i class="fas fa-user-alt fa-lg"></i></a>
+            <a href="/profil" class="icon"><i class="fas fa-user-alt fa-lg"></i></a>
         </li>
         <li>
-            <a href="/pages/favoris" class="icon"><i class="fas fa-heart fa-lg"></i></a>
+            <a href="/favoris" class="icon"><i class="fas fa-heart fa-lg"></i></a>
         </li>
         <li>
-            <a href="/pages/panier" class="icon"><i class="fas fa-shopping-basket fa-lg"></i></a>
+            <a href="/panier" class="icon"><i class="fas fa-shopping-basket fa-lg"></i></a>
         </li>  
     </ul>
     <div class="burger">

@@ -14,7 +14,8 @@ class ReservationController extends Controller
      */
     public function index()
     {
-        //
+        $reservations = Reservation::all();
+        return view('panier.list', ['reservations'=> $reservations]);
     }
 
     /**
@@ -24,7 +25,7 @@ class ReservationController extends Controller
      */
     public function create()
     {
-        //
+        return view('panier.form', ['reservations'=>$reservations]);
     }
 
     /**
@@ -46,7 +47,7 @@ class ReservationController extends Controller
      */
     public function show(Reservation $reservation)
     {
-        //
+        return view('panier.one', ['reservation'=>$reservation]);
     }
 
     /**

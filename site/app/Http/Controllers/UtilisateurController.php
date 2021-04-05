@@ -14,7 +14,8 @@ class UtilisateurController extends Controller
      */
     public function index()
     {
-        //
+        $utilisateurs = Utilisateur::all();
+        return view('profil.list', ['utilisateurs'=> $utilisateurs]);
     }
 
     /**
@@ -24,7 +25,8 @@ class UtilisateurController extends Controller
      */
     public function create()
     {
-        //
+        $ateliers = Atelier::all();
+        return view('profil.form', ['ateliers'=>$ateliers]);
     }
 
     /**
@@ -46,7 +48,7 @@ class UtilisateurController extends Controller
      */
     public function show(Utilisateur $utilisateur)
     {
-        //
+        return view('profil.one', ['utilisateur'=>$utilisateur]);
     }
 
     /**

@@ -15,11 +15,11 @@
             </li>
             <li>
                 <p>04</p>
-                <a href="/user/ateliers">Atelier</a>
+                <a href="/ateliers">Atelier</a>
             </li>
             <li>
                 <p>05</p>
-                <a href="/user/mobilier">Mobilier</a>
+                <a href="/mobilier">Mobilier</a>
             </li>
         </ul>
     </nav>

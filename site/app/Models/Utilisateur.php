@@ -19,4 +19,8 @@ class Utilisateur extends Model
         'rgpd',
         'cg'
     ];
+
+    public function ateliers () {
+        return $this->belongsToMany(Atelier::class);
+    }
 }

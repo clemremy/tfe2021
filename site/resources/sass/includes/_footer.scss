@@ -1,5 +1,5 @@
 div.footer{
-    height: 100vh;
+    height: auto;
     width: 100%;
     padding: 3em 5em;
     background-color: $white;
@@ -59,6 +59,7 @@ div.footer{
     }
     nav.mentions{
         width: 100%;
+        margin: 3em 0 0 0;
         display: flex;
         flex-flow: row wrap;
         align-items: flex-end;

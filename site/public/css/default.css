@@ -8,10 +8,10 @@ nav.navbar {
   display: flex;
   justify-content: flex-end;
   flex-flow: row wrap;
-  padding: 1em 2em;
+  padding: 2em;
 }
 nav.navbar div.logo img.imglogo {
-  width: 150px;
+  width: 100px;
   height: auto;
 }
 nav.navbar ul {
@@ -141,7 +141,7 @@ nav.navbar.show ul.navlinks {
   }
 }
 div.footer {
-  height: 100vh;
+  height: auto;
   width: 100%;
   padding: 3em 5em;
   background-color: #ffffff;
@@ -195,6 +195,7 @@ div.footer .footer-info div address a {
 }
 div.footer nav.mentions {
   width: 100%;
+  margin: 3em 0 0 0;
   display: flex;
   flex-flow: row wrap;
   align-items: flex-end;

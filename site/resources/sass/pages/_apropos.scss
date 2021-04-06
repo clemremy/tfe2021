@@ -48,13 +48,14 @@ article.apropospage{
             }
         }
         div.galerie{
-            width: 100%;
+            width: 80%;
             margin: 0 auto;
             height: 100vh;
             display: flex;
             flex-flow: row wrap;
             div{
-                padding: 4em 2em;
+                padding: 0 2em 2em 2em;
+                margin: 0;
             }
             .picture-one{
                 background: url("/images/3.jpg") no-repeat;

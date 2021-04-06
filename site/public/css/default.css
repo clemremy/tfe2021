@@ -493,14 +493,15 @@ article.apropospage .container div.history .text {
   align-self: center;
 }
 article.apropospage .container div.galerie {
-  width: 100%;
+  width: 80%;
   margin: 0 auto;
   height: 100vh;
   display: flex;
   flex-flow: row wrap;
 }
 article.apropospage .container div.galerie div {
-  padding: 4em 2em;
+  padding: 0 2em 2em 2em;
+  margin: 0;
 }
 article.apropospage .container div.galerie .picture-one {
   background: url("/images/3.jpg") no-repeat;
@@ -662,11 +663,16 @@ article.apropospage .container form.newsletter p input:last-child:hover {
   line-height: 5em;
 }
 .legal ol li {
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
+  padding-bottom: 2em;
 }
 .legal ol li h2 {
   line-height: 2em;
+  font-size: 2em;
+}
+.legal ol li p {
+  text-align: justify;
 }
 
 * {

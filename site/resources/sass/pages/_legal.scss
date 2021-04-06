@@ -8,10 +8,15 @@
     }
     ol{
         li{
-            width: 90%;
+            width: 80%;
             margin: 0 auto;
+            padding-bottom: 2em;
             h2{
                 line-height: 2em;
+                font-size: 2em;
+            }
+            p{
+                text-align: justify;
             }
         }
     }

@@ -675,6 +675,15 @@ article.apropospage .container form.newsletter p input:last-child:hover {
   text-align: justify;
 }
 
+.loggedin {
+  min-height: 100vh;
+  text-align: center;
+  display: flex;
+}
+.loggedin ul {
+  margin: auto;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

@@ -26,11 +26,19 @@ Route::get('/dashboard', function () {
 require __DIR__.'/auth.php';
 
 
-/// ------- REDIRECT PAGE ------- ///
+
 Route::get('/', function () {
     return view('welcome');
 });
 
+Auth::routes();
+Route::get('/user', 'UserController@index')->name('user')->middleware('user');
+Route::get('/admin', 'AdminController@index')->name('admin')->middleware('admin');
+
+Route::get('/register', 'App\Http\Controllers\Auth\RegisteredUserController@create')->name('register');
+Route::post('/register', 'App\Http\Controllers\Auth\RegisteredUserController@store')->name('registered');
+
+/// ------- USER REDIRECT PAGE ------- ///
 Route::get('/a-propos', function()
 {
     return View::make('pages.apropos');
@@ -60,3 +68,7 @@ Route::get('/conditions-generales-de-vente', function()
 {
     return View::make('pages.cgv');
 });
+
+
+
+/// ------- ADMIN REDIRECT PAGE ------- ///

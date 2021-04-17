@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Atelier_utilisateur;
+use App\Models\User;
 use Illuminate\Http\Request;
 
-class Atelier_utilisateurController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class Atelier_utilisateurController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Atelier_utilisateur  $atelier_utilisateur
+     * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function show(Atelier_utilisateur $atelier_utilisateur)
+    public function show(User $user)
     {
         //
     }
@@ -52,10 +52,10 @@ class Atelier_utilisateurController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Atelier_utilisateur  $atelier_utilisateur
+     * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function edit(Atelier_utilisateur $atelier_utilisateur)
+    public function edit(User $user)
     {
         //
     }
@@ -64,10 +64,10 @@ class Atelier_utilisateurController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Atelier_utilisateur  $atelier_utilisateur
+     * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Atelier_utilisateur $atelier_utilisateur)
+    public function update(Request $request, User $user)
     {
         //
     }
@@ -75,10 +75,10 @@ class Atelier_utilisateurController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Atelier_utilisateur  $atelier_utilisateur
+     * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Atelier_utilisateur $atelier_utilisateur)
+    public function destroy(User $user)
     {
         //
     }

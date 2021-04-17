@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Article;
+use App\Models\Favorite;
 use Illuminate\Http\Request;
 
-class ArticleController extends Controller
+class FavoriteController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,7 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        $articles = Article::all();
-        return view('mobilier.list', ['articles'=> $articles]);
+        //
     }
 
     /**
@@ -25,7 +24,7 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        return view('mobilier.form', ['articles'=>$articles]);
+        //
     }
 
     /**
@@ -42,21 +41,21 @@ class ArticleController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Article  $article
+     * @param  \App\Models\Favorite  $favorite
      * @return \Illuminate\Http\Response
      */
-    public function show(Article $article)
+    public function show(Favorite $favorite)
     {
-        return view('mobilier.one', ['article'=>$article]);
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Article  $article
+     * @param  \App\Models\Favorite  $favorite
      * @return \Illuminate\Http\Response
      */
-    public function edit(Article $article)
+    public function edit(Favorite $favorite)
     {
         //
     }
@@ -65,10 +64,10 @@ class ArticleController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Article  $article
+     * @param  \App\Models\Favorite  $favorite
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Article $article)
+    public function update(Request $request, Favorite $favorite)
     {
         //
     }
@@ -76,10 +75,10 @@ class ArticleController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Article  $article
+     * @param  \App\Models\Favorite  $favorite
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Article $article)
+    public function destroy(Favorite $favorite)
     {
         //
     }

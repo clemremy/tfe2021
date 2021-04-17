@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFavorisTable extends Migration
+class CreateStatusesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,9 @@ class CreateFavorisTable extends Migration
      */
     public function up()
     {
-        Schema::create('favoris', function (Blueprint $table) {
+        Schema::create('status', function (Blueprint $table) {
             $table->id();
-
-            $table->unsignedBigInteger('articles_id');
-            $table->foreign('articles_id')->references('id')->on('articles');
-
-            $table->unsignedBigInteger('utilisateurs_id');
-            $table->foreign('utilisateurs_id')->references('id')->on('utilisateurs');
+            $table->string('name');
             $table->timestamps();
         });
     }
@@ -32,6 +27,6 @@ class CreateFavorisTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('favoris');
+        Schema::dropIfExists('statuses');
     }
 }

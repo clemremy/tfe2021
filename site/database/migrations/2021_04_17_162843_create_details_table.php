@@ -15,13 +15,11 @@ class CreateDetailsTable extends Migration
     {
         Schema::create('details', function (Blueprint $table) {
             $table->id();
-            $table->integer('quantite');
-
-            $table->unsignedBigInteger('reservations_id');
-            $table->foreign('reservations_id')->references('id')->on('reservations');
-
-            $table->unsignedBigInteger('articles_id');
-            $table->foreign('articles_id')->references('id')->on('articles');
+            $table->integer('amount');
+            $table->unsignedBigInteger('bookings_id');
+            $table->foreign('bookings_id')->references('id')->on('bookings');
+            $table->unsignedBigInteger('items_id');
+            $table->foreign('items_id')->references('id')->on('items');
             $table->timestamps();
         });
     }

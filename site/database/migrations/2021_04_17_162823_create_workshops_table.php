@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAdminsTable extends Migration
+class CreateWorkshopsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,14 @@ class CreateAdminsTable extends Migration
      */
     public function up()
     {
-        Schema::create('admins', function (Blueprint $table) {
+        Schema::create('workshops', function (Blueprint $table) {
             $table->id();
-            $table->string('nom');
-            $table->string('prenom');
-            $table->string('email');
-            $table->string('mot_de_passe');
+            $table->string('name');
+            $table->string('description');
+            $table->datetime('start_date');
+            $table->datetime('end_date');
+            $table->integer('nb_places');
+            $table->boolean('active');
             $table->timestamps();
         });
     }
@@ -30,6 +32,6 @@ class CreateAdminsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('admins');
+        Schema::dropIfExists('workshops');
     }
 }

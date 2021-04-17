@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Historique;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
-class HistoriqueController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class HistoriqueController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Historique  $historique
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function show(Historique $historique)
+    public function show(Category $category)
     {
         //
     }
@@ -52,10 +52,10 @@ class HistoriqueController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Historique  $historique
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function edit(Historique $historique)
+    public function edit(Category $category)
     {
         //
     }
@@ -64,10 +64,10 @@ class HistoriqueController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Historique  $historique
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Historique $historique)
+    public function update(Request $request, Category $category)
     {
         //
     }
@@ -75,10 +75,10 @@ class HistoriqueController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Historique  $historique
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Historique $historique)
+    public function destroy(Category $category)
     {
         //
     }

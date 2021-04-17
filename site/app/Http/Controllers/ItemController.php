@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Favoris;
+use App\Models\Item;
 use Illuminate\Http\Request;
 
-class FavorisController extends Controller
+class ItemController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,7 @@ class FavorisController extends Controller
      */
     public function index()
     {
-        $favoris = Favoris::all();
-        return view('favoris.list', ['favoris'=> $favoris]);
+        //
     }
 
     /**
@@ -25,7 +24,7 @@ class FavorisController extends Controller
      */
     public function create()
     {
-        return view('favoris.form', ['favoris'=>$favoris]);
+        //
     }
 
     /**
@@ -42,21 +41,21 @@ class FavorisController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Favoris  $favoris
+     * @param  \App\Models\Item  $item
      * @return \Illuminate\Http\Response
      */
-    public function show(Favoris $favoris)
+    public function show(Item $item)
     {
-        return view('favoris.one', ['favoris'=>$favoris]);
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Favoris  $favoris
+     * @param  \App\Models\Item  $item
      * @return \Illuminate\Http\Response
      */
-    public function edit(Favoris $favoris)
+    public function edit(Item $item)
     {
         //
     }
@@ -65,10 +64,10 @@ class FavorisController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Favoris  $favoris
+     * @param  \App\Models\Item  $item
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Favoris $favoris)
+    public function update(Request $request, Item $item)
     {
         //
     }
@@ -76,10 +75,10 @@ class FavorisController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Favoris  $favoris
+     * @param  \App\Models\Item  $item
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Favoris $favoris)
+    public function destroy(Item $item)
     {
         //
     }

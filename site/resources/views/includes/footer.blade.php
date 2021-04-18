@@ -7,7 +7,7 @@
             </li>
             <li>
                 <p>02</p>
-                <a href="{{ url('/apropos') }}">A propos</a>
+                <a href="{{ url('/a-propos') }}">A propos</a>
             </li>
             <li>
                 <p>03</p>
@@ -62,7 +62,7 @@
                 <a href="mailto:clemremypro@gmail.com"><strong>Clem Remy</strong></a>
             </li>
             <li>
-                <a href="{{ url('/politique-de-confidentialite') }}">Politique de confidentialité</a>
+                <a href="{{ url('/politique-de-confidentialites') }}">Politique de confidentialité</a>
             </li>
             <li>
                 <a href="{{ url('/conditions-generales-de-vente') }}">Conditions générales de vente</a>

@@ -19,8 +19,12 @@ class User extends Authenticatable
     protected $fillable = [
         'first_name',
         'last_name',
-        'role',
         'email',
+        'role',
+        'newsletter',
+        'account',
+        'gdpr',
+        'terms',
         'password',
     ];
 
@@ -42,4 +46,8 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function workshops () {
+        return $this->belongsToMany(Workshop::class);
+    }
 }

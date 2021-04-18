@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Workshop;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class WorkshopController extends Controller
@@ -14,7 +15,8 @@ class WorkshopController extends Controller
      */
     public function index()
     {
-        //
+        $workshops = Workshop::all();
+        return view('workshops.list', ['workshops'=> $workshops]);
     }
 
     /**
@@ -24,7 +26,8 @@ class WorkshopController extends Controller
      */
     public function create()
     {
-        //
+        $workshops = Workshop::all();
+        return view('workshops.form');
     }
 
     /**
@@ -35,7 +38,17 @@ class WorkshopController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $workshop = new Workshop();
+        $workshop->name = $request->has('name') && strlen($request->name) ? $request->name : 'Pas de nom';
+        $workshop->description = $request->has('description') && strlen($request->description) ? $request->description : 'Pas de description';
+        $workshop->start_date = date('Y-m-d', strtotime($request->start_date)) ? $request->start_date : null;
+        $workshop->end_date = date('Y-m-d', strtotime($request->end_date)) ? $request->end_date : null;
+        $workshop->nb_places = $request->has('nb_places') && strlen($request->nb_places) ? $request->nb_places : 'Pas de nombre de places';
+        $workshop->active = int(strtoint($request->active)) ? $request->active : 0;
+
+        $workshop->save();
+
+        return redirect('/ateliers');
     }
 
     /**
@@ -46,7 +59,7 @@ class WorkshopController extends Controller
      */
     public function show(Workshop $workshop)
     {
-        //
+        return view('workshops.one', ['workshop'=>$workshop]);
     }
 
     /**
@@ -57,7 +70,7 @@ class WorkshopController extends Controller
      */
     public function edit(Workshop $workshop)
     {
-        //
+        return view('workshops.edit', ['workshop'=>$workshop]);
     }
 
     /**
@@ -69,7 +82,21 @@ class WorkshopController extends Controller
      */
     public function update(Request $request, Workshop $workshop)
     {
-        //
+        $workshop->name = $request->has('name') && strlen($request->name) ? $request->name : $workshop->name;
+        $workshop->description = $request->has('description') && strlen($request->description) ? $request->description : $workshop->description;
+        $workshop->start_date = date('Y-m-d', strtotime($request->start_date)) ? $request->start_date : $workshop->start_date;
+        $workshop->end_date = date('Y-m-d', strtotime($request->end_date)) ? $request->end_date : $workshop->end_date;
+        $workshop->nb_places = $request->has('nb_places') && strlen($request->nb_places) ? $request->nb_places : $workshop->nb_places;
+        
+        $saved = $workshop->save();
+
+        if ($saved) {
+            return back()->with('message:success', 'Ok');
+        } else {
+            return back()->with('message:error', 'Error');
+        }
+        
+        return redirect('/ateliers');
     }
 
     /**
@@ -80,6 +107,7 @@ class WorkshopController extends Controller
      */
     public function destroy(Workshop $workshop)
     {
-        //
+        $workshop->delete();
+        return redirect('/ateliers')->with('delete', 'Cet atelier a été supprimé avec succès!');;
     }
 }

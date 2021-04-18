@@ -15,7 +15,7 @@
     <label>Nombre de places totales:</label>
     <input type="number" name="nb_places" value="{{ $workshop->nb_places }}">
 
-    <input type="submit" value="Envoyer">
-    <a href="/ateliers">Annuler</a>
+    <input type="submit" value="Modifier" class="btn-edit">
+    <a href="/ateliers" class="btn-back">Annuler</a>
+    @stop
 </form>
-@stop

@@ -14,10 +14,11 @@
     <label>Nombre de places:</label>
     <input type="number" name="nb_places">
     <label>Mettre en ligne?</label>
-    <input type="checkbox" name="active" value="1"> Oui
+    <input type="checkbox" name="active" value="1" checked>
+    <label for="yes">Oui</label>
 
-    <input type="submit" value="Envoyer">
-    <a href="/ateliers">Annuler</a>
+    <input type="submit" value="Envoyer" class="btn-send">
+    <a href="/ateliers" class="btn-back">Annuler</a>
 </form>
 
 @stop

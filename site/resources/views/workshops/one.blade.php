@@ -15,10 +15,10 @@
                             @csrf
                             @method('delete')
                             <input type="submit" value="Supprimer" onclick="return confirm('Etes-vous sur de vouloir supprimer cet atelier?')">
-                            <button type="submit" onclick="return confirm('Etes-vous sur de vouloir supprimer cet atelier?')">
+                            <button type="submit" class="btn-delete" onclick="return confirm('Etes-vous sur de vouloir supprimer cet atelier?')">
                                 <i class="fas fa-trash-alt"></i>
                             </button>
-                            <a href="{{ route('ateliers.edit', $workshop->id) }}" class="edit">Modifier</a>
+                            <a href="{{ route('ateliers.edit', $workshop->id) }}" class="btn-edit">Modifier</a>
                         </form>
                     </td>
                 @endif

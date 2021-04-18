@@ -44,7 +44,7 @@ class WorkshopController extends Controller
         $workshop->start_date = date('Y-m-d', strtotime($request->start_date)) ? $request->start_date : null;
         $workshop->end_date = date('Y-m-d', strtotime($request->end_date)) ? $request->end_date : null;
         $workshop->nb_places = $request->has('nb_places') && strlen($request->nb_places) ? $request->nb_places : 'Pas de nombre de places';
-        $workshop->active = int(strtoint($request->active)) ? $request->active : 0;
+        $workshop->active = intval($request->active) ? $request->active : 0;
 
         $workshop->save();
 
@@ -87,14 +87,9 @@ class WorkshopController extends Controller
         $workshop->start_date = date('Y-m-d', strtotime($request->start_date)) ? $request->start_date : $workshop->start_date;
         $workshop->end_date = date('Y-m-d', strtotime($request->end_date)) ? $request->end_date : $workshop->end_date;
         $workshop->nb_places = $request->has('nb_places') && strlen($request->nb_places) ? $request->nb_places : $workshop->nb_places;
-        
-        $saved = $workshop->save();
+        $workshop->active = intval($request->active) ? $request->active : $workshop->active;
 
-        if ($saved) {
-            return back()->with('message:success', 'Ok');
-        } else {
-            return back()->with('message:error', 'Error');
-        }
+        $workshop->save();
         
         return redirect('/ateliers');
     }
@@ -108,6 +103,6 @@ class WorkshopController extends Controller
     public function destroy(Workshop $workshop)
     {
         $workshop->delete();
-        return redirect('/ateliers')->with('delete', 'Cet atelier a été supprimé avec succès!');;
+        return redirect('/ateliers')->with('delete', 'Cet atelier a été supprimé avec succès!');
     }
 }

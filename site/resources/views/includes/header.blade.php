@@ -9,7 +9,7 @@
             <a href="{{ url('/a-propos') }}">A propos</a>
         </li>
         <li>
-            <a href="{{ url('/contact') }}">Contact</a>
+            <a href="/contact">Contact</a>
         </li>
         <li>
             <a href="/ateliers">Atelier</a>

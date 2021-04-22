@@ -31,38 +31,48 @@
                     </a>
                 </address>
             </div>
-            <form class="contact col-6">
-                <p>
-                    <label for="prenom">Prénom</label>
-                    <input type="text" name="prenom" placeholder="Jean-Claude" required>
-                </p>
-                <p>
-                    <label for="nom">Nom</label>
-                    <input type="text" name="nom" placeholder="Van Damme" required>
-                </p>
-                <p>
-                    <label for="email">Adresse mail</label>
-                    <input type="text" name="email" placeholder="jcvd@mail.com" required>
-                </p>
-                <p>
-                    <label for="sujet">Sujet</label>
-                    <select name="sujet">
-                        <option value="">--Choisir une option--</option>
-                        <option value="rdv">Rendez-vous</option>
-                        <option value="commande">Commande personnalisée</option>
-                        <option value="sav">Service après vente</option>
-                        <option value="autre">Autre</option>
-                    </select>
-                </p>
-                <p>
-                    <label for="message">Message</label>
-                    <input type="textarea" name="message" placeholder="Bonjour, j'aimerais..." required>
-                </p>
-                <p class="custom-button">
-                <input type="submit" value="envoyer" class="btn">
-                <span class="btn-line"></span>
-                <p>
-            </form>
+            <div class="contactform">
+                <!-- Success message -->
+                @if(Session::has('success'))
+                    <div>
+                        {{Session::get('success')}}
+                    </div>
+                @endif
+
+                <form method="post" action="{{ route('contact.store') }}" class="contact col-6">
+                @csrf
+                    <p>
+                        <label for="first_name">Prénom</label>
+                        <input type="text" name="first_name" placeholder="Jean-Claude" required>
+                    </p>
+                    <p>
+                        <label for="last_name">Nom</label>
+                        <input type="text" name="last_name" placeholder="Van Damme" required>
+                    </p>
+                    <p>
+                        <label for="email">Adresse mail</label>
+                        <input type="text" name="email" placeholder="jcvd@mail.com" required>
+                    </p>
+                    <p>
+                        <label for="subject">Sujet</label>
+                        <select name="subject">
+                            <option value="">--Choisir une option--</option>
+                            <option value="rdv">Rendez-vous</option>
+                            <option value="commande">Commande personnalisée</option>
+                            <option value="sav">Service après vente</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="message">Message</label>
+                        <input type="textarea" name="message" placeholder="Bonjour, j'aimerais..." required>
+                    </p>
+                    <p class="custom-button">
+                        <input type="submit" value="envoyer" class="btn">
+                        <span class="btn-line"></span>
+                    </p>
+                </form>
+            </div>
         </div>
     </article>
 @endsection

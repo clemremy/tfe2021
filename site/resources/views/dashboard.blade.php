@@ -11,10 +11,7 @@
                 <a href="#">Gerer les utilisateurs</a>
             </li>
             <li>
-                <a href="#">Gerer les ateliers</a>
-            </li>
-            <li>
-                <a href="#">Gerer les articles</a>
+                <a href="/admins">Gérer les admins</a>
             </li>
             @endif
         </ul>

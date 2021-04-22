@@ -100,8 +100,9 @@ class WorkshopController extends Controller
      * @param  \App\Models\Workshop  $workshop
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Workshop $workshop)
+    public function destroy($id)
     {
+        $workshop = Workshop::find($id);
         $workshop->delete();
         return redirect('/ateliers')->with('delete', 'Cet atelier a été supprimé avec succès!');
     }

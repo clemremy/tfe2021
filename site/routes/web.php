@@ -51,6 +51,8 @@ Route::get('/contact', function()
 });
 
 Route::resource('ateliers', WorkshopController::class);
+Route::put('/ateliers', 'App\Http\Controllers\WorkshopController@update')->name('update');
+
 Route::resource('mobilier', ItemController::class);
 Route::resource('profil', UserController::class);
 Route::resource('favoris', FavoriteController::class);

@@ -11,17 +11,16 @@ $blue: #3490dc;
 $indigo: #6574cd;
 $purple: #9561e2;
 $pink: #f66d9b;
-$red: #e3342f;
 $orange: #f6993f;
 $yellow: #ffed4a;
-$green: #38c172;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
 $gray: #808080;
+
+//general
 $lightgray: #d3d3d3;
 $black: #000000;
 $white: #ffffff;
-
 $background: #F5F5F5;
 $hover: #CBD5CC;
 
@@ -29,6 +28,12 @@ $hover: #CBD5CC;
 $margin: 1em 2em;
 
 // button crud
+$green: #578259;
+$dark-green: darken($green, 5%);
+$edit: #060c07;
+$dark-edit: lighten($edit, 5%);
+$red: #e3342f;
+$dark-red: darken($red, 5%);
 // button
 
 // Breaking points

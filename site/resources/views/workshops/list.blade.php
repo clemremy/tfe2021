@@ -9,9 +9,3 @@
     @each('workshops.one', $workshops, 'workshop')
 </article>
 @endsection
-
-<style>
-    .atelier{
-        padding-top: 10rem;
-    }
-</style>

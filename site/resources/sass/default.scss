@@ -6,6 +6,7 @@
 @import 'pages/apropos';
 @import 'pages/legal';
 @import 'pages/loggedin';
+@import 'pages/workshop';
 // @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&display=swap');
@@ -124,6 +125,7 @@ li{
     list-style: none;
 }
 
+// BUTTON
 .custom-button{
     .btn{
         padding: 1em;
@@ -144,5 +146,56 @@ li{
     &:hover .btn, &:hover .span{
         transform: translate(10px);
         transition: transform 0.3s ease-in-out;
+    }
+}
+
+.btn-add {
+	background-color: $green;
+	display:inline-block;
+	cursor:pointer;
+	color: $white;
+	font: $sans-serif-normal;
+	padding:10px 20px;
+	text-decoration:none;
+    &:hover {
+        background-color: $dark-green;
+    }
+    &:active {
+        position:relative;
+        top:1px;
+    }
+}
+
+.btn-delete {
+	background-color:$red;
+	cursor:pointer;
+	color:$white;
+    font: $sans-serif-normal;
+	padding:10px 20px;
+	text-decoration:none;
+    border: none;
+    outline: none;
+    &:hover {
+        background-color:$dark-red;
+    }
+    i{
+        margin-right: 10px;
+    }
+}
+
+.btn-edit {
+	background-color:$edit;
+	cursor:pointer;
+	color:$white;
+    font: $sans-serif-normal;
+	padding:10px 20px;
+	text-decoration:none;
+    border: none;
+    outline: none;
+    &:hover {
+        background-color:$dark-edit;
+    }
+    i{
+        margin-right: 10px;
     }
 }

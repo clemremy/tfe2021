@@ -241,37 +241,37 @@ div.footer nav.mentions ul li a:hover, div.footer nav.mentions ul li a:focus {
     height: auto;
   }
 }
-.title {
+.title-home {
   position: absolute;
   z-index: 20;
   color: #ffffff;
   left: 2rem;
   bottom: 30%;
 }
-.title form.newsletter {
+.title-home form.newsletter {
   width: 80%;
   height: auto;
   padding: 2rem 0;
 }
-.title form.newsletter label {
+.title-home form.newsletter label {
   margin: 0 auto;
   text-align: center;
 }
-.title form.newsletter p {
+.title-home form.newsletter p {
   border: 1px solid #ffffff;
   display: flex;
   flex-direction: row;
   margin: 1em auto;
 }
-.title form.newsletter p input {
+.title-home form.newsletter p input {
   margin: 0;
   border: none;
 }
-.title form.newsletter p input:first-child {
+.title-home form.newsletter p input:first-child {
   margin: 0;
   width: 300%;
 }
-.title form.newsletter p input:last-child {
+.title-home form.newsletter p input:last-child {
   background-color: #ffffff;
   font-size: 1.5em;
   padding: 0 1em 0 0;
@@ -279,7 +279,7 @@ div.footer nav.mentions ul li a:hover, div.footer nav.mentions ul li a:focus {
   transition: all 0.5s;
   cursor: pointer;
 }
-.title form.newsletter p input:last-child:hover {
+.title-home form.newsletter p input:last-child:hover {
   padding: 0 0.7em 0 0;
 }
 

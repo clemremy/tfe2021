@@ -8,7 +8,8 @@
             <span class="line two"></span>
             <div class="title">
                 <h1>
-                    Une question?</h1>
+                    Une question?
+                </h1>
             </div>
         </div>
         <div class="container">

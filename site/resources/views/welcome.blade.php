@@ -3,7 +3,7 @@
 @section('content')
 <div class="slideshow-container">
     
-    <div class="title">
+    <div class="title-home">
         <h1>
             Du mobilier unique.
         </h1>

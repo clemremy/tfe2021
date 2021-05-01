@@ -1,7 +1,7 @@
 @extends('layouts.default')
 @section('content')
 
-<form action="/ateliers" method="post" class="form create">
+<form action="/ateliers" method="post" class="form-create atelier">
     @csrf
     <label>Nom de l'atelier:</label>
     <input type="text" name="name">
@@ -17,8 +17,10 @@
     <input type="checkbox" name="active" value="1" checked>
     <label for="yes">Oui</label>
 
-    <input type="submit" value="Envoyer" class="btn-send">
-    <a href="/ateliers" class="btn-back">Annuler</a>
+    <div class="cta">
+        <input type="submit" value="Envoyer" class="btn-edit">
+        <a href="/ateliers" class="btn-back">Annuler</a>
+    </div>
 </form>
 
 @stop

@@ -1,7 +1,7 @@
 @extends('layouts.default')
 @section('content')
 
-<form action="/ateliers/{{ $workshop->id }}" method="post" class="form edit">
+<form action="/ateliers/{{ $workshop->id }}" method="post" class="form-edit atelier">
     @csrf
     @method('put')
     <label>Nom de l'atelier:</label>
@@ -15,10 +15,13 @@
     <label>Nombre de places totales:</label>
     <input type="number" name="nb_places" value="{{ $workshop->nb_places }}">
     <label>Mettre en ligne?</label>
-    <input type="checkbox" name="active" value="1" checked>
-    <label for="yes">Oui</label>
-
-    <input type="submit" value="Modifier" class="btn-edit">
-    <a href="/ateliers" class="btn-back">Annuler</a>
+    <div class="check">
+        <input type="checkbox" name="active" value="1" checked>
+        <label for="yes">Oui</label>
+    </div>
+    <div class="cta">
+        <input type="submit" value="Enregistrer" class="btn-edit">
+        <a href="/ateliers" class="btn-back">Annuler</a>
+    </div>
     @stop
 </form>

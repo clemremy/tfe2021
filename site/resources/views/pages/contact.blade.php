@@ -39,7 +39,7 @@
                     </div>
                 @endif
 
-                <form method="post" action="{{ route('contact.store') }}" class="contact col-6">
+                <form method="post" action="" class="contact col-6">
                 @csrf
                     <p>
                         <label for="first_name">Prénom</label>

@@ -1,3 +1,45 @@
+.title{
+    position: absolute;
+    z-index: 20;
+    color: $white;
+    left: 2rem;
+    bottom: 30%;
+    form.newsletter{
+        width: 80%;
+        height: auto;
+        padding: 2rem 0;
+        label{
+            margin: 0 auto;
+            text-align: center;
+        }
+        p{
+            border: 1px solid $white;
+            display:flex;
+            flex-direction:row;
+            margin: 1em auto;
+            input{
+                margin: 0;
+                border:none;
+                &:first-child{
+                    margin: 0;
+                    width: 300%;
+                }
+                &:last-child{
+                    background-color: $white;
+                    font-size: 1.5em;
+                    padding: 0 1em 0 0;
+                    text-align: right;
+                    transition: all 0.5s;
+                    cursor: pointer;
+                    &:hover{
+                        padding: 0 0.7em 0 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
 .slideshow-container {
     height: 100vh;
     width: 100%;
@@ -12,14 +54,14 @@
         text-align:center;
         z-index: 200;
         position: absolute;
-        bottom: 2em;
-        right: 4em;
+        bottom: 2rem;
+        right: 4rem;
     }
     .two{
-        right: 3em;
+        right: 3rem;
     }
     .three{
-        right: 2em;
+        right: 2rem;
     }
     .active {
         background-color: $black;
@@ -89,8 +131,8 @@
     div.scrollone{
         height: 100vh;
         position: absolute;
-        z-index: 200;
-        left: 2em;
+        z-index: 20;
+        left: 2rem;
         .scroll-indicator {
             position: absolute;
             bottom: 0px;

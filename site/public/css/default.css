@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&display=swap);
+@charset "UTF-8";
 nav.navbar {
   z-index: 300;
   width: 100%;
@@ -240,6 +241,48 @@ div.footer nav.mentions ul li a:hover, div.footer nav.mentions ul li a:focus {
     height: auto;
   }
 }
+.title {
+  position: absolute;
+  z-index: 20;
+  color: #ffffff;
+  left: 2rem;
+  bottom: 30%;
+}
+.title form.newsletter {
+  width: 80%;
+  height: auto;
+  padding: 2rem 0;
+}
+.title form.newsletter label {
+  margin: 0 auto;
+  text-align: center;
+}
+.title form.newsletter p {
+  border: 1px solid #ffffff;
+  display: flex;
+  flex-direction: row;
+  margin: 1em auto;
+}
+.title form.newsletter p input {
+  margin: 0;
+  border: none;
+}
+.title form.newsletter p input:first-child {
+  margin: 0;
+  width: 300%;
+}
+.title form.newsletter p input:last-child {
+  background-color: #ffffff;
+  font-size: 1.5em;
+  padding: 0 1em 0 0;
+  text-align: right;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.title form.newsletter p input:last-child:hover {
+  padding: 0 0.7em 0 0;
+}
+
 .slideshow-container {
   height: 100vh;
   width: 100%;
@@ -260,14 +303,14 @@ div.footer nav.mentions ul li a:hover, div.footer nav.mentions ul li a:focus {
   text-align: center;
   z-index: 200;
   position: absolute;
-  bottom: 2em;
-  right: 4em;
+  bottom: 2rem;
+  right: 4rem;
 }
 .slideshow-container .two {
-  right: 3em;
+  right: 3rem;
 }
 .slideshow-container .three {
-  right: 2em;
+  right: 2rem;
 }
 .slideshow-container .active {
   background-color: #000000;
@@ -354,8 +397,8 @@ div.footer nav.mentions ul li a:hover, div.footer nav.mentions ul li a:focus {
 .slideshow-container div.scrollone {
   height: 100vh;
   position: absolute;
-  z-index: 200;
-  left: 2em;
+  z-index: 20;
+  left: 2rem;
 }
 .slideshow-container div.scrollone .scroll-indicator {
   position: absolute;
@@ -685,7 +728,7 @@ article.apropospage .container form.newsletter p input:last-child:hover {
 }
 
 .atelier {
-  padding-top: 10rem;
+  padding: 10rem 0 5rem 0;
 }
 .atelier h1 {
   text-align: center;
@@ -709,6 +752,7 @@ article.apropospage .container form.newsletter p input:last-child:hover {
   flex-basis: 50%;
   height: 400px;
   overflow: hidden;
+  padding: 0 5rem 0 0;
 }
 .atelier .workshop figure img {
   -o-object-fit: cover;
@@ -726,12 +770,65 @@ article.apropospage .container form.newsletter p input:last-child:hover {
 .atelier .workshop .workshop-info h2 {
   margin: 1rem 1rem 1rem 0;
 }
-.atelier .workshop .workshop-info p:nth-of-type(1) {
+.atelier .workshop .workshop-info .detail {
   border-bottom: 1px solid #000000;
   padding-bottom: 1rem;
+  text-transform: uppercase;
 }
 .atelier .workshop .crud {
   margin: 2rem 0 0;
+}
+
+.form-edit, .form-create {
+  width: 70%;
+  margin: 0 auto;
+}
+.form-edit .check, .form-create .check {
+  display: flex;
+}
+.form-edit .check input, .form-edit .check label, .form-create .check input, .form-create .check label {
+  flex-basis: auto;
+}
+.form-edit .cta, .form-create .cta {
+  width: 100%;
+}
+.form-edit .cta .btn-edit, .form-create .cta .btn-edit {
+  width: auto;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 20;
+  padding: 4rem;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+.modal .modal-content {
+  background-color: #ffffff;
+  margin: auto;
+  padding: 4rem;
+  border: 1px solid #d3d3d3;
+  width: 80%;
+}
+.modal .modal-content .close {
+  color: #d3d3d3;
+  font-size: 28px;
+  font-weight: normal;
+}
+.modal .modal-content .close:hover, .modal .modal-content .close:focus {
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modal .modal-content form h3 {
+  margin: 1em 2em;
+}
+.modal .modal-content form .btn-edit {
+  width: auto;
 }
 
 * {
@@ -934,6 +1031,7 @@ li {
 }
 .btn-add:hover {
   background-color: #4d734f;
+  color: #ffffff;
 }
 .btn-add:active {
   position: relative;
@@ -952,6 +1050,7 @@ li {
 }
 .btn-delete:hover {
   background-color: #db231d;
+  color: #ffffff;
 }
 .btn-delete i {
   margin-right: 10px;
@@ -969,7 +1068,27 @@ li {
 }
 .btn-edit:hover {
   background-color: #0f1d11;
+  color: #ffffff;
 }
 .btn-edit i {
   margin-right: 10px;
+}
+
+.btn-back {
+  background-color: #d3d3d3;
+  cursor: pointer;
+  color: #ffffff;
+  font: normal 400 0.9em/1.5 "Open Sans", sans-serif;
+  padding: 10px 20px;
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+.btn-back::before {
+  content: "⟵";
+  margin-right: 10px;
+}
+.btn-back:hover {
+  background-color: #c6c6c6;
+  color: #ffffff;
 }

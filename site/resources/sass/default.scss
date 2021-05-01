@@ -159,6 +159,7 @@ li{
 	text-decoration:none;
     &:hover {
         background-color: $dark-green;
+        color:$white;
     }
     &:active {
         position:relative;
@@ -177,6 +178,7 @@ li{
     outline: none;
     &:hover {
         background-color:$dark-red;
+        color:$white;
     }
     i{
         margin-right: 10px;
@@ -194,8 +196,28 @@ li{
     outline: none;
     &:hover {
         background-color:$dark-edit;
+        color:$white;
     }
     i{
         margin-right: 10px;
+    }
+}
+
+.btn-back {
+	background-color:$lightgray;
+	cursor:pointer;
+	color:$white;
+    font: $sans-serif-normal;
+	padding:10px 20px;
+	text-decoration:none;
+    border: none;
+    outline: none;
+    &::before{
+        content:'\0027F5';
+        margin-right: 10px;
+    }
+    &:hover {
+        background-color:$dark-lightgray;
+        color:$white;
     }
 }

@@ -2,17 +2,21 @@
 
 @section('content')
 <div class="slideshow-container">
-    <!--
+    
     <div class="title">
         <h1>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+            Du mobilier unique.
         </h1>
-        <h3>
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </h3>
-        <button>Call to action</button>
+        <form class="newsletter" >
+            <label>Ne ratez rien</label>
+            <br/>
+            <p>
+            <input type="email" name="email" value="" placeholder="catherinemoulin@gmail.com" >
+            <input type="submit" value="&#10230;">
+            </p>
+        </form>
     </div>
-    -->
+    
     <div>
         <span class="dot one"></span> 
         <span class="dot two"></span> 

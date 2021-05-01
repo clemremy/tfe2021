@@ -47,16 +47,16 @@ Route::get('/a-propos', function()
 });
 
 // CONTACT
-/*
+
 Route::get('/contact', function()
 {
     return View::make('pages.contact');
-});*/
-/*
-Route::get('/contact', [ContactFormController::class, 'createForm']);
-Route::post('/contact', [ContactFormController::class, 'ContactUsForm'])->name('contact.store');*/
-Route::get('/contact', 'App\Http\Controllers\ContactFormController@createForm')->name('createform');
-Route::get('/contact', 'App\Http\Controllers\ContactFormController@ContactUsForm')->name('contact.store');
+});
+
+//Route::get('/contact', [ContactFormController::class, 'createForm']);
+//Route::post('/contact', [ContactFormController::class, 'ContactUsForm'])->name('contact.store');
+//Route::get('/contact', 'App\Http\Controllers\ContactFormController@createForm')->name('createform');
+//Route::get('/contact', 'App\Http\Controllers\ContactFormController@ContactUsForm')->name('contact.store');
 
 Route::resource('ateliers', WorkshopController::class);
 Route::put('/ateliers', 'App\Http\Controllers\WorkshopController@update')->name('update');

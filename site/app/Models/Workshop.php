@@ -15,6 +15,7 @@ class Workshop extends Model
         'start_date',
         'end_date',
         'nb_places',
+        'price',
         'active'
     ];
 

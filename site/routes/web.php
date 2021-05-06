@@ -31,12 +31,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+/*Auth::routes();
 Route::get('/user', 'UserController@index')->name('user')->middleware('user');
 Route::get('/admin', 'AdminController@index')->name('admin')->middleware('admin');
-
-Route::get('/register', 'App\Http\Controllers\Auth\RegisteredUserController@create')->name('register');
-Route::post('/register', 'App\Http\Controllers\Auth\RegisteredUserController@store')->name('registered');
+*/
+//Route::get('/register', 'App\Http\Controllers\Auth\RegisteredUserController@create')->name('register');
+//Route::post('/register', 'App\Http\Controllers\Auth\RegisteredUserController@store')->name('registered');
 
 
 /// ------- USER REDIRECT PAGE ------- ///
@@ -58,8 +58,8 @@ Route::get('/contact', function()
 //Route::get('/contact', 'App\Http\Controllers\ContactFormController@createForm')->name('createform');
 //Route::get('/contact', 'App\Http\Controllers\ContactFormController@ContactUsForm')->name('contact.store');
 
-Route::resource('ateliers', WorkshopController::class);
-Route::put('/ateliers', 'App\Http\Controllers\WorkshopController@update')->name('update');
+Route::resource('ateliers', 'App\Http\Controllers\WorkshopController');
+//Route::put('/ateliers', 'App\Http\Controllers\WorkshopController@update')->name('update');
 
 Route::resource('mobilier', ItemController::class);
 Route::resource('profil', UserController::class);

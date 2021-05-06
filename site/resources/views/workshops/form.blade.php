@@ -13,6 +13,8 @@
     <input type="date" name="end_date">
     <label>Nombre de places:</label>
     <input type="number" name="nb_places">
+    <label>Prix:</label>
+    <input type="number" name="price">
     <label>Mettre en ligne?</label>
     <input type="checkbox" name="active" value="1" checked>
     <label for="yes">Oui</label>

@@ -799,13 +799,16 @@ article.apropospage .container form.newsletter p input:last-child:hover {
 .modal {
   display: none;
   position: fixed;
-  z-index: 20;
+  z-index: 400;
   padding: 4rem;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   overflow: auto;
+  background-color: white;
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
 }
 .modal .modal-content {
   background-color: #ffffff;
@@ -825,7 +828,7 @@ article.apropospage .container form.newsletter p input:last-child:hover {
   cursor: pointer;
 }
 .modal .modal-content form h3 {
-  margin: 1em 2em;
+  margin: 1rem 2rem 1rem 0;
 }
 .modal .modal-content form .btn-edit {
   width: auto;

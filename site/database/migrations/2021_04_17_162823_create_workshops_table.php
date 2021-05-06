@@ -20,6 +20,7 @@ class CreateWorkshopsTable extends Migration
             $table->datetime('start_date');
             $table->datetime('end_date');
             $table->integer('nb_places');
+            $table->integer('price');
             $table->boolean('active');
             $table->timestamps();
         });

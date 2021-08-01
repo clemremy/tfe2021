@@ -14,7 +14,8 @@ class ItemController extends Controller
      */
     public function index()
     {
-        //
+        $items = Item::all();
+        return view('items.list', ['items'=> $items]);
     }
 
     /**
@@ -24,7 +25,8 @@ class ItemController extends Controller
      */
     public function create()
     {
-        //
+        $items = Item::all();
+        return view('items.form');
     }
 
     /**
@@ -35,7 +37,18 @@ class ItemController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $item = new Item();
+        $item->name = $request->has('name') && strlen($request->name) ? $request->name : 'Pas de nom';
+        $item->description = $request->has('description') && strlen($request->description) ? $request->description : 'Pas de description';
+        $item->price = $request->has('price') && strlen($request->price) ? $request->price : 'Pas de prix';
+        $item->amount = $request->has('amount') && strlen($request->amount) ? $request->amount : 'Pas de quantité';
+        $item->customization = $request->has('customization') && strlen($request->customization) ? $request->customization : 'Pas de personnalisation';
+        $item->categories_id = intval($request->categories_id) ? $request->categories_id : 1;
+        $item->active = intval($request->active) ? $request->active : 0;
+
+        $item->save();
+
+        return redirect('/mobilier');
     }
 
     /**
@@ -46,7 +59,7 @@ class ItemController extends Controller
      */
     public function show(Item $item)
     {
-        //
+        return view('items.one', ['item'=>$item]);
     }
 
     /**
@@ -55,9 +68,10 @@ class ItemController extends Controller
      * @param  \App\Models\Item  $item
      * @return \Illuminate\Http\Response
      */
-    public function edit(Item $item)
+    public function edit($id)
     {
-        //
+        $item = Item::find($id);
+        return view('items.edit', ['item'=>$item]);
     }
 
     /**
@@ -67,9 +81,20 @@ class ItemController extends Controller
      * @param  \App\Models\Item  $item
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Item $item)
+    public function update(Request $request, $id)
     {
-        //
+        $item = Item::find($id);
+        $item->name = $request->has('name') && strlen($request->name) ? $request->name : $item->name;
+        $item->description = $request->has('description') && strlen($request->description) ? $request->description : $item->description;
+        $item->price = $request->has('price') && strlen($request->price) ? $request->price : $item->price;
+        $item->amount = $request->has('amount') && strlen($request->amount) ? $request->amount : $item->amount;
+        $item->customization = $request->has('customization') && strlen($request->customization) ? $request->customization : $item->customization;
+        $item->categories_id = intval($request->categories_id) ? $request->categories_id : $item->categories_id;
+        $item->active = intval($request->active) ? $request->active : $item->active;
+
+        $item->save();
+        
+       return redirect('/mobilier');
     }
 
     /**
@@ -78,8 +103,10 @@ class ItemController extends Controller
      * @param  \App\Models\Item  $item
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Item $item)
+    public function destroy($id)
     {
-        //
+        $item = Item::find($id);
+        $item->delete();
+        return redirect('/mobilier')->with('delete', 'Cet article a été supprimé avec succès!');
     }
 }

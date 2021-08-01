@@ -61,7 +61,9 @@ Route::get('/contact', function()
 Route::resource('ateliers', 'App\Http\Controllers\WorkshopController');
 //Route::put('/ateliers', 'App\Http\Controllers\WorkshopController@update')->name('update');
 
-Route::resource('mobilier', ItemController::class);
+//Route::resource('mobilier', ItemController::class);
+Route::resource('mobilier', 'App\Http\Controllers\ItemController');
+
 Route::resource('profil', UserController::class);
 Route::resource('favoris', FavoriteController::class);
 Route::resource('panier', BookingController::class);

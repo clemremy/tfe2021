@@ -14,7 +14,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+        $categories = Category::all();
+        return view('categories.list', ['categories'=> $categories]);
     }
 
     /**
@@ -24,7 +25,8 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        $categories = Category::all();
+        return view('categories.form');
     }
 
     /**
@@ -35,7 +37,12 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $category = new Category();
+        $category->name = $request->has('name') && strlen($request->name) ? $request->name : 'Pas de nom';
+        
+        $category->save();
+
+        return redirect('/categorie');
     }
 
     /**
@@ -46,7 +53,7 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
-        //
+        return view('categories.one', ['category'=>$category]);
     }
 
     /**
@@ -55,9 +62,10 @@ class CategoryController extends Controller
      * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function edit(Category $category)
+    public function edit($id)
     {
-        //
+        $category = Category::find($id);
+        return view('categories.edit', ['category'=>$category]);
     }
 
     /**
@@ -67,9 +75,14 @@ class CategoryController extends Controller
      * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Category $category)
+    public function update(Request $request, $id)
     {
-        //
+        $category = Category::find($id);
+        $category->name = $request->has('name') && strlen($request->name) ? $request->name : $category->name;
+        
+        $category->save();
+        
+        return redirect('/categorie');
     }
 
     /**
@@ -78,8 +91,10 @@ class CategoryController extends Controller
      * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Category $category)
+    public function destroy($id)
     {
-        //
+        $category = Category::find($id);
+        $category->delete();
+        return redirect('/categorie')->with('delete', 'Cette catégorie a été supprimée avec succès!');
     }
 }

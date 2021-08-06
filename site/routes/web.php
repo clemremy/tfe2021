@@ -64,6 +64,8 @@ Route::resource('ateliers', 'App\Http\Controllers\WorkshopController');
 //Route::resource('mobilier', ItemController::class);
 Route::resource('mobilier', 'App\Http\Controllers\ItemController');
 
+Route::resource('categorie', 'App\Http\Controllers\CategoryController');
+
 Route::resource('profil', UserController::class);
 Route::resource('favoris', FavoriteController::class);
 Route::resource('panier', BookingController::class);

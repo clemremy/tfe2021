@@ -21,4 +21,8 @@ class Item extends Model
     public function users () {
         return $this->HasMany(User::class);
     }
+
+    public function categories () {
+        return $this->belongsTo(Category::class);
+    }
 }

@@ -4,6 +4,7 @@
         <p>{{$items->description}}</p>
         <p>{{$items->price}}€</p>
         <p>{{$items->amount}} pièces</p>
+        <p>{{$items->categories->name}}</p>
         <br/>
     </div>
     @if( Auth::user() && Auth::user()->role=='admin') 

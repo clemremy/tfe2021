@@ -15,10 +15,9 @@
         <p>Prix par personne: {{$workshop->price}}€</p>
         <br/>
 
-        <p class="custom-button">
-            <input type="submit" value="S'inscrire" class="modal-btn" id="{{ $workshop->id }}">
-            <span class="btn-line"></span>
-        </p>
+        <button class="custom-button modal-btn" id="{{ $workshop->id }}" type="submit">
+            Reserver
+        </button>
     </div>
     @if( Auth::user() && Auth::user()->role=='admin') 
         <form action="/ateliers/{{ $workshop->id }}" method="post" class="crud">

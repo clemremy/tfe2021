@@ -4,8 +4,11 @@
         <p>{{$items->description}}</p>
         <p>{{$items->price}}€</p>
         <p>{{$items->amount}} pièces</p>
-        <p>{{$items->categories->name}}</p>
+        <p>Catégorie: {{$items->categories->name}}</p>
         <br/>
+        <button class="custom-button modal-btn" id="{{ $items->id }}" type="submit">
+            Ajouter au panier
+        </button>
     </div>
     @if( Auth::user() && Auth::user()->role=='admin') 
         <form action="/mobilier/{{ $items->id }}" method="post" class="crud">

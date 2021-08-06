@@ -6,6 +6,7 @@
         Nos ateliers.
     </h1>
     <a href="/ateliers/create" class="btn-add" role="button">Ajouter</a>
+    <a href="/inscription" role="button">Voir les inscriptions</a>
     @each('workshops.one', $workshops, 'workshop')
 </article>
 
@@ -14,7 +15,8 @@
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
-    <form>
+    <form action="/ateliers" method="post" class="form">
+    @csrf
     <input type="hidden" name="workshop_id">
         <h3>Formulaire d'inscription</h3>
         <label>Prénom:</label>

@@ -14,7 +14,8 @@ class BookingController extends Controller
      */
     public function index()
     {
-        //
+        $bookings = Booking::all();
+        return view('cart.list', ['bookings'=> $bookings]);
     }
 
     /**

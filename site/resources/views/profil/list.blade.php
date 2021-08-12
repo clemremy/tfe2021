@@ -2,6 +2,6 @@
 
 @section('content')
 
-    @each('profil.one', $utilisateurs, 'utilisateur')
+    @each('profil.one', $persons, 'person')
 
 @endsection

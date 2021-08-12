@@ -10,10 +10,9 @@ class Workshop_user extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name',
-        'first_name',
-        'email',
-        'nb_places',
+        'nb_persons',
+        'workshops_id',
+        'users_id'
     ];
 
     public function users () {

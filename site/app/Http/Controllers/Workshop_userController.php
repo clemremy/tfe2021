@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Workshop_user;
+use App\Models\User;
+use App\Models\Workshop;
 use Illuminate\Http\Request;
 
 class Workshop_userController extends Controller
@@ -26,7 +28,9 @@ class Workshop_userController extends Controller
     public function create()
     {
         $workshop_users = Workshop_user::all();
-        return view('workshops.list');
+        $workshops = Workshop::all();
+        $users = User::all();
+        return view('workshops.list', ['workshops'=>$workshops, 'users'=>$users]);
     }
 
     /**
@@ -38,11 +42,37 @@ class Workshop_userController extends Controller
     public function store(Request $request)
     {
         $workshop_user = new Workshop_user();
-        $workshop_user->name = $request->has('name') && strlen($request->name) ? $request->name : 'Pas de nom';
-        $workshop_user->first_name = $request->has('first_name') && strlen($request->first_name) ? $request->first_name : 'Pas de prénom';
-        
-        $workshop_user->save();
 
+        // Créer ou récup l'utilisateur 
+        $user = User::where("email", $request->email)->first();
+        if ( ! $user ){
+            // Méthode store de UserController
+            $user = new User();
+            $user->first_name = $request->has('first_name') && strlen($request->first_name) ? $request->first_name : 'Pas de prénom';
+            $user->last_name = $request->has('last_name') && strlen($request->last_name) ? $request->last_name : 'Pas de nom';
+            $user->email = $request->has('email') && strlen($request->email) ? $request->email : 'Pas d\'email';
+            $user->role = $request->has('role') && strlen($request->role) ? $request->role : 'user';
+            $user->newsletter = $request->has('newsletter') && strlen($request->newsletter) ? $request->newsletter : '0';
+            $user->account = $request->has('account') && strlen($request->account) ? $request->account : '1';
+            $user->gdpr = $request->has('gdpr') && strlen($request->gdpr) ? $request->gdpr : '1';
+            $user->terms = $request->has('terms') && strlen($request->terms) ? $request->terms : '1';
+            $user->password = $request->has('password') && strlen($request->password) ? $request->password : 'pasdemdp';
+            $user->save();
+        }
+        $workshop_user->nb_persons = $request->has('nb_persons') && strlen($request->nb_persons) ? $request->nb_persons : '1';
+        
+        // associer l'utilisateur
+        $user = User::find($request->users_id);
+        if($user) {
+            $workshop_user->user()->associate($user);
+        }
+        // associer le workshop
+        $workshop = Workshop::find($request->workshops_id);
+        if($workshop) {
+            $workshop_user->workshop()->associate($workshop);
+        }
+
+        $workshop_user->save();
         return redirect('/inscription');
     }
 

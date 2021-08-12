@@ -1,5 +1,4 @@
 <div class="profil">
-    <button><a href="/produits">Annuler</a></button>
     <form>
         <p>
             <label for="prenom">Prénom:</label>

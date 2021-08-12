@@ -8,7 +8,7 @@
             </li>
             @if(Auth::user()->role=='admin')
             <li>
-                <a href="#">Gerer les utilisateurs</a>
+                <a href="/utilisateurs">Gerer les utilisateurs</a>
             </li>
             <li>
                 <a href="/admins">Gérer les admins</a>

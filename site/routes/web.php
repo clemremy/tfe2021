@@ -59,8 +59,6 @@ Route::get('/contact', function()
 //Route::get('/contact', 'App\Http\Controllers\ContactFormController@ContactUsForm')->name('contact.store');
 
 Route::resource('ateliers', 'App\Http\Controllers\WorkshopController');
-//Route::put('/ateliers', 'App\Http\Controllers\WorkshopController@update')->name('update');
-
 Route::resource('inscription', 'App\Http\Controllers\Workshop_userController');
 
 //Route::resource('mobilier', ItemController::class);
@@ -70,8 +68,9 @@ Route::resource('categorie', 'App\Http\Controllers\CategoryController');
 
 Route::resource('profil', UserController::class);
 Route::resource('favoris', FavoriteController::class);
-
 Route::resource('panier', 'App\Http\Controllers\BookingController');
+
+Route::resource('utilisateurs', 'App\Http\Controllers\UserController');
 
 
 

@@ -9,6 +9,15 @@
     <div class="cta">
         <a href="/ateliers" class="btn-back">Retour aux ateliers</a>
     </div>
-    @each('workshop_users.one', $workshop_users, 'workshop_user')
+
+    <table>
+        <tr>
+            <th>Utilisateur</th>
+            <th>Atelier</th>
+            <th>Nombre de places</th>
+            <th>Action</th>
+        </tr>
+        @each('workshop_users.one', $workshop_users, 'workshop_user')
+    </table>
 </article>
 @endsection

@@ -62,14 +62,17 @@ class Workshop_userController extends Controller
         $workshop_user->nb_persons = $request->has('nb_persons') && strlen($request->nb_persons) ? $request->nb_persons : '1';
         
         // associer l'utilisateur
-        $user = User::find($request->users_id);
+        $user = User::find($request->user_id);
         if($user) {
-            $workshop_user->user()->associate($user);
+            $workshop_user->user()->sync($user);
+            //$workshop_user->user()->attach($request->user_id);
         }
+        
         // associer le workshop
-        $workshop = Workshop::find($request->workshops_id);
+        $workshop = Workshop::find($request->workshop_id);
         if($workshop) {
-            $workshop_user->workshop()->associate($workshop);
+            $workshop_user->workshop()->sync($workshop);
+            //$workshop_user->workshop()->attach($request->workshop_id);
         }
 
         $workshop_user->save();

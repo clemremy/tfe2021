@@ -10,6 +10,10 @@
     <input type="text" name="description" value="{{ $item->description }}">
     <label>Prix de l'article:</label>
     <input type="number" name="price" value="{{ $item->price }}">
+    <label>Image de l'article:</label>
+    <input type="file" name="image" placeholder="image">
+    <img src="/image/{{ $item->image }}" width="300px"><br/>
+
     <label>Quantité disponible:</label>
     <input type="number" name="amount" value="{{ $item->amount }}">
     <label>Personnalisable?</label>

@@ -70,7 +70,6 @@
                     </p>
                     <p class="custom-button">
                         <input type="submit" value="envoyer" class="btn">
-                        <span class="btn-line"></span>
                     </p>
                 </form>
             </div>

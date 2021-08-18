@@ -1,4 +1,7 @@
 <div class="mobilier">
+    <figure>
+        <img src="/image/{{ $items->image }}" style="width:200px;" >
+    </figure>
     <div>
         <h2>{{$items->name}}</h2>
         <p>{{$items->description}}</p>

@@ -7,13 +7,15 @@
     <input type="text" name="name">
     <label>Description de l'article:</label>
     <input type="text" name="description">
-    <label>Prix:</label>
+    <label>Prix de l'article:</label>
     <input type="number" name="price">
+    <label>Image de l'article:</label>
+    <input type="file" name="image" placeholder="image">
 
     <br>
-    <label>amount:</label>
+    <label>Quantité disponible:</label>
     <input type="number" name="amount">
-    <label>custo:</label>
+    <label>Personnalisable:</label>
     <input type="number" name="customization">
     </br>
 

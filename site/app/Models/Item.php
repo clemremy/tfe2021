@@ -15,7 +15,8 @@ class Item extends Model
         'price',
         'amount',
         'customization',
-        'active'
+        'active',
+        'image'
     ];
 
     public function users () {

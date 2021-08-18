@@ -19,6 +19,7 @@ class CreateItemsTable extends Migration
             $table->string('description');
             $table->float('price');
             $table->integer('amount');
+            $table->string('image');
             $table->boolean('customization');
             $table->boolean('active');
             $table->unsignedBigInteger('categories_id');

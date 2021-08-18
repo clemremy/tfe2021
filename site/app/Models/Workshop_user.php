@@ -15,10 +15,10 @@ class Workshop_user extends Model
         'users_id'
     ];
 
-    public function users () {
+    public function user () {
         return $this->belongsToMany(User::class);
     }
-    public function workshops () {
+    public function workshop () {
         return $this->belongsToMany(Workshop::class);
     }
 }

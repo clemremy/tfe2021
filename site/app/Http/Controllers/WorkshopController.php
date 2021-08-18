@@ -45,7 +45,8 @@ class WorkshopController extends Controller
         $workshop->end_date = date('Y-m-d', strtotime($request->end_date)) ? $request->end_date : null;
         $workshop->nb_places = $request->has('nb_places') && strlen($request->nb_places) ? $request->nb_places : 'Pas de nombre de places';
         $workshop->price = $request->has('price') && strlen($request->price) ? $request->price : 'Pas de prix';
-        $workshop->active = intval($request->active) ? $request->active : 0;
+        //$workshop->active = intval($request->active) ? $request->active : 0;
+        $workshop->active = $request->has('active') && strlen($request->active) ? $request->active : '0';
 
         $workshop->save();
 
@@ -90,8 +91,9 @@ class WorkshopController extends Controller
         $workshop->start_date = date('Y-m-d', strtotime($request->start_date)) ? $request->start_date : $workshop->start_date;
         $workshop->end_date = date('Y-m-d', strtotime($request->end_date)) ? $request->end_date : $workshop->end_date;
         $workshop->nb_places = $request->has('nb_places') && strlen($request->nb_places) ? $request->nb_places : $workshop->nb_places;
-        //$workshop->price = $request->has('price') && strlen($request->price) ? $request->price : $workshop->price;
-        $workshop->active = intval($request->active) ? $request->active : $workshop->active;
+        $workshop->price = $request->has('price') && strlen($request->price) ? $request->price : $workshop->price;
+        //$workshop->active = intval($request->active) ? $request->active : $workshop->active;
+        $workshop->active = $request->has('active') && strlen($request->active) ? $request->active : $workshop->active;
 
         $workshop->save();
         

@@ -16,17 +16,22 @@
 
     <label>Quantité disponible:</label>
     <input type="number" name="amount" value="{{ $item->amount }}">
+
     <label>Personnalisable?</label>
-    <input type="number" name="customization" value="{{ $item->customization }}">
+    <select name="customization">
+        <option value="1" {{ ($item->customization == 1) ? 'selected' : '' }}>Oui</option>
+        <option value="0" {{ ($item->customization == 0) ? 'selected' : '' }}>Non</option>
+    </select>
+
     <label>Catégorie:</label>
     <input type="number" name="categories_id" value="{{ $item->categories_id }}">
-    
-    
+      
     <label>Mettre en ligne?</label>
-    <div class="check">
-        <input type="checkbox" name="active" value="1" checked>
-        <label for="yes">Oui</label>
-    </div>
+    <select name="active">
+        <option value="1" {{ ($item->active == 1) ? 'selected' : '' }}>Oui</option>
+        <option value="0" {{ ($item->active == 0) ? 'selected' : '' }}>Non</option>
+    </select>
+
     <div class="cta">
         <input type="submit" value="Enregistrer" class="btn-edit">
         <a href="/mobilier" class="btn-back">Annuler</a>

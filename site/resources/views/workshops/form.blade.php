@@ -15,9 +15,12 @@
     <input type="number" name="nb_places">
     <label>Prix:</label>
     <input type="number" name="price">
+
     <label>Mettre en ligne?</label>
-    <input type="checkbox" name="active" value="1" checked>
-    <label for="yes">Oui</label>
+    <select name="active">
+        <option value="1">Oui</option>
+        <option value="0">Non</option>
+    </select>
 
     <div class="cta">
         <input type="submit" value="Envoyer" class="btn-edit">

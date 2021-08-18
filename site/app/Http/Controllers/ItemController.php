@@ -46,8 +46,9 @@ class ItemController extends Controller
         $item->image = $request->has('image') && strlen($request->image) ? $request->image : 'none';
         $item->amount = $request->has('amount') && strlen($request->amount) ? $request->amount : 'Pas de quantité';
         $item->customization = $request->has('customization') && strlen($request->customization) ? $request->customization : 'Pas de personnalisation';
-        $item->categories_id = intval($request->categories_id) ? $request->categories_id : 1;
-        $item->active = intval($request->active) ? $request->active : 0;
+        $item->categories_id = intval($request->categories_id) ? $request->categories_id : '';
+        $item->active = intval($request->active) ? $request->active : '';
+        $item->active = $request->has('active') && strlen($request->active) ? $request->active : '0';
 
         if ($image = $request->file('image')) {
             $destinationPath = 'image/';
@@ -100,8 +101,9 @@ class ItemController extends Controller
         $item->amount = $request->has('amount') && strlen($request->amount) ? $request->amount : $item->amount;
         $item->customization = $request->has('customization') && strlen($request->customization) ? $request->customization : $item->customization;
         $item->categories_id = intval($request->categories_id) ? $request->categories_id : $item->categories_id;
-        $item->active = intval($request->active) ? $request->active : $item->active;
-
+        //$item->active = intval($request->active) ? $request->active : $item->active;
+        $item->active = $request->has('active') && strlen($request->active) ? $request->active : $item->active;
+        
         $item->save();
         
        return redirect('/mobilier');

@@ -15,16 +15,22 @@
     <br>
     <label>Quantité disponible:</label>
     <input type="number" name="amount">
+
     <label>Personnalisable:</label>
-    <input type="number" name="customization">
+    <select name="customization">
+        <option value="1">Oui</option>
+        <option value="0">Non</option>
+    </select>
     </br>
 
     <label>Catégories:</label>
     <input type="number" name="categories_id">
 
     <label>Mettre en ligne?</label>
-    <input type="checkbox" name="active" value="1" checked>
-    <label for="yes">Oui</label>
+    <select name="active">
+        <option value="1">Oui</option>
+        <option value="0">Non</option>
+    </select>
 
     <div class="cta">
         <input type="submit" value="Envoyer" class="btn-edit">

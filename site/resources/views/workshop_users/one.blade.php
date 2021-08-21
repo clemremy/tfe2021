@@ -3,6 +3,7 @@
         <td>{{$workshop_user->user_id}}</td>
         <td>{{$workshop_user->workshop_id}}</td>
         <td>{{$workshop_user->nb_persons}}</td>
+        <td>{{$workshop_user->paid}}</td>
         <td>
             <form action="/inscription/{{ $workshop_user->id }}" method="post" class="crud">
                 @csrf

@@ -12,8 +12,9 @@ class Workshop_user extends Model
 
     protected $fillable = [
         'nb_persons',
-        'workshops_id',
-        'users_id'
+        'workshop_id',
+        'user_id', 
+        'paid'
     ];
 
     public function user () {

@@ -60,7 +60,8 @@ class Workshop_userController extends Controller
             $user->save();
         }
         $workshop_user->nb_persons = $request->has('nb_persons') && strlen($request->nb_persons) ? $request->nb_persons : '1';
-        
+        $workshop_user->paid = $request->has('paid') && strlen($request->paid) ? $request->paid : '0';
+
         // associer l'utilisateur
         $user = User::where("email", $request->email)->first();
         if($user) {
@@ -108,9 +109,17 @@ class Workshop_userController extends Controller
      * @param  \App\Models\Workshop_user  $workshop_user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Workshop_user $workshop_user)
+    public function update(Request $request, $id)
     {
-        //
+        $workshop_user = Workshop_user::find($id);
+        $workshop_user->user_id = $request->has('user_id') && strlen($request->user_id) ? $request->user_id : $workshop_user->user_id;
+        $workshop_user->workshop_id = $request->has('workshop_id') && strlen($request->workshop_id) ? $request->workshop_id : $workshop_user->workshop_id;
+        $workshop_user->nb_persons = $request->has('nb_persons') && strlen($request->nb_persons) ? $request->nb_persons : $workshop_user->nb_persons;
+        $workshop_user->paid = $request->has('paid') && strlen($request->paid) ? $request->paid : $workshop_user->paid;
+
+        $workshop_user->save();
+        
+        return redirect('/inscription');
     }
 
     /**

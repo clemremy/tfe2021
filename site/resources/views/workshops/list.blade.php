@@ -2,6 +2,12 @@
 
 @section('content')
 <article class="atelier">
+    <!--
+    // Si aucun n'atelier n'est actif, alors montrer ceci...
+    <div class="emptyworkshop">
+      <h1>Aucun atelier n'est prévu pour le moment.</h1>
+    </div>
+    -->
     <h1>
         Nos ateliers.
     </h1>
@@ -22,7 +28,7 @@
     <input type="hidden" name="workshop_id">
         <h3>Formulaire d'inscription</h3>
         <label>Prénom:</label>
-        <input type="text" name="name">
+        <input type="text" name="first_name">
         <label>Nom:</label>
         <input type="text" name="last_name">
         <label>Adresse mail:</label>

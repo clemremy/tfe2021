@@ -2,7 +2,7 @@
 
 @section('content')
     <article class="contactpage">
-    <div class="first-slide">
+        <div class="first-slide">
             <div class="img-background"></div>
             <span class="line one"></span>
             <span class="line two"></span>
@@ -32,6 +32,7 @@
                     </a>
                 </address>
             </div>
+            
             <div class="contactform">
                 <!-- Success message -->
                 @if(Session::has('success'))

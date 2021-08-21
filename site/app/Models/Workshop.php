@@ -19,11 +19,17 @@ class Workshop extends Model
         'active'
     ];
 
+    /*
     public function users () {
         return $this->belongsToMany(User::class);
     }
+    */
 
     public function categories () {
         return $this->HasMany(Category::class);
+    }
+
+    public function workshop_users () {
+        return $this->hasMany(Workshop_user::class);
     }
 }

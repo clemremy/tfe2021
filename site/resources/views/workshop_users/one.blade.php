@@ -1,7 +1,7 @@
 <div class="workshopuser">
     <tr>
-        <td>{{$workshop_user->users_id}}</td>
-        <td>{{$workshop_user->workshops_id}}</td>
+        <td>{{$workshop_user->user_id}}</td>
+        <td>{{$workshop_user->workshop_id}}</td>
         <td>{{$workshop_user->nb_persons}}</td>
         <td>
             <form action="/inscription/{{ $workshop_user->id }}" method="post" class="crud">

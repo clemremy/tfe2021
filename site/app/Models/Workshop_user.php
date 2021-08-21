@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Workshop_user extends Model
 {
     use HasFactory;
+    protected $table = 'workshop_users';
 
     protected $fillable = [
         'nb_persons',
@@ -16,9 +17,9 @@ class Workshop_user extends Model
     ];
 
     public function user () {
-        return $this->belongsToMany(User::class);
+        return $this->belongsTo(User::class);
     }
     public function workshop () {
-        return $this->belongsToMany(Workshop::class);
+        return $this->belongsTo(Workshop::class);
     }
 }

@@ -40,17 +40,22 @@ Route::get('/admin', 'AdminController@index')->name('admin')->middleware('admin'
 
 
 /// ------- USER REDIRECT PAGE ------- ///
-// AbOUT
+// ABOUT
 Route::get('/a-propos', function()
 {
     return View::make('pages.about');
 });
 
 // CONTACT
-
 Route::get('/contact', function()
 {
     return View::make('pages.contact');
+});
+
+// MOBILIER ACCUEIL
+Route::get('/mobilier-accueil', function()
+{
+    return View::make('pages.mobilieraccueil');
 });
 
 //Route::get('/contact', [ContactFormController::class, 'createForm']);

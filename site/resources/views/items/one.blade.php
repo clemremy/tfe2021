@@ -10,7 +10,7 @@
         <p>Catégorie: {{$items->categories->name}}</p>
         <br/>
         <button class="custom-button modal-btn" id="{{ $items->id }}" type="submit">
-            Ajouter au panier
+            Voir l'article
         </button>
     </div>
     @if( Auth::user() && Auth::user()->role=='admin') 

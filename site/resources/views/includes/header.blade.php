@@ -15,7 +15,7 @@
             <a href="/ateliers">Atelier</a>
         </li>
         <li>
-            <a href="/mobilier">Mobilier</a>
+            <a href="{{ url('/mobilier-accueil') }}">Mobilier</a>
         </li>
         <li>
             <a href="/profil" class="icon"><i class="fas fa-user-alt fa-lg"></i></a>

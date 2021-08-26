@@ -20,12 +20,6 @@
         <li>
             <a href="/profil" class="icon"><i class="fas fa-user-alt fa-lg"></i></a>
         </li>
-        <li>
-            <a href="/favoris" class="icon"><i class="fas fa-heart fa-lg"></i></a>
-        </li>
-        <li>
-            <a href="/panier" class="icon"><i class="fas fa-shopping-basket fa-lg"></i></a>
-        </li>  
     </ul>
     <div class="burger">
         <div class="line line1"></div>

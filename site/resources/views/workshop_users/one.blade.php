@@ -1,7 +1,7 @@
 <div class="workshopuser">
     <tr>
-        <td>{{$workshop_user->user_id}}</td>
-        <td>{{$workshop_user->workshop_id}}</td>
+        <td>{{$workshop_user->user->last_name}}</td>
+        <td>{{$workshop_user->workshop->name}}</td>
         <td>{{$workshop_user->nb_persons}}</td>
         <td>{{$workshop_user->paid}}</td>
         <td>

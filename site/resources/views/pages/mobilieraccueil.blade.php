@@ -1,5 +1,4 @@
 @extends('layouts.default')
-
 @section('content')
     <article class="toutmobilier">
         <div class="first-slide">

@@ -9,9 +9,10 @@
         <p>{{$items->amount}} pièces</p>
         <p>Catégorie: {{$items->categories->name}}</p>
         <br/>
-        <button class="custom-button modal-btn" id="{{ $items->id }}" type="submit">
-            Voir l'article
-        </button>
+
+        <a class="custom-button" href="#">
+            <i class="fas fa-edit"></i>Voir l'article
+        </a>
     </div>
     @if( Auth::user() && Auth::user()->role=='admin') 
         <form action="/mobilier/{{ $items->id }}" method="post" class="crud">

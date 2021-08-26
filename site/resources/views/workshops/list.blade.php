@@ -8,6 +8,7 @@
       <h1>Aucun atelier n'est prévu pour le moment.</h1>
     </div>
     -->
+    
     <h1>
         Nos ateliers.
     </h1>

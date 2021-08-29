@@ -19,7 +19,7 @@
 
     <div class="cta">
         <input type="submit" value="Enregistrer" class="btn-edit">
-        <a href="/ateliers" class="btn-back">Annuler</a>
+        <a href="/inscription" class="btn-back">Annuler</a>
     </div>
     @stop
 </form>

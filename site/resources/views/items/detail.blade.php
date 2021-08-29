@@ -1,4 +1,4 @@
-<div class="mobilier">
+<div class="article">
     <figure>
         <img src="/image/{{ $items->image }}" style="width:200px;" >
     </figure>
@@ -10,7 +10,7 @@
         <p>Catégorie: {{$items->categories->name}}</p>
         <br/>
         <button class="custom-button modal-btn" id="{{ $items->id }}" type="submit">
-            Reserver l'article
+            Réserver l'article
         </button>
     </div>
 </div>

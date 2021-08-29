@@ -6,6 +6,7 @@ use App\Models\Workshop_user;
 use App\Models\User;
 use App\Models\Workshop;
 use Illuminate\Http\Request;
+use Auth;
 
 class Workshop_userController extends Controller
 {
@@ -16,8 +17,11 @@ class Workshop_userController extends Controller
      */
     public function index()
     {
-        $workshop_users = Workshop_user::all();
-        return view('workshop_users.list', ['workshop_users'=> $workshop_users]);
+        if (Auth::user() &&  Auth::user()->role == 'admin') {
+            $workshop_users = Workshop_user::all();
+            return view('workshop_users.list', ['workshop_users'=> $workshop_users]);
+        } 
+        return view('auth.login');
     }
 
     /**

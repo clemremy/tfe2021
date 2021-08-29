@@ -17,9 +17,29 @@
         <li>
             <a href="{{ url('/mobilier-accueil') }}">Mobilier</a>
         </li>
+        
+        @if (!Auth::check())
+        <li>
+            <a href="/login">Connexion</a>
+        </li>
+        @endif
+
+        @if(Auth::check())
         <li>
             <a href="/profil" class="icon"><i class="fas fa-user-alt fa-lg"></i></a>
         </li>
+        <li>
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+
+                <x-dropdown-link :href="route('logout')"
+                        onclick="event.preventDefault();
+                                    this.closest('form').submit();">
+                    {{ __('Logout') }}
+                </x-dropdown-link>
+            </form>
+        </li>
+        @endif
     </ul>
     <div class="burger">
         <div class="line line1"></div>

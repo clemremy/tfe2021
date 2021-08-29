@@ -66,9 +66,11 @@ Route::get('/mobilier-accueil', function()
 Route::resource('ateliers', 'App\Http\Controllers\WorkshopController');
 Route::resource('inscription', 'App\Http\Controllers\Workshop_userController');
 
-Route::resource('item', 'App\Http\Controllers\ItemController');
 Route::resource('mobilier', 'App\Http\Controllers\ItemController');
-Route::resource('custo', 'App\Http\Controllers\ItemController');
+Route::resource('mobilier/achat', 'App\Http\Controllers\ItemController');
+Route::resource('mobilier/personnalisable', 'App\Http\Controllers\ItemController');
+//Route::resource('mobilier/article', 'App\Http\Controllers\ItemController');
+Route::resource('reservation', 'App\Http\Controllers\BookingController');
 
 Route::resource('categorie', 'App\Http\Controllers\CategoryController');
 

@@ -8,7 +8,6 @@
       <h1>Aucun atelier n'est prévu pour le moment.</h1>
     </div>
     -->
-    
     <h1>
         Nos ateliers.
     </h1>
@@ -34,10 +33,12 @@
         <input type="text" name="last_name">
         <label>Adresse mail:</label>
         <input type="email" name="email">
-        <label>Nombre de places désirées:</label>
+        <label>Nombre de places désirées<sup>*</sup>:</label>
         <input type="number" name="nb_persons">
 
-        <p>Un email de confirmation vous sera envoyé avec les informations de paiements à finaliser dans les 7 jours qui suivent la réception de ce-dernier pour finaliser votre inscription. Au dela de ce délais, votre inscription sera annulée et les places remises en vente.</p>
+        <p>Un email de confirmation vous sera envoyé avec les informations de paiements à réaliser dans les 7 jours qui suivent la réception de ce-dernier pour finaliser votre inscription. Au dela de ce délais, votre inscription sera annulée et les places remises en vente.
+          <br/><br/><sup>* Sous réserve des places disponibles.</sup>
+        </p>
         <input type="submit" value="Confirmer l'inscription" class="btn-edit" id="sent">
     </form>
   </div>

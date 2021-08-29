@@ -68,9 +68,11 @@ class ItemController extends Controller
      * @param  \App\Models\Item  $item
      * @return \Illuminate\Http\Response
      */
-    public function show(Item $item)
+    public function show(Item $item, $id)
     {   
+ 
         return view('items.one', ['item'=>$item]);
+        return view('items.two', ['item'=>$item]);
         $item = Item::find($id);
         return view('items.detail', ['item'=>$item]);
     }

@@ -1,4 +1,4 @@
-@if ($items->active == 1 && $items->customization == 0)
+@if ($items->active == 1 && $items->customization == 1)
 <div class="mobilier">
     <figure>
         <img src="/image/{{ $items->image }}" style="width:200px;" >
@@ -14,7 +14,6 @@
         <a class="custom-button" href="#">
             <i class="fas fa-edit"></i>Voir l'article
         </a>
-
     </div>
     @if( Auth::user() && Auth::user()->role=='admin') 
         <form action="/mobilier/{{ $items->id }}" method="post" class="crud">

@@ -14,8 +14,11 @@ class BookingController extends Controller
      */
     public function index()
     {
-        $bookings = Booking::all();
-        return view('cart.list', ['bookings'=> $bookings]);
+        if (Auth::user() &&  Auth::user()->role == 'admin') {
+            $bookings = Booking::all();
+            return view('booking.list', ['bookings'=> $bookings]);
+        } 
+        return view('auth.login');
     }
 
     /**

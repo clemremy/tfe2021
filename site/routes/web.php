@@ -88,7 +88,7 @@ Route::get('/politique-de-confidentialites', function()
     return View::make('pages.gdpr');
 });
 
-Route::get('/conditions-generales-de-vente', function()
+Route::get('/conditions-generales', function()
 {
     return View::make('pages.terms');
 });

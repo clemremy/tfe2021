@@ -19,7 +19,7 @@
             </li>
             <li>
                 <p>05</p>
-                <a href="/mobilier">Mobilier</a>
+                <a href="/mobilier-accueil">Mobilier</a>
             </li>
         </ul>
     </nav>
@@ -28,17 +28,17 @@
             <p>Nous suivre</p>
             <a href="https://www.facebook.com/Gl%C3%BCck-Design-101383345315020/?ref=page_internal">Facebook</a>
             <br/>
-            <a href="">Instagram</a>
+            <a href="https://www.instagram.com/gluckdesign.be/">Instagram</a>
         </div>
         <div class="contact">
             <p>Contact</p>
             <address>
-                <a href="mailto:gluckdesign@gmail.com">
-                    gluckdesign@gmail.com
+                <a href="mailto:gluckdesign.contact@gmail.com">
+                    gluckdesign.contact@gmail.com
                 </a>
                 <br/>
-                <a href="tel:+32 473 930 226">
-                    +32 473 930 226
+                <a href="tel:+32479459416">
+                    +32 479 45 94 16
                 </a>
             </address>
         </div>
@@ -65,7 +65,7 @@
                 <a href="{{ url('/politique-de-confidentialites') }}">Politique de confidentialité</a>
             </li>
             <li>
-                <a href="{{ url('/conditions-generales-de-vente') }}">Conditions générales de vente</a>
+                <a href="{{ url('/conditions-generales') }}">Conditions générales</a>
             </li>
         </ul>
     </nav>

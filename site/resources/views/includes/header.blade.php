@@ -26,7 +26,7 @@
 
         @if(Auth::check())
         <li>
-            <a href="/profil" class="icon"><i class="fas fa-user-alt fa-lg"></i></a>
+            <a href="/profil" class="icon"><i class="far fa-user fa-lg"></i></i></a>
         </li>
         <li>
             <form method="POST" action="{{ route('logout') }}">

@@ -9,7 +9,7 @@
     <a href="/mobilier/create" class="btn-add" role="button">Ajouter un article</a>
     <a href="/categorie" role="button">Voir les catégories d'articles</a>
     @endif
-    @each('items.one', $items, 'items');
+    @each('items.two', $items, 'items');
 </article>
 
 

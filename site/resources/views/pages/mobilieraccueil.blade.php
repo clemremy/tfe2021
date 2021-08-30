@@ -5,7 +5,7 @@
             <div class="img-background"></div>
             <div class="title">
                 <h1>
-                    <a href="/mobilier/achat">Acheter</a>
+                    <a href="/mobilier">Acheter</a>
                 </h1>
             </div>
         </div>
@@ -13,7 +13,7 @@
             <a href="/mobilier"><div class="img-background"></div></a>
             <div class="title">
                 <h1>
-                    <a href="/mobilier/personnalisable">Personnaliser</a>
+                    <a href="/personnalisable">Personnaliser</a>
                 </h1>
             </div>
         </div>

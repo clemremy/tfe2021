@@ -47,6 +47,16 @@
     </div>
 </div>
 
+<div class="lastitems">
+    <h1>
+        Nos derniers articles.
+    </h1>
+    <div>
+
+    </div>
+    <a href="/mobilier/achat">Voir plus d'articles</a>
+</div>
+
 <script>
     var slideIndex = 0;
     showSlides();

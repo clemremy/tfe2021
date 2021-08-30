@@ -14,10 +14,20 @@ class ItemController extends Controller
      */
     public function index()
     {
-        $items = Item::all();
-        //$items = Item::latest()->paginate(3);
+        $items = Item::orderBy('created_at', 'desc')->get();
         return view('items.list', ['items'=> $items]);
-            //->with('i', (request()->input('page', 1) - 1) * 3);
+
+        /*
+        $items = Item::latest()->paginate(3);
+        return view('welcome', ['items'=> $items])
+        ->with('i', (request()->input('page', 1) - 1) * 3);
+        */
+    }
+
+    public function indexdeux()
+    {
+        $items = Item::all();
+        return view('items.listtwo', ['items'=> $items]);
     }
 
     /**
@@ -43,7 +53,10 @@ class ItemController extends Controller
         $item->name = $request->has('name') && strlen($request->name) ? $request->name : 'Pas de nom';
         $item->description = $request->has('description') && strlen($request->description) ? $request->description : 'Pas de description';
         $item->price = $request->has('price') && strlen($request->price) ? $request->price : 'Pas de prix';
-        $item->image = $request->has('image') && strlen($request->image) ? $request->image : 'none';
+
+        $item->image = $request->hasFile('image') && file($request->image) ? $request->image : 'none';
+        //$item->image = $request->has('image') && strlen($request->image) ? $request->image : 'none';
+
         $item->amount = $request->has('amount') && strlen($request->amount) ? $request->amount : 'Pas de quantité';
         $item->customization = $request->has('customization') && strlen($request->customization) ? $request->customization : 'Pas de personnalisation';
         $item->categories_id = intval($request->categories_id) ? $request->categories_id : '';
@@ -51,12 +64,12 @@ class ItemController extends Controller
         $item->active = $request->has('active') && strlen($request->active) ? $request->active : '0';
 
         if ($image = $request->file('image')) {
-            $destinationPath = 'image/';
-            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-            $image->move($destinationPath, $profileImage);
-            $input['image'] = "$profileImage";
+            $destinationPath = 'images/article/';
+            $articleImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destinationPath, $articleImage);
+            $input['image'] = "$articleImage";
         }
-        
+
         $item->save();
 
         return redirect('/mobilier');
@@ -68,13 +81,18 @@ class ItemController extends Controller
      * @param  \App\Models\Item  $item
      * @return \Illuminate\Http\Response
      */
-    public function show(Item $item, $id)
+    public function show(Item $item)
     {   
- 
         return view('items.one', ['item'=>$item]);
-        return view('items.two', ['item'=>$item]);
+        //return view('items.two', ['item'=>$item]);
+        /*return view('welcome', ['item'=>$item]);
         $item = Item::find($id);
-        return view('items.detail', ['item'=>$item]);
+        return view('items.detail', ['item'=>$item]);*/
+    }
+
+    public function showdeux(Item $item)
+    {   
+        return view('items.two', ['item'=>$item]);
     }
 
     /**

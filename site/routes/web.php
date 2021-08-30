@@ -6,7 +6,6 @@ use App\Http\Controllers\WorkshopController;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\FavoriteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,16 +29,11 @@ require __DIR__.'/auth.php';
 Route::get('/', function () {
     return view('welcome');
 });
-
-/*Auth::routes();
-Route::get('/user', 'UserController@index')->name('user')->middleware('user');
-Route::get('/admin', 'AdminController@index')->name('admin')->middleware('admin');
-*/
-//Route::get('/register', 'App\Http\Controllers\Auth\RegisteredUserController@create')->name('register');
-//Route::post('/register', 'App\Http\Controllers\Auth\RegisteredUserController@store')->name('registered');
+//Route::get('/', 'App\Http\Controllers\ItemController@show');
 
 
-/// ------- USER REDIRECT PAGE ------- ///
+
+/// ------- PAGE ------- ///
 // ABOUT
 Route::get('/a-propos', function()
 {
@@ -52,32 +46,31 @@ Route::get('/contact', function()
     return View::make('pages.contact');
 });
 
-// MOBILIER ACCUEIL
+
+// ATELIERS
+Route::resource('ateliers', 'App\Http\Controllers\WorkshopController');
+Route::resource('inscription', 'App\Http\Controllers\Workshop_userController');
+
+
+// MOBILIER
 Route::get('/mobilier-accueil', function()
 {
     return View::make('pages.mobilieraccueil');
 });
-
-//Route::get('/contact', [ContactFormController::class, 'createForm']);
-//Route::post('/contact', [ContactFormController::class, 'ContactUsForm'])->name('contact.store');
-//Route::get('/contact', 'App\Http\Controllers\ContactFormController@createForm')->name('createform');
-//Route::get('/contact', 'App\Http\Controllers\ContactFormController@ContactUsForm')->name('contact.store');
-
-Route::resource('ateliers', 'App\Http\Controllers\WorkshopController');
-Route::resource('inscription', 'App\Http\Controllers\Workshop_userController');
-
 Route::resource('mobilier', 'App\Http\Controllers\ItemController');
-Route::resource('mobilier/achat', 'App\Http\Controllers\ItemController');
-Route::resource('mobilier/personnalisable', 'App\Http\Controllers\ItemController');
-//Route::resource('mobilier/article', 'App\Http\Controllers\ItemController');
-Route::resource('reservation', 'App\Http\Controllers\BookingController');
 
+Route::get('//personnalisable', 'App\Http\Controllers\ItemController@indexdeux')->name('indexdeux');
+Route::get('/personnalisable', 'App\Http\Controllers\ItemController@showdeux')->name('showdeux');
+    //Route::get('/personnalisable', 'App\Http\Controllers\ItemController@indexdeux')->name('indexdeux');
+    //Route::get('/personnalisable', 'App\Http\Controllers\ItemController@showdeux')->name('showdeux');;
+
+Route::resource('/article', 'App\Http\Controllers\ItemController');
+Route::resource('reservation', 'App\Http\Controllers\BookingController');
 Route::resource('categorie', 'App\Http\Controllers\CategoryController');
 
-Route::resource('profil', UserController::class);
-Route::resource('favoris', FavoriteController::class);
-Route::resource('panier', 'App\Http\Controllers\BookingController');
 
+
+Route::resource('profil', 'App\Http\Controllers\UserController');
 Route::resource('utilisateurs', 'App\Http\Controllers\UserController');
 
 

@@ -17,16 +17,15 @@ class ItemController extends Controller
         $items = Item::orderBy('created_at', 'desc')->get();
         return view('items.list', ['items'=> $items]);
 
-        /*
-        $items = Item::latest()->paginate(3);
+        /*$items = Item::latest()->paginate(5);
         return view('welcome', ['items'=> $items])
-        ->with('i', (request()->input('page', 1) - 1) * 3);
-        */
+        ->with('i', (request()->input('page', 1) - 1) * 5);*/
     }
 
     public function indexdeux()
     {
-        $items = Item::all();
+        //$items = Item::all();
+        $items = Item::orderBy('created_at', 'desc')->get();
         return view('items.listtwo', ['items'=> $items]);
     }
 
@@ -72,7 +71,12 @@ class ItemController extends Controller
 
         $item->save();
 
-        return redirect('/mobilier');
+        //return redirect('/mobilier');
+        if (url()->previous() === '/mobilier') { 
+            return redirect()->back();
+        } else {
+            return redirect('/mobilier-personnalisable');
+        }
     }
 
     /**
@@ -93,6 +97,11 @@ class ItemController extends Controller
     public function showdeux(Item $item)
     {   
         return view('items.two', ['item'=>$item]);
+    }
+
+    public function showarticle(Item $item)
+    {   
+        return view('items.product', ['item'=>$item]);
     }
 
     /**
@@ -128,7 +137,12 @@ class ItemController extends Controller
         
         $item->save();
         
-       return redirect('/mobilier');
+       //return redirect('/mobilier');
+       if (url()->previous() === url('/mobilier')) { 
+            return redirect()->back();
+        } else {
+            return redirect('/mobilier-personnalisable');
+        }
     }
 
     /**
@@ -141,6 +155,7 @@ class ItemController extends Controller
     {
         $item = Item::find($id);
         $item->delete();
-        return redirect('/mobilier')->with('delete', 'Cet article a été supprimé avec succès!');
+        //return redirect('/mobilier')->with('delete', 'Cet article a été supprimé avec succès!');
+        return redirect()->back();
     }
 }

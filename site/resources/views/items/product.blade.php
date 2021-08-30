@@ -1,6 +1,7 @@
+<form action="/article/{{ $item->id }}" method="post">
 <div class="article">
     <figure>
-        <img src="/image/{{ $items->image }}" style="width:200px;" >
+        <img src="/images/article/{{ $items->image }}" style="width:200px;" >
     </figure>
     <div>
         <h2>{{$items->name}}</h2>
@@ -14,3 +15,4 @@
         </button>
     </div>
 </div>
+</form>

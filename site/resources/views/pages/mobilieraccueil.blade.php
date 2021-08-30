@@ -13,7 +13,7 @@
             <a href="/mobilier"><div class="img-background"></div></a>
             <div class="title">
                 <h1>
-                    <a href="/personnalisable">Personnaliser</a>
+                    <a href="/mobilier-personnalisable">Personnaliser</a>
                 </h1>
             </div>
         </div>

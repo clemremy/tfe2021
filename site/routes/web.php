@@ -58,13 +58,11 @@ Route::get('/mobilier-accueil', function()
     return View::make('pages.mobilieraccueil');
 });
 Route::resource('mobilier', 'App\Http\Controllers\ItemController');
+Route::get('/mobilier-personnalisable', 'App\Http\Controllers\ItemController@indexdeux')->name('indexdeux');
+//Route::get('/mobilier-personnalisable/{item}', 'App\Http\Controllers\ItemController@showdeux')->name('showdeux');
 
-Route::get('//personnalisable', 'App\Http\Controllers\ItemController@indexdeux')->name('indexdeux');
-Route::get('/personnalisable', 'App\Http\Controllers\ItemController@showdeux')->name('showdeux');
-    //Route::get('/personnalisable', 'App\Http\Controllers\ItemController@indexdeux')->name('indexdeux');
-    //Route::get('/personnalisable', 'App\Http\Controllers\ItemController@showdeux')->name('showdeux');;
+Route::get('/mobilier/article/{$id}', 'App\Http\Controllers\ItemController@showarticle');
 
-Route::resource('/article', 'App\Http\Controllers\ItemController');
 Route::resource('reservation', 'App\Http\Controllers\BookingController');
 Route::resource('categorie', 'App\Http\Controllers\CategoryController');
 

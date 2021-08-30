@@ -1,7 +1,7 @@
 @if ($items->active == 1 && $items->customization == 0)
 <div class="mobilier">
     <figure>
-        <img src="/images/artice/{{ $items->image }}" style="width:200px;" >
+        <img src="/images/article/{{ $items->image }}" style="width:200px;" >
     </figure>
     <div>
         <h2>{{$items->name}}</h2>
@@ -11,7 +11,7 @@
         <p>Catégorie: {{$items->categories->name}}</p>
         <br/>
 
-        <a class="custom-button" href="/article/{{ $items->id }}">
+        <a class="custom-button" href="/mobilier/article/{{ $items->id }}">
             <i class="fas fa-edit"></i>Voir l'article
         </a>
 

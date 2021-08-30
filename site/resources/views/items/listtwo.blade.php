@@ -3,7 +3,7 @@
 @section('content')
 <article class="item">
     <h1>
-        Nos articles.
+        Nos articles à personnaliser.
     </h1>
     @if( Auth::user() && Auth::user()->role=='admin') 
     <a href="/mobilier/create" class="btn-add" role="button">Ajouter un article</a>

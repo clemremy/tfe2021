@@ -67,8 +67,9 @@ Route::resource('reservation', 'App\Http\Controllers\BookingController');
 Route::resource('categorie', 'App\Http\Controllers\CategoryController');
 
 
-
-Route::resource('profil', 'App\Http\Controllers\UserController');
+// PROFIL
+//Route::resource('profil', 'App\Http\Controllers\UserController');
+Route::get('/profil', 'App\Http\Controllers\UserController@indexProfil')->name('profil.indexProfil');
 Route::resource('utilisateurs', 'App\Http\Controllers\UserController');
 
 

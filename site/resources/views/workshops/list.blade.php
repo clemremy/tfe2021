@@ -37,7 +37,13 @@
         <input type="number" name="nb_persons">
 
         <p>Un email de confirmation vous sera envoyé avec les informations de paiements à réaliser dans les 7 jours qui suivent la réception de ce-dernier pour finaliser votre inscription. Au dela de ce délais, votre inscription sera annulée et les places remises en vente.
-          <br/><br/><sup>* Sous réserve des places disponibles.</sup>
+          
+          <br/><br/>
+          <input type="checkbox" class="checkbox" name="gdpr" value="gdpr">
+          <label for="gdpr" class="checkboxlabel">J'ai lu et j'accepte les <a href="{{ url('/conditions-generales') }}">conditions générales</a> et la <a href="{{ url('/politique-de-confidentialites') }}">politique de confidentialité</a></label>
+        
+          <br/><br/>
+          <sup>* Sous réserve des places disponibles.</sup>
         </p>
         <input type="submit" value="Confirmer l'inscription" class="btn-edit" id="sent">
     </form>

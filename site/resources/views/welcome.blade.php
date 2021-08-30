@@ -54,7 +54,7 @@
     <div>
 
     </div>
-    <a href="/mobilier/achat">Voir plus d'articles</a>
+    <a href="/mobilier">Voir plus d'articles</a>
 </div>
 
 <script>

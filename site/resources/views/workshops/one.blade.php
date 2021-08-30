@@ -69,7 +69,3 @@
     </form>
 </div>
 @endif
-
-@if(count(($workshop->active==0)) ===0)
-<h2>Aucun atelier n'est prévu pour l'instant.</h2>
-@endif

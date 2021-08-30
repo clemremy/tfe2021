@@ -864,10 +864,10 @@ body h2 {
 body h3 {
   font-size: 2em;
 }
-body label {
+body label:not(.checkboxlabel) {
   text-transform: uppercase;
 }
-body input, body select {
+body input:not(.checkbox), body select {
   margin: 1em auto;
   width: 100%;
   padding: 1em;

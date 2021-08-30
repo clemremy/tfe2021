@@ -18,6 +18,12 @@ class UserController extends Controller
         return view('users.list', ['users'=> $users]);
     }
 
+    public function indexProfil()
+    {
+        $users = User::all();
+        return view('profil.list', ['users'=> $users]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -49,6 +55,10 @@ class UserController extends Controller
     {
         return view('users.one', ['user'=>$user]);
     }
+    public function showProfil(User $user)
+    {
+        return view('profil.one', ['user'=>$user]);
+    }
 
     /**
      * Show the form for editing the specified resource.
@@ -60,6 +70,12 @@ class UserController extends Controller
     {
         $user = User::find($id);
         return view('users.edit', ['user'=>$user]);
+    }
+
+    public function editProfil($id)
+    {
+        $user = User::find($id);
+        return view('profil.edit', ['user'=>$user]);
     }
 
     /**
@@ -75,6 +91,7 @@ class UserController extends Controller
         $user->first_name = $request->has('first_name') && strlen($request->first_name) ? $request->first_name : $user->first_name;
         $user->last_name = $request->has('last_name') && strlen($request->last_name) ? $request->last_name : $user->last_name;
         $user->email = $request->has('email') && strlen($request->email) ? $request->email : $user->email;
+        $user->role = $request->has('role') && strlen($request->role) ? $request->role : $user->role;
 
         $user->save();
         

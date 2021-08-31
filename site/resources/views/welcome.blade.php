@@ -50,7 +50,25 @@
         Nos derniers articles.
     </h1>
     <div>
+        @if ($items->active == 1 && $items->customization == 0)
+        <div class="mobilier">
+            <figure>
+                <img src="/images/article/{{ $items->image }}" style="width:200px;" >
+            </figure>
+            <div>
+                <h2>{{$items->name}}</h2>
+                <p>{{$items->description}}</p>
+                <p>{{$items->price}}€</p>
+                <p>{{$items->amount}} pièces</p>
+                <p>Catégorie: {{$items->categories->name}}</p>
+                <br/>
 
+                <a class="custom-button" href="/article/{{$items->id }}">
+                    Voir l'article
+                </a>
+            </div>
+        </div>
+        @endif
     </div>
     <a href="/mobilier">Voir plus d'articles</a>
 </div>

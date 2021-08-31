@@ -27,7 +27,7 @@ class ItemController extends Controller
     public function indexhome()
     {
         $items = Item::latest()->paginate(5);
-        return view('welcome', ['items'=> $items])
+        return view('items.listwelcome', ['items'=> $items])
         ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 

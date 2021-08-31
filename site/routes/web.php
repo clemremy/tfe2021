@@ -28,7 +28,7 @@ require __DIR__.'/auth.php';
 Route::get('/', function () {
     return view('welcome');
 });
-//Route::get('/', 'App\Http\Controllers\ItemController@showhome')->name('showhome');
+Route::get('/', 'App\Http\Controllers\ItemController@indexhome')->name('indexhome');
 
 /// ------- PAGE ------- ///
 // ABOUT

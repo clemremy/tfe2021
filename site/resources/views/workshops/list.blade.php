@@ -2,12 +2,6 @@
 
 @section('content')
 <article class="atelier">
-    <!--
-    // Si aucun n'atelier n'est actif, alors montrer ceci...
-    <div class="emptyworkshop">
-      <h1>Aucun atelier n'est prévu pour le moment.</h1>
-    </div>
-    -->
     <h1>
         Nos ateliers.
     </h1>

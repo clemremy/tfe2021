@@ -34,7 +34,7 @@
         </form>
     @endif
 </div>
-@else($workshop->active==0 && Auth::user() && Auth::user()->role=='admin')
+@elseif (Auth::user() && Auth::user()->role=='admin' && $workshop->active == 0)
 <div class="workshop">
     <figure>
         <img src="{{ asset('images/1.jpg') }}"></img>
@@ -68,4 +68,8 @@
         </a>
     </form>
 </div>
+@endif
+
+@if( count(array($workshop->active == 1)) != null )
+    <h2>Aucun atelier n'est prévu pour l'instat</h2>
 @endif

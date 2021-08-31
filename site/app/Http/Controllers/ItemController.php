@@ -72,8 +72,8 @@ class ItemController extends Controller
         $item->save();
 
         //return redirect('/mobilier');
-        if (url()->previous() === '/mobilier') { 
-            return redirect()->back();
+        if ($item->customization==0) { 
+            return redirect('/mobilier');
         } else {
             return redirect('/mobilier-personnalisable');
         }
@@ -88,10 +88,6 @@ class ItemController extends Controller
     public function show(Item $item)
     {   
         return view('items.one', ['item'=>$item]);
-        //return view('items.two', ['item'=>$item]);
-        /*return view('welcome', ['item'=>$item]);
-        $item = Item::find($id);
-        return view('items.detail', ['item'=>$item]);*/
     }
 
     public function showdeux(Item $item)
@@ -99,8 +95,9 @@ class ItemController extends Controller
         return view('items.two', ['item'=>$item]);
     }
 
-    public function showarticle(Item $item)
+    public function showarticle($id)
     {   
+        $item = Item::find($id);
         return view('items.product', ['item'=>$item]);
     }
 
@@ -138,8 +135,8 @@ class ItemController extends Controller
         $item->save();
         
        //return redirect('/mobilier');
-       if (url()->previous() === url('/mobilier')) { 
-            return redirect()->back();
+       if ($item->customization==0) { 
+            return redirect('/mobilier');
         } else {
             return redirect('/mobilier-personnalisable');
         }

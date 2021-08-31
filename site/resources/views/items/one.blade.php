@@ -11,8 +11,8 @@
         <p>Catégorie: {{$items->categories->name}}</p>
         <br/>
 
-        <a class="custom-button" href="/mobilier/article/{{ $items->id }}">
-            <i class="fas fa-edit"></i>Voir l'article
+        <a class="custom-button" href="/article/{{$items->id }}">
+            Voir l'article
         </a>
 
     </div>

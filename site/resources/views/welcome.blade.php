@@ -50,7 +50,7 @@
         Nos derniers articles.
     </h1>
     <div>
-    
+
     </div>
     <a href="/mobilier">Voir plus d'articles</a>
 </div>

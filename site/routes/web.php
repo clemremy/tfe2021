@@ -28,10 +28,7 @@ require __DIR__.'/auth.php';
 Route::get('/', function () {
     return view('welcome');
 });
-/*Route::resource('/', 'App\Http\Controllers\ItemController')->only([
-    'indexhome'
-]);*/
-Route::get('/', 'App\Http\Controllers\ItemController@indexhome')->name('indexhome');
+//Route::get('/', 'App\Http\Controllers\ItemController@showhome')->name('showhome');
 
 /// ------- PAGE ------- ///
 // ABOUT

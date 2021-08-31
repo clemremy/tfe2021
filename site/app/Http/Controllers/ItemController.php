@@ -128,11 +128,30 @@ class ItemController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {
+    {  
+        $request->validate([
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+
+        $input = $request->all();
+
+        if ($image = $request->file('image')) {
+            $destinationPath = 'images/article';
+            $articleImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destinationPath, $articleImage);
+            $input['image'] = "$articleImage";
+        }else{
+            unset($input['image']);
+        }
+        
+        
         $item = Item::find($id);
         $item->name = $request->has('name') && strlen($request->name) ? $request->name : $item->name;
         $item->description = $request->has('description') && strlen($request->description) ? $request->description : $item->description;
         $item->price = $request->has('price') && strlen($request->price) ? $request->price : $item->price;
+
+        $item->image = $request->has('image') && strlen($request->image= date('YmdHis') . "." . $image->getClientOriginalExtension()) ? $request->image : $item->image;
+
         $item->amount = $request->has('amount') && strlen($request->amount) ? $request->amount : $item->amount;
         $item->customization = $request->has('customization') && strlen($request->customization) ? $request->customization : $item->customization;
         $item->categories_id = intval($request->categories_id) ? $request->categories_id : $item->categories_id;

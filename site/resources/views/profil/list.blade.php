@@ -5,7 +5,6 @@
     <h1>
         Les utilisateurs.
     </h1>
-    @each('profil.one', $users, 'user')``
-    @each('includes.header', $users, 'user')
+    @each('includes.header', $users, 'users')
 </article>
 @endsection

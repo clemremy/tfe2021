@@ -1,7 +1,7 @@
 @extends('layouts.default')
 @section('content')
 
-<form action="/mobilier/{{ $item->id }}" method="post" class="form-edit mobilier">
+<form action="/mobilier/{{ $item->id }}" method="post" class="form-edit mobilier" enctype="multipart/form-data">
     @csrf
     @method('put')
     <label>Nom de l'article:</label>

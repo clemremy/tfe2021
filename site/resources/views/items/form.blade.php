@@ -1,7 +1,7 @@
 @extends('layouts.default')
 @section('content')
 
-<form action="/mobilier" method="post" class="form-create mobilier">
+<form action="/mobilier" method="post" class="form-create mobilier" enctype="multipart/form-data">
     @csrf
     <label>Nom de l'article:</label>
     <input type="text" name="name">

@@ -16,10 +16,6 @@ class ItemController extends Controller
     {
         $items = Item::orderBy('created_at', 'desc')->get();
         return view('items.list', ['items'=> $items]);
-
-        /*$items = Item::latest()->paginate(5);
-        return view('welcome', ['items'=> $items])
-        ->with('i', (request()->input('page', 1) - 1) * 5);*/
     }
 
     public function indexdeux()
@@ -27,6 +23,12 @@ class ItemController extends Controller
         //$items = Item::all();
         $items = Item::orderBy('created_at', 'desc')->get();
         return view('items.listtwo', ['items'=> $items]);
+    }
+    public function indexhome()
+    {
+        $items = Item::latest()->paginate(5);
+        return view('welcome', ['items'=> $items])
+        ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     /**
@@ -48,13 +50,26 @@ class ItemController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+  
+        $input = $request->all();
+
+        if ($image = $request->file('image')) {
+            $destinationPath = 'images/article';
+            $articleImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destinationPath, $articleImage);
+            $input['image'] = "$articleImage";
+        }
+
         $item = new Item();
         $item->name = $request->has('name') && strlen($request->name) ? $request->name : 'Pas de nom';
         $item->description = $request->has('description') && strlen($request->description) ? $request->description : 'Pas de description';
         $item->price = $request->has('price') && strlen($request->price) ? $request->price : 'Pas de prix';
 
-        $item->image = $request->hasFile('image') && file($request->image) ? $request->image : 'none';
-        //$item->image = $request->has('image') && strlen($request->image) ? $request->image : 'none';
+        //$item->image = $request->hasFile('image') && file($request->image) ? $request->image : 'none';
+        $item->image = $request->has('image') && strlen($request->image= date('YmdHis') . "." . $image->getClientOriginalExtension()) ? $request->image : 'none';
 
         $item->amount = $request->has('amount') && strlen($request->amount) ? $request->amount : 'Pas de quantité';
         $item->customization = $request->has('customization') && strlen($request->customization) ? $request->customization : 'Pas de personnalisation';
@@ -62,16 +77,8 @@ class ItemController extends Controller
         //$item->active = intval($request->active) ? $request->active : '';
         $item->active = $request->has('active') && strlen($request->active) ? $request->active : '0';
 
-        if ($image = $request->file('image')) {
-            $destinationPath = 'images/article/';
-            $articleImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-            $image->move($destinationPath, $articleImage);
-            $input['image'] = "$articleImage";
-        }
-
         $item->save();
 
-        //return redirect('/mobilier');
         if ($item->customization==0) { 
             return redirect('/mobilier');
         } else {
@@ -134,7 +141,6 @@ class ItemController extends Controller
         
         $item->save();
         
-       //return redirect('/mobilier');
        if ($item->customization==0) { 
             return redirect('/mobilier');
         } else {

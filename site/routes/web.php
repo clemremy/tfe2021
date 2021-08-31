@@ -25,13 +25,13 @@ Route::get('/dashboard', function () {
 require __DIR__.'/auth.php';
 
 
-
 Route::get('/', function () {
     return view('welcome');
 });
-//Route::get('/', 'App\Http\Controllers\ItemController@show');
-
-
+/*Route::resource('/', 'App\Http\Controllers\ItemController')->only([
+    'indexhome'
+]);*/
+Route::get('/', 'App\Http\Controllers\ItemController@indexhome')->name('indexhome');
 
 /// ------- PAGE ------- ///
 // ABOUT
@@ -69,12 +69,14 @@ Route::get('/article/{id}', 'App\Http\Controllers\ItemController@showarticle')->
 Route::resource('reservation', 'App\Http\Controllers\BookingController');
 Route::resource('categorie', 'App\Http\Controllers\CategoryController');
 
+// UPLOAD IMAGE
+//Route::post('uploadImage', [PictureController::class, 'store']);
 
 // PROFIL
 //Route::resource('profil', 'App\Http\Controllers\UserController');
-Route::get('/profil', 'App\Http\Controllers\UserController@indexProfil')->name('profil.indexProfil');
 Route::resource('utilisateurs', 'App\Http\Controllers\UserController');
-
+Route::resource('profil', 'App\Http\Controllers\UserController');
+Route::get('/profil/{id}', 'App\Http\Controllers\UserController@showprofil')->name('showprofil');
 
 
 /// ------- LEGAL PAGE ------- ///

@@ -12,9 +12,15 @@
         <p>{{$item->amount}} pièces</p>
         <p>Catégorie: {{$item->categories->name}}</p>
         <br/>
+        @if( ! Auth::check() )
+        <a href="/login" class="custom-button">
+            Réserver l'article
+        </a>
+        @elseif( Auth::check() )
         <button class="custom-button modal-btn" id="{{ $item->id }}" type="submit">
             Réserver l'article
         </button>
+        @endif
     </div>
 </div>
 

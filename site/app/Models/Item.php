@@ -16,7 +16,7 @@ class Item extends Model
         'amount',
         'customization',
         'active',
-        'image'
+        'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
     ];
 
     public function users () {

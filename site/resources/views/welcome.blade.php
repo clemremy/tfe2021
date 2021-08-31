@@ -4,17 +4,15 @@
 <div class="slideshow-container">
     
     <div class="title-home">
+        @if(Auth::check() && Auth::user()->role=='admin')
+            <p>Vous êtes connecté comme admin</p>
+            @elseif(Auth::check() && Auth::user()->role=='user')
+                <p>Bienvenue</p>
+        @endif
+
         <h1>
             Du mobilier unique.
         </h1>
-        <form class="newsletter" >
-            <label>Ne ratez rien</label>
-            <br/>
-            <p>
-            <input type="email" name="email" value="" placeholder="catherinemoulin@gmail.com" >
-            <input type="submit" value="&#10230;">
-            </p>
-        </form>
     </div>
     
     <div>
@@ -52,9 +50,20 @@
         Nos derniers articles.
     </h1>
     <div>
-
+    
     </div>
     <a href="/mobilier">Voir plus d'articles</a>
+</div>
+
+<div>
+    <form class="newsletter" >
+        <label>Ne ratez rien</label>
+        <br/>
+        <p>
+        <input type="email" name="email" value="" placeholder="catherinemoulin@gmail.com" >
+        <input type="submit" value="&#10230;">
+        </p>
+    </form>
 </div>
 
 <script>

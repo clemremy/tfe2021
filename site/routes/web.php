@@ -60,7 +60,6 @@ Route::get('/mobilier-accueil', function()
 Route::resource('mobilier', 'App\Http\Controllers\ItemController');
 Route::get('/mobilier-personnalisable', 'App\Http\Controllers\ItemController@indexdeux')->name('indexdeux');
 //Route::get('/mobilier-personnalisable/{item}', 'App\Http\Controllers\ItemController@showdeux')->name('showdeux');
-
 //Route::resource('/mobilier/article', 'App\Http\Controllers\ItemController');
 Route::resource('article', 'App\Http\Controllers\ItemController@showarticle')->except([
     'show'

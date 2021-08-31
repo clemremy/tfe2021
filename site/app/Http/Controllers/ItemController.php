@@ -26,9 +26,8 @@ class ItemController extends Controller
     }
     public function indexhome()
     {
-        $items = Item::latest()->paginate(5);
-        return view('items.listwelcome', ['items'=> $items])
-        ->with('i', (request()->input('page', 1) - 1) * 5);
+        $items = Item::latest()->paginate(3);
+        return view('items.listwelcome', ['items'=> $items]);
     }
 
     /**
@@ -118,6 +117,11 @@ class ItemController extends Controller
     {
         $item = Item::find($id);
         return view('items.edit', ['item'=>$item]);
+    }
+    public function editprofil($id)
+    {
+        $item = Item::find($id);
+        return view('profil.edit', ['item'=>$item]);
     }
 
     /**

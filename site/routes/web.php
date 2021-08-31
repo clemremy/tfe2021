@@ -44,9 +44,11 @@ Route::get('/contact', function()
 });
 
 
+
 // ATELIERS
 Route::resource('ateliers', 'App\Http\Controllers\WorkshopController');
 Route::resource('inscription', 'App\Http\Controllers\Workshop_userController');
+
 
 
 // MOBILIER
@@ -66,14 +68,19 @@ Route::get('/article/{id}', 'App\Http\Controllers\ItemController@showarticle')->
 Route::resource('reservation', 'App\Http\Controllers\BookingController');
 Route::resource('categorie', 'App\Http\Controllers\CategoryController');
 
-// UPLOAD IMAGE
-//Route::post('uploadImage', [PictureController::class, 'store']);
+
 
 // PROFIL
-//Route::resource('profil', 'App\Http\Controllers\UserController');
 Route::resource('utilisateurs', 'App\Http\Controllers\UserController');
-Route::resource('profil', 'App\Http\Controllers\UserController');
+//Route::resource('profil', 'App\Http\Controllers\UserController');
+Route::resource('profil', 'App\Http\Controllers\UserController')->except([
+    'indexprofil', 'showprofil'
+]);
+//Route::get('/', 'App\Http\Controllers\UserController@indexprofil')->name('indexprofil');
+Route::get('/profil/{id}', 'App\Http\Controllers\UserController@indexprofil')->name('indexprofil');
 Route::get('/profil/{id}', 'App\Http\Controllers\UserController@showprofil')->name('showprofil');
+Route::get('/profil/{id}/edit', 'App\Http\Controllers\UserController@editprofil')->name('editprofil');
+
 
 
 /// ------- LEGAL PAGE ------- ///

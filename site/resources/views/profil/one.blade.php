@@ -8,4 +8,8 @@
     @else
         <p>Vous n'êtes pas inscrit à la newsletter</p>
     @endif
+
+    <a class="btn-edit" href="{{ route('profil.edit', $user->id) }}">
+        <i class="fas fa-edit"></i>Modifier
+    </a>
 </div>

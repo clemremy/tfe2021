@@ -62,7 +62,7 @@
                 <a href="mailto:clemremypro@gmail.com"><strong>Clem Remy</strong></a>
             </li>
             <li>
-                <a href="{{ url('/politique-de-confidentialites') }}">Politique de confidentialité</a>
+                <a href="{{ url('/politique-de-confidentialite') }}">Politique de confidentialité</a>
             </li>
             <li>
                 <a href="{{ url('/conditions-generales') }}">Conditions générales</a>

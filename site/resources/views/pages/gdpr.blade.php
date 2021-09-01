@@ -25,7 +25,7 @@
                 <p>  
                     Vos données à caractère personnel sont collectées pour répondre à une ou plusieurs des finalités suivantes :
                     <br/>
-                    Formulaire de contact lié aux questions, demandes générales ou commerciales. Les données vous concernant pour ce formulaires sont :
+                    Formulaire de contact lié aux questions, demandes générales ou commerciales. Les données vous concernant pour ce formulaire sont :
                     <br/>
                     Nom
                     Prénom
@@ -36,7 +36,7 @@
             <li>
                 <h2>4. Cession des données à caractère personnel.</h2>
                 <p>  
-                    Vos données à caractère personnel ne feront pas l’objet de cessions, locations ou échanges au bénéfice de tiers. Elles sont uniquement utilisées à des fins d’analyse ou de réponse.
+                    Vos données à caractère personnel ne feront pas l’objet de cessions, locations ou échanges au bénéfice de tiers. Elles sont uniquement utilisées à des fins d’analyses ou de réponses.
                 </p>
             </li>
 
@@ -48,34 +48,16 @@
             </li>
 
             <li>
-                <h2>6. Cookies.</h2>
-                <p>  
-                    Nous utilisons ou pouvons utiliser Google Analytics qui est un outil statistique d’analyse d’audience qui génère un cookie permettant de mesurer le nombre de visites sur le site, le nombre de pages vues et l’activité des visiteurs. Votre adresse IP est également collectée pour déterminer la ville depuis laquelle vous vous connectez.
-                    <br/>
-                    Nous vous rappelons à toutes fins utiles qu’il vous est possible de vous opposer au dépôt de cookies en configurant votre navigateur. Un tel refus pourrait toutefois empêcher le bon fonctionnement du site.
-                </p>
-            </li>
-
-            <li>
-                <h2>7. Formulaire de contact sur le site web.</h2>
-                <p>  
-                    Les demandes de contact via le formulaire sont redirigées vers la même boite mail que celle de l’adresse gluckdesign@gmail.com, qui sont lues exclusivement par l’équipe de Glück Design.
-                    <br/>
-                    Les informations que nous collectons ne sont jamais divulguées en externe.
-                </p>
-            </li>
-
-            <li>
-                <h2>8. Consentement.</h2>
+                <h2>6. Consentement.</h2>
                 <p>  
                     Lorsque vous choisissez de communiquer vos données à caractère personnel, vous donnez expressément votre consentement pour la collecte et l’utilisation de celles-ci conformément à ce qui est énoncé à la présente charte et à la législation en vigueur.
                 </p>
             </li>
 
             <li>
-                <h2>9. Accès à vos données à caractère personnel.</h2>
+                <h2>7. Accès à vos données à caractère personnel.</h2>
                 <p>  
-                    Vous disposez du droit d’obtenir la communication et, le cas échéant, la rectification ou la suppression des données vous concernant. A ces fins ou pour tout autre question concernant la présente charte, vous pouvez vous adresser à : gluckdesign@gmail.com.
+                    Vous disposez du droit d’obtenir la communication et, le cas échéant, la rectification ou la suppression des données vous concernant. A ces fins ou pour tout autre question concernant la présente charte, vous pouvez vous adresser à : gluckdesign.contact@gmail.com.
                     <br/>
                     Il est rappelé que toute personne peut, pour des motifs légitimes, s'opposer au traitement des données la concernant.
                 </p>

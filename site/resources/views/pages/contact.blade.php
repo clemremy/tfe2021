@@ -16,9 +16,9 @@
             <div class="info col-6">
                 <address>
                     <i class="fa-lg"></i>
-                    <a href="mailto:gluckdesign@gmail.com">gluckdesign@gmail.com</a>
+                    <a href="mailto:gluckdesign.contact@gmail.com">gluckdesign.contact@gmail.com</a>
                     <br/><br/>
-                    <a href="tel:+32000000000">+32 473/930.226</a>
+                    <a href="tel:+32479459416">+32 479 45 94 16</a>
                 </address>
                 <br/>
                 <address>

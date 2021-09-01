@@ -1,5 +1,5 @@
 <meta charset="utf-8">
-<meta name="description" content="Donnez une seconde vie à ces meubles vintages et remplis d'histoire en favorisant la rénovation et revolarisation pour offrir un charme unique à votre intérieur. Participez à des ateliers pour tout apprendre sur les bienfaits du circuit court et du zéro déchet.">
+<meta name="description" content="Donnez une seconde vie à des meubles vintages rempli d'histoires en favorisant la rénovation et revolarisation pour offrir un charme unique à votre intérieur. Participez à des ateliers pour tout apprendre sur les bienfaits du circuit court et du zéro déchet.">
 <meta name="keywords" content="Gluck Design, meuble, mobilier, rénovation, revalorisation, belge, scandinave, circuit court, zéro déchet, ateliers, produits, vintage, table de nuit, chaise, table, fateuil, canapé, commode, design, décoration, décoration intérieure, intérieur, chic">
 <meta name="author" content="Glück Design">
 <meta name="copyright" content="Glück Design">

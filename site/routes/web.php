@@ -83,7 +83,7 @@ Route::put('/profil', 'App\Http\Controllers\UserController@updateprofil')->name(
 
 
 /// ------- LEGAL PAGE ------- ///
-Route::get('/politique-de-confidentialites', function()
+Route::get('/politique-de-confidentialite', function()
 {
     return View::make('pages.gdpr');
 });

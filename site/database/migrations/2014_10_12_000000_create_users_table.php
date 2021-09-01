@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('role')->default('user');
             $table->boolean('newsletter')->default(0);
-            $table->boolean('account')->default(0);
+            $table->boolean('account')->default(1);
             $table->boolean('gdpr')->default(0);
             $table->boolean('terms')->default(0);
             $table->timestamp('email_verified_at')->nullable();

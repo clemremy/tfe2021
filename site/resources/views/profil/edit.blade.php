@@ -1,22 +1,22 @@
 @extends('layouts.default')
 @section('content')
 
-<form action="/profil/{{ $user->id }}" method="post" class="form-edit profil">
+<form action="/profil" method="post" class="form-edit profil">
     @csrf
     @method('put')
     <label for="prenom">Prénom:</label>
-    <input type="text" name="prenom">
+    <input type="text" name="prenom" value="{{ $user->first_name }}">
 
     <label for="name">Nom:</label>
-    <input type="text" name="name">
+    <input type="text" name="name" value="{{ $user->last_name }}">
 
     <label for="email">Adresse mail:</label>
-    <input type="email" name="email">
+    <input type="email" name="email" value="{{ $user->email }}">
 
     <label>Recevoir la newsletter?</label>
     <select name="newsletter">
-        <option value="1" {{ ($item->active == 1) ? 'selected' : '' }}>Oui</option>
-        <option value="0" {{ ($item->active == 0) ? 'selected' : '' }}>Non</option>
+        <option value="1" {{ ($user->newsletter == 1) ? 'selected' : '' }}>Oui</option>
+        <option value="0" {{ ($user->newsletter == 0) ? 'selected' : '' }}>Non</option>
     </select>
 
     <div class="cta">

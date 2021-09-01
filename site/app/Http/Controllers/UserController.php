@@ -25,7 +25,6 @@ class UserController extends Controller
 
     public function indexProfil()
     {
-        $users = User::all();
         return view('profil.list', ['users'=> $users]);
     }
 
@@ -60,9 +59,10 @@ class UserController extends Controller
     {
         return view('users.one', ['user'=>$user]);
     }
-    public function showprofil($id)
+    public function showprofil(User $user)
     {   
-        $user = User::find($id);
+        $user = auth()->user();
+        $id = auth()->id();
         return view('profil.one', ['user'=>$user]);
     }
 
@@ -78,9 +78,12 @@ class UserController extends Controller
         return view('users.edit', ['user'=>$user]);
     }
 
-    public function editProfil($id)
+    public function editProfil(User $user)
     {
-        $user = User::find($id);
+        //$user = User::find($id);
+        //return view('profil.edit', ['user'=>$user]);
+        $user = auth()->user();
+        $id = auth()->id();
         return view('profil.edit', ['user'=>$user]);
     }
 

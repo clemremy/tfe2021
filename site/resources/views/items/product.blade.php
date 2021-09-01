@@ -16,11 +16,18 @@
         <a href="/login" class="custom-button">
             Réserver l'article
         </a>
-        @elseif( Auth::check() )
+        @elseif( Auth::check() && $item->customization == 0)
         <button class="custom-button modal-btn" id="{{ $item->id }}" type="submit">
             Réserver l'article
         </button>
+        @elseif( Auth::check() && $item->customization == 1)
+        <a href="/contact" class="custom-button">
+            Interessé? Contactez-moi!
+        </a>
         @endif
+        <div class="cta">
+            <a href="{{ url()->previous() }}" class="btn-back">Annuler</a>
+        </div>
     </div>
 </div>
 

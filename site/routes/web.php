@@ -72,11 +72,10 @@ Route::resource('categorie', 'App\Http\Controllers\CategoryController');
 
 // PROFIL
 Route::resource('utilisateurs', 'App\Http\Controllers\UserController');
-//Route::resource('profil', 'App\Http\Controllers\UserController');
+
 Route::resource('profil', 'App\Http\Controllers\UserController')->except([
-    'indexprofil', 'showprofil'
+    'indexprofil', 'showprofil', 'editprofil'
 ]);
-//Route::get('/', 'App\Http\Controllers\UserController@indexprofil')->name('indexprofil');
 Route::get('/profil/{id}', 'App\Http\Controllers\UserController@indexprofil')->name('indexprofil');
 Route::get('/profil/{id}', 'App\Http\Controllers\UserController@showprofil')->name('showprofil');
 Route::get('/profil/{id}/edit', 'App\Http\Controllers\UserController@editprofil')->name('editprofil');

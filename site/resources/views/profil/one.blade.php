@@ -12,4 +12,7 @@
     <a class="btn-edit" href="{{ route('profil.edit', $user->id) }}">
         <i class="fas fa-edit"></i>Modifier
     </a>
+    @if( Auth::user() && Auth::user()->role=='admin') 
+        <a href="/utilisateurs" role="button">Voir tous les utilisateurs</a>
+    @endif
 </div>

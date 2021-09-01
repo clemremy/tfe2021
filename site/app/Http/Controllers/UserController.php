@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Auth;
 
 class UserController extends Controller
 {
@@ -14,9 +15,13 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::all();
-        return view('users.list', ['users'=> $users]);
+        if (Auth::user() &&  Auth::user()->role == 'admin') {
+            $users = User::all();
+            return view('users.list', ['users'=> $users]);
+        } 
+        return view('auth.login');
     }
+    
 
     public function indexProfil()
     {

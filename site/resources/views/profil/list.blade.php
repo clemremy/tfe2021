@@ -3,7 +3,7 @@
 @section('content')
 <article class="profile">
     <h1>
-        Les utilisateurs.
+        Mon profil.
     </h1>
     
     @each('profil.one', $users, 'users')

@@ -6,16 +6,16 @@
     </div>
     <ul class="navlinks col-8">
         <li>
-            <a href="{{ url('/a-propos') }}">A propos</a>
+            <a href="/a-propos">A propos</a>
         </li>
         <li>
-            <a href="{{ url('/contact') }}">Contact</a>
+            <a href="/contact">Contact</a>
         </li>
         <li>
             <a href="/ateliers">Atelier</a>
         </li>
         <li>
-            <a href="{{ url('/mobilier-accueil') }}">Mobilier</a>
+            <a href="/mobilier-accueil">Mobilier</a>
         </li>
         
         @if (!Auth::check())
@@ -35,7 +35,7 @@
                 <x-dropdown-link :href="route('logout')"
                         onclick="event.preventDefault();
                                     this.closest('form').submit();">
-                    {{ __('Logout') }}
+                    {{ __('Se déconnecter') }}
                 </x-dropdown-link>
             </form>
         </li>

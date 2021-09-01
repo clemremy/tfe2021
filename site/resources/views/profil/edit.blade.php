@@ -1,6 +1,3 @@
-@extends('layouts.default')
-@section('content')
-
 <form action="/profil" method="post" class="form-edit profil">
     @csrf
     @method('put')
@@ -23,5 +20,4 @@
         <input type="submit" value="Enregistrer" class="btn-edit">
         <a href="{{ url()->previous() }}" class="btn-back">Annuler</a>
     </div>
-    @stop
 </form>

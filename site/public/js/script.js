@@ -8,3 +8,11 @@ $(document).ready(function() {
         $('#myModal').css('display', 'none');
     });
 });
+
+$(document).ready(function() {
+    var checkBoxes = $('div .checkbox');
+    checkBoxes.change(function () {
+        $('.submitcheck').prop('disabled', checkBoxes.filter(':checked').length < 1);
+    });
+    $('div .checkbox').change();
+});

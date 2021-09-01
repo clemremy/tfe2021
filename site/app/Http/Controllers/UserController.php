@@ -46,7 +46,15 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        /*
+        $user->first_name = $request->has('first_name') && strlen($request->first_name) ? $request->first_name : 'Pas de prénom';
+        $user->last_name = $request->has('last_name') && strlen($request->last_name) ? $request->last_name : 'Pas de nom';
+        $user->email = $request->has('email') && strlen($request->email) ? $request->email : 'Pas d\'email';
+        $user->role = $request->has('role') && strlen($request->role) ? $request->role : 'user';
+        $user->newsletter = $request->has('newsletter') && strlen($request->newsletter) ? $request->newsletter : '0';
+        $user->save();
+        return redirect('/profil');
+        */
     }
 
     /**
@@ -107,6 +115,19 @@ class UserController extends Controller
        return redirect('/utilisateurs');
     }
 
+    public function updateprofil(Request $request, User $user)
+    {
+        $user = auth()->user();
+        $id = auth()->id();
+        $user->first_name = $request->has('first_name') && strlen($request->first_name) ? $request->first_name : $user->first_name;
+        $user->last_name = $request->has('last_name') && strlen($request->last_name) ? $request->last_name : $user->last_name;
+        $user->email = $request->has('email') && strlen($request->email) ? $request->email : $user->email;
+        $user->role = $request->has('role') && strlen($request->role) ? $request->role : $user->role;
+        
+        $user->save();
+        
+        return redirect('/profil');
+    }
     /**
      * Remove the specified resource from storage.
      *

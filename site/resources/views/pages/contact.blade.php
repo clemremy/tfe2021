@@ -51,7 +51,7 @@
                     <p>
                         <label for="subject">Sujet</label>
                         <select name="subject">
-                            <option value="">--Choisir une option--</option>
+                            <option value="none">--Choisir une option--</option>
                             <option value="rdv">Rendez-vous</option>
                             <option value="commande">Commande personnalisée</option>
                             <option value="sav">Service après vente</option>
@@ -62,10 +62,11 @@
                         <label for="message">Message</label>
                         <input type="textarea" name="message" placeholder="..." required>
                     </p>
+                    <input type="text" id="honeypot" value="" style="display:none">
                     <p>
                         <div class="mycheckboxes">
-                            <input name="terms" type="hidden" value="1">
-                            <input type="checkbox" class="checkbox" name="gdpr" value="1">
+                            <input type="hidden" name="terms" value="1">
+                            <input type="hidden" class="checkbox" name="gdpr" value="1">
                             <label for="gdpr" class="checkboxlabel">J'ai lu et j'accepte les <a href="{{ url('/conditions-generales') }}">conditions générales</a> et la <a href="{{ url('/politique-de-confidentialites') }}">politique de confidentialité</a>.</label>
                         </div>
                     </p>

@@ -42,10 +42,9 @@ Route::get('/contact', function()
 {
     return View::make('pages.contact');
 });
-Route::get('/mail', function()
-{
-    return View::make('pages.mail');
-});
+Route::resource('/contact', 'App\Http\Controllers\ContactFormController')->except([
+    'index'
+]);
 
 
 // ATELIERS

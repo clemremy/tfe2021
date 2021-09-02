@@ -28,8 +28,9 @@ class ContactFormController extends Controller
     public function store(Request $request)
     {
         if( Contact::create($request->all()) ) {
-            Mail::to('gluckdesign.contact@gmail.com')->send(new Contact($data));
-            return true;
+            $data = $request->all();
+            Mail::to('gluckdesign.contact@gmail.com')->send(new ContactMail($data));
+            return redirect('/contact');
         } else {
             return false;
         }

@@ -26,7 +26,7 @@ class ItemController extends Controller
     }
     public function indexhome()
     {
-        $items = Item::latest()->paginate(3);
+        $items = Item::latest()->paginate(5);
         return view('items.listwelcome', ['items'=> $items]);
     }
 

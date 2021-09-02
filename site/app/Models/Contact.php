@@ -14,6 +14,8 @@ class Contact extends Model
         'last_name', 
         'email',
         'subject',
-        'message'
+        'message', 
+        //'gdpr',
+        //'terms'
     ];
 }

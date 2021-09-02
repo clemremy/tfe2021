@@ -18,7 +18,7 @@ class CreateContactsTable extends Migration
             $table->string('first_name');
             $table->string('last_name');
             $table->string('email');
-            $table->string('subject');
+            $table->string('subject')->nullable();
             $table->text('message');
             $table->boolean('gdpr')->default(1);
             $table->boolean('terms')->default(1);

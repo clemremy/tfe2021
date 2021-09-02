@@ -7,11 +7,11 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class Contact extends Mailable
+class ContactMail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    protected $data;
+    public $data;
     /**
      * Create a new message instance.
      *
@@ -30,13 +30,8 @@ class Contact extends Mailable
     public function build()
     {
         //return $this->subject('Nouveau message')->markdown('pages.mail');
-        //return $this->from('example@example.com', 'Example')->view('pages.mail');
-        /*return $this->view('pages.mail')
-        ->with([
-            'datafirst_name' => $this->data->first_name,
-            'datalast_name' => $this->data->last_name,
-        ]);*/
-        return $this->from('example@example.com')
-        ->markdown('pages.mail');
+        /*return $this->from('example@example.com')
+        ->markdown('pages.mail');*/
+        return $this->subject('Nouveau message')->markdown('pages.mail');
     }
 }

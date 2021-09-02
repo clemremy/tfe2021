@@ -6,7 +6,7 @@ use App\Http\Controllers\WorkshopController;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\UserController;
-
+use App\Mail\ContactMail;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -42,7 +42,10 @@ Route::get('/contact', function()
 {
     return View::make('pages.contact');
 });
-
+Route::get('/mail', function()
+{
+    return View::make('pages.mail');
+});
 
 
 // ATELIERS

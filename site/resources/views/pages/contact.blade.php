@@ -34,14 +34,7 @@
             </div>
             
             <div class="contactform">
-                <!-- Success message -->
-                @if(Session::has('success'))
-                    <div>
-                        {{Session::get('success')}}
-                    </div>
-                @endif
-
-                <form method="post" action="" class="contact col-6">
+                <form action="/contact" method="post" class="contact col-6">
                 @csrf
                     <p>
                         <label for="first_name">Prénom</label>
@@ -67,11 +60,16 @@
                     </p>
                     <p>
                         <label for="message">Message</label>
-                        <input type="textarea" name="message" placeholder="Bonjour, j'aimerais..." required>
+                        <input type="textarea" name="message" placeholder="..." required>
                     </p>
-                    <p class="custom-button">
-                        <input type="submit" value="envoyer" class="btn">
+                    <p>
+                        <div class="mycheckboxes">
+                            <input name="terms" type="hidden" value="1">
+                            <input type="checkbox" class="checkbox" name="gdpr" value="1">
+                            <label for="gdpr" class="checkboxlabel">J'ai lu et j'accepte les <a href="{{ url('/conditions-generales') }}">conditions générales</a> et la <a href="{{ url('/politique-de-confidentialites') }}">politique de confidentialité</a>.</label>
+                        </div>
                     </p>
+                    <input type="submit" value="Envoyer" class="btn submitcheck" id="sent">
                 </form>
             </div>
         </div>

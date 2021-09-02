@@ -20,6 +20,8 @@ class CreateContactsTable extends Migration
             $table->string('email');
             $table->string('subject');
             $table->text('message');
+            $table->boolean('gdpr')->default(1);
+            $table->boolean('terms')->default(1);
             $table->timestamps();
         });
     }

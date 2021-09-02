@@ -3,41 +3,69 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Contact;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ContactMail;
 
 class ContactFormController extends Controller
 {
-    // Create Contact Form
-    public function createForm(Request $request) {
-        return view('pages.contact');
+/**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        return Contact::all();
     }
 
-    // Store Contact Form data
-    public function ContactUsForm(Request $request) {
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        if( Contact::create($request->all()) ) {
+            Mail::to('gluckdesign.contact@gmail.com')->send(new Contact($data));
+            return true;
+        } else {
+            return false;
+        }
+    }
 
-        // Form validation
-        $this->validate($request, [
-            'first_name' => 'required',
-            'last_name' => 'required',
-            'email' => 'required|email',
-            'subject'=>'required',
-            'message' => 'required'
-        ]);
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\Contact  $contact
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Contact $contact)
+    {
+        return $contact;
+    }
 
-        //  Store data in database
-        Contact::create($request->all());
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\Contact  $contact
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, Contact $contact)
+    {
+        $contact->update($request->all());
+    }
 
-        //  Send mail to admin
-        \Mail::send('mail', array(
-            'first_name' => $request->get('first_name'),
-            'last_name' => $request->get('last_name'),
-            'email' => $request->get('email'),
-            'subject' => $request->get('subject'),
-            'message' => $request->get('message'),
-        ), function($message) use ($request){
-            $message->from($request->email);
-            $message->to('gluckdesign.contact@gmail.com', 'Admin')->subject($request->get('subject'));
-        });
-
-        return redirect('/contact')->with('success', 'Votre message a bien été envoyé, merci!');
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Models\Contact  $contact
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(Contact $contact)
+    {
+        $contact->delete();
     }
 }

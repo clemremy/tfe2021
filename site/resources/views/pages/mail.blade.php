@@ -1,11 +1,8 @@
-<article class="mailing">
-    Vous avez reçu un message de: {{ $first_name $last_name }} <br><br>
+@component('mail::message')
+# Vous avez reçu un message de la part de {{ $data['first_name'] }} {{ $data['last_name'] }} ({{ $data['email'] }})
 
-    User details: <br><br>
+Contenu du message:
 
-    First name: {{ $first_name }} <br>
-    Last name: {{ $last_name }} <br>
-    Email: {{ $email }} <br>
-    Subject: {{ $subject }} <br>
-    Message: {{ $message }} <br><br>
-</article>
+{{ $data['message'] }}
+
+@endcomponent

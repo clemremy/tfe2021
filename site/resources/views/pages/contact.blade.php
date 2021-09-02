@@ -66,7 +66,7 @@
                     <p>
                         <div class="mycheckboxes">
                             <input type="hidden" name="terms" value="1">
-                            <input type="hidden" class="checkbox" name="gdpr" value="1">
+                            <input type="checkbox" class="checkbox" name="gdpr" value="1">
                             <label for="gdpr" class="checkboxlabel">J'ai lu et j'accepte les <a href="{{ url('/conditions-generales') }}">conditions générales</a> et la <a href="{{ url('/politique-de-confidentialites') }}">politique de confidentialité</a>.</label>
                         </div>
                     </p>

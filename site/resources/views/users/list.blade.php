@@ -10,6 +10,7 @@
             <th>Prénom</th>
             <th>Nom</th>
             <th>Email</th>
+            <th>Newsletter</th>
             <th>Action</th>
         </tr>
         @each('users.one', $users, 'user')

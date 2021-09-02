@@ -30,13 +30,15 @@
         <label>Nombre de places désirées<sup>*</sup>:</label>
         <input type="number" name="nb_persons" required>
 
+        <input type="text" id="honeypot" value="" style="display:none">
+        
         <p>Un email de confirmation vous sera envoyé avec les informations de paiements à réaliser dans les 7 jours qui suivent la réception de ce-dernier pour finaliser votre inscription. Au dela de ce délais, votre inscription sera annulée et les places remises en vente.
           
           <br/><br/>
           <div class="mycheckboxes">
            <input name="terms" type="hidden" value="1">
             <input type="checkbox" class="checkbox" name="gdpr" value="1">
-            <label for="gdpr" class="checkboxlabel">J'ai lu et j'accepte les <a href="{{ url('/conditions-generales') }}">conditions générales</a> et la <a href="{{ url('/politique-de-confidentialites') }}">politique de confidentialité</a>.</label>
+            <label for="gdpr" class="checkboxlabel">J'ai lu et j'accepte les <a href="{{ url('/conditions-generales') }}">conditions générales</a> et la <a href="{{ url('/politique-de-confidentialite') }}">politique de confidentialité</a>.</label>
           </div>
 
           <br/><br/>

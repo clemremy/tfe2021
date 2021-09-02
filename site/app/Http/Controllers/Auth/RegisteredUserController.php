@@ -36,6 +36,9 @@ class RegisteredUserController extends Controller
             'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
+            'account' => 'required|string|max:255',
+            'gdpr' => 'required|string|max:255',
+            'terms' => 'required|string|max:255',
             'password' => 'required|string|confirmed|min:8',
         ]);
 
@@ -43,6 +46,9 @@ class RegisteredUserController extends Controller
             'first_name' => $request->first_name,
             'last_name' => $request->last_name,
             'email' => $request->email,
+            'account' => $request->account,
+            'gdpr' => $request->gdpr,
+            'terms' => $request->terms,
             'password' => Hash::make($request->password),
         ]));
 

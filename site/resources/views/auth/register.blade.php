@@ -46,6 +46,19 @@
                                 name="password_confirmation" required />
             </div>
 
+
+            <input type="text" id="honeypot" value="" style="display:none">
+            <input type="text" name="account" value="1" style="display:none">
+
+            <p>
+                <div class="mycheckboxes">
+                    <input name="terms" type="hidden" value="1">
+                    <input type="checkbox" class="checkbox" name="gdpr" value="1">
+                    <label for="gdpr" class="checkboxlabel">J'ai lu et j'accepte les <a href="{{ url('/conditions-generales') }}">conditions générales</a> et la <a href="{{ url('/politique-de-confidentialite') }}">politique de confidentialité</a>.</label>
+                </div>
+            </p>
+
+
             <div class="flex items-center justify-end mt-4">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
                     {{ __('Déjà enregistré? ') }}

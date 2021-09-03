@@ -2,13 +2,13 @@
     @csrf
     @method('put')
     <label for="prenom">Prénom:</label>
-    <input type="text" name="prenom" value="{{ $user->first_name }}">
+    <input type="text" name="first_name" value="{{Auth::user()->first_name}}">
 
     <label for="name">Nom:</label>
-    <input type="text" name="name" value="{{ $user->last_name }}">
+    <input type="text" name="last_name" value="{{Auth::user()->last_name}}">
 
     <label for="email">Adresse mail:</label>
-    <input type="email" name="email" value="{{ $user->email }}">
+    <input type="email" name="email" value="{{Auth::user()->email}}">
 
     <label>Recevoir la newsletter?</label>
     <select name="newsletter">

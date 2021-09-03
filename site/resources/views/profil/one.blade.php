@@ -2,6 +2,7 @@
     <a href="/utilisateurs" role="button">Voir tous les utilisateurs</a>
 @endif
 <div class="profil">
+    <h3>Porfil de {{Auth::user()->first_name}} {{Auth::user()->last_name}}</h3>
     <label for="prenom">Prénom:</label>
     <p>{{$user->first_name}}</p>
     <label for="nom">Nom:</label>

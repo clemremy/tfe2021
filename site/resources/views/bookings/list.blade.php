@@ -7,13 +7,15 @@
     </h1>
     
     <div class="cta">
-        <a href="/mobilier-accueil" class="btn-back">Retour aux articles</a>
+        <a href="/mobilier" class="btn-back">Retour aux articles</a>
     </div>
 
     <table>
         <tr>
             <th>Utilisateur</th>
-            <th>Mobilier</th>
+            <th>Article</th>
+            <th>Prix total</th>
+            <th>Acompte payé?</th>
             <th>Réservation payée?</th>
             <th>Action</th>
         </tr>

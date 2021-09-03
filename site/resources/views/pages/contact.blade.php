@@ -52,9 +52,9 @@
                         <label for="subject">Sujet</label>
                         <select name="subject">
                             <option value="none">--Choisir une option--</option>
-                            <option value="rdv">Rendez-vous</option>
+                            <option value="rendez-vous">Rendez-vous</option>
                             <option value="commande">Commande personnalisée</option>
-                            <option value="sav">Service après vente</option>
+                            <option value="service après vente">Service après vente</option>
                             <option value="autre">Autre</option>
                         </select>
                     </p>

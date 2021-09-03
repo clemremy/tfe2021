@@ -15,6 +15,7 @@
             <th>Utilisateur</th>
             <th>Atelier</th>
             <th>Nombre de places</th>
+            <th>Acompte payé?</th>
             <th>Réservation payée?</th>
             <th>Action</th>
         </tr>

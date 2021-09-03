@@ -9,6 +9,12 @@
     <label>Atelier concerné:</label>
     <input type="text" name="description" value="{{ $booking->workshop_id }}">
 
+    <label>Acompte payé?</label>
+    <select name="advance">
+        <option value="1" {{ ($booking->advance == 1) ? 'selected' : '' }}>Oui</option>
+        <option value="0" {{ ($booking->advance == 0) ? 'selected' : '' }}>Non</option>
+    </select>
+
     <label>Reservation payée?</label>
     <select name="paid">
         <option value="1" {{ ($booking->paid == 1) ? 'selected' : '' }}>Oui</option>

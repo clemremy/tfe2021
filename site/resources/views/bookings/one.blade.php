@@ -1,7 +1,9 @@
 <div class="booking">
     <tr>
-        <td>{{$booking->user->last_name}}</td>
-        <td>{{$booking->workshop->name}}</td>
+        <td>{{$booking->user->last_name}} {{$booking->user->first_name}}</td>
+        <td>{{$booking->item->name}}</td>
+        <td>{{$booking->item->price}}</td>
+        <td>{{$booking->advance}}</td>
         <td>{{$booking->paid}}</td>
         <td>
             <form action="/reservation/{{ $booking->id }}" method="post" class="crud">

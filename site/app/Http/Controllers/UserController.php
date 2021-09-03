@@ -47,6 +47,8 @@ class UserController extends Controller
     public function store(Request $request)
     {
         /*
+        $user->first_name = $request->has('first_name') && strlen($request->first_name) ? $request->first_name : 'pasdeprénom';
+        $user->last_name = $request->has('last_name') && strlen($request->last_name) ? $request->last_name : 'pasdenom';
         $user->newsletter = $request->has('newsletter') && strlen($request->newsletter) ? $request->newsletter : '0';
         $user->gdpr = $request->has('gdpr') && strlen($request->gdpr) ? $request->gdpr : '0';
         $user->terms = $request->has('terms') && strlen($request->terms) ? $request->terms : '0';
@@ -113,14 +115,14 @@ class UserController extends Controller
        return redirect('/utilisateurs');
     }
 
-    public function updateprofil(Request $request, User $user)
+    public function updateprofil(Request $request)
     {
         $user = auth()->user();
         $id = auth()->id();
         $user->first_name = $request->has('first_name') && strlen($request->first_name) ? $request->first_name : $user->first_name;
         $user->last_name = $request->has('last_name') && strlen($request->last_name) ? $request->last_name : $user->last_name;
         $user->email = $request->has('email') && strlen($request->email) ? $request->email : $user->email;
-        $user->role = $request->has('role') && strlen($request->role) ? $request->role : $user->role;
+        $user->newsletter = $request->has('newsletter') && strlen($request->newsletter) ? $request->newsletter : $user->newsletter;
         
         $user->save();
         

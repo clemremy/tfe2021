@@ -48,23 +48,20 @@
         <input type="text" name="last_name" required>
         <label>Adresse mail:</label>
         <input type="email" name="email" required>
-        <label>Acompte à payer:</label>
         <p>
-        <?php $accompte = ( $item->price / 100 ) * 15; 
-        echo $accompte ?>€
+            <label>Acompte à payer:</label>
+            <?php $accompte = ( $item->price / 100 ) * 15; 
+            echo $accompte ?>€
         </p>
+        <br/>
         
-        <input type="hidden" name="datetime">
         <input type="text" id="honeypot" value="" style="display:none">
 
-        <p>Un email de confirmation vous sera envoyé avec les informations de paiements à réaliser dans les 7 jours qui suivent la réception de ce-dernier pour finaliser votre réservation. Au dela de ce délais, votre réservation sera annulée et les biens remis en vente.
-          
-          <br/><br/>
-          <div class="mycheckboxes">
-           <input name="terms" type="hidden" value="1">
-            <input type="checkbox" class="checkbox" name="gdpr" value="1">
-            <label for="gdpr" class="checkboxlabel">J'ai lu et j'accepte les <a href="{{ url('/conditions-generales') }}">conditions générales</a> et la <a href="{{ url('/politique-de-confidentialite') }}">politique de confidentialité</a>.</label>
-          </div>
+        <p>
+            Un email de confirmation vous sera envoyé avec les informations de paiements à réaliser dans les 7 jours qui suivent la réception de ce-dernier pour finaliser votre réservation. Au dela de ce délais, votre réservation sera annulée et les biens remis en vente.
+
+            <br/><br/>
+            <sup>* Sous réserve du stock disponible.</sup>
         </p>
         <input type="submit" value="Confirmer la réservation" class="btn-edit submitcheck" id="sent">
     </form>

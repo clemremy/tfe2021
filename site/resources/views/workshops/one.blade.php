@@ -70,6 +70,3 @@
 </div>
 @endif
 
-@if( count(array($workshop->active == 1)) != null )
-    <h2>Aucun atelier n'est prévu pour l'instat</h2>
-@endif

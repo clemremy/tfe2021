@@ -14,6 +14,7 @@ class Workshop_user extends Model
         'nb_persons',
         'workshop_id',
         'user_id', 
+        'advance',
         'paid'
     ];
 

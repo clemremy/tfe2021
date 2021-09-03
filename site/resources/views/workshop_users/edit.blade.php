@@ -11,7 +11,13 @@
     <label>Nombre de places réservées:</label>
     <input type="number" name="nb_places" value="{{ $workshop_user->nb_persons }}">
 
-    <label>Reservation payée?</label>
+    <label>Acompte payé?</label>
+    <select name="advance">
+        <option value="1" {{ ($workshop_user->advance == 1) ? 'selected' : '' }}>Oui</option>
+        <option value="0" {{ ($workshop_user->advance == 0) ? 'selected' : '' }}>Non</option>
+    </select>
+
+    <label>Réservation payée?</label>
     <select name="paid">
         <option value="1" {{ ($workshop_user->paid == 1) ? 'selected' : '' }}>Oui</option>
         <option value="0" {{ ($workshop_user->paid == 0) ? 'selected' : '' }}>Non</option>

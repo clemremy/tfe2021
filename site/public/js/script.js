@@ -9,6 +9,16 @@ $(document).ready(function() {
         $('#myModal').css('display', 'none');
     });
 });
+$(document).ready(function() {
+    $('.modal-btn').on('click', function() {
+        var id = $(this).attr('id');
+        $('#myModal input[name="item_id"]').val(id);
+        $('#myModal').css('display', 'block');
+    });
+    $('#myModal .close').on('click', function() {
+        $('#myModal').css('display', 'none');
+    });
+});
 
 //checkbox non cochée = bouton submit incliquable
 $(document).ready(function() {

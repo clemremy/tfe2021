@@ -16,6 +16,7 @@ class CreateWorkshopUsersTable extends Migration
         Schema::create('workshop_users', function (Blueprint $table) {
             $table->id();
             $table->integer('nb_persons');
+            $table->boolean('advance');
             $table->boolean('paid');
             $table->unsignedBigInteger('workshop_id');
             $table->foreign('workshop_id')->references('id')->on('workshops')->nullable();

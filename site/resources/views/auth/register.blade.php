@@ -58,15 +58,18 @@
                 </div>
             </p>
 
+            <input type="submit" value="S'inscrire" class="btn-edit submitcheck" id="sent">
 
             <div class="flex items-center justify-end mt-4">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
                     {{ __('Déjà enregistré? ') }}
                 </a>
 
-                <x-button class="ml-4">
+                <!--
+                <x-button class="ml-4 submitcheck">
                     {{ __('S\'inscrire') }}
                 </x-button>
+                -->
             </div>
         </form>
     </x-auth-card>

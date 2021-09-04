@@ -47,6 +47,7 @@ class Workshop_userController extends Controller
     {
         $workshop_user = new Workshop_user();
 
+        /*
         // Créer ou récup l'utilisateur 
         $user = User::where("email", $request->email)->first();
         if ( ! $user ){
@@ -60,9 +61,11 @@ class Workshop_userController extends Controller
             $user->account = $request->has('account') && strlen($request->account) ? $request->account : '1';
             $user->gdpr = $request->has('gdpr') && strlen($request->gdpr) ? $request->gdpr : '1';
             $user->terms = $request->has('terms') && strlen($request->terms) ? $request->terms : '1';
-            $user->password = $request->has('password') && strlen($request->password) ? $request->password : 'pasdemdp';
+            $user->password = $request->has('password') && strlen($request->password) ? $request->password : 'pas de mdp';
             $user->save();
         }
+        */
+        
         $workshop_user->nb_persons = $request->has('nb_persons') && strlen($request->nb_persons) ? $request->nb_persons : '1';
         $workshop_user->advance = $request->has('advance') && strlen($request->advance) ? $request->advance : '0';
         $workshop_user->paid = $request->has('paid') && strlen($request->paid) ? $request->paid : '0';

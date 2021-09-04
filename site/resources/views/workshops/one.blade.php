@@ -16,9 +16,15 @@
         <p>Prix par personne: {{$workshop->price}}€</p>
         <br/>
 
+        @if( ! Auth::check())
+        <a href="/login" class="custom-button">
+            Réserver
+        </a>
+        @elseif( Auth::check())
         <button class="custom-button modal-btn" id="{{ $workshop->id }}" type="submit">
             Reserver
         </button>
+        @endif
     </div>
     @if( Auth::user() && Auth::user()->role=='admin') 
         <form action="/ateliers/{{ $workshop->id }}" method="post" class="crud">
@@ -51,10 +57,6 @@
         <p>Nombre de places totales: {{$workshop->nb_places}}</p>
         <p>Prix par personne: {{$workshop->price}}€</p>
         <br/>
-
-        <button class="custom-button modal-btn" id="{{ $workshop->id }}" type="submit">
-            Reserver
-        </button>
     </div>
     <form action="/ateliers/{{ $workshop->id }}" method="post" class="crud">
         @csrf
@@ -70,6 +72,3 @@
 </div>
 @endif
 
-@if(($workshop->active==1) == 0)
-    <h3>Aucun atelier n'est prévu pour l'instant mais n'hésitez pas à me contacter pour un cours particulier.</h3>
-@endif

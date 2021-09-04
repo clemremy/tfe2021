@@ -15,8 +15,13 @@ class WorkshopController extends Controller
      */
     public function index()
     {
+        /*if( $workshops = Workshop::where('active', '=', 1) == 0){
+            return view('workshops.two', ['workshops'=> $workshops]); 
+        }*/
         $workshops = Workshop::all();
         return view('workshops.list', ['workshops'=> $workshops]);
+
+        
     }
 
     /**

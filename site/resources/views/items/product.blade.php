@@ -63,7 +63,7 @@
             <br/><br/>
             <sup>* Sous réserve du stock disponible.</sup>
         </p>
-        <input type="submit" value="Confirmer la réservation" class="btn-edit submitcheck" id="sent">
+        <input type="submit" value="Confirmer la réservation" class="btn-edit" id="sent">
     </form>
   </div>
 </div>

@@ -30,6 +30,7 @@
             <th>Utilisateur</th>
             <th>Article</th>
             <th>Prix total</th>
+            <th>Acompte</th>
             <th>Acompte payé?</th>
             <th>Réservation payée?</th>
             <th>Action</th>

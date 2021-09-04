@@ -43,7 +43,7 @@
         <h3>Formulaire d'inscription</h3>
 
         <label>Adresse mail:</label>
-        <input type="email" name="email" required>
+        <input type="email" name="email" value="{{ Auth::user()->email }}" required>
         <label>Nombre de places désirées<sup>*</sup>:</label>
         <input type="number" name="nb_persons" required>
 

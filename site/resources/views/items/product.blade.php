@@ -43,7 +43,7 @@
     <input type="hidden" name="item_id">
         <h3>Formulaire de réservation</h3>
         <label>Adresse mail:</label>
-        <input type="email" name="email" required>
+        <input type="email" name="email" value="{{ Auth::user()->email }}" required>
         <p>
             <label>Acompte à payer:</label>
             <?php $accompte = ( $item->price / 100 ) * 15; 

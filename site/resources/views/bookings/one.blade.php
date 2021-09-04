@@ -5,6 +5,10 @@
         <td>{{$booking->item->name}}</td>
         <td>{{$booking->item->price}}</td>
         <td>
+            <?php echo ( $booking->item->price / 100 ) * 15; ?>€
+        </td>
+        
+        <td>
             @if ($booking->advance == 1)
             Oui
             @elseif ($booking->advance == 0)

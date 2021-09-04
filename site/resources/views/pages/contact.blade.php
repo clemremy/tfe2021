@@ -51,11 +51,11 @@
                     <p>
                         <label for="subject">Sujet</label>
                         <select name="subject">
-                            <option value="none">--Choisir une option--</option>
-                            <option value="rendez-vous">Rendez-vous</option>
-                            <option value="commande">Commande personnalisée</option>
-                            <option value="service après vente">Service après vente</option>
-                            <option value="autre">Autre</option>
+                            <option value="None">--Choisir une option--</option>
+                            <option value="Rendez-vous">Rendez-vous</option>
+                            <option value="Commande personnalisée">Commande personnalisée</option>
+                            <option value="Service après vente">Service après vente</option>
+                            <option value="Autre">Autre</option>
                         </select>
                     </p>
                     <p>
@@ -72,6 +72,13 @@
                     </p>
                     <input type="submit" value="Envoyer" class="btn submitcheck" id="sent">
                 </form>
+                @if (\Session::has('usersuccess'))
+                <div class="alert alert-success">
+                    <ul>
+                        <li>{!! \Session::get('usersuccess') !!}</li>
+                    </ul>
+                </div>
+                @endif
             </div>
         </div>
     </article>

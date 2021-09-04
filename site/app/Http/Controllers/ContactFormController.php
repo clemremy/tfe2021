@@ -30,7 +30,7 @@ class ContactFormController extends Controller
         if( Contact::create($request->all()) ) {
             $data = $request->all();
             Mail::to('gluckdesign.contact@gmail.com')->send(new ContactMail($data));
-            return redirect('/contact');
+            return redirect('/contact')->with('usersuccess', 'Votre message a bien été prise en compte, merci !');;
         } else {
             return false;
         }

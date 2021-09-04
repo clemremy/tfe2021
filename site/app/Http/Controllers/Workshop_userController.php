@@ -84,7 +84,7 @@ class Workshop_userController extends Controller
         }
 
         $workshop_user->save();
-        return redirect('/ateliers');
+        return redirect('/ateliers')->with('usersuccess', 'Votre réservation a bien été prise en compte, merci !');
     }
 
     /**

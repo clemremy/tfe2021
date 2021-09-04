@@ -20,6 +20,12 @@
             <li>{!! \Session::get('success') !!}</li>
         </ul>
     </div>
+    @elseif (\Session::has('usersuccess'))
+    <div class="alert alert-success">
+        <ul>
+            <li>{!! \Session::get('usersuccess') !!}</li>
+        </ul>
+    </div>
     @endif
 
     <h1>

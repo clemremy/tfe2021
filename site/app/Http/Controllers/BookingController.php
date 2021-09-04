@@ -63,7 +63,7 @@ class BookingController extends Controller
         }
 
         $booking->save();
-        return redirect('/mobilier');
+        return redirect('/mobilier')->with('usersuccess', 'Votre inscription a bien été prise en compte, merci !');
     }
 
     /**

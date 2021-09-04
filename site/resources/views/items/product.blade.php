@@ -45,8 +45,6 @@
         <label>Adresse mail:</label>
         @if ( Auth::check() )
         <input type="email" name="email" value="{{ Auth::user()->email }}" required>
-        else( ! Auth::check() )
-        <input type="email" name="email" required>
         @endif
         <p>
             <label>Acompte à payer:</label>

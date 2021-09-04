@@ -51,9 +51,8 @@
         <label>Adresse mail:</label>
         @if ( Auth::check() )
         <input type="email" name="email" value="{{ Auth::user()->email }}" required>
-        else( ! Auth::check() )
-        <input type="email" name="email" required>
         @endif
+        
         <label>Nombre de places désirées<sup>*</sup>:</label>
         <input type="number" name="nb_persons" required>
 

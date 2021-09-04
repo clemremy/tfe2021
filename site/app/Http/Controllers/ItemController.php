@@ -26,7 +26,11 @@ class ItemController extends Controller
     }
     public function indexhome()
     {
-        $items = Item::latest()->paginate(5);
+        $items = Item::orderBy('created_at', 'desc')
+            ->where('active', '=', 1)
+            ->where('customization', '=', 0)
+            //->take(5)
+            ->get();
         return view('items.listwelcome', ['items'=> $items]);
     }
 
@@ -79,9 +83,9 @@ class ItemController extends Controller
         $item->save();
 
         if ($item->customization==0) { 
-            return redirect('/mobilier');
+            return redirect('/mobilier')->with('success', 'L\'article a été ajouté !');
         } else {
-            return redirect('/mobilier-personnalisable');
+            return redirect('/mobilier-personnalisable')->with('success', 'L\'article a été ajouté !');
         }
     }
 
@@ -165,9 +169,9 @@ class ItemController extends Controller
         $item->save();
         
        if ($item->customization==0) { 
-            return redirect('/mobilier');
+            return redirect('/mobilier')->with('update', 'L\'article a été modifié !');
         } else {
-            return redirect('/mobilier-personnalisable');
+            return redirect('/mobilier-personnalisable')->with('update', 'L\'article a été modifié !');
         }
     }
 
@@ -182,6 +186,6 @@ class ItemController extends Controller
         $item = Item::find($id);
         $item->delete();
         //return redirect('/mobilier')->with('delete', 'Cet article a été supprimé avec succès!');
-        return redirect()->back();
+        return redirect()->back()->with('delete', 'Cet article a été supprimé !');
     }
 }

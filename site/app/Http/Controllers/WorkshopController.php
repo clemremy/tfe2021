@@ -18,7 +18,7 @@ class WorkshopController extends Controller
         /*if( $workshops = Workshop::where('active', '=', 1) == 0){
             return view('workshops.two', ['workshops'=> $workshops]); 
         }*/
-        $workshops = Workshop::all();
+        $workshops = Workshop::orderBy('created_at', 'desc')->get();
         return view('workshops.list', ['workshops'=> $workshops]);
 
         
@@ -55,7 +55,7 @@ class WorkshopController extends Controller
 
         $workshop->save();
 
-        return redirect('/ateliers');
+        return redirect('/ateliers')->with('success', 'L\'atelier a été ajouté !');;
     }
 
     /**
@@ -102,7 +102,7 @@ class WorkshopController extends Controller
 
         $workshop->save();
         
-       return redirect('/ateliers');
+       return redirect('/ateliers')->with('update', 'L\'atelier a été modifié !');
     }
 
     /**
@@ -115,6 +115,6 @@ class WorkshopController extends Controller
     {
         $workshop = Workshop::find($id);
         $workshop->delete();
-        return redirect('/ateliers')->with('delete', 'Cet atelier a été supprimé avec succès!');
+        return redirect('/ateliers')->with('delete', 'L\'atelier a été supprimé !');
     }
 }

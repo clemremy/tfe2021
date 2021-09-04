@@ -42,7 +42,7 @@ class CategoryController extends Controller
         
         $category->save();
 
-        return redirect('/categorie');
+        return redirect('/categorie')->with('success', 'La catégorie a été ajoutée !');
     }
 
     /**
@@ -82,7 +82,7 @@ class CategoryController extends Controller
         
         $category->save();
         
-        return redirect('/categorie');
+        return redirect('/categorie')->with('update', 'La catégorie a été modifiée !');
     }
 
     /**
@@ -95,6 +95,6 @@ class CategoryController extends Controller
     {
         $category = Category::find($id);
         $category->delete();
-        return redirect('/categorie')->with('delete', 'Cette catégorie a été supprimée avec succès!');
+        return redirect('/categorie')->with('delete', 'La catégorie a été supprimée !');
     }
 }

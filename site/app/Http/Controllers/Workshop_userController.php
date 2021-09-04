@@ -65,7 +65,7 @@ class Workshop_userController extends Controller
             $user->save();
         }
         */
-        
+
         $workshop_user->nb_persons = $request->has('nb_persons') && strlen($request->nb_persons) ? $request->nb_persons : '1';
         $workshop_user->advance = $request->has('advance') && strlen($request->advance) ? $request->advance : '0';
         $workshop_user->paid = $request->has('paid') && strlen($request->paid) ? $request->paid : '0';
@@ -128,7 +128,7 @@ class Workshop_userController extends Controller
 
         $workshop_user->save();
         
-        return redirect('/inscription');
+        return redirect('/inscription')->with('update', 'L\'inscription a été modifiée !');;
     }
 
     /**
@@ -141,6 +141,6 @@ class Workshop_userController extends Controller
     {
         $workshop_user = Workshop_user::find($id);
         $workshop_user->delete();
-        return redirect('/inscription')->with('delete', 'Cette inscription a été supprimée avec succès!');
+        return redirect('/inscription')->with('delete', 'L\'inscription a été supprimée !');
     }
 }

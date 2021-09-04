@@ -50,7 +50,6 @@
         Nos derniers articles.
     </h1>
     <div>
-        @if ($items->active == 1 && $items->customization == 0)
         <div class="mobilier">
             <figure>
                 <img src="/images/article/{{ $items->image }}" style="width:200px;" >
@@ -68,7 +67,6 @@
                 </a>
             </div>
         </div>
-        @endif
     </div>
     <a href="/mobilier">Voir plus d'articles</a>
 </div>

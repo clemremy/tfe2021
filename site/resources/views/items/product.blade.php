@@ -42,10 +42,6 @@
     @csrf
     <input type="hidden" name="item_id">
         <h3>Formulaire de réservation</h3>
-        <label>Prénom:</label>
-        <input type="text" name="first_name" required>
-        <label>Nom:</label>
-        <input type="text" name="last_name" required>
         <label>Adresse mail:</label>
         <input type="email" name="email" required>
         <p>

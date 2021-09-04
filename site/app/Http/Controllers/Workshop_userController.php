@@ -128,7 +128,7 @@ class Workshop_userController extends Controller
 
         $workshop_user->save();
         
-        return redirect('/inscription')->with('update', 'L\'inscription a été modifiée !');;
+        return redirect('/inscription')->with('update', 'L\'inscription ' . $workshop_user->id . ' a été modifiée !');;
     }
 
     /**
@@ -141,6 +141,6 @@ class Workshop_userController extends Controller
     {
         $workshop_user = Workshop_user::find($id);
         $workshop_user->delete();
-        return redirect('/inscription')->with('delete', 'L\'inscription a été supprimée !');
+        return redirect('/inscription')->with('delete', 'L\'inscription ' . $workshop_user->id . ' a été supprimée !');
     }
 }

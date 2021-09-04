@@ -4,10 +4,8 @@
 <form action="/reservation/{{ $booking->id }}" method="post" class="form-edit reservation">
     @csrf
     @method('put')
-    <label>Nom de l'utilisateur:</label>
-    <input type="text" name="name" value="{{ $booking->user_id }}">
-    <label>Atelier concerné:</label>
-    <input type="text" name="description" value="{{ $booking->workshop_id }}">
+    <h3>Réservation de l'article "{{ $booking->item->name }}"<br/>par {{ $booking->user->email }}</h3>
+    <br/>
 
     <label>Acompte payé?</label>
     <select name="advance">

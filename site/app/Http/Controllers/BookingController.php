@@ -105,7 +105,7 @@ class BookingController extends Controller
         $booking->paid = $request->has('paid') && strlen($request->paid) ? $request->paid : $booking->paid;
 
         $booking->save();
-        return redirect('/reservation')->with('update', 'La réservation a été modifiée !');
+        return redirect('/reservation')->with('update', 'La réservation ' . $booking->id . ' a été modifiée !');
     }
 
     /**
@@ -118,6 +118,6 @@ class BookingController extends Controller
     {
         $booking = Booking::find($id);
         $booking->delete();
-        return redirect('/inscription')->with('delete', 'La réservation a été supprimée !');
+        return redirect('/reservation')->with('delete', 'La réservation ' . $booking->id . ' a été supprimée !');
     }
 }

@@ -1,10 +1,23 @@
 <div class="booking">
     <tr>
+        <td>{{$booking->id}}</td>
         <td>{{$booking->user->last_name}} {{$booking->user->first_name}}</td>
         <td>{{$booking->item->name}}</td>
         <td>{{$booking->item->price}}</td>
-        <td>{{$booking->advance}}</td>
-        <td>{{$booking->paid}}</td>
+        <td>
+            @if ($booking->advance == 1)
+            Oui
+            @elseif ($booking->advance == 0)
+            Non
+            @endif
+        </td>
+        <td>
+            @if ($booking->paid == 1)
+            Oui
+            @elseif ($booking->paid == 0)
+            Non
+            @endif
+        </td>
         <td>
             <form action="/reservation/{{ $booking->id }}" method="post" class="crud">
                 @csrf

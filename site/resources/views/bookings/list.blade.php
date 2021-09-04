@@ -26,6 +26,7 @@
 
     <table>
         <tr>
+            <th>Numéro</th>
             <th>Utilisateur</th>
             <th>Article</th>
             <th>Prix total</th>

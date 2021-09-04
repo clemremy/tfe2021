@@ -4,12 +4,11 @@
 <form action="/inscription/{{ $workshop_user->id }}" method="post" class="form-edit inscription">
     @csrf
     @method('put')
-    <label>Nom de l'utilisateur:</label>
-    <input type="text" name="name" value="{{ $workshop_user->user_id }}">
-    <label>Atelier concerné:</label>
-    <input type="text" name="description" value="{{ $workshop_user->workshop_id }}">
+    <h3>Réservation de l'atelier "{{ $workshop_user->workshop->name }}" <br/>par {{ $workshop_user->user->email }}</h3>
+    <br/>
+
     <label>Nombre de places réservées:</label>
-    <input type="number" name="nb_places" value="{{ $workshop_user->nb_persons }}">
+    <input type="number" name="nb_persons" value="{{ $workshop_user->nb_persons }}">
 
     <label>Acompte payé?</label>
     <select name="advance">

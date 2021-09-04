@@ -26,6 +26,7 @@
 
     <table>
         <tr>
+            <th>Numéro</th>
             <th>Utilisateur</th>
             <th>Atelier</th>
             <th>Nombre de places</th>

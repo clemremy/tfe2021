@@ -1,0 +1,47 @@
+.article{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    figure{
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .product{
+        padding: $padding;
+        margin-top: 10vh;
+        min-height: 20vh;
+        .product-title{
+            display: flex;
+            align-items: center;
+            h2{
+                flex-basis: 50%;
+            }
+            p{
+                flex-basis: 50%;
+                text-align: right;
+                font-size: 1.2em;
+            }
+        }
+        .product-info{
+            .line{
+                margin: 3rem 0 1rem;
+                display: block;
+                width: 100%;
+                border-top: 1px solid $lightgray;
+            }
+            p:not(:last-child){
+                font-style: oblique;
+            }
+        }
+        a, button{
+            margin-top: 3em;
+        }
+        
+    }
+}

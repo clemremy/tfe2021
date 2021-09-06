@@ -28,13 +28,21 @@
     </div>
     @endif
 
-    <h1>
+    <h1 class="col-12">
         Ils vous attendent.
     </h1>
     @if( Auth::user() && Auth::user()->role=='admin') 
-    <a href="/mobilier/create" class="btn-add" role="button">Ajouter un article</a>
-    <a href="/reservation" role="button">Voir les réservations</a>
-    <a href="/categorie" role="button">Voir les catégories d'articles</a>
+    <ul class="admin-link col-12">
+        <li>
+            <a href="/mobilier/create" class="btn-add" role="button">Ajouter un article</a>
+        </li>
+        <li>
+            <a href="/reservation" role="button">Voir les réservations</a>
+        </li>
+        <li>
+            <a href="/categorie" role="button">Voir les catégories d'articles</a>
+        </li>
+    </ul>
     @endif
     @each('items.one', $items, 'items')
 </article>

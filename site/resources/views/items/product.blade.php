@@ -2,23 +2,31 @@
 
 @section('content')
 <div class="article">
-    <figure>
-        <img src="/images/article/{{ $item->image }}" style="width:200px;" >
+    <figure class="col-6">
+        <img src="/images/article/{{ $item->image }}">
     </figure>
-    <div>
-        <h2>{{$item->name}}</h2>
-        <p>{{$item->description}}</p>
-        <p>{{$item->price}}€</p>
-        <p>{{$item->amount}} pièces</p>
-        <p>Catégorie: {{$item->categories->name}}</p>
-        <br/>
+    <div class="product col-6">
+        <div class="product-title">
+            <h2>{{$item->name}}</h2>
+            <br/>
+            <p>{{$item->price}}€</p>
+        </div>
+
+        <div class="product-info">
+            <span class="line"></span>
+            <p>{{$item->amount}} pcs.</p>
+            <p>{{$item->categories->name}}</p>
+            <br/>
+            <p>{{$item->description}}</p>
+        </div>
+
         @if( ! Auth::check() && $item->customization == 0)
         <a href="/login" class="custom-button">
-            Réserver l'article
+            Réserver
         </a>
         @elseif( Auth::check() && $item->customization == 0)
         <button class="custom-button modal-btn" id="{{ $item->id }}" type="submit">
-            Réserver l'article
+            Réserver
         </button>
         @endif
         @if( $item->customization == 1)
@@ -26,9 +34,6 @@
             Interessé? Contactez-moi!
         </a>
         @endif
-        <div class="cta">
-            <a href="{{ url()->previous() }}" class="btn-back">Annuler</a>
-        </div>
     </div>
 </div>
 
@@ -41,7 +46,7 @@
     <form action="/reservation" method="post" class="form">
     @csrf
     <input type="hidden" name="item_id">
-        <h3>Formulaire de réservation</h3>
+        <h3>Réserver</h3>
         <label>Adresse mail:</label>
         @if ( Auth::check() )
         <input type="email" name="email" value="{{ Auth::user()->email }}" required>
@@ -61,7 +66,7 @@
             <br/><br/>
             <sup>* Sous réserve du stock disponible.</sup>
         </p>
-        <input type="submit" value="Confirmer la réservation" class="btn-edit" id="sent">
+        <input type="submit" value="Confirmer la réservation" class="custom-button" id="sent">
     </form>
   </div>
 </div>

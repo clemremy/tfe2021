@@ -1,6 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Quicksand:wght@300;400;500&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500&display=swap);
-@charset "UTF-8";
 nav.navbar {
   z-index: 300;
   width: 100%;
@@ -37,7 +36,7 @@ nav.navbar ul li a {
   color: #ffffff;
   position: relative;
   padding: 0 10px 10px 0;
-  font: normal 400 1em/1.5 "Open Sans", sans-serif;
+  font: normal 400 0.95em/1.5 "Open Sans", sans-serif;
 }
 nav.navbar ul li a::after {
   bottom: 0;
@@ -437,7 +436,7 @@ div.footer nav.mentions ul li a:hover, div.footer nav.mentions ul li a:focus {
   margin: 1rem;
 }
 .insert .about a {
-  display: contents;
+  margin: 0 auto;
 }
 
 article.contactpage .first-slide .img-background {
@@ -458,7 +457,7 @@ article.contactpage .container .info address {
 }
 article.contactpage .container .info address a {
   color: #1d1d1d;
-  font: normal 400 1em/1.5 "Open Sans", sans-serif;
+  font: normal 400 0.95em/1.5 "Open Sans", sans-serif;
   font-size: 1.2em;
 }
 article.contactpage .container .info address a:hover, article.contactpage .container .info address a:focus {
@@ -644,7 +643,7 @@ article.apropospage .container div.galerie .picture-four:hover {
   }
 }
 .legal {
-  padding: 10em 2em 5em;
+  margin-bottom: 2em;
   width: 100%;
   height: auto;
 }
@@ -743,44 +742,6 @@ article.apropospage .container div.galerie .picture-four:hover {
   width: auto;
 }
 
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 400;
-  padding: 4rem;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: white;
-  -webkit-backdrop-filter: blur(1px);
-          backdrop-filter: blur(1px);
-}
-.modal .modal-content {
-  background-color: #ffffff;
-  margin: auto;
-  padding: 4rem;
-  border: 1px solid #d3d3d3;
-  width: 80%;
-}
-.modal .modal-content .close {
-  color: #d3d3d3;
-  font-size: 28px;
-  font-weight: normal;
-}
-.modal .modal-content .close:hover, .modal .modal-content .close:focus {
-  color: #1d1d1d;
-  text-decoration: none;
-  cursor: pointer;
-}
-.modal .modal-content form h3 {
-  margin: 1rem 2rem 1rem 0;
-}
-.modal .modal-content form .btn-edit {
-  width: auto;
-}
-
 .allitems {
   display: flex;
   width: 100%;
@@ -799,10 +760,11 @@ article.apropospage .container div.galerie .picture-four:hover {
   background-position: center bottom;
   width: 100%;
   height: 100vh;
-  transition: all 0.2s;
+  transition: all 0.5s;
+  transform: scale(1.05);
 }
 .allitems .half-slide .title:hover {
-  transform: scale(0.98);
+  transform: scale(1);
 }
 .allitems .half-slide .title h2 {
   color: #ffffff;
@@ -811,10 +773,81 @@ article.apropospage .container div.galerie .picture-four:hover {
   background-image: url(/images/nathan-oakley.jpg?32eea316fc2d443cf3ba853cbe1c47b7);
 }
 
-.item .mobilier {
-  margin: 1rem;
-  padding: 1rem;
-  background-color: #ffffff;
+.item {
+  min-height: 100vh;
+  width: 100%;
+  padding: 3em;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.item .mobilier figure {
+  height: 300px;
+  width: 100%;
+  overflow: hidden;
+}
+.item .mobilier figure img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.item .mobilier:hover figure {
+  transition: all 1s ease-in-out;
+  border-radius: 5%;
+}
+.item .mobilier p:nth-of-type(2) {
+  font-style: oblique;
+  color: #808080;
+}
+.item .unactive {
+  background-color: #d3d3d3;
+}
+
+.article {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+}
+.article figure {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.article figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.article .product {
+  padding: 3em;
+  margin-top: 10vh;
+  min-height: 20vh;
+}
+.article .product .product-title {
+  display: flex;
+  align-items: center;
+}
+.article .product .product-title h2 {
+  flex-basis: 50%;
+}
+.article .product .product-title p {
+  flex-basis: 50%;
+  text-align: right;
+  font-size: 1.2em;
+}
+.article .product .product-info .line {
+  margin: 3rem 0 1rem;
+  display: block;
+  width: 100%;
+  border-top: 1px solid #d3d3d3;
+}
+.article .product .product-info p:not(:last-child) {
+  font-style: oblique;
+}
+.article .product a, .article .product button {
+  margin-top: 3em;
 }
 
 * {
@@ -830,7 +863,7 @@ body {
 }
 body h1, body h2, body h3, body h4, body h5, body p, body a, body address, body input, body label, body strong, body ul, body li, body span {
   color: #1d1d1d;
-  font: normal 400 1em/1.5 "Open Sans", sans-serif;
+  font: normal 400 0.95em/1.5 "Open Sans", sans-serif;
 }
 body h1, body h2, body h3, body h4, body h5 {
   font: normal 300 1em/1 "Archivo", sans-serif;
@@ -843,6 +876,9 @@ body h2 {
 }
 body h3 {
   font-size: 2em;
+}
+body h4 {
+  font-size: 1.2em;
 }
 body address {
   text-decoration: none;
@@ -863,6 +899,7 @@ body .container {
 
 a {
   text-decoration: none;
+  font-style: normal;
 }
 a:hover, a:focus {
   color: #CBD5CC;
@@ -880,8 +917,6 @@ div.first-slide .img-background {
   width: 50%;
   height: 100vh;
   position: absolute;
-  background-size: cover;
-  background-color: #ffffff;
 }
 div.first-slide div.title {
   display: flex;
@@ -983,14 +1018,44 @@ div.first-slide div.title h1 {
   }
 }
 .custom-button {
-  background-color: #3490dc;
   display: inline-block;
   cursor: pointer;
   color: #ffffff;
-  font: normal 400 1em/1.5 "Open Sans", sans-serif;
+  text-transform: uppercase;
+  font: normal 600 0.95em/1.5 "Open Sans", sans-serif;
+  font-size: 0.75em;
+  text-align: center;
+  letter-spacing: 2px;
+  width: 160px;
   padding: 10px 20px;
-  text-decoration: none;
-  border: none;
+  border: 2px solid #CBD5CC;
+  background: #CBD5CC;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+.custom-button::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background: #ffffff;
+  transition: all 0.3s ease;
+}
+.custom-button:hover {
+  color: #1d1d1d;
+}
+.custom-button:hover::after {
+  left: 0;
+  width: 100%;
+}
+.custom-button:active {
+  top: 2px;
 }
 
 .btn-add {
@@ -998,7 +1063,7 @@ div.first-slide div.title h1 {
   display: inline-block;
   cursor: pointer;
   color: #ffffff;
-  font: normal 400 1em/1.5 "Open Sans", sans-serif;
+  font: normal 400 0.95em/1.5 "Open Sans", sans-serif;
   padding: 10px 20px;
   text-decoration: none;
 }
@@ -1012,17 +1077,17 @@ div.first-slide div.title h1 {
 }
 
 .btn-delete {
-  background-color: #e3342f;
+  background-color: #ca0000;
   cursor: pointer;
   color: #ffffff;
-  font: normal 400 1em/1.5 "Open Sans", sans-serif;
+  font: normal 400 0.95em/1.5 "Open Sans", sans-serif;
   padding: 10px 20px;
   text-decoration: none;
   border: none;
   outline: none;
 }
 .btn-delete:hover {
-  background-color: #db231d;
+  background-color: #b10000;
   color: #ffffff;
 }
 .btn-delete i {
@@ -1030,17 +1095,17 @@ div.first-slide div.title h1 {
 }
 
 .btn-edit {
-  background-color: #060c07;
+  background-color: #ca7900;
   cursor: pointer;
   color: #ffffff;
-  font: normal 400 1em/1.5 "Open Sans", sans-serif;
+  font: normal 400 0.95em/1.5 "Open Sans", sans-serif;
   padding: 10px 20px;
   text-decoration: none;
   border: none;
   outline: none;
 }
 .btn-edit:hover {
-  background-color: #0f1d11;
+  background-color: #e48800;
   color: #ffffff;
 }
 .btn-edit i {
@@ -1051,17 +1116,46 @@ div.first-slide div.title h1 {
   background-color: #d3d3d3;
   cursor: pointer;
   color: #ffffff;
-  font: normal 400 1em/1.5 "Open Sans", sans-serif;
+  font: normal 400 0.95em/1.5 "Open Sans", sans-serif;
   padding: 10px 20px;
   text-decoration: none;
   border: none;
   outline: none;
 }
-.btn-back::before {
-  content: "⟵";
-  margin-right: 10px;
-}
 .btn-back:hover {
   background-color: #c6c6c6;
   color: #ffffff;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 400;
+  right: 0;
+  top: 0;
+  width: 50%;
+  height: 100vh;
+  overflow: auto;
+}
+.modal .modal-content {
+  background-color: #ffffff;
+  padding: 4rem;
+  width: 100%;
+  height: 100vh;
+}
+.modal .modal-content .close {
+  color: #d3d3d3;
+  font-size: 28px;
+  font-weight: normal;
+}
+.modal .modal-content .close:hover, .modal .modal-content .close:focus {
+  color: #1d1d1d;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modal .modal-content form h3 {
+  margin: 1rem 2rem 1rem 0;
+}
+.modal .modal-content form .btn-edit {
+  width: auto;
 }

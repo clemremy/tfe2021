@@ -1,7 +1,7 @@
 // Typography
-$body-light: normal 300 1em/1.5 'Open Sans', sans-serif;
-$body-normal: normal 400 1em/1.5 'Open Sans', sans-serif;
-$body-bold: normal 600 1em/1.5 'Open Sans', sans-serif;
+$body-light: normal 300 0.95em/1.5 'Open Sans', sans-serif;
+$body-normal: normal 400 0.95em/1.5 'Open Sans', sans-serif;
+$body-bold: normal 600 0.95em/1.5 'Open Sans', sans-serif;
 
 $title-normal: normal 300 1em/1 'Archivo', sans-serif;
 $title-bold: normal 400 1em/1 'Archivo', sans-serif;
@@ -26,13 +26,14 @@ $hover: #CBD5CC;
 
 // Margin & padding
 $margin: 1em 2em;
+$padding: 3em;
 
 // button crud
 $green: #578259;
 $dark-green: darken($green, 5%);
-$edit: #060c07;
+$edit: #ca7900;
 $dark-edit: lighten($edit, 5%);
-$red: #e3342f;
+$red: #ca0000;
 $dark-red: darken($red, 5%);
 $dark-lightgray: darken($lightgray, 5%);
 // button

@@ -14,9 +14,10 @@
             background-position: center bottom;
             width: 100%;
             height: 100vh;
-            transition: all .2s;
+            transition: all .5s;
+            transform: scale(1.05);
             &:hover{
-                transform: scale(0.98);
+                transform: scale(1);
             }
             h2{
                 color: $white;
@@ -29,10 +30,34 @@
 }
 
 .item{
+    min-height: 100vh;
+    width: 100%;
+    padding: $padding;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
     .mobilier{
-        margin: 1rem;
-        padding: 1rem;
-        background-color: $white;
+        figure{
+            height: 300px;
+            width: 100%;
+            overflow: hidden;
+            img{
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+            }
+        }
+        &:hover figure{
+            transition: all 1s ease-in-out;
+            border-radius: 5%;
+        }
+        p:nth-of-type(2){
+            font-style: oblique;
+            color: $gray;
+        }
+    }
+    .unactive{
+        background-color: $lightgray;
     }
 
 }

@@ -185,7 +185,7 @@ div.footer .footer-info div a {
   color: #1d1d1d;
 }
 div.footer .footer-info div a:hover, div.footer .footer-info div a:focus {
-  color: #CBD5CC;
+  color: #808080;
 }
 div.footer .footer-info div address {
   font-style: normal;
@@ -199,7 +199,6 @@ div.footer nav.mentions {
   display: flex;
   flex-flow: row wrap;
   align-items: flex-end;
-  font-size: 0.8em;
 }
 div.footer nav.mentions ul {
   display: flex;
@@ -210,14 +209,14 @@ div.footer nav.mentions ul li {
   margin-right: 2em;
   color: #808080;
 }
-div.footer nav.mentions ul li strong {
-  font-weight: normal;
+div.footer nav.mentions ul li p strong a {
+  font-size: 1.05em;
 }
 div.footer nav.mentions ul li a {
   color: #808080;
 }
 div.footer nav.mentions ul li a:hover, div.footer nav.mentions ul li a:focus {
-  color: #CBD5CC;
+  color: #1d1d1d;
 }
 
 @media all and (max-width: 767px) {
@@ -448,8 +447,6 @@ article.contactpage .container {
   display: flex;
   flex-flow: row wrap;
   align-items: flex-end;
-  position: relative;
-  top: -20em;
   height: auto;
 }
 article.contactpage .container .info address {
@@ -461,14 +458,22 @@ article.contactpage .container .info address a {
   font-size: 1.2em;
 }
 article.contactpage .container .info address a:hover, article.contactpage .container .info address a:focus {
-  color: #CBD5CC;
+  color: #808080;
 }
 article.contactpage .container .contact {
-  margin-left: 0;
-  padding: 0 3em 0 3em;
+  margin: 0 3em;
 }
-article.contactpage .container .contact p {
-  margin: 1em 0 0 0;
+article.contactpage .container .contact p textarea {
+  height: 100px;
+}
+article.contactpage .container .contact p select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(135deg, gray 50%, transparent 50%), linear-gradient(to right, #ccc, #ccc);
+  background-position: calc(100% - 25px), calc(100% - 20px), calc(100% - 3.5em);
+  background-size: 5px 5px, 5px 5px, 1px 1.5em;
+  background-repeat: no-repeat;
 }
 
 article.apropospage .first-slide .img-background {
@@ -887,12 +892,25 @@ body address {
 }
 body label:not(.checkboxlabel) {
   text-transform: uppercase;
+  width: 100%;
 }
-body input:not(.checkbox), body select {
+body input:not(.checkbox), body select, body textarea {
   margin: 1em auto;
   width: 100%;
   padding: 1em;
   outline: none;
+  border: 1px solid #d3d3d3;
+}
+body input:not(.checkbox):focus, body select:focus, body textarea:focus {
+  border: 1px solid #CBD5CC;
+}
+body .checkboxlabel a {
+  text-decoration: none;
+  font: normal 400 0.95em/1.5 "Open Sans", sans-serif;
+  color: #808080;
+}
+body .checkboxlabel a:hover, body .checkboxlabel a:focus {
+  color: #1d1d1d;
 }
 body .container {
   margin: 4em;
@@ -901,9 +919,7 @@ body .container {
 a {
   text-decoration: none;
   font-style: normal;
-}
-a:hover, a:focus {
-  color: #CBD5CC;
+  transition: color 0.3s ease-in-out;
 }
 
 li {

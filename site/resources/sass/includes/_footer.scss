@@ -46,7 +46,7 @@ div.footer{
             a{
                 color: $black;
                 &:hover, &:focus{
-                    color: $hover;  
+                    color: $gray;  
                 }
             }
             address{
@@ -63,7 +63,6 @@ div.footer{
         display: flex;
         flex-flow: row wrap;
         align-items: flex-end;
-        font-size: 0.8em;
         ul{
             display: flex;
             flex-flow: row wrap;
@@ -71,13 +70,13 @@ div.footer{
             li{
                 margin-right: 2em;
                 color: $gray;
-                strong{
-                    font-weight: normal;
+                p strong a{
+                    font-size: 1.05em;
                 }
                 a{
                     color: $gray;
                     &:hover, &:focus{
-                        color: $hover;  
+                        color: $black;  
                     }
                 }
             }

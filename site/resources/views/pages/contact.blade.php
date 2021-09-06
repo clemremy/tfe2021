@@ -58,7 +58,7 @@
                     </p>
                     <p>
                         <label for="message">Message</label>
-                        <input type="textarea" name="message" placeholder="..." required>
+                        <textarea name="message" placeholder="..." required></textarea>
                     </p>
                     <input type="text" id="honeypot" value="" style="display:none">
                     <p>

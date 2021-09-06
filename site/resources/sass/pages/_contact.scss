@@ -10,8 +10,6 @@ article.contactpage{
         display: flex;
         flex-flow: row wrap;
         align-items: flex-end;
-        position: relative;
-        top: -20em;
         height: auto;
         .info address
         {
@@ -21,15 +19,32 @@ article.contactpage{
                 font: $body-normal;
                 font-size: 1.2em;
                 &:hover, &:focus{
-                    color: $hover;  
+                    color: $gray;  
                 }
             }
         }
         .contact{
-            margin-left: 0;
-            padding: 0 3em 0 3em;
+            margin: 0 3em;
             p{
-                margin: 1em 0 0 0;
+                textarea{
+                    height: 100px;
+                }
+                select{
+                    appearance:none;
+                    background-image:
+                    linear-gradient(45deg, transparent 50%, gray 50%),
+                    linear-gradient(135deg, gray 50%, transparent 50%),
+                    linear-gradient(to right, #ccc, #ccc);
+                    background-position:
+                        calc(100% - 25px),
+                        calc(100% - 20px),
+                        calc(100% - 3.5em);
+                    background-size:
+                        5px 5px,
+                        5px 5px,
+                        1px 1.5em;
+                    background-repeat: no-repeat;
+                }
             }
         }
     }

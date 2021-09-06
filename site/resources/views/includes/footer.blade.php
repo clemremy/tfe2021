@@ -58,8 +58,8 @@
     <nav class="mentions col-12">
         <ul>
             <li>
-                <p>&copy; Glück Design <script type="text/javascript">var year = new Date();document.write(year.getFullYear());</script> |
-                    <a href="mailto:clemremypro@gmail.com"><strong>Clem Remy</strong></a>
+                <p>&copy; Glück Design <script type="text/javascript">var year = new Date();document.write(year.getFullYear());</script> | Made by
+                    <strong><a href="mailto:clemremypro@gmail.com">Clem Remy</a></strong>
                 </p>
             </li>
             <li>

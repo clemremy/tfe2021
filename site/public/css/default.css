@@ -474,6 +474,7 @@ article.contactpage .container .contact p {
 article.apropospage .first-slide .img-background {
   background-image: url(/images/minh-pham.jpg?64a7d8935c45244d2562d15ff61d27dd);
   background-position: center;
+  background-size: cover;
   right: 0;
 }
 article.apropospage .container div.history {
@@ -523,61 +524,61 @@ article.apropospage .container div.history .text {
   text-align: justify;
   align-self: center;
 }
-article.apropospage .container div.galerie {
+article.apropospage .container ul.galerie {
   width: 100%;
-  margin: 0 auto;
-  height: 100vh;
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
+  margin: 10em 0;
 }
-article.apropospage .container div.galerie div {
-  padding: 0 2em 2em 2em;
-  margin: 0;
+article.apropospage .container ul.galerie li {
+  margin: 1em;
+  height: 80vh;
+  width: 50%;
+  transition: background 0.3s ease-in-out;
 }
-article.apropospage .container div.galerie .picture-one {
+article.apropospage .container ul.galerie .picture-one {
   background: url("/images/3.jpg") no-repeat;
   background-size: cover;
   background-origin: content-box;
-  width: 50%;
-  height: 50%;
 }
-article.apropospage .container div.galerie .picture-one:hover {
+article.apropospage .container ul.galerie .picture-one:hover {
   background: url("/images/1.jpg") no-repeat;
   background-size: cover;
   background-origin: content-box;
 }
-article.apropospage .container div.galerie .picture-two {
+article.apropospage .container ul.galerie .picture-two {
   background: url("/images/3.jpg") no-repeat;
   background-size: cover;
   background-origin: content-box;
-  width: 50%;
-  height: 50%;
+  height: 60vh;
+  width: 40%;
+  align-self: flex-end;
 }
-article.apropospage .container div.galerie .picture-two:hover {
+article.apropospage .container ul.galerie .picture-two:hover {
   background: url("/images/1.jpg") no-repeat;
   background-size: cover;
   background-origin: content-box;
 }
-article.apropospage .container div.galerie .picture-three {
+article.apropospage .container ul.galerie .picture-three {
   background: url("/images/3.jpg") no-repeat;
   background-size: cover;
   background-origin: content-box;
-  width: 50%;
-  height: 50%;
+  height: 60vh;
+  width: 40%;
+  align-self: flex-start;
 }
-article.apropospage .container div.galerie .picture-three:hover {
+article.apropospage .container ul.galerie .picture-three:hover {
   background: url("/images/1.jpg") no-repeat;
   background-size: cover;
   background-origin: content-box;
 }
-article.apropospage .container div.galerie .picture-four {
+article.apropospage .container ul.galerie .picture-four {
   background: url("/images/3.jpg") no-repeat;
   background-size: cover;
   background-origin: content-box;
-  width: 50%;
-  height: 50%;
 }
-article.apropospage .container div.galerie .picture-four:hover {
+article.apropospage .container ul.galerie .picture-four:hover {
   background: url("/images/1.jpg") no-repeat;
   background-size: cover;
   background-origin: content-box;

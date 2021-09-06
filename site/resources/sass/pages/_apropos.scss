@@ -3,6 +3,7 @@ article.apropospage{
         .img-background{
             background-image: url("../../../public/images/minh-pham.jpg");
             background-position: center;
+            background-size: cover;
             right: 0;
         }
     }
@@ -48,22 +49,22 @@ article.apropospage{
                 align-self: center;
             }
         }
-        div.galerie{
+        ul.galerie{
             width: 100%;
-            margin: 0 auto;
-            height: 100vh;
             display: flex;
             flex-flow: row wrap;
-            div{
-                padding: 0 2em 2em 2em;
-                margin: 0;
+            justify-content: center;
+            margin: 10em 0;
+            li{
+                margin: 1em;
+                height: 80vh;
+                width: 50%;
+                transition: background .3s ease-in-out;
             }
             .picture-one{
                 background: url("/images/3.jpg") no-repeat;
                 background-size: cover;
                 background-origin: content-box;
-                width: 50%;
-                height: 50%;
                 &:hover{
                     background: url("/images/1.jpg") no-repeat;
                     background-size: cover;
@@ -74,8 +75,9 @@ article.apropospage{
                 background: url("/images/3.jpg") no-repeat;
                 background-size: cover;
                 background-origin: content-box;
-                width: 50%;
-                height: 50%;
+                height: 60vh;
+                width: 40%;
+                align-self: flex-end;
                 &:hover{
                     background: url("/images/1.jpg") no-repeat;
                     background-size: cover;
@@ -86,8 +88,9 @@ article.apropospage{
                 background: url("/images/3.jpg") no-repeat;
                 background-size: cover;
                 background-origin: content-box;
-                width: 50%;
-                height: 50%;
+                height: 60vh;
+                width: 40%;
+                align-self: flex-start;
                 &:hover{
                     background: url("/images/1.jpg") no-repeat;
                     background-size: cover;
@@ -98,8 +101,6 @@ article.apropospage{
                 background: url("/images/3.jpg") no-repeat;
                 background-size: cover;
                 background-origin: content-box;
-                width: 50%;
-                height: 50%;
                 &:hover{
                     background: url("/images/1.jpg") no-repeat;
                     background-size: cover;

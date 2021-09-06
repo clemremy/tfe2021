@@ -37,21 +37,21 @@
                 <div class="text col-6">
                     <p>
                         Passionnée par le bricolage depuis qu’elle est en âge de tenir un tournevis, Valentine Van Gestel s’est pourtant d’abord illustrée durant 20 ans dans une autre passion : le journalisme. 
-                        <br /><br />
+                        <br />
                         En 2018, conscientisée par l’importance de changer de mode de vie urgemment, elle adopte les philosophies de la permaculture et du zéro-déchet. Grâce à ses 5 années de formation auprès de son acolyte Robert dans l’émission ‘Une Brique dans le Ventre’, elle développe sa passion pour l’upcycling. 
                         <br /><br />
                         En 2020, elle trouve sa voie en réalisant toute la décoration d’intérieur du nouveau café-cantine Al&Greta en retapant avec amour des meubles destinés… aux encombrants ! 
-                        <br /><br />
-                        En 2021, elle crée Glück Design, société de revalorisation de meubles oubliés, qui respecte ses valeurs de respect de l’environnement, en s’inscrivant dans l’économie circulaire, durable et éco-responsable ; et souligne l’humanité d’une seconde chance. 
+                        <br />
+                        C'est alors qu'en 2021, elle crée Glück Design, société de revalorisation de meubles oubliés, qui respecte ses valeurs de respect de l’environnement, en s’inscrivant dans l’économie circulaire, durable et éco-responsable ; et souligne l’humanité d’une seconde chance. 
                     </p>
                 </div>
             </div>
-            <div class="galerie">
-                <div class="picture-one"></div>
-                <div class="picture-two"></div>
-                <div class="picture-three"></div>
-                <div class="picture-four"></div>
-            </div>
+            <ul class="galerie">
+                <li class="picture-one"></li>
+                <li class="picture-two"></li>
+                <li class="picture-three"></li>
+                <li class="picture-four"></li>
+            </ul>
         </div>
     </article>
 @endsection

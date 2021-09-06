@@ -1,20 +1,22 @@
 @extends('layouts.default')
 @section('content')
-    <article class="toutmobilier">
-        <div class="first-slide">
-            <div class="img-background"></div>
+    <article class="allitems">
+        <div class="half-slide">
             <div class="title">
-                <h1>
-                    <a href="/mobilier">Acheter</a>
-                </h1>
+                <a href="/mobilier">
+                    <h2>
+                        Acheter
+                    </h2>
+                </a>
             </div>
         </div>
-        <div class="first-slide">
-            <a href="/mobilier"><div class="img-background"></div></a>
-            <div class="title">
-                <h1>
-                    <a href="/mobilier-personnalisable">Personnaliser</a>
-                </h1>
+        <div class="half-slide">
+            <div class="title two">
+                <a href="/mobilier-personnalisable">
+                    <h2>
+                        Commander
+                    </h2>
+                </a>
             </div>
         </div>
     </article>

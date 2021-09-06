@@ -29,7 +29,7 @@ class ItemController extends Controller
         $items = Item::orderBy('created_at', 'desc')
             ->where('active', '=', 1)
             ->where('customization', '=', 0)
-            //->take(5)
+            ->take(5)
             ->get();
         return view('items.listwelcome', ['items'=> $items]);
     }

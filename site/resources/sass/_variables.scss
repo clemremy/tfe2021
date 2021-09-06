@@ -1,10 +1,10 @@
 // Typography
-$sans-serif-light: normal 300 0.9em/1.5 'Open Sans', sans-serif;
-$sans-serif-normal: normal 400 0.9em/1.5 'Open Sans', sans-serif;
-$sans-serif-bold: normal 600 0.9em/1.5 'Open Sans', sans-serif;
+$body-light: normal 300 1em/1.5 'Open Sans', sans-serif;
+$body-normal: normal 400 1em/1.5 'Open Sans', sans-serif;
+$body-bold: normal 600 1em/1.5 'Open Sans', sans-serif;
 
-$serif-normal: normal 400 1em/1 'Cormorant Garamond', serif;
-$serif-bold: normal 700 1em/1 'Cormorant Garamond', serif;
+$title-normal: normal 300 1em/1 'Archivo', sans-serif;
+$title-bold: normal 400 1em/1 'Archivo', sans-serif;
 
 // Colors
 $blue: #3490dc;
@@ -19,9 +19,9 @@ $gray: #808080;
 
 //general
 $lightgray: #d3d3d3;
-$black: #000000;
+$black: #1d1d1d;
 $white: #ffffff;
-$background: #F5F5F5;
+$background: #fafafa;
 $hover: #CBD5CC;
 
 // Margin & padding

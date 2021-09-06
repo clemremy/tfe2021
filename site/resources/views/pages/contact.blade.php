@@ -4,8 +4,6 @@
     <article class="contactpage">
         <div class="first-slide">
             <div class="img-background"></div>
-            <span class="line one"></span>
-            <span class="line two"></span>
             <div class="title">
                 <h1>
                     Une question?

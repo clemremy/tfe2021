@@ -1,10 +1,10 @@
-@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Quicksand:wght@300;400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500&display=swap);
 @charset "UTF-8";
 nav.navbar {
   z-index: 300;
   width: 100%;
-  height: 8vh;
+  height: auto;
   position: absolute;
   display: flex;
   justify-content: flex-end;
@@ -37,7 +37,7 @@ nav.navbar ul li a {
   color: #ffffff;
   position: relative;
   padding: 0 10px 10px 0;
-  font: normal 400 0.9em/1.5 "Open Sans", sans-serif;
+  font: normal 400 1em/1.5 "Open Sans", sans-serif;
 }
 nav.navbar ul li a::after {
   bottom: 0;
@@ -71,17 +71,17 @@ nav.navbar div.burger div.line {
 
 nav.navbar.show div.burger div.line1 {
   transform: translate(-10px) rotate(45deg) translate(15px);
-  background: #000000;
+  background: #1d1d1d;
 }
 
 nav.navbar.show div.burger div.line2 {
   opacity: 0;
-  background: #000000;
+  background: #1d1d1d;
 }
 
 nav.navbar.show div.burger div.line3 {
   transform: translate(-10px) rotate(-45deg) translate(15px);
-  background: #000000;
+  background: #1d1d1d;
 }
 
 nav.navbar.show ul.navlinks {
@@ -105,12 +105,12 @@ nav.navbar.show ul.navlinks {
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-around;
-    background: #F5F5F5;
+    background: #fafafa;
     transform: translateX(100%);
     transition: transform 1s ease;
   }
   nav.navbar ul.navlinks li a {
-    color: #000000;
+    color: #1d1d1d;
   }
 }
 @media all and (max-width: 767px) {
@@ -133,12 +133,12 @@ nav.navbar.show ul.navlinks {
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-around;
-    background: #F5F5F5;
+    background: #fafafa;
     transform: translateX(100%);
     transition: transform 1s ease;
   }
   nav.navbar ul.navlinks li a {
-    color: #000000;
+    color: #1d1d1d;
   }
 }
 div.footer {
@@ -166,11 +166,11 @@ div.footer nav.footer-nav ul li p:first-of-type {
   padding: 1em 0;
 }
 div.footer nav.footer-nav ul li a {
-  font: normal 400 1em/1 "Cormorant Garamond", serif;
+  font: normal 300 1em/1 "Archivo", sans-serif;
   font-size: 2.7em;
   line-height: 2em;
   padding: 0 1em;
-  color: #000000;
+  color: #1d1d1d;
 }
 div.footer .footer-info div {
   margin-bottom: 2em;
@@ -183,7 +183,7 @@ div.footer .footer-info div p {
   margin: 0 0 1.5em 0;
 }
 div.footer .footer-info div a {
-  color: #000000;
+  color: #1d1d1d;
 }
 div.footer .footer-info div a:hover, div.footer .footer-info div a:focus {
   color: #CBD5CC;
@@ -192,7 +192,7 @@ div.footer .footer-info div address {
   font-style: normal;
 }
 div.footer .footer-info div address a {
-  color: #000000;
+  color: #1d1d1d;
 }
 div.footer nav.mentions {
   width: 100%;
@@ -244,43 +244,15 @@ div.footer nav.mentions ul li a:hover, div.footer nav.mentions ul li a:focus {
 .title-home {
   position: absolute;
   z-index: 20;
-  color: #ffffff;
-  left: 2rem;
-  bottom: 30%;
-}
-.title-home form.newsletter {
-  width: 80%;
-  height: auto;
-  padding: 2rem 0;
-}
-.title-home form.newsletter label {
-  margin: 0 auto;
-  text-align: center;
-}
-.title-home form.newsletter p {
-  border: 1px solid #ffffff;
   display: flex;
-  flex-direction: row;
-  margin: 1em auto;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
 }
-.title-home form.newsletter p input {
-  margin: 0;
-  border: none;
-}
-.title-home form.newsletter p input:first-child {
-  margin: 0;
-  width: 300%;
-}
-.title-home form.newsletter p input:last-child {
-  background-color: #ffffff;
-  font-size: 1.5em;
-  padding: 0 1em 0 0;
-  text-align: right;
-  transition: all 0.5s;
-  cursor: pointer;
-}
-.title-home form.newsletter p input:last-child:hover {
-  padding: 0 0.7em 0 0;
+.title-home > * {
+  color: #ffffff;
 }
 
 .slideshow-container {
@@ -313,7 +285,7 @@ div.footer nav.mentions ul li a:hover, div.footer nav.mentions ul li a:focus {
   right: 2rem;
 }
 .slideshow-container .active {
-  background-color: #000000;
+  background-color: #1d1d1d;
 }
 .slideshow-container .fade {
   -webkit-animation-name: fade;
@@ -415,7 +387,7 @@ div.footer nav.mentions ul li a:hover, div.footer nav.mentions ul li a:focus {
   width: 100%;
   height: 100%;
   display: block;
-  background: linear-gradient(to bottom, #000000 50%, rgba(0, 0, 0, 0) 50%);
+  background: linear-gradient(to bottom, #1d1d1d 50%, rgba(29, 29, 29, 0) 50%);
   background-position: 0 750px;
   background-size: 100% 200%;
   -webkit-animation: scrolldown 2s cubic-bezier(0.76, 0, 0.3, 1) forwards infinite;
@@ -427,7 +399,6 @@ div.footer nav.mentions ul li a:hover, div.footer nav.mentions ul li a:focus {
   top: 0;
   letter-spacing: 1px;
   color: #ffffff;
-  font: normal 400 0.9em/1.5 "Open Sans", sans-serif;
   font-size: 0.8em;
 }
 @-webkit-keyframes scrolldown {
@@ -453,8 +424,25 @@ div.footer nav.mentions ul li a:hover, div.footer nav.mentions ul li a:focus {
   }
 }
 
+.insert .about {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+}
+.insert .about > * {
+  margin: 1rem;
+}
+.insert .about a {
+  display: contents;
+}
+
 article.contactpage .first-slide .img-background {
-  background-image: url(/images/3.jpg?900309b13b092e5aef0b15430ab890e0);
+  background-image: url(/images/1-16.jpg?deddd34b576379109d659e794c7a3ef2);
+  background-position: bottom;
   left: 0;
 }
 article.contactpage .container {
@@ -469,8 +457,8 @@ article.contactpage .container .info address {
   text-align: center;
 }
 article.contactpage .container .info address a {
-  color: #000000;
-  font: normal 400 0.9em/1.5 "Open Sans", sans-serif;
+  color: #1d1d1d;
+  font: normal 400 1em/1.5 "Open Sans", sans-serif;
   font-size: 1.2em;
 }
 article.contactpage .container .info address a:hover, article.contactpage .container .info address a:focus {
@@ -485,7 +473,8 @@ article.contactpage .container .contact p {
 }
 
 article.apropospage .first-slide .img-background {
-  background-image: url(/images/1.jpg?abc693106e7eca062a9fd293880a9545);
+  background-image: url(/images/minh-pham.jpg?64a7d8935c45244d2562d15ff61d27dd);
+  background-position: center;
   right: 0;
 }
 article.apropospage .container div.history {
@@ -536,7 +525,7 @@ article.apropospage .container div.history .text {
   align-self: center;
 }
 article.apropospage .container div.galerie {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   height: 100vh;
   display: flex;
@@ -594,42 +583,6 @@ article.apropospage .container div.galerie .picture-four:hover {
   background-size: cover;
   background-origin: content-box;
 }
-article.apropospage .container form.newsletter {
-  width: 50%;
-  height: auto;
-  text-align: center;
-  margin: 0 auto;
-  padding: 10rem 0;
-}
-article.apropospage .container form.newsletter label {
-  margin: 0 auto;
-  text-align: center;
-}
-article.apropospage .container form.newsletter p {
-  border: 1px solid #000000;
-  display: flex;
-  flex-direction: row;
-  margin: 1em auto;
-}
-article.apropospage .container form.newsletter p input {
-  margin: 0;
-  border: none;
-}
-article.apropospage .container form.newsletter p input:first-child {
-  margin: 0;
-  width: 300%;
-}
-article.apropospage .container form.newsletter p input:last-child {
-  background-color: #ffffff;
-  font-size: 1.5em;
-  padding: 0 1em 0 0;
-  text-align: right;
-  transition: all 0.5s;
-  cursor: pointer;
-}
-article.apropospage .container form.newsletter p input:last-child:hover {
-  padding: 0 0.7em 0 0;
-}
 
 @media all and (max-width: 767px) {
   article.apropospage .container {
@@ -653,9 +606,6 @@ article.apropospage .container form.newsletter p input:last-child:hover {
   article.apropospage .container .galerie .picture-four {
     width: 100%;
     height: 100%;
-  }
-  article.apropospage .container form.newsletter {
-    width: 90%;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -691,9 +641,6 @@ article.apropospage .container form.newsletter p input:last-child:hover {
   article.apropospage .container .galerie .picture-four {
     width: 100%;
     height: 50%;
-  }
-  article.apropospage .container form.newsletter {
-    width: 90%;
   }
 }
 .legal {
@@ -771,7 +718,7 @@ article.apropospage .container form.newsletter p input:last-child:hover {
   margin: 1rem 1rem 1rem 0;
 }
 .atelier .workshop .workshop-info .detail {
-  border-bottom: 1px solid #000000;
+  border-bottom: 1px solid #1d1d1d;
   padding-bottom: 1rem;
   text-transform: uppercase;
 }
@@ -823,7 +770,7 @@ article.apropospage .container form.newsletter p input:last-child:hover {
   font-weight: normal;
 }
 .modal .modal-content .close:hover, .modal .modal-content .close:focus {
-  color: #000000;
+  color: #1d1d1d;
   text-decoration: none;
   cursor: pointer;
 }
@@ -832,6 +779,36 @@ article.apropospage .container form.newsletter p input:last-child:hover {
 }
 .modal .modal-content form .btn-edit {
   width: auto;
+}
+
+.allitems {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+.allitems .half-slide {
+  flex-basis: 50%;
+  overflow: hidden;
+}
+.allitems .half-slide .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/images/halacious.jpg?97b0518d5829382cb8efdbf2966935a6);
+  background-size: cover;
+  background-position: center bottom;
+  width: 100%;
+  height: 100vh;
+  transition: all 0.2s;
+}
+.allitems .half-slide .title:hover {
+  transform: scale(0.98);
+}
+.allitems .half-slide .title h2 {
+  color: #ffffff;
+}
+.allitems .half-slide .two {
+  background-image: url(/images/nathan-oakley.jpg?32eea316fc2d443cf3ba853cbe1c47b7);
 }
 
 .item .mobilier {
@@ -849,11 +826,14 @@ article.apropospage .container form.newsletter p input:last-child:hover {
 body {
   width: 100%;
   min-height: 100vh;
-  font: normal 400 0.9em/1.5 "Open Sans", sans-serif;
-  background-color: #F5F5F5;
+  background-color: #fafafa;
+}
+body h1, body h2, body h3, body h4, body h5, body p, body a, body address, body input, body label, body strong, body ul, body li, body span {
+  color: #1d1d1d;
+  font: normal 400 1em/1.5 "Open Sans", sans-serif;
 }
 body h1, body h2, body h3, body h4, body h5 {
-  font: normal 400 1em/1 "Cormorant Garamond", serif;
+  font: normal 300 1em/1 "Archivo", sans-serif;
 }
 body h1 {
   font-size: 3.5em;
@@ -863,6 +843,10 @@ body h2 {
 }
 body h3 {
   font-size: 2em;
+}
+body address {
+  text-decoration: none;
+  font-style: normal;
 }
 body label:not(.checkboxlabel) {
   text-transform: uppercase;
@@ -877,6 +861,17 @@ body .container {
   margin: 4em;
 }
 
+a {
+  text-decoration: none;
+}
+a:hover, a:focus {
+  color: #CBD5CC;
+}
+
+li {
+  list-style: none;
+}
+
 div.first-slide {
   width: 100%;
   height: 100vh;
@@ -887,16 +882,6 @@ div.first-slide .img-background {
   position: absolute;
   background-size: cover;
   background-color: #ffffff;
-}
-div.first-slide span.line {
-  width: 100px;
-  display: block;
-  border-top: 2px solid #000000;
-  position: absolute;
-  top: 50%;
-}
-div.first-slide span.two {
-  right: 0;
 }
 div.first-slide div.title {
   display: flex;
@@ -997,23 +982,12 @@ div.first-slide div.title h1 {
     flex-basis: 100%;
   }
 }
-a {
-  text-decoration: none;
-}
-a:hover, a:focus {
-  color: #CBD5CC;
-}
-
-li {
-  list-style: none;
-}
-
 .custom-button {
   background-color: #3490dc;
   display: inline-block;
   cursor: pointer;
   color: #ffffff;
-  font: normal 400 0.9em/1.5 "Open Sans", sans-serif;
+  font: normal 400 1em/1.5 "Open Sans", sans-serif;
   padding: 10px 20px;
   text-decoration: none;
   border: none;
@@ -1024,7 +998,7 @@ li {
   display: inline-block;
   cursor: pointer;
   color: #ffffff;
-  font: normal 400 0.9em/1.5 "Open Sans", sans-serif;
+  font: normal 400 1em/1.5 "Open Sans", sans-serif;
   padding: 10px 20px;
   text-decoration: none;
 }
@@ -1041,7 +1015,7 @@ li {
   background-color: #e3342f;
   cursor: pointer;
   color: #ffffff;
-  font: normal 400 0.9em/1.5 "Open Sans", sans-serif;
+  font: normal 400 1em/1.5 "Open Sans", sans-serif;
   padding: 10px 20px;
   text-decoration: none;
   border: none;
@@ -1059,7 +1033,7 @@ li {
   background-color: #060c07;
   cursor: pointer;
   color: #ffffff;
-  font: normal 400 0.9em/1.5 "Open Sans", sans-serif;
+  font: normal 400 1em/1.5 "Open Sans", sans-serif;
   padding: 10px 20px;
   text-decoration: none;
   border: none;
@@ -1077,7 +1051,7 @@ li {
   background-color: #d3d3d3;
   cursor: pointer;
   color: #ffffff;
-  font: normal 400 0.9em/1.5 "Open Sans", sans-serif;
+  font: normal 400 1em/1.5 "Open Sans", sans-serif;
   padding: 10px 20px;
   text-decoration: none;
   border: none;

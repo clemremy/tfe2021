@@ -4,8 +4,6 @@
     <article class="apropospage col-12">
         <div class="first-slide">
             <div class="img-background"></div>
-            <span class="line one"></span>
-            <span class="line two"></span>
             <div class="title">
                 <h1>
                     Glück Design  
@@ -20,7 +18,7 @@
                         Valentine
                     </h2>
                     <figure>
-                        <img src="{{ asset('images/1.jpg') }}" alt="" >
+                        <img src="{{ asset('images/valentine.jpeg') }}" alt="portrait de Valentine - fondatrice de Glück Design" >
                         <svg width="150" height="150" class="rotating-text">
                             <path id="curve" fill="transparent" 
                             d="
@@ -54,14 +52,6 @@
                 <div class="picture-three"></div>
                 <div class="picture-four"></div>
             </div>
-            <form class="newsletter" >
-                <label>Restez informé</label>
-                <br/>
-                <p>
-                <input type="email" name="email" value="" placeholder="catherinemoulin@gmail.com" >
-                <input type="submit" value="&#10230;">
-                </p>
-            </form>
         </div>
     </article>
 @endsection

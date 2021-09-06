@@ -58,8 +58,9 @@
     <nav class="mentions col-12">
         <ul>
             <li>
-                &copy; Glück Design 2021 |
-                <a href="mailto:clemremypro@gmail.com"><strong>Clem Remy</strong></a>
+                <p>&copy; Glück Design <script type="text/javascript">var year = new Date();document.write(year.getFullYear());</script> |
+                    <a href="mailto:clemremypro@gmail.com"><strong>Clem Remy</strong></a>
+                </p>
             </li>
             <li>
                 <a href="{{ url('/politique-de-confidentialite') }}">Politique de confidentialité</a>

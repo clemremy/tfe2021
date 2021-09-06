@@ -8,9 +8,11 @@
 @import 'pages/loggedin';
 @import 'pages/workshop';
 @import 'pages/item';
-// @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&display=swap');
+
+//@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Quicksand:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500&display=swap');
 *{
     box-sizing: border-box;
     margin: 0;
@@ -20,10 +22,13 @@
 body{
     width: 100%;
     min-height: 100vh;
-    font: $sans-serif-normal;
     background-color: $background;
+    h1, h2, h3, h4, h5, p, a, address, input, label, strong, ul, li, span{
+        color: $black;
+        font: $body-normal;
+    }
     h1, h2, h3, h4, h5{
-        font: $serif-normal;
+        font: $title-normal;
     }
     h1{
         font-size: 3.5em;
@@ -33,6 +38,10 @@ body{
     }
     h3{
         font-size: 2em;
+    }
+    address{
+        text-decoration: none;
+        font-style: normal;
     }
     label:not(.checkboxlabel){
         text-transform: uppercase;
@@ -48,6 +57,17 @@ body{
     }
 }
 
+a{
+    text-decoration: none;
+    &:hover, &:focus{
+        color: $hover;  
+    }
+}
+
+li{
+    list-style: none;
+}
+
 // FIRST SILDE demi photo
 div.first-slide{
     width: 100%;
@@ -60,16 +80,6 @@ div.first-slide{
         //background-image: url("../../../public/images/1.jpg");
         background-size: cover;
         background-color: $white;;
-    }
-    span.line{
-        width: 100px;
-        display:block;
-        border-top: 2px solid $black;
-        position: absolute;
-        top: 50%;
-    }
-    span.two{
-        right: 0;
     }
     div.title{
         display: flex;
@@ -115,24 +125,13 @@ div.first-slide{
     .col-1{flex-basis: 100%;}
 }
 
-a{
-    text-decoration: none;
-    &:hover, &:focus{
-        color: $hover;  
-    }
-}
-
-li{
-    list-style: none;
-}
-
 // BUTTON
 .custom-button{
     background-color: $blue;
 	display:inline-block;
 	cursor:pointer;
 	color: $white;
-	font: $sans-serif-normal;
+	font: $body-normal;
 	padding:10px 20px;
 	text-decoration:none;
     border: none;
@@ -143,7 +142,7 @@ li{
 	display:inline-block;
 	cursor:pointer;
 	color: $white;
-	font: $sans-serif-normal;
+	font: $body-normal;
 	padding:10px 20px;
 	text-decoration:none;
     &:hover {
@@ -160,7 +159,7 @@ li{
 	background-color:$red;
 	cursor:pointer;
 	color:$white;
-    font: $sans-serif-normal;
+    font: $body-normal;
 	padding:10px 20px;
 	text-decoration:none;
     border: none;
@@ -178,7 +177,7 @@ li{
 	background-color:$edit;
 	cursor:pointer;
 	color:$white;
-    font: $sans-serif-normal;
+    font: $body-normal;
 	padding:10px 20px;
 	text-decoration:none;
     border: none;
@@ -196,7 +195,7 @@ li{
 	background-color:$lightgray;
 	cursor:pointer;
 	color:$white;
-    font: $sans-serif-normal;
+    font: $body-normal;
 	padding:10px 20px;
 	text-decoration:none;
     border: none;

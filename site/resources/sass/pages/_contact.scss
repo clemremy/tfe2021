@@ -1,7 +1,8 @@
 article.contactpage{
     .first-slide{
         .img-background{
-            background-image: url("../../../public/images/3.jpg");
+            background-image: url("../../../public/images/1-16.jpg");
+            background-position: bottom;
             left: 0;
         }
     }
@@ -17,7 +18,7 @@ article.contactpage{
             text-align: center;
             a{
                 color: $black;
-                font: $sans-serif-normal;
+                font: $body-normal;
                 font-size: 1.2em;
                 &:hover, &:focus{
                     color: $hover;  

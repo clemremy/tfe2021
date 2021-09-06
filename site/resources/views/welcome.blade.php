@@ -50,7 +50,7 @@
         Nos derniers articles.
     </h1>
     <div>
-        <div class="mobilier">
+        <div class="mobilier-home">
             <figure>
                 <img src="/images/article/{{ $items->image }}" style="width:200px;" >
             </figure>
@@ -71,16 +71,19 @@
     <a href="/mobilier">Voir plus d'articles</a>
 </div>
 
-<div>
-    <form class="newsletter" >
-        <label>Ne ratez rien</label>
-        <br/>
+<div class="insert">
+    <div class="about">
+        <h1>
+            Tout pour un style unique
+        </h1>
         <p>
-        <input type="email" name="email" value="" placeholder="catherinemoulin@gmail.com" >
-        <input type="submit" value="&#10230;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </p>
-    </form>
+        <br/>
+        <a href="/a-propos">En savoir plus</a>
+    </div>
 </div>
+
 
 <script>
     var slideIndex = 0;

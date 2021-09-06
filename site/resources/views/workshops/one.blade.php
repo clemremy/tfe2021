@@ -1,7 +1,7 @@
 @if ($workshop->active == 1)
 <div class="workshop">
     <figure>
-        <img src="{{ asset('images/1.jpg') }}"></img>
+        <img src="/images/atelier/{{ $workshop->image }}" style="width:200px;" >
     </figure>
     <div class="workshop-info">
         <h2>{{$workshop->name}}</h2>

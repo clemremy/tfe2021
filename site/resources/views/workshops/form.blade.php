@@ -1,7 +1,7 @@
 @extends('layouts.default')
 @section('content')
 
-<form action="/ateliers" method="post" class="form-create atelier">
+<form action="/ateliers" method="post" class="form-create atelier" enctype="multipart/form-data">
     @csrf
     <label>Nom de l'atelier:</label>
     <input type="text" name="name">
@@ -13,8 +13,10 @@
     <input type="date" name="end_date">
     <label>Nombre de places:</label>
     <input type="number" name="nb_places">
-    <label>Prix:</label>
+    <label>Prix par personne:</label>
     <input type="number" name="price">
+    <label>Image de l'atelier:</label>
+    <input type="file" name="image" placeholder="image">
 
     <label>Mettre en ligne?</label>
     <select name="active">

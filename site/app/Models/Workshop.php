@@ -16,7 +16,8 @@ class Workshop extends Model
         'end_date',
         'nb_places',
         'price',
-        'active'
+        'active',
+        'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
     ];
 
     /*

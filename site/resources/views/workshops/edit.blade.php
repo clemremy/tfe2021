@@ -1,7 +1,7 @@
 @extends('layouts.default')
 @section('content')
 
-<form action="/ateliers/{{ $workshop->id }}" method="post" class="form-edit atelier">
+<form action="/ateliers/{{ $workshop->id }}" method="post" class="form-edit atelier" enctype="multipart/form-data">
     @csrf
     @method('put')
     <label>Nom de l'atelier:</label>
@@ -14,8 +14,11 @@
     <input type="date" name="end_date" value="{{ date('Y-m-d', strtotime($workshop->end_date)) }}">
     <label>Nombre de places totales:</label>
     <input type="number" name="nb_places" value="{{ $workshop->nb_places }}">
-    <label>Prix de l'atelier:</label>
+    <label>Prix par personne:</label>
     <input type="number" name="price" value="{{ $workshop->price }}">
+    <label>Image de l'atelier:</label>
+    <input type="file" name="image" placeholder="image">
+    <img src="/images/atelier/{{ $workshop->image }}" width="300px"><br/>
 
     <label>Mettre en ligne?</label>
     <select name="active">

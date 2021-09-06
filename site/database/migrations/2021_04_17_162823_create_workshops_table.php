@@ -22,6 +22,7 @@ class CreateWorkshopsTable extends Migration
             $table->integer('nb_places');
             $table->integer('price');
             $table->boolean('active');
+            $table->string('image');
             $table->timestamps();
         });
     }

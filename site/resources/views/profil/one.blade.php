@@ -22,7 +22,7 @@
 
         <div class="cta">
             <a class="btn-edit" href="/profil.edit">
-                <i class="fas fa-edit"></i>Modifier
+                <i class="fas fa-edit"></i>
             </a>
             <a href="/" class="btn-back">Retour</a>
         </div>

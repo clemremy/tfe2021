@@ -53,6 +53,9 @@ div.footer{
                 font-style: normal;
                 a{
                     color: $black;
+                    &:hover, &:focus{
+                        color: $gray;  
+                    }
                 }
             }
         }
@@ -70,9 +73,6 @@ div.footer{
             li{
                 margin-right: 2em;
                 color: $gray;
-                p strong a{
-                    font-size: 1.05em;
-                }
                 a{
                     color: $gray;
                     &:hover, &:focus{

@@ -68,45 +68,6 @@
             <br/>
         </div>
     </a>
-    <a href="/article/{{$items->id }}" class="col-3">
-        <div class="mobilier">
-            <figure>
-                <img src="/images/article/{{ $items->image }}" >
-            </figure>
-            
-            <br/>
-            <h4>{{$items->name}}</h4>
-            <p>{{$items->price}}€</p>
-            <p>{{$items->categories->name}}</p>
-            <br/>
-        </div>
-    </a>
-    <a href="/article/{{$items->id }}" class="col-3">
-        <div class="mobilier">
-            <figure>
-                <img src="/images/article/{{ $items->image }}" >
-            </figure>
-            
-            <br/>
-            <h4>{{$items->name}}</h4>
-            <p>{{$items->price}}€</p>
-            <p>{{$items->categories->name}}</p>
-            <br/>
-        </div>
-    </a>
-    <a href="/article/{{$items->id }}" class="col-3">
-        <div class="mobilier">
-            <figure>
-                <img src="/images/article/{{ $items->image }}" >
-            </figure>
-            
-            <br/>
-            <h4>{{$items->name}}</h4>
-            <p>{{$items->price}}€</p>
-            <p>{{$items->categories->name}}</p>
-            <br/>
-        </div>
-    </a>
 </div>
 
 <div class="insert">

@@ -49,3 +49,16 @@ $(function() {
             // code block
 }
 });
+
+$(function() {
+    switch (window.location.pathname) {
+        case '/mobilier-accueil':
+            $('.burger').addClass('white');
+            break;
+        case '/':
+            $('.burger').addClass('white');
+            break;
+        default: 
+            // code block
+}
+});

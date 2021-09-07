@@ -63,8 +63,13 @@ nav.navbar{
             height: 2px;
             width: 35px;
             margin: 0.5em 0;
-            background: $white;
+            background: $black;
             transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+    }
+    div.burger.white {
+        div.line {
+            background: $white;
         }
     }
 }
@@ -80,8 +85,9 @@ nav.white{
     }
 }
 
+
 nav.navbar.show div.burger div.line1 {
-    transform: translate(-10px) rotate(45deg) translate(15px);
+    transform: translate(-10px) rotate(45deg) translate(14px);
     background: $black;
 }
 nav.navbar.show div.burger div.line2 {
@@ -89,7 +95,7 @@ nav.navbar.show div.burger div.line2 {
     background: $black;
 }
 nav.navbar.show div.burger div.line3 {
-    transform: translate(-10px) rotate(-45deg) translate(15px);
+    transform: translate(-10px) rotate(-45deg) translate(14px);
     background: $black;
 }
 nav.navbar.show ul.navlinks{
@@ -105,20 +111,58 @@ nav.navbar.show ul.navlinks{
             z-index: 400;
         }
         ul.navlinks {
+            padding: 4em;
             position: fixed;
             top: 0;
             right: 0;
             height: 100vh;
             width: 100%;
+            font: $title-normal;
+            font-size: 2em;
             flex-direction: column;
-            align-items: flex-start;
-            justify-content: space-around;
+            justify-content: flex-start;
             background: $background;
             transform: translateX(100%);
             transition: transform 1s ease;
-            li a{
-                color: $black;
+            li{
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                &:nth-of-type(n+5){
+                    flex-direction: row;
+                }
+                &:nth-of-type(n+5) a::before{
+                    content: none;
+                }
+                &:nth-of-type(n+5) a:hover{
+                    margin: 0;
+                }
+                a{
+                    color: $black;
+                    transition: all 0.3s;
+                    &::before{
+                        content: "";
+                        width: 50px;
+                        height: 2px;
+                        background-color: $hover;
+                        position: relative;
+                        display: inline-block;
+                        margin-right: 1em;
+                        vertical-align: middle;
+                    }
+                    &::after{
+                        display: none;
+                    }
+                    &:hover, &:focus{
+                        margin-left: 1em;
+                    }
+                }
             }
+        }
+    }
+    nav.white{
+        ul li a{
+            filter: none;
         }
     }
 }

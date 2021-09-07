@@ -10,11 +10,11 @@
                     @csrf
                     @method('delete')
                     <button type="submit" class="btn-delete" onclick="return confirm('Etes-vous sur de vouloir supprimer cet utilisateur?')">
-                        <i class="fas fa-trash-alt"></i>Supprimer
+                        <i class="fas fa-trash-alt"></i>
                     </button>
 
                     <a class="btn-edit" href="{{ route('utilisateurs.edit', $user->id) }}">
-                        <i class="fas fa-edit"></i>Modifier
+                        <i class="fas fa-edit"></i>
                     </a>
                 </form>
             </td>

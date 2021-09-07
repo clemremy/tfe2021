@@ -5,7 +5,9 @@
     <h1>
         Les utilisateurs.
     </h1>
-    <a href="/profil" class="btn-back">Retour</a>
+    <div class="admin-link">
+        <a href="/profil" class="btn-back">Retour</a>
+    </div>
     <table>
         <tr>
             <th>Prénom</th>

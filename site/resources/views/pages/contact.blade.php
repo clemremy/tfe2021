@@ -6,7 +6,7 @@
             <div class="img-background"></div>
             <div class="title">
                 <h2>
-                    Écrivez-moi
+                    Écrivez-moi.
                 </h2>
                 <br/>
                 <p>

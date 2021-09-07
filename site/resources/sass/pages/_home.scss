@@ -148,7 +148,6 @@
 }
 
 .lastitems{
-    min-height: 100vh;
     //border: 1px solid red;
     margin: 4em 4em 0;
     display: flex;
@@ -194,9 +193,13 @@
             &:hover figure{
                 border-radius: 15px;
             }
+            &:hover p:last-of-type{
+                color: $black;
+            }
             p:last-of-type{
                 font-style: oblique;
                 color: $gray;
+                transition: all .2s ease-in-out;
             }
         }
     }

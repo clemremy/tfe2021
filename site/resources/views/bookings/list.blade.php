@@ -20,7 +20,7 @@
         Réservation.
     </h1>
     
-    <div class="cta">
+    <div class="admin-link">
         <a href="/mobilier" class="btn-back">Retour aux articles</a>
     </div>
 

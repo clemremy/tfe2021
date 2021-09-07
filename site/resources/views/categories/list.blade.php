@@ -25,8 +25,20 @@
     <h1>
         Les catégories.
     </h1>
-    <a href="/categorie/create" class="btn-add" role="button">Ajouter une catégorie</a>
-    <a href="/mobilier-accueil" class="btn-back">Annuler</a>
+    <div class="admin-link">
+        <a href="/categorie/create" class="btn-add" role="button">Ajouter une catégorie</a>
+        <a href="/mobilier-accueil" class="btn-back">Annuler</a>
+    </div>
+    <table>
+        <tr>
+            <th>
+                Nom
+            </th>
+            <th>
+                Action
+            </th>
+        </tr>
     @each('categories.one', $categories, 'categories')
+    </table>
 </article>
 @endsection

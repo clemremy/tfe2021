@@ -31,7 +31,7 @@
         @endif
         @if( $item->customization == 1)
         <a href="/contact" class="custom-button">
-            Interessé? Contactez-moi!
+            Interessé?
         </a>
         @endif
     </div>

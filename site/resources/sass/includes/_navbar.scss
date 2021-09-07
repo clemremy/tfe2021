@@ -33,7 +33,8 @@ nav.navbar{
                 color: $black;
                 position: relative;
                 padding: 0 10px 10px 0;
-                font: $body-normal;
+                
+                font-size: 1em;
                 &::after {
                     bottom: 0;
                     content: "";

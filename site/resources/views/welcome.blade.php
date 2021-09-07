@@ -45,27 +45,68 @@
 </div>
 
 <div class="lastitems">
-    <h2>
-        Nos derniers articles.
-    </h2>
-    <div>
-        <div class="mobilier-home">
-            <figure>
-                <img src="/images/article/{{ $items->image }}" style="width:200px;" >
-            </figure>
-            <div>
-                <h4>{{$items->name}}</h4>
-                <p>{{$items->price}}€</p>
-                <p>{{$items->categories->name}}</p>
-                <br/>
-
-                <a class="custom-button" href="/article/{{$items->id }}">
-                    Voir l'article
-                </a>
-            </div>
+    <div class="item-title col-12">
+        <h2>
+            Nos derniers articles.
+        </h2>
+        <div>
+            <a href="/mobilier">
+                <i class="fas fa-chevron-right fa-lg"></i>
+            </a>
         </div>
     </div>
-    <a href="/mobilier" class="more">Voir plus d'articles</a>
+    <a href="/article/{{$items->id }}" class="col-3">
+        <div class="mobilier">
+            <figure>
+                <img src="/images/article/{{ $items->image }}" >
+            </figure>
+            
+            <br/>
+            <h4>{{$items->name}}</h4>
+            <p>{{$items->price}}€</p>
+            <p>{{$items->categories->name}}</p>
+            <br/>
+        </div>
+    </a>
+    <a href="/article/{{$items->id }}" class="col-3">
+        <div class="mobilier">
+            <figure>
+                <img src="/images/article/{{ $items->image }}" >
+            </figure>
+            
+            <br/>
+            <h4>{{$items->name}}</h4>
+            <p>{{$items->price}}€</p>
+            <p>{{$items->categories->name}}</p>
+            <br/>
+        </div>
+    </a>
+    <a href="/article/{{$items->id }}" class="col-3">
+        <div class="mobilier">
+            <figure>
+                <img src="/images/article/{{ $items->image }}" >
+            </figure>
+            
+            <br/>
+            <h4>{{$items->name}}</h4>
+            <p>{{$items->price}}€</p>
+            <p>{{$items->categories->name}}</p>
+            <br/>
+        </div>
+    </a>
+    <a href="/article/{{$items->id }}" class="col-3">
+        <div class="mobilier">
+            <figure>
+                <img src="/images/article/{{ $items->image }}" >
+            </figure>
+            
+            <br/>
+            <h4>{{$items->name}}</h4>
+            <p>{{$items->price}}€</p>
+            <p>{{$items->categories->name}}</p>
+            <br/>
+        </div>
+    </a>
 </div>
 
 <div class="insert">

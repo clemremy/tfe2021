@@ -69,14 +69,15 @@
                     </div>
                 </p>
                 <input type="submit" value="Envoyer" class="btn submitcheck" id="sent">
+
+                @if (\Session::has('usersuccess'))
+                <div class="alert alert-success">
+                    <ul>
+                        <li>{!! \Session::get('usersuccess') !!}</li>
+                    </ul>
+                </div>
+                @endif
             </form>
-            @if (\Session::has('usersuccess'))
-            <div class="alert alert-success">
-                <ul>
-                    <li>{!! \Session::get('usersuccess') !!}</li>
-                </ul>
-            </div>
-            @endif
         </div>
     </article>
 @endsection

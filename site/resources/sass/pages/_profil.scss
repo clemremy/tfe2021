@@ -1,0 +1,10 @@
+.profile{
+    min-height: 100vh;
+    display: flex;
+    .profil{
+        margin: 8em 4em 4em;
+        padding: 4em;
+        background-color: $white;
+        flex-basis: 100%;
+    }
+}

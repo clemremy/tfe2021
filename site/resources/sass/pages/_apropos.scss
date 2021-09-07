@@ -6,9 +6,6 @@ article.apropospage{
             background-size: cover;
             right: 0;
         }
-        p{
-            font-size: 1.2em;
-        }
     }
     .container {
         div.history{
@@ -31,7 +28,7 @@ article.apropospage{
             margin: 10em 0;
             li{
                 margin: 1em;
-                height: 90vh;
+                height: 75vh;
                 width: 50%;
             }
             .picture-one{
@@ -43,7 +40,7 @@ article.apropospage{
                 background: url("/images/gallery/chair.jpg") no-repeat;
                 background-size: cover;
                 background-position: center;
-                height: 65vh;
+                height: 60vh;
                 width: 40%;
                 align-self: flex-end;
             }
@@ -51,7 +48,7 @@ article.apropospage{
                 background: url("/images/gallery/locker.jpg") no-repeat;
                 background-size: cover;
                 background-position: center bottom;
-                height: 65vh;
+                height: 60vh;
                 width: 40%;
                 align-self: flex-start;
             }

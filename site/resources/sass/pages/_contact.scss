@@ -11,9 +11,6 @@ article.contactpage{
 
         .title{
             left:50%;
-            p{
-                font-size: 1.2em;
-            }
         }
 
     }
@@ -21,11 +18,14 @@ article.contactpage{
     .container{
         display: flex;
         height: auto;
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin-top: -13em;
+        padding-bottom: 4em;
         .info{
             address{
                 background-color: $white;
                 padding: 4em;
-                font-size: 1.2em;
                 height: auto;
                 a{
                     color: $black;
@@ -37,6 +37,7 @@ article.contactpage{
             }
         } 
         .contact{
+            padding-left: 4em;
             p{
                 textarea{
                     height: 100px;

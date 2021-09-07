@@ -1,23 +1,30 @@
-<form action="/profil" method="post" class="form-edit profil">
-    @csrf
-    @method('put')
-    <label for="prenom">Prénom:</label>
-    <input type="text" name="first_name" value="{{Auth::user()->first_name}}">
+@extends('layouts.default')
 
-    <label for="name">Nom:</label>
-    <input type="text" name="last_name" value="{{Auth::user()->last_name}}">
+@section('content')
+<article class="profile">
+    <form action="/profil" method="post" class="form-edit profil">
+        @csrf
+        @method('put')
+        <label for="prenom">Prénom:</label>
+        <input type="text" name="first_name" value="{{Auth::user()->first_name}}">
 
-    <label for="email">Adresse mail:</label>
-    <input type="email" name="email" value="{{Auth::user()->email}}">
+        <label for="name">Nom:</label>
+        <input type="text" name="last_name" value="{{Auth::user()->last_name}}">
 
-    <label>Recevoir la newsletter?</label>
-    <select name="newsletter">
-        <option value="1" {{ ($user->newsletter == 1) ? 'selected' : '' }}>Oui</option>
-        <option value="0" {{ ($user->newsletter == 0) ? 'selected' : '' }}>Non</option>
-    </select>
+        <label for="email">Adresse mail:</label>
+        <input type="email" name="email" value="{{Auth::user()->email}}">
 
-    <div class="cta">
-        <input type="submit" value="Enregistrer" class="btn-edit">
-        <a href="{{ url()->previous() }}" class="btn-back">Annuler</a>
-    </div>
-</form>
+        <label>Recevoir la newsletter?</label>
+        <select name="newsletter">
+            <option value="1" {{ ($user->newsletter == 1) ? 'selected' : '' }}>Oui</option>
+            <option value="0" {{ ($user->newsletter == 0) ? 'selected' : '' }}>Non</option>
+        </select>
+
+        <div class="cta">
+            <input type="submit" value="Enregistrer" class="btn-edit">
+            <a href="{{ url()->previous() }}" class="btn-back">Annuler</a>
+        </div>
+    </form>
+</article>
+
+@endsection

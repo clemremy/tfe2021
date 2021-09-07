@@ -28,9 +28,15 @@
     </div>
     @endif
 
-    <h2 class="col-12">
-        Ils vous attendent.
-    </h2>
+    <div class="item-title col-12">
+        <h2>
+            Prêts à être adopté.
+        </h2>
+        <p>
+            Laissez-vous séduire.
+        </p>
+    </div>
+
     @if( Auth::user() && Auth::user()->role=='admin') 
     <ul class="admin-link col-12">
         <li>

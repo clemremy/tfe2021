@@ -29,7 +29,7 @@
                 <button type="submit" class="btn-delete" onclick="return confirm('Etes-vous sur de vouloir supprimer cette réservation?')">
                     <i class="fas fa-trash-alt"></i>Supprimer
                 </button>
-
+                <br/>
                 <a class="btn-edit" href="{{ route('reservation.edit', $booking->id) }}">
                     <i class="fas fa-edit"></i>Modifier
                 </a>

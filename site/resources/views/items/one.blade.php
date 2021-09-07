@@ -1,6 +1,6 @@
 @if ($items->active == 1 && $items->customization == 0)
-<a href="/article/{{$items->id }}">
-    <div class="mobilier col-4">
+<a href="/article/{{$items->id }}" class="col-3">
+    <div class="mobilier">
         <figure>
             <img src="/images/article/{{ $items->image }}" >
         </figure>
@@ -27,8 +27,8 @@
     </div>
 </a>
 @elseif (Auth::user() && Auth::user()->role=='admin' && $items->active == 0 && $items->customization == 0)
-<a href="/article/{{$items->id }}">
-    <div class="mobilier unactive col-4">
+<a href="/article/{{$items->id }}" class="col-3">
+    <div class="mobilier unactive">
         <figure>
             <img src="/images/article/{{ $items->image }}" >
         </figure>

@@ -22,15 +22,24 @@
     </div>
     @endif
 
-    <h2>
-        Nos articles à personnaliser.
-    </h2>
-    <p>
-        Ces biens sont encore dans leur état d'origine mais n'attendent que vous pour rentrer dans la grande aventure. L'un deux vous inspire et vous le voyez déjà chez vous? Contactez-moi, je m'occupe du reste!
-    </p>
+    <div class="item-title col-12">
+        <h2>
+            Nos articles à personnaliser.
+        </h2>
+        <p>
+            Encore dans leur état d'origine, ces biens n'attendent que vous pour entrer dans la grande aventure de la revalorisation. L'un deux vous inspire et vous le voyez déjà chez vous? Dîtes-moi vos désirs, je m'occupe du reste!
+        </p>
+    </div>
+    
     @if( Auth::user() && Auth::user()->role=='admin') 
-    <a href="/mobilier/create" class="btn-add" role="button">Ajouter un article</a>
-    <a href="/categorie" role="button" class="btn-back">Voir les catégories</a>
+    <ul class="admin-link col-12">
+        <li>
+            <a href="/mobilier/create" class="btn-add" role="button">Ajouter un article</a>
+        </li>
+        <li>
+            <a href="/categorie" role="button" class="btn-back">Voir les catégories</a>
+        </li>
+    </ul>
     @endif
     @each('items.two', $items, 'items')
 </article>

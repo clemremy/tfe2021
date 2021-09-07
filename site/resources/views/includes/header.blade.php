@@ -1,7 +1,7 @@
 <nav class="navbar">
     <div class="logo col-4">
         <a href="/" class="logo">
-            <img src="{{ asset('images/logo_02_white.svg') }}" class="imglogo" alt="Logo Glück Design"/>
+            <img src="{{ asset('images/logo.svg') }}" class="imglogo" alt="Logo Glück Design"/>
         </a>
     </div>
     <ul class="navlinks col-8">

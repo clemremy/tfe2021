@@ -35,3 +35,17 @@ $('form').submit(function(){
         return false;
     } 
 });
+
+// Change nav color
+$(function() {
+    switch (window.location.pathname) {
+        case '/mobilier-accueil':
+            $('.navbar').addClass('white');
+            break;
+        case '/':
+            $('.navbar').addClass('white');
+            break;
+        default: 
+            // code block
+}
+});

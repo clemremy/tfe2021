@@ -30,7 +30,7 @@ nav.navbar{
             }
             a{
                 text-decoration: none;
-                color: $white;
+                color: $black;
                 position: relative;
                 padding: 0 10px 10px 0;
                 font: $body-normal;
@@ -40,7 +40,7 @@ nav.navbar{
                     display: block;
                     height: 2px;
                     position: absolute;
-                    background: $white;
+                    background: $black;
                     transition: width 0.3s ease 0s;
                     width: 0;
                 }
@@ -64,6 +64,20 @@ nav.navbar{
             margin: 0.5em 0;
             background: $white;
             transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+    }
+}
+
+nav.white{
+    div.logo{
+        img.imglogo{
+            filter: invert(100%) brightness(120%) contrast(100%);
+        }
+    }
+    ul li a{
+        color: $white;
+        &::after{
+            background: $white;
         }
     }
 }

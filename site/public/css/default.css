@@ -33,7 +33,7 @@ nav.navbar ul li:last-child {
 }
 nav.navbar ul li a {
   text-decoration: none;
-  color: #ffffff;
+  color: #1d1d1d;
   position: relative;
   padding: 0 10px 10px 0;
   font: normal 400 0.95em/1.5 "Open Sans", sans-serif;
@@ -44,7 +44,7 @@ nav.navbar ul li a::after {
   display: block;
   height: 2px;
   position: absolute;
-  background: #ffffff;
+  background: #1d1d1d;
   transition: width 0.3s ease 0s;
   width: 0;
 }
@@ -66,6 +66,16 @@ nav.navbar div.burger div.line {
   margin: 0.5em 0;
   background: #ffffff;
   transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+nav.white div.logo img.imglogo {
+  filter: invert(100%) brightness(120%) contrast(100%);
+}
+nav.white ul li a {
+  color: #ffffff;
+}
+nav.white ul li a::after {
+  background: #ffffff;
 }
 
 nav.navbar.show div.burger div.line1 {
@@ -1149,7 +1159,7 @@ div.first-slide div.title h2 {
 }
 
 .btn-add {
-  background-color: #578259;
+  background-color: #9fc957;
   display: inline-block;
   cursor: pointer;
   color: #ffffff;
@@ -1158,7 +1168,7 @@ div.first-slide div.title h2 {
   text-decoration: none;
 }
 .btn-add:hover {
-  background-color: #4d734f;
+  background-color: #94c344;
   color: #ffffff;
 }
 .btn-add:active {
@@ -1167,7 +1177,7 @@ div.first-slide div.title h2 {
 }
 
 .btn-delete {
-  background-color: #ca0000;
+  background-color: #ff3b3b;
   cursor: pointer;
   color: #ffffff;
   font: normal 400 0.95em/1.5 "Open Sans", sans-serif;
@@ -1177,7 +1187,7 @@ div.first-slide div.title h2 {
   outline: none;
 }
 .btn-delete:hover {
-  background-color: #b10000;
+  background-color: #ff2222;
   color: #ffffff;
 }
 .btn-delete i {
@@ -1185,7 +1195,7 @@ div.first-slide div.title h2 {
 }
 
 .btn-edit {
-  background-color: #ca7900;
+  background-color: #fad43d;
   cursor: pointer;
   color: #ffffff;
   font: normal 400 0.95em/1.5 "Open Sans", sans-serif;
@@ -1195,7 +1205,7 @@ div.first-slide div.title h2 {
   outline: none;
 }
 .btn-edit:hover {
-  background-color: #e48800;
+  background-color: #f9ce24;
   color: #ffffff;
 }
 .btn-edit i {
@@ -1248,4 +1258,25 @@ div.first-slide div.title h2 {
 }
 .modal .modal-content form .btn-edit {
   width: auto;
+}
+
+.alert {
+  width: 100%;
+  padding: 1em;
+  border-radius: 10px;
+}
+
+.alert-danger {
+  color: #D8000C;
+  background-color: #FFBABA;
+}
+
+.alert-warning {
+  color: #9F6000;
+  background-color: #FEEFB3;
+}
+
+.alert-success {
+  color: #270;
+  background-color: #DFF2BF;
 }

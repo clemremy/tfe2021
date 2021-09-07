@@ -16,7 +16,7 @@
             <div class="history">
                 <div class="author col-6">
                     <h3>
-                        Valentine
+                        A propos de Valentine
                     </h3>
                     <figure>
                         <img src="{{ asset('images/valentine.jpeg') }}" alt="portrait de Valentine - fondatrice de Glück Design" >

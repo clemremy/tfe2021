@@ -287,3 +287,22 @@ div.first-slide{
         }
     }
 }
+
+// ALERT
+.alert{
+    width: 100%;
+    padding: 1em;
+    border-radius: 10px;
+} 
+.alert-danger{
+    color: #D8000C;
+    background-color: #FFBABA;
+}
+.alert-warning{
+    color: #9F6000;
+    background-color: #FEEFB3;
+}
+.alert-success{
+    color: #270;
+    background-color: #DFF2BF;
+}

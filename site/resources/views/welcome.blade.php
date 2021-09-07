@@ -74,7 +74,7 @@
             Tout pour un style unique
         </h3>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Sélectionnés avec soin, Glück Design vous propose de redécouvrir des meubles oubliés en leur donnant une nouvelle vie pour en faire des pièces uniques de votre intérieur. Soucieux de l'économie durable, vous pourrez combiner chique et authenticité grâce à ces articles d'exeptions, made in Belgium.
         </p>
         <br/>
         <a href="/a-propos" class="custom-button">découvrir</a>

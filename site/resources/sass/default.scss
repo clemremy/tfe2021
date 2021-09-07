@@ -97,16 +97,13 @@ div.first-slide{
         position: absolute;
     }
     div.title{
+        position: absolute;
+        width: 50%;
+        min-height: 100vh;
         display: flex;
         flex-flow: column wrap;
         justify-content: center;
-        width: 50%;
-        margin: 0 auto;
-        h2{
-            text-align: center;
-            margin-top: 50vh;
-            transform: translateY(-50%);
-        }
+        padding: 4em;
     }
 }
 

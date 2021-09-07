@@ -72,10 +72,7 @@ nav.white div.logo img.imglogo {
   filter: invert(100%) brightness(120%) contrast(100%);
 }
 nav.white ul li a {
-  color: #ffffff;
-}
-nav.white ul li a::after {
-  background: #ffffff;
+  filter: invert(100%) brightness(120%) contrast(100%);
 }
 
 nav.navbar.show div.burger div.line1 {
@@ -360,7 +357,7 @@ div.footer nav.mentions ul li a:hover, div.footer nav.mentions ul li a:focus {
 }
 @-webkit-keyframes fade {
   from {
-    opacity: 0.9;
+    opacity: 0.95;
   }
   to {
     opacity: 1;
@@ -368,7 +365,7 @@ div.footer nav.mentions ul li a:hover, div.footer nav.mentions ul li a:focus {
 }
 @keyframes fade {
   from {
-    opacity: 0.9;
+    opacity: 0.95;
   }
   to {
     opacity: 1;
@@ -507,29 +504,33 @@ div.footer nav.mentions ul li a:hover, div.footer nav.mentions ul li a:focus {
 }
 
 article.contactpage .first-slide .img-background {
-  background-image: url(/images/1-16.jpg?deddd34b576379109d659e794c7a3ef2);
-  background-position: bottom;
+  background-image: url(/images/nathan-oakley-2.jpg?1e0478592c2abe338fb4ea6438321ede);
+  background-position: right center;
+  background-size: cover;
   left: 0;
+}
+article.contactpage .first-slide .title {
+  left: 50%;
+}
+article.contactpage .first-slide .title p {
+  font-size: 1.2em;
 }
 article.contactpage .container {
   display: flex;
-  flex-flow: row wrap;
-  align-items: flex-end;
   height: auto;
 }
 article.contactpage .container .info address {
-  text-align: center;
+  background-color: #ffffff;
+  padding: 4em;
+  font-size: 1.2em;
+  height: auto;
 }
 article.contactpage .container .info address a {
   color: #1d1d1d;
   font: normal 400 0.95em/1.5 "Open Sans", sans-serif;
-  font-size: 1.2em;
 }
 article.contactpage .container .info address a:hover, article.contactpage .container .info address a:focus {
   color: #808080;
-}
-article.contactpage .container .contact {
-  margin: 0 3em;
 }
 article.contactpage .container .contact p textarea {
   height: 100px;
@@ -545,57 +546,25 @@ article.contactpage .container .contact p select {
 }
 
 article.apropospage .first-slide .img-background {
-  background-image: url(/images/minh-pham.jpg?64a7d8935c45244d2562d15ff61d27dd);
-  background-position: center;
+  background-image: url(/images/paul-weaver.jpg?ea10492dd4c55976921dc0921250fb5f);
+  background-position: right center;
   background-size: cover;
   right: 0;
 }
+article.apropospage .first-slide p {
+  font-size: 1.2em;
+}
 article.apropospage .container div.history {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   margin: 10rem auto;
   display: flex;
   flex-flow: row wrap;
   padding: 2em 0;
+  text-align: justify;
 }
 article.apropospage .container div.history > div {
   padding: 2em;
-}
-article.apropospage .container div.history .author {
-  text-align: center;
-}
-article.apropospage .container div.history .author figure {
-  height: 90%;
-  width: 100%;
-}
-article.apropospage .container div.history .author figure img {
-  height: 100%;
-  width: 100%;
-  display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-article.apropospage .container div.history .author figure .rotating-text {
-  -webkit-animation: rotate 8s linear infinite;
-          animation: rotate 8s linear infinite;
-  transform-origin: 50% 50%;
-  letter-spacing: 3px;
-  margin-top: -5em;
-  margin-right: -35em;
-}
-@-webkit-keyframes rotate {
-  100% {
-    transform: rotate(1turn);
-  }
-}
-@keyframes rotate {
-  100% {
-    transform: rotate(1turn);
-  }
-}
-article.apropospage .container div.history .text {
-  text-align: justify;
-  align-self: center;
 }
 article.apropospage .container ul.galerie {
   width: 100%;
@@ -606,116 +575,36 @@ article.apropospage .container ul.galerie {
 }
 article.apropospage .container ul.galerie li {
   margin: 1em;
-  height: 80vh;
+  height: 90vh;
   width: 50%;
-  transition: background 0.3s ease-in-out;
 }
 article.apropospage .container ul.galerie .picture-one {
-  background: url("/images/3.jpg") no-repeat;
+  background: url("/images/gallery/rockingchair-1.jpg") no-repeat;
+  background-position: bottom;
   background-size: cover;
-  background-origin: content-box;
-}
-article.apropospage .container ul.galerie .picture-one:hover {
-  background: url("/images/1.jpg") no-repeat;
-  background-size: cover;
-  background-origin: content-box;
 }
 article.apropospage .container ul.galerie .picture-two {
-  background: url("/images/3.jpg") no-repeat;
+  background: url("/images/gallery/chair.jpg") no-repeat;
   background-size: cover;
-  background-origin: content-box;
-  height: 60vh;
+  background-position: center;
+  height: 65vh;
   width: 40%;
   align-self: flex-end;
 }
-article.apropospage .container ul.galerie .picture-two:hover {
-  background: url("/images/1.jpg") no-repeat;
-  background-size: cover;
-  background-origin: content-box;
-}
 article.apropospage .container ul.galerie .picture-three {
-  background: url("/images/3.jpg") no-repeat;
+  background: url("/images/gallery/locker.jpg") no-repeat;
   background-size: cover;
-  background-origin: content-box;
-  height: 60vh;
+  background-position: center bottom;
+  height: 65vh;
   width: 40%;
   align-self: flex-start;
 }
-article.apropospage .container ul.galerie .picture-three:hover {
-  background: url("/images/1.jpg") no-repeat;
-  background-size: cover;
-  background-origin: content-box;
-}
 article.apropospage .container ul.galerie .picture-four {
-  background: url("/images/3.jpg") no-repeat;
+  background: url("/images/gallery/chair-3.jpg") no-repeat;
   background-size: cover;
-  background-origin: content-box;
-}
-article.apropospage .container ul.galerie .picture-four:hover {
-  background: url("/images/1.jpg") no-repeat;
-  background-size: cover;
-  background-origin: content-box;
+  background-position: center;
 }
 
-@media all and (max-width: 767px) {
-  article.apropospage .container {
-    margin: 0;
-  }
-  article.apropospage .container div.history .author figure .rotating-text {
-    display: none;
-  }
-  article.apropospage .container .galerie .picture-one {
-    width: 100%;
-    height: 100%;
-  }
-  article.apropospage .container .galerie .picture-two {
-    width: 100%;
-    height: 100%;
-  }
-  article.apropospage .container .galerie .picture-three {
-    width: 100%;
-    height: 100%;
-  }
-  article.apropospage .container .galerie .picture-four {
-    width: 100%;
-    height: 100%;
-  }
-}
-@media (min-width: 768px) and (max-width: 1023px) {
-  article.apropospage {
-    max-width: 100%;
-  }
-  article.apropospage .container {
-    margin: 0;
-  }
-  article.apropospage .container div.history .author figure .rotating-text {
-    display: none;
-  }
-  article.apropospage .container .galerie {
-    margin: 0;
-    padding: 0;
-  }
-  article.apropospage .container .galerie div {
-    margin: 0;
-    padding: 1em;
-  }
-  article.apropospage .container .galerie .picture-one {
-    width: 100%;
-    height: 50%;
-  }
-  article.apropospage .container .galerie .picture-two {
-    width: 100%;
-    height: 50%;
-  }
-  article.apropospage .container .galerie .picture-three {
-    width: 100%;
-    height: 50%;
-  }
-  article.apropospage .container .galerie .picture-four {
-    width: 100%;
-    height: 50%;
-  }
-}
 .legal {
   margin-bottom: 2em;
   width: 100%;
@@ -823,30 +712,33 @@ article.apropospage .container ul.galerie .picture-four:hover {
   width: 100%;
   height: 100vh;
 }
-.allitems .half-slide {
+.allitems a {
   flex-basis: 50%;
+}
+.allitems a .half-slide {
   overflow: hidden;
 }
-.allitems .half-slide .title {
+.allitems a .half-slide .title {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(/images/halacious.jpg?97b0518d5829382cb8efdbf2966935a6);
+  background-image: url(/images/thom-bradley.jpg?601c17ae472feda9bc1c512048f80d35);
   background-size: cover;
-  background-position: center bottom;
+  background-position: center;
   width: 100%;
   height: 100vh;
   transition: all 0.5s;
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
-.allitems .half-slide .title:hover {
+.allitems a .half-slide .title:hover {
   transform: scale(1);
 }
-.allitems .half-slide .title h2 {
+.allitems a .half-slide .title h2 {
   color: #ffffff;
 }
-.allitems .half-slide .two {
-  background-image: url(/images/nathan-oakley.jpg?32eea316fc2d443cf3ba853cbe1c47b7);
+.allitems a .half-slide .two {
+  background-image: url(/images/ryan-riggins.jpg?26c0790dbb361727704d153951a39c56);
+  background-position: center;
 }
 
 .item {
@@ -1019,16 +911,13 @@ div.first-slide .img-background {
   position: absolute;
 }
 div.first-slide div.title {
+  position: absolute;
+  width: 50%;
+  min-height: 100vh;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
-  width: 50%;
-  margin: 0 auto;
-}
-div.first-slide div.title h2 {
-  text-align: center;
-  margin-top: 50vh;
-  transform: translateY(-50%);
+  padding: 4em;
 }
 
 .col-12 {

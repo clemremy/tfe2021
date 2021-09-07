@@ -9,8 +9,8 @@
             @elseif(Auth::check() && Auth::user()->role=='user')
                 <p>Bienvenue</p>
         @endif
-        <h1>
-            Du mobilier unique.
+        <h1 style="text-align: center">
+        Des meubles<br/>remplis d'histoires
         </h1>
     </div>
     
@@ -74,7 +74,7 @@
             Tout pour un style unique
         </h3>
         <p>
-            Sélectionnés avec soin, Glück Design vous propose de redécouvrir des meubles oubliés en leur donnant une nouvelle vie pour en faire des pièces uniques de votre intérieur. Soucieux de l'économie durable, vous pourrez combiner chique et authenticité grâce à ces articles d'exeptions, made in Belgium.
+            En leur donnant une nouvelle vie, Glück Design revalorise des meubles oubliés pour vous afin d'en faire des pièces uniques de votre intérieur. Soucieux de l'économie durable, vous pourrez combiner chique et authenticité grâce à ces articles d'exeptions, made in Belgium.
         </p>
         <br/>
         <a href="/a-propos" class="custom-button">découvrir</a>
@@ -100,7 +100,7 @@
     }
     slides[slideIndex-1].style.display = "block";  
     dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 5000); // Change image every 2 seconds
+    setTimeout(showSlides, 5000); // Change image every 5 seconds
     }
 </script>
 @endsection

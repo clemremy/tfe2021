@@ -25,6 +25,9 @@
     <h2>
         Nos articles à personnaliser.
     </h2>
+    <p>
+        Ces biens sont encore dans leur état d'origine mais n'attendent que vous pour rentrer dans la grande aventure. L'un deux vous inspire et vous le voyez déjà chez vous? Contactez-moi, je m'occupe du reste!
+    </p>
     @if( Auth::user() && Auth::user()->role=='admin') 
     <a href="/mobilier/create" class="btn-add" role="button">Ajouter un article</a>
     <a href="/categorie" role="button" class="btn-back">Voir les catégories</a>

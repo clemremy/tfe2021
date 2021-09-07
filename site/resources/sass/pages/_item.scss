@@ -2,31 +2,35 @@
     display: flex;
     width: 100%;
     height: 100vh;
-    .half-slide{
+    a{
         flex-basis: 50%;
-        overflow: hidden;
-        .title{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-image: url("../../../public/images/halacious.jpg");
-            background-size: cover;
-            background-position: center bottom;
-            width: 100%;
-            height: 100vh;
-            transition: all .5s;
-            transform: scale(1.05);
-            &:hover{
-                transform: scale(1);
+        .half-slide{
+            overflow: hidden;
+            .title{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-image: url("../../../public/images/thom-bradley.jpg");
+                background-size: cover;
+                background-position: center;
+                width: 100%;
+                height: 100vh;
+                transition: all .5s;
+                transform: scale(1.02);
+                &:hover{
+                    transform: scale(1);
+                }
+                h2{
+                    color: $white;
+                }
             }
-            h2{
-                color: $white;
+            .two{
+                background-image: url("../../../public/images/ryan-riggins.jpg");
+                background-position: center;
             }
-        }
-        .two{
-            background-image: url("../../../public/images/nathan-oakley.jpg");
         }
     }
+
 }
 
 .item{

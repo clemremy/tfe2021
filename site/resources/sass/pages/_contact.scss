@@ -1,34 +1,47 @@
 article.contactpage{
+
     .first-slide{
+
         .img-background{
-            background-image: url("../../../public/images/1-16.jpg");
-            background-position: bottom;
+            background-image: url("../../../public/images/nathan-oakley-2.jpg");
+            background-position: right center;
+            background-size: cover;
             left: 0;
         }
-    }
-    .container{
-        display: flex;
-        flex-flow: row wrap;
-        align-items: flex-end;
-        height: auto;
-        .info address
-        {
-            text-align: center;
-            a{
-                color: $black;
-                font: $body-normal;
+
+        .title{
+            left:50%;
+            p{
                 font-size: 1.2em;
-                &:hover, &:focus{
-                    color: $gray;  
-                }
             }
         }
+
+    }
+
+    .container{
+        display: flex;
+        height: auto;
+        .info{
+            address{
+                background-color: $white;
+                padding: 4em;
+                font-size: 1.2em;
+                height: auto;
+                a{
+                    color: $black;
+                    font: $body-normal;
+                    &:hover, &:focus{
+                        color: $gray;  
+                    }
+                }
+            }
+        } 
         .contact{
-            margin: 0 3em;
             p{
                 textarea{
                     height: 100px;
                 }
+
                 select{
                     appearance:none;
                     background-image:
@@ -45,6 +58,7 @@ article.contactpage{
                         1px 1.5em;
                     background-repeat: no-repeat;
                 }
+
             }
         }
     }

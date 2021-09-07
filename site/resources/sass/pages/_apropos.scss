@@ -1,52 +1,26 @@
 article.apropospage{
     .first-slide{
         .img-background{
-            background-image: url("../../../public/images/minh-pham.jpg");
-            background-position: center;
+            background-image: url("../../../public/images/paul-weaver.jpg");
+            background-position: right center;
             background-size: cover;
             right: 0;
+        }
+        p{
+            font-size: 1.2em;
         }
     }
     .container {
         div.history{
             width: 100%;
-            height: 100vh;
+            min-height: 100vh;
             margin: 10rem auto;
             display: flex;
             flex-flow: row wrap;
             padding: 2em 0;
+            text-align: justify;
             & > div{
                 padding: 2em;
-            }
-            .author{
-                text-align: center;
-                figure{
-                    height: 90%;
-                    width: 100%;
-                    img{
-                        height: 100%;
-                        width: 100%;
-                        display: block;
-                        object-fit: cover;
-                    }
-                    .rotating-text {
-                        animation: rotate 8s linear infinite;
-                        transform-origin: 50% 50%;
-                        letter-spacing: 3px;
-                        margin-top: -5em;
-                        margin-right: -35em;
-                        @keyframes rotate {
-                            100% {
-                                transform: rotate(1turn);
-                            }
-                        }
-                    }
-                }
-
-            }
-            .text{
-                text-align: justify;
-                align-self: center;
             }
         }
         ul.galerie{
@@ -57,134 +31,44 @@ article.apropospage{
             margin: 10em 0;
             li{
                 margin: 1em;
-                height: 80vh;
+                height: 90vh;
                 width: 50%;
-                transition: background .3s ease-in-out;
             }
             .picture-one{
-                background: url("/images/3.jpg") no-repeat;
+                background: url("/images/gallery/rockingchair-1.jpg") no-repeat;
+                background-position: bottom;
                 background-size: cover;
-                background-origin: content-box;
-                &:hover{
-                    background: url("/images/1.jpg") no-repeat;
-                    background-size: cover;
-                    background-origin: content-box;
-                }
             }
             .picture-two{
-                background: url("/images/3.jpg") no-repeat;
+                background: url("/images/gallery/chair.jpg") no-repeat;
                 background-size: cover;
-                background-origin: content-box;
-                height: 60vh;
+                background-position: center;
+                height: 65vh;
                 width: 40%;
                 align-self: flex-end;
-                &:hover{
-                    background: url("/images/1.jpg") no-repeat;
-                    background-size: cover;
-                    background-origin: content-box;
-                }
             }
             .picture-three{
-                background: url("/images/3.jpg") no-repeat;
+                background: url("/images/gallery/locker.jpg") no-repeat;
                 background-size: cover;
-                background-origin: content-box;
-                height: 60vh;
+                background-position: center bottom;
+                height: 65vh;
                 width: 40%;
                 align-self: flex-start;
-                &:hover{
-                    background: url("/images/1.jpg") no-repeat;
-                    background-size: cover;
-                    background-origin: content-box;
-                }
             }
             .picture-four{
-                background: url("/images/3.jpg") no-repeat;
+                background: url("/images/gallery/chair-3.jpg") no-repeat;
                 background-size: cover;
-                background-origin: content-box;
-                &:hover{
-                    background: url("/images/1.jpg") no-repeat;
-                    background-size: cover;
-                    background-origin: content-box;
-                }
+                background-position: center;
             }
         }
     }
 }
 
-
-@media #{$mobile}{
-    article.apropospage{
-        .container{
-            margin: 0;
-            div.history{
-                .author{
-                    figure{
-                        .rotating-text {
-                            display: none;
-                        }
-                    }
-                }
-            }
-            .galerie{
-                .picture-one{
-                    width: 100%;
-                    height: 100%;
-                }
-                .picture-two{
-                    width: 100%;
-                    height: 100%;
-                }
-                .picture-three{
-                    width: 100%;
-                    height: 100%;
-                }
-                .picture-four{
-                    width: 100%;
-                    height: 100%;
-                }
-            }
-        }
-    }
-}
 
 @media #{$tablet}{
-    article.apropospage{
-        max-width: 100%;
-        .container{
-            margin: 0;
-            div.history{
-                .author{
-                    figure{
-                        .rotating-text {
-                            display: none;
-                        }
-                    }
-                }
-            }
-            .galerie{
-                margin: 0;
-                padding: 0;
-                div{
-                    margin: 0;
-                    padding: 1em;
-                }
-                .picture-one{
-                    width: 100%;
-                    height: 50%;
-                }
-                .picture-two{
-                    width: 100%;
-                    height: 50%;
-                }
-                .picture-three{
-                    width: 100%;
-                    height: 50%;
-                }
-                .picture-four{
-                    width: 100%;
-                    height: 50%;
-                }
-            }
-        }
-    }
+    
+}
+
+@media #{$mobile}{
+
 }

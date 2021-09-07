@@ -75,10 +75,7 @@ nav.white{
         }
     }
     ul li a{
-        color: $white;
-        &::after{
-            background: $white;
-        }
+        filter: invert(100%) brightness(120%) contrast(100%);
     }
 }
 

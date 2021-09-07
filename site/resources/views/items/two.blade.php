@@ -7,6 +7,7 @@
 
         <br/>
         <h4>{{$items->name}}</h4>
+        <p class="price">{{$items->price}}€</p>
         <p>{{$items->categories->name}}</p>
         <br/>
             
@@ -34,6 +35,7 @@
 
         <br/>
         <h4>{{$items->name}}</h4>
+        <p class="price">{{$items->price}}€</p>
         <p>{{$items->categories->name}}</p>
         <br/>
 

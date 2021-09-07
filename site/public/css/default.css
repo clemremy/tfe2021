@@ -166,7 +166,7 @@ div.footer nav.footer-nav ul li p:first-of-type {
 }
 div.footer nav.footer-nav ul li a {
   font: normal 300 1em/1 "Archivo", sans-serif;
-  font-size: 2.7em;
+  font-size: 2.6em;
   line-height: 2em;
   padding: 0 1em;
   color: #1d1d1d;
@@ -422,6 +422,60 @@ div.footer nav.mentions ul li a:hover, div.footer nav.mentions ul li a:focus {
   }
 }
 
+.lastitems {
+  min-height: 100vh;
+  border: 1px solid red;
+  margin: 4em 4em 0;
+}
+.lastitems div {
+  display: flex;
+  justify-content: flex-start;
+}
+.lastitems div .mobilier-home {
+  display: block;
+}
+.lastitems div .mobilier-home figure {
+  height: 300px;
+  width: 100%;
+  overflow: hidden;
+}
+.lastitems div .mobilier-home figure img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.lastitems div .mobilier-home:hover figure {
+  transition: all 1s ease-in-out;
+  border-radius: 5%;
+}
+.lastitems div .mobilier-home p:nth-of-type(2) {
+  font-style: oblique;
+  color: #808080;
+}
+.lastitems .more {
+  text-decoration: none;
+  color: #1d1d1d;
+  position: relative;
+  padding: 0 10px 10px 0;
+  font: normal 400 0.95em/1.5 "Open Sans", sans-serif;
+  float: right;
+}
+.lastitems .more::after {
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  position: absolute;
+  background: #1d1d1d;
+  transition: width 0.3s ease 0s;
+  width: 0;
+}
+.lastitems .more:hover::after {
+  width: 50%;
+  left: 0;
+}
+
 .insert .about {
   min-height: 100vh;
   display: flex;
@@ -433,6 +487,10 @@ div.footer nav.mentions ul li a:hover, div.footer nav.mentions ul li a:focus {
 }
 .insert .about > * {
   margin: 1rem;
+}
+.insert .about h3 {
+  font-size: 3em;
+  line-height: 2em;
 }
 .insert .about a {
   margin: 0 auto;
@@ -680,31 +738,32 @@ article.apropospage .container ul.galerie .picture-four:hover {
 }
 
 .atelier {
-  padding: 10rem 0 5rem 0;
+  padding: 10em 4em 0;
 }
-.atelier h1 {
+.atelier h2 {
   text-align: center;
 }
 .atelier .btn-add {
   margin-left: 5%;
 }
 .atelier .workshop {
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-flow: row wrap;
   background-color: #ffffff;
   justify-content: flex-end;
-  padding: 2rem;
-  margin: 3rem auto;
+  margin: 4em auto;
+}
+.atelier .workshop > * {
+  padding: 2em;
 }
 .atelier .workshop:not(:first-child) {
   margin: 1rem auto 3rem;
 }
 .atelier .workshop figure {
   flex-basis: 50%;
-  height: 400px;
+  height: 550px;
   overflow: hidden;
-  padding: 0 5rem 0 0;
 }
 .atelier .workshop figure img {
   -o-object-fit: cover;
@@ -717,18 +776,19 @@ article.apropospage .container ul.galerie .picture-four:hover {
   height: 100%;
   display: flex;
   flex-flow: column wrap;
-  padding: 1rem 0 1rem 1rem;
-}
-.atelier .workshop .workshop-info h2 {
-  margin: 1rem 1rem 1rem 0;
 }
 .atelier .workshop .workshop-info .detail {
+  margin: 3rem 0 1rem;
   border-bottom: 1px solid #1d1d1d;
   padding-bottom: 1rem;
   text-transform: uppercase;
 }
+.atelier .workshop .workshop-info a, .atelier .workshop .workshop-info button {
+  margin-top: 3em;
+}
 .atelier .workshop .crud {
-  margin: 2rem 0 0;
+  padding-top: 0;
+  margin-top: 0;
 }
 
 .form-edit, .form-create {
@@ -787,6 +847,14 @@ article.apropospage .container ul.galerie .picture-four:hover {
   flex-flow: row wrap;
   justify-content: space-between;
 }
+.item .admin-link {
+  display: flex;
+  margin: 1em 1em 1em 0;
+}
+.item .admin-link li {
+  margin-right: 1em;
+  align-self: center;
+}
 .item .mobilier figure {
   height: 300px;
   width: 100%;
@@ -835,7 +903,7 @@ article.apropospage .container ul.galerie .picture-four:hover {
   display: flex;
   align-items: center;
 }
-.article .product .product-title h2 {
+.article .product .product-title h3 {
   flex-basis: 50%;
 }
 .article .product .product-title p {
@@ -882,6 +950,7 @@ body h2 {
 }
 body h3 {
   font-size: 2em;
+  line-height: 1.7em;
 }
 body h4 {
   font-size: 1.2em;
@@ -889,28 +958,6 @@ body h4 {
 body address {
   text-decoration: none;
   font-style: normal;
-}
-body label:not(.checkboxlabel) {
-  text-transform: uppercase;
-  width: 100%;
-}
-body input:not(.checkbox), body select, body textarea {
-  margin: 1em auto;
-  width: 100%;
-  padding: 1em;
-  outline: none;
-  border: 1px solid #d3d3d3;
-}
-body input:not(.checkbox):focus, body select:focus, body textarea:focus {
-  border: 1px solid #CBD5CC;
-}
-body .checkboxlabel a {
-  text-decoration: none;
-  font: normal 400 0.95em/1.5 "Open Sans", sans-serif;
-  color: #808080;
-}
-body .checkboxlabel a:hover, body .checkboxlabel a:focus {
-  color: #1d1d1d;
 }
 body .container {
   margin: 4em;
@@ -924,6 +971,32 @@ a {
 
 li {
   list-style: none;
+}
+
+label:not(.checkboxlabel) {
+  text-transform: uppercase;
+  width: 100%;
+}
+
+input:not(.checkbox), select, textarea {
+  margin: 1em auto;
+  width: 100%;
+  padding: 1em;
+  outline: none;
+  border: 1px solid #d3d3d3;
+}
+
+input:not(.checkbox):focus, select:focus, textarea:focus {
+  border: 1px solid #CBD5CC;
+}
+
+.checkboxlabel a {
+  text-decoration: none;
+  font: normal 400 0.95em/1.5 "Open Sans", sans-serif;
+  color: #808080;
+}
+.checkboxlabel a:hover, .checkboxlabel a:focus {
+  color: #1d1d1d;
 }
 
 div.first-slide {
@@ -942,7 +1015,7 @@ div.first-slide div.title {
   width: 50%;
   margin: 0 auto;
 }
-div.first-slide div.title h1 {
+div.first-slide div.title h2 {
   text-align: center;
   margin-top: 50vh;
   transform: translateY(-50%);

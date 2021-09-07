@@ -36,6 +36,14 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+    .admin-link{
+        display: flex;
+        margin: 1em 1em 1em 0;
+        li{
+            margin-right: 1em;
+            align-self: center;
+        }
+    }
     .mobilier{
         figure{
             height: 300px;

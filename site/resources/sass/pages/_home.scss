@@ -147,6 +147,63 @@
     /* End of scroll */
 }
 
+.lastitems{
+    min-height: 100vh;
+    border: 1px solid red;
+    margin: 4em 4em 0;
+
+    div{
+        display: flex;
+        justify-content: flex-start;
+        .mobilier-home{
+            display: block;
+            figure{
+                height: 300px;
+                width: 100%;
+                overflow: hidden;
+                img{
+                    object-fit: cover;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+            &:hover figure{
+                transition: all 1s ease-in-out;
+                border-radius: 5%;
+            }
+            p:nth-of-type(2){
+                font-style: oblique;
+                color: $gray;
+            }
+        }
+    
+    }
+    .more{
+        text-decoration: none;
+        color: $black;
+        position: relative;
+        padding: 0 10px 10px 0;
+        font: $body-normal;
+        float: right;
+        &::after {
+            bottom: 0;
+            content: "";
+            display: block;
+            height: 2px;
+            position: absolute;
+            background: $black;
+            transition: width 0.3s ease 0s;
+            width: 0;
+        }
+        &:hover::after {
+            width: 50%;
+            left: 0;
+        }
+    }
+}
+
+
+
 .insert{
     .about{
         min-height: 100vh;
@@ -158,6 +215,10 @@
         text-align: center;
         & > *{
             margin: 1rem;
+        }
+        h3{
+            font-size: 3em;
+            line-height: 2em;
         }
         a{
             margin: 0 auto;

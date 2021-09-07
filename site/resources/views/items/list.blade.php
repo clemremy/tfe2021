@@ -28,19 +28,19 @@
     </div>
     @endif
 
-    <h1 class="col-12">
+    <h2 class="col-12">
         Ils vous attendent.
-    </h1>
+    </h2>
     @if( Auth::user() && Auth::user()->role=='admin') 
     <ul class="admin-link col-12">
         <li>
             <a href="/mobilier/create" class="btn-add" role="button">Ajouter un article</a>
         </li>
         <li>
-            <a href="/reservation" role="button">Voir les réservations</a>
+            <a href="/reservation" role="button" class="btn-back">Voir les réservations</a>
         </li>
         <li>
-            <a href="/categorie" role="button">Voir les catégories d'articles</a>
+            <a href="/categorie" role="button" class="btn-back">Voir les catégories</a>
         </li>
     </ul>
     @endif

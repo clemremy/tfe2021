@@ -22,12 +22,12 @@
     </div>
     @endif
 
-    <h1>
+    <h2>
         Nos articles à personnaliser.
-    </h1>
+    </h2>
     @if( Auth::user() && Auth::user()->role=='admin') 
     <a href="/mobilier/create" class="btn-add" role="button">Ajouter un article</a>
-    <a href="/categorie" role="button">Voir les catégories d'articles</a>
+    <a href="/categorie" role="button" class="btn-back">Voir les catégories</a>
     @endif
     @each('items.two', $items, 'items')
 </article>

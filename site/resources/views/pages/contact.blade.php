@@ -5,9 +5,9 @@
         <div class="first-slide">
             <div class="img-background"></div>
             <div class="title">
-                <h1>
+                <h2>
                     Une question?
-                </h1>
+                </h2>
             </div>
         </div>
         <div class="container">

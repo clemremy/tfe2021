@@ -7,7 +7,7 @@
     </figure>
     <div class="product col-6">
         <div class="product-title">
-            <h2>{{$item->name}}</h2>
+            <h3>{{$item->name}}</h3>
             <br/>
             <p>{{$item->price}}€</p>
         </div>

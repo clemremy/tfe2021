@@ -9,7 +9,6 @@
             @elseif(Auth::check() && Auth::user()->role=='user')
                 <p>Bienvenue</p>
         @endif
-
         <h1>
             Du mobilier unique.
         </h1>
@@ -46,20 +45,18 @@
 </div>
 
 <div class="lastitems">
-    <h1>
+    <h2>
         Nos derniers articles.
-    </h1>
+    </h2>
     <div>
         <div class="mobilier-home">
             <figure>
                 <img src="/images/article/{{ $items->image }}" style="width:200px;" >
             </figure>
             <div>
-                <h2>{{$items->name}}</h2>
-                <p>{{$items->description}}</p>
+                <h4>{{$items->name}}</h4>
                 <p>{{$items->price}}€</p>
-                <p>{{$items->amount}} pièces</p>
-                <p>Catégorie: {{$items->categories->name}}</p>
+                <p>{{$items->categories->name}}</p>
                 <br/>
 
                 <a class="custom-button" href="/article/{{$items->id }}">
@@ -68,14 +65,14 @@
             </div>
         </div>
     </div>
-    <a href="/mobilier">Voir plus d'articles</a>
+    <a href="/mobilier" class="more">Voir plus d'articles</a>
 </div>
 
 <div class="insert">
     <div class="about">
-        <h1>
+        <h3>
             Tout pour un style unique
-        </h1>
+        </h3>
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </p>

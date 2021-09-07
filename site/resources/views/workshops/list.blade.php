@@ -28,12 +28,12 @@
     </div>
     @endif
 
-    <h1>
+    <h2>
         Nos ateliers.
-    </h1>
+    </h2>
     @if( Auth::user() && Auth::user()->role=='admin') 
     <a href="/ateliers/create" class="btn-add" role="button">Ajouter</a>
-    <a href="/inscription" role="button">Voir les inscriptions</a>
+    <a href="/inscription" role="button" class="btn-back">Voir les inscriptions</a>
     @endif
     @each('workshops.one', $workshops, 'workshop')
 </article>

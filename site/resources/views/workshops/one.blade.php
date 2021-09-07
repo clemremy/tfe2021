@@ -1,10 +1,10 @@
 @if ($workshop->active == 1)
 <div class="workshop">
     <figure>
-        <img src="/images/atelier/{{ $workshop->image }}" style="width:200px;" >
+        <img src="/images/atelier/{{ $workshop->image }}" >
     </figure>
     <div class="workshop-info">
-        <h2>{{$workshop->name}}</h2>
+        <h3>{{$workshop->name}}</h3>
         <p>{{$workshop->description}}</p>
         <br/>
 
@@ -46,7 +46,7 @@
         <img src="{{ asset('images/1.jpg') }}"></img>
     </figure>
     <div class="workshop-info">
-        <h2>{{$workshop->name}}</h2>
+        <h3>{{$workshop->name}}</h3>
         <p>{{$workshop->description}}</p>
         <br/>
 

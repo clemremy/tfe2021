@@ -1,6 +1,6 @@
 .atelier{
-    padding: 10rem 0 5rem 0;
-    h1{
+    padding: 10em 4em 0;
+    h2{
         text-align: center;
     }
     .btn-add{
@@ -8,21 +8,22 @@
     }
 
     .workshop{
-        width: 90%;
+        width: 100%;
         display: flex;
         flex-flow: row wrap;
         background-color: $white;
         justify-content: flex-end;
-        padding: 2rem;
-        margin: 3rem auto;
+        margin: 4em auto;
+        & > *{
+            padding: 2em;
+        }
         &:not(:first-child){
             margin: 1rem auto 3rem;
         }
         figure{
             flex-basis: 50%;
-            height: 400px;
+            height: 550px;
             overflow: hidden;
-            padding: 0 5rem 0 0;
             img{
                 object-fit: cover;
                 width: 100%;
@@ -35,25 +36,23 @@
             height: 100%;
             display: flex;
             flex-flow: column wrap;
-            padding: 1rem 0 1rem 1rem;
-            h2{
-                margin: 1rem 1rem 1rem 0;
-            }
             .detail{
+                margin: 3rem 0 1rem;
                 border-bottom: 1px solid $black;
                 padding-bottom: 1rem;
                 text-transform: uppercase;
             }
+            a, button{
+                margin-top: 3em;
+            }
         }
 
         .crud{
-            margin: 2rem 0 0;
+            padding-top: 0;
+            margin-top: 0;
         }
 
     }
-
-
-
 }
 
 .form-edit, .form-create{

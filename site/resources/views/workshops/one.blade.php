@@ -10,8 +10,7 @@
 
         <p class="detail">details</p>
         <br/>
-        <p>Du: {{$workshop->start_date}}</p>
-        <p>Au: {{$workshop->end_date}}</p>
+        <p>Du {{date('d-m-Y', strtotime($workshop->start_date))}} au {{date('d-m-Y', strtotime($workshop->end_date))}}</p>
         <p>Nombre de places totales: {{$workshop->nb_places}}</p>
         <p>Prix par personne: {{$workshop->price}}€</p>
         <br/>
@@ -52,8 +51,7 @@
 
         <p class="detail">details</p>
         <br/>
-        <p>Du: {{$workshop->start_date}}</p>
-        <p>Au: {{$workshop->end_date}}</p>
+        <p>Du {{date('d-m-Y', strtotime($workshop->start_date))}} au {{date('d-m-Y', strtotime($workshop->end_date))}}</p>
         <p>Nombre de places totales: {{$workshop->nb_places}}</p>
         <p>Prix par personne: {{$workshop->price}}€</p>
         <br/>

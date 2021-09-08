@@ -69,5 +69,24 @@
     }
 }
 
-
-
+@media #{$tablet}{
+    .atelier{
+        .workshop{
+            figure{
+                width: 100%;
+            }
+        }
+    }
+}
+@media #{$mobile}{
+    .atelier{
+        padding-left: 1em;
+        padding-right: 1em;
+        .workshop{
+            flex-flow: column wrap;
+            figure{
+                width: 100%;
+            }
+        }
+    }
+}

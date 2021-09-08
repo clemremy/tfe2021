@@ -163,6 +163,9 @@ nav.navbar.show ul.navlinks {
   nav.navbar {
     justify-content: space-between;
   }
+  nav.navbar div.logo {
+    flex-basis: 50%;
+  }
   nav.navbar div.burger {
     display: block;
     z-index: 400;
@@ -788,6 +791,23 @@ article.apropospage .container ul.galerie .picture-four {
   width: auto;
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  .atelier .workshop figure {
+    width: 100%;
+  }
+}
+@media all and (max-width: 767px) {
+  .atelier {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  .atelier .workshop {
+    flex-flow: column wrap;
+  }
+  .atelier .workshop figure {
+    width: 100%;
+  }
+}
 .allitems {
   display: flex;
   width: 100%;
@@ -887,6 +907,32 @@ article.apropospage .container ul.galerie .picture-four {
   padding: 8em 4em 4em;
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  .allitems {
+    height: auto;
+    flex-flow: column wrap;
+  }
+  .allitems a {
+    flex-basis: 100%;
+  }
+}
+@media all and (max-width: 767px) {
+  .allitems {
+    height: auto;
+    flex-flow: column wrap;
+  }
+  .allitems a {
+    flex-basis: 100%;
+  }
+
+  .item {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  .item .item-title p {
+    width: 100%;
+  }
+}
 .article {
   width: 100%;
   min-height: 100vh;
@@ -933,6 +979,26 @@ article.apropospage .container ul.galerie .picture-four {
   margin-top: 3em;
 }
 
+@media all and (max-width: 767px) {
+  .article {
+    height: auto;
+    flex-flow: column wrap;
+  }
+  .article figure {
+    min-height: 100vh;
+  }
+  .article .product {
+    margin: 0;
+  }
+  .article .product .product-title {
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .article .product .product-title h3 {
+    width: 100%;
+  }
+}
 table {
   width: 100%;
   text-align: left;
@@ -1319,6 +1385,16 @@ div.first-slide div.title {
   width: auto;
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  .modal {
+    width: 100%;
+  }
+}
+@media all and (max-width: 767px) {
+  .modal {
+    width: 100%;
+  }
+}
 .alert {
   width: 100%;
   padding: 1em;

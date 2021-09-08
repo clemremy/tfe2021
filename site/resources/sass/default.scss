@@ -287,6 +287,17 @@ div.first-slide{
     }
 }
 
+@media #{$tablet}{
+    .modal{
+        width: 100%
+    }
+}
+@media #{$mobile}{
+    .modal{
+        width: 100%
+    }
+}
+
 // ALERT
 .alert{
     width: 100%;

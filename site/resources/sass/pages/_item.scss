@@ -104,3 +104,31 @@
 .form-create.mobilier, .form-edit.mobilier{
     padding: 8em 4em 4em;
 }
+
+@media #{$tablet}{
+    .allitems{
+        height: auto;
+        flex-flow: column wrap;
+        a{
+            flex-basis: 100%;
+        }
+    }
+}
+@media #{$mobile}{
+    .allitems{
+        height: auto;
+        flex-flow: column wrap;
+        a{
+            flex-basis: 100%;
+        }
+    }
+    .item{
+        padding-left: 1em;
+        padding-right: 1em;
+        .item-title{
+            p{
+                width: 100%;
+            }
+        }
+    }
+}

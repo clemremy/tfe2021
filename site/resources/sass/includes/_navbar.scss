@@ -170,6 +170,9 @@ nav.navbar.show ul.navlinks{
 @media #{$mobile}{
     nav.navbar{
         justify-content: space-between;
+        div.logo{
+            flex-basis: 50%;
+        }
         div.burger{
             display: block;
             z-index: 400;

@@ -20,7 +20,7 @@
         Inscription aux ateliers.
     </h1>
     
-    <div class="cta">
+    <div class="admin-link">
         <a href="/ateliers" class="btn-back">Retour aux ateliers</a>
     </div>
 

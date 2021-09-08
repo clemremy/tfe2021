@@ -5,6 +5,7 @@
             <td>{{$user->last_name}}</td>
             <td>{{$user->email}}</td>
             <td>{{$user->newsletter}}</td>
+            <td>{{$user->role}}</td>
             <td>
                 <form action="/utilisateurs/{{ $user->id }}" method="post" class="crud">
                     @csrf

@@ -679,9 +679,6 @@ article.apropospage .container ul.galerie .picture-four {
 .atelier {
   padding: 10em 4em 0;
 }
-.atelier .btn-add {
-  margin-left: 5%;
-}
 .atelier .workshop {
   width: 100%;
   display: flex;
@@ -893,6 +890,7 @@ table {
   text-align: left;
   background-color: #ffffff;
   padding: 2em;
+  font: normal 400 0.9em/1.5 "Open Sans", sans-serif;
 }
 table tr {
   background-color: #ffffff;
@@ -901,7 +899,7 @@ table tr:nth-of-type(2n+1) {
   background-color: #f0f0f0;
 }
 table tr th {
-  padding: 1em;
+  padding: 2em;
 }
 table tr td {
   padding: 1em;
@@ -932,11 +930,27 @@ table tr td {
   margin: 1em 1em 1em 0;
 }
 
+.atelier_utilisateur {
+  padding: 8em 4em 4em;
+}
+.atelier_utilisateur .admin-link {
+  margin: 1em 1em 1em 0;
+}
+
 .utilisateur {
   padding: 8em 4em 4em;
 }
+.utilisateur h2 {
+  padding: 0 0 1em 0;
+}
 .utilisateur .admin-link {
   margin: 1em 1em 1em 0;
+}
+.utilisateur .administrateurs, .utilisateur .newsletter {
+  padding: 4em 0 0 0;
+}
+.utilisateur .administrateurs > h2, .utilisateur .newsletter > h2 {
+  padding: 0 0 1em 0;
 }
 
 * {
@@ -980,12 +994,13 @@ body .container {
 
 a {
   text-decoration: none;
-  font-style: normal;
   transition: color 0.3s ease-in-out;
+  font: normal 400 0.9em/1.5 "Open Sans", sans-serif;
 }
 
 li {
   list-style: none;
+  font: normal 400 0.9em/1.5 "Open Sans", sans-serif;
 }
 
 label:not(.checkboxlabel) {

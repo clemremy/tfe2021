@@ -1,6 +1,15 @@
 .utilisateur{
     padding: 8em 4em 4em;
+    h2{
+        padding: 0 0 1em 0;
+    }
     .admin-link{
         margin: 1em 1em 1em 0;
+    }
+    .administrateurs, .newsletter{
+        padding: 4em 0 0 0;
+    }
+    .administrateurs > h2, .newsletter > h2{
+        padding: 0 0 1em 0;
     }
 }

@@ -63,12 +63,13 @@ body{
 
 a{
     text-decoration: none;
-    font-style: normal;
     transition: color .3s ease-in-out;
+    font: $body-normal;
 }
 
 li{
     list-style: none;
+    font: $body-normal;
 }
 
 label:not(.checkboxlabel){

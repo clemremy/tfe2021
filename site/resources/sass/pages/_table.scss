@@ -3,13 +3,14 @@ table{
     text-align: left;
     background-color: $white;
     padding: 2em;
+    font: $body-normal;
     tr{
         background-color: $white;
         &:nth-of-type(2n+1){
             background-color: $unactive;
         }
         th{
-            padding: 1em;
+            padding: 2em;
         }
         td{ 
             padding: 1em;

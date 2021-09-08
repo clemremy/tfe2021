@@ -6,7 +6,7 @@ table{
     tr{
         background-color: $white;
         &:nth-of-type(2n+1){
-            background-color: #eeeeee;
+            background-color: $unactive;
         }
         th{
             padding: 1em;

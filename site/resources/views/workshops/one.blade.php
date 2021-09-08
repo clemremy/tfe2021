@@ -40,7 +40,7 @@
     @endif
 </div>
 @elseif (Auth::user() && Auth::user()->role=='admin' && $workshop->active == 0)
-<div class="workshop">
+<div class="workshop unactive">
     <figure>
         <img src="{{ asset('images/1.jpg') }}"></img>
     </figure>
@@ -55,6 +55,16 @@
         <p>Nombre de places totales: {{$workshop->nb_places}}</p>
         <p>Prix par personne: {{$workshop->price}}€</p>
         <br/>
+
+        @if( ! Auth::check())
+        <a href="/login" class="custom-button">
+            Réserver
+        </a>
+        @elseif( Auth::check())
+        <button class="custom-button modal-btn" id="{{ $workshop->id }}" type="submit">
+            Reserver
+        </button>
+        @endif
     </div>
     <form action="/ateliers/{{ $workshop->id }}" method="post" class="crud">
         @csrf

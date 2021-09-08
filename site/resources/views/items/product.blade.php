@@ -9,7 +9,11 @@
         <div class="product-title">
             <h3>{{$item->name}}</h3>
             <br/>
+            @if ($item->customization == 1)
+            <p>A partir de {{$item->price}}€</p>
+            @elseif ($item->customization == 0)
             <p>{{$item->price}}€</p>
+            @endif
         </div>
 
         <div class="product-info">

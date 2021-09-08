@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Exception;
 use Auth;
 
 class UserController extends Controller
@@ -112,7 +113,7 @@ class UserController extends Controller
 
         $user->save();
         
-       return redirect('/utilisateurs');
+       return redirect('/utilisateurs')->with('update', 'L\'utilisateur a été modifié !');;
     }
 
     public function updateprofil(Request $request)
@@ -126,7 +127,7 @@ class UserController extends Controller
         
         $user->save();
         
-        return redirect('/profil');
+        return redirect('/profil')->with('update', 'La modification a été enregistrée !');;
     }
     /**
      * Remove the specified resource from storage.
@@ -136,8 +137,12 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        $user = User::find($id);
-        $user->delete();
-        return redirect('/utilisateurs');
+        try{
+            $user = User::find($id);
+            $user->delete();
+            return redirect('/utilisateurs')->with('delete', 'L\'utilisateur a été supprimé !');
+        }catch(Exception $e){
+            return redirect()->back()->with('error','Suppression impossible: cet utilisateur est inscrit à un atelier ou a passé commande.');
+        }
     }
 }

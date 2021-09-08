@@ -3,7 +3,7 @@
 @section('content')
 <article class="atelier">
     @if (\Session::has('delete'))
-        <div class="alert alert-danger">
+        <div class="alert alert-success">
             <ul>
                 <li>{!! \Session::get('delete') !!}</li>
             </ul>
@@ -26,8 +26,14 @@
             <li>{!! \Session::get('usersuccess') !!}</li>
         </ul>
     </div>
+    @elseif (\Session::has('error'))
+    <div class="alert alert-danger">
+        <ul>
+            <li>{!! \Session::get('error') !!}</li>
+        </ul>
+    </div>
     @endif
-
+ 
     <h2>
         Nos ateliers.
     </h2>

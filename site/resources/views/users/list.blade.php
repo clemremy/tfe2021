@@ -2,10 +2,30 @@
 
 @section('content')
 <article class="utilisateur">
+    @if (\Session::has('delete'))
+        <div class="alert alert-success">
+            <ul>
+                <li>{!! \Session::get('delete') !!}</li>
+            </ul>
+        </div>
+    @elseif (\Session::has('update'))
+    <div class="alert alert-warning">
+        <ul>
+            <li>{!! \Session::get('update') !!}</li>
+        </ul>
+    </div>
+    @elseif (\Session::has('error'))
+    <div class="alert alert-danger">
+        <ul>
+            <li>{!! \Session::get('error') !!}</li>
+        </ul>
+    </div>
+    @endif
+
     <div class="admin-link">
         <a href="/profil" class="btn-back">Retour</a>
     </div>
-    
+
     <h2>
         Les utilisateurs.
     </h2>

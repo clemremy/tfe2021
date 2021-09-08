@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Workshop;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Exception;
 
 class WorkshopController extends Controller
 {
@@ -69,7 +70,7 @@ class WorkshopController extends Controller
 
         $workshop->save();
 
-        return redirect('/ateliers')->with('success', 'L\'atelier a été ajouté !');;
+        return redirect('/ateliers')->with('success', 'L\'atelier "' . $workshop->name . '" a été ajouté !');;
     }
 
     /**
@@ -128,7 +129,7 @@ class WorkshopController extends Controller
 
         $workshop->save();
         
-       return redirect('/ateliers')->with('update', 'L\'atelier a été modifié !');
+       return redirect('/ateliers')->with('update', 'L\'atelier "' . $workshop->name . '" a été modifié !');
     }
 
     /**
@@ -139,8 +140,12 @@ class WorkshopController extends Controller
      */
     public function destroy($id)
     {
-        $workshop = Workshop::find($id);
-        $workshop->delete();
-        return redirect('/ateliers')->with('delete', 'L\'atelier a été supprimé !');
+        try{
+            $workshop = Workshop::find($id);
+            $workshop->delete();
+            return redirect('/ateliers')->with('delete', 'L\'atelier "' . $workshop->name . '" a été supprimé !');
+        }catch(Exception $e){
+            return redirect()->back()->with('error','Suppression impossible: des inscriptions sont enregistrées pour cet atelier.');
+        }
     }
 }

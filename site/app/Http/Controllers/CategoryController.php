@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Exception;
 
 class CategoryController extends Controller
 {
@@ -42,7 +43,7 @@ class CategoryController extends Controller
         
         $category->save();
 
-        return redirect('/categorie')->with('success', 'La catégorie a été ajoutée !');
+        return redirect('/categorie')->with('success', 'La catégorie "' . $category->name . '" a été ajoutée !');
     }
 
     /**
@@ -82,7 +83,7 @@ class CategoryController extends Controller
         
         $category->save();
         
-        return redirect('/categorie')->with('update', 'La catégorie a été modifiée !');
+        return redirect('/categorie')->with('update', 'La catégorie "' . $category->name . '" a été modifiée !');
     }
 
     /**
@@ -93,8 +94,12 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        $category = Category::find($id);
-        $category->delete();
-        return redirect('/categorie')->with('delete', 'La catégorie a été supprimée !');
+        try{
+            $category = Category::find($id);
+            $category->delete();
+            return redirect('/categorie')->with('delete', 'La catégorie "' . $category->name . '" a été supprimée !');
+        }catch(Exception $e){
+            return redirect()->back()->with('error','Suppression impossible: la catégorie est utilisée pour certains articles.');
+        }
     }
 }

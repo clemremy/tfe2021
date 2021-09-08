@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Item;
 use Illuminate\Http\Request;
+use Exception;
 
 class ItemController extends Controller
 {
@@ -29,7 +30,7 @@ class ItemController extends Controller
         $items = Item::orderBy('created_at', 'desc')
             ->where('active', '=', 1)
             ->where('customization', '=', 0)
-            ->take(5)
+            ->take(4)
             ->get();
         return view('items.listwelcome', ['items'=> $items]);
     }
@@ -83,9 +84,9 @@ class ItemController extends Controller
         $item->save();
 
         if ($item->customization==0) { 
-            return redirect('/mobilier')->with('success', 'L\'article a été ajouté !');
+            return redirect('/mobilier')->with('success', 'L\'article "' . $item->name .'" a été ajouté !');
         } else {
-            return redirect('/mobilier-personnalisable')->with('success', 'L\'article a été ajouté !');
+            return redirect('/mobilier-personnalisable')->with('success', 'L\'article "' . $item->name .'" a été ajouté !');
         }
     }
 
@@ -109,6 +110,10 @@ class ItemController extends Controller
     {   
         $item = Item::find($id);
         return view('items.product', ['item'=>$item]);
+    }
+    public function showhome(Item $item)
+    {   
+        return view('welcome', ['item'=>$item]);
     }
 
     /**
@@ -169,9 +174,9 @@ class ItemController extends Controller
         $item->save();
         
        if ($item->customization==0) { 
-            return redirect('/mobilier')->with('update', 'L\'article a été modifié !');
+            return redirect('/mobilier')->with('update', 'L\'article "' . $item->name .'" a été modifié !');
         } else {
-            return redirect('/mobilier-personnalisable')->with('update', 'L\'article a été modifié !');
+            return redirect('/mobilier-personnalisable')->with('update', 'L\'article "' . $item->name .'" a été modifié !');
         }
     }
 
@@ -183,9 +188,13 @@ class ItemController extends Controller
      */
     public function destroy($id)
     {
-        $item = Item::find($id);
-        $item->delete();
-        //return redirect('/mobilier')->with('delete', 'Cet article a été supprimé avec succès!');
-        return redirect()->back()->with('delete', 'Cet article a été supprimé !');
+        try{
+            $item = Item::find($id);
+            $item->delete();
+            //return redirect('/mobilier')->with('delete', 'Cet article a été supprimé avec succès!');
+            return redirect()->back()->with('delete', 'L\'article ' . $item->name .' a été supprimé !');
+        }catch(Exception $e){
+            return redirect()->back()->with('error','Suppression impossible: des réservations sont enregistrées pour cet article.');
+        }
     }
 }

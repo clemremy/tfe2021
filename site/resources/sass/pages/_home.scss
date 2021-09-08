@@ -221,10 +221,25 @@
         }
         h3{
             font-size: 3em;
-            line-height: 2em;
+            line-height: 1em;
         }
         a{
             margin: 0 auto;
+        }
+    }
+}
+
+@media #{$tablet}{
+    .insert{
+        .about{
+            width: 80%;
+        }
+    }
+}
+@media #{$mobile}{
+    .insert{
+        .about{
+            width: 95%;
         }
     }
 }

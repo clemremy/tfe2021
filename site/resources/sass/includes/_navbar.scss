@@ -170,28 +170,63 @@ nav.navbar.show ul.navlinks{
 @media #{$mobile}{
     nav.navbar{
         justify-content: space-between;
-        div.logo{
-            flex-basis: auto;
-        }
         div.burger{
             display: block;
             z-index: 400;
         }
         ul.navlinks {
+            padding: 4em;
             position: fixed;
             top: 0;
             right: 0;
             height: 100vh;
             width: 100%;
+            font: $title-normal;
+            font-size: 2em;
             flex-direction: column;
-            align-items: flex-start;
-            justify-content: space-around;
+            justify-content: flex-start;
             background: $background;
             transform: translateX(100%);
             transition: transform 1s ease;
-            li a{
-                color: $black;
+            li{
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                &:nth-of-type(n+5){
+                    flex-direction: row;
+                }
+                &:nth-of-type(n+5) a::before{
+                    content: none;
+                }
+                &:nth-of-type(n+5) a:hover{
+                    margin: 0;
+                }
+                a{
+                    color: $black;
+                    transition: all 0.3s;
+                    &::before{
+                        content: "";
+                        width: 50px;
+                        height: 2px;
+                        background-color: $hover;
+                        position: relative;
+                        display: inline-block;
+                        margin-right: 1em;
+                        vertical-align: middle;
+                    }
+                    &::after{
+                        display: none;
+                    }
+                    &:hover, &:focus{
+                        margin-left: 1em;
+                    }
+                }
             }
+        }
+    }
+    nav.white{
+        ul li a{
+            filter: none;
         }
     }
 }

@@ -19,7 +19,7 @@ class WorkshopController extends Controller
         if ( empty($workshops = Workshop::where('active', '=', '0') )) {
             return view('workshops.two', ['workshops'=>$workshops]);
         }else{
-        $workshops = Workshop::orderBy('created_at', 'desc')->get();
+        $workshops = Workshop::orderBy('id', 'desc')->get();
         return view('workshops.list', ['workshops'=> $workshops]);
         }
         

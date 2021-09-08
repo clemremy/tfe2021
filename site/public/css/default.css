@@ -163,28 +163,62 @@ nav.navbar.show ul.navlinks {
   nav.navbar {
     justify-content: space-between;
   }
-  nav.navbar div.logo {
-    flex-basis: auto;
-  }
   nav.navbar div.burger {
     display: block;
     z-index: 400;
   }
   nav.navbar ul.navlinks {
+    padding: 4em;
     position: fixed;
     top: 0;
     right: 0;
     height: 100vh;
     width: 100%;
+    font: normal 300 1em/1 "Archivo", sans-serif;
+    font-size: 2em;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-around;
+    justify-content: flex-start;
     background: #fafafa;
     transform: translateX(100%);
     transition: transform 1s ease;
   }
+  nav.navbar ul.navlinks li {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  nav.navbar ul.navlinks li:nth-of-type(n+5) {
+    flex-direction: row;
+  }
+  nav.navbar ul.navlinks li:nth-of-type(n+5) a::before {
+    content: none;
+  }
+  nav.navbar ul.navlinks li:nth-of-type(n+5) a:hover {
+    margin: 0;
+  }
   nav.navbar ul.navlinks li a {
     color: #1d1d1d;
+    transition: all 0.3s;
+  }
+  nav.navbar ul.navlinks li a::before {
+    content: "";
+    width: 50px;
+    height: 2px;
+    background-color: #CBD5CC;
+    position: relative;
+    display: inline-block;
+    margin-right: 1em;
+    vertical-align: middle;
+  }
+  nav.navbar ul.navlinks li a::after {
+    display: none;
+  }
+  nav.navbar ul.navlinks li a:hover, nav.navbar ul.navlinks li a:focus {
+    margin-left: 1em;
+  }
+
+  nav.white ul li a {
+    filter: none;
   }
 }
 div.footer {
@@ -538,12 +572,22 @@ div.footer nav.mentions ul li a:hover, div.footer nav.mentions ul li a:focus {
 }
 .insert .about h3 {
   font-size: 3em;
-  line-height: 2em;
+  line-height: 1em;
 }
 .insert .about a {
   margin: 0 auto;
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  .insert .about {
+    width: 80%;
+  }
+}
+@media all and (max-width: 767px) {
+  .insert .about {
+    width: 95%;
+  }
+}
 article.contactpage .first-slide .img-background {
   background-image: url(/images/nathan-oakley-2.jpg?1e0478592c2abe338fb4ea6438321ede);
   background-position: right center;
@@ -806,37 +850,41 @@ article.apropospage .container ul.galerie .picture-four {
   margin-right: 1em;
   align-self: center;
 }
-.item a {
+.item .mobilier {
   padding: 1.5em;
 }
-.item a .mobilier figure {
+.item .mobilier a figure {
   height: 300px;
   width: 100%;
   overflow: hidden;
   transition: all 0.5s ease-in-out;
 }
-.item a .mobilier figure img {
+.item .mobilier a figure img {
   -o-object-fit: cover;
      object-fit: cover;
   height: 100%;
   width: 100%;
 }
-.item a .mobilier:hover figure {
+.item .mobilier a:hover figure {
   border-radius: 15px;
 }
-.item a .mobilier:hover p:last-of-type {
+.item .mobilier a:hover p:last-of-type {
   color: #1d1d1d;
 }
-.item a .mobilier p:last-of-type {
+.item .mobilier a p:last-of-type {
   font-style: oblique;
   color: #808080;
   transition: all 0.2s ease-in-out;
 }
-.item a .mobilier .crud {
+.item .mobilier a .crud {
   display: none;
 }
 .item .unactive {
   background-color: #f0f0f0;
+}
+
+.form-create.mobilier, .form-edit.mobilier {
+  padding: 8em 4em 4em;
 }
 
 .article {

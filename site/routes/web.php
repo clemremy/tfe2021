@@ -31,6 +31,7 @@ Route::get('/', function () {
 Route::get('/', 'App\Http\Controllers\ItemController@indexhome')->name('indexhome');
 //Route::get('/', 'App\Http\Controllers\ItemController@showhome')->name('showhome');
 
+
 /// ------- PAGE ------- ///
 // ABOUT
 Route::get('/a-propos', function()

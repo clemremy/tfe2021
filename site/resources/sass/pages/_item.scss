@@ -62,9 +62,10 @@
             align-self: center;
         }
     }
-    a{
+    .mobilier{
         padding: 1.5em;
-        .mobilier{
+        a{
+            
             figure{
                 height: 300px;
                 width: 100%;
@@ -98,4 +99,8 @@
         background-color: $unactive;
     }
 
+}
+
+.form-create.mobilier, .form-edit.mobilier{
+    padding: 8em 4em 4em;
 }

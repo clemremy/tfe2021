@@ -70,7 +70,7 @@
     </a>
 </div>
 
-<div class="insert">
+<div class="insert col-12">
     <div class="about">
         <h3>
             Tout pour un style unique

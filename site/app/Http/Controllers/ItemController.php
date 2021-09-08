@@ -15,24 +15,23 @@ class ItemController extends Controller
      */
     public function index()
     {
-        $items = Item::orderBy('created_at', 'desc')->get();
+        $items = Item::orderBy('id', 'desc')->get();
         return view('items.list', ['items'=> $items]);
     }
 
     public function indexdeux()
     {
         //$items = Item::all();
-        $items = Item::orderBy('created_at', 'desc')->get();
+        $items = Item::orderBy('id', 'desc')->get();
         return view('items.listtwo', ['items'=> $items]);
     }
     public function indexhome()
     {
-        $items = Item::orderBy('created_at', 'desc')
+        $items = Item::latest()->paginate(5)
             ->where('active', '=', 1)
-            ->where('customization', '=', 0)
-            ->take(4)
-            ->get();
-        return view('items.listwelcome', ['items'=> $items]);
+            ->where('customization', '=', 0);
+        return view('items.listwelcome', ['items'=> $items])
+        ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     /**
@@ -111,8 +110,10 @@ class ItemController extends Controller
         $item = Item::find($id);
         return view('items.product', ['item'=>$item]);
     }
+
     public function showhome(Item $item)
     {   
+        $item = Item::all();
         return view('welcome', ['item'=>$item]);
     }
 

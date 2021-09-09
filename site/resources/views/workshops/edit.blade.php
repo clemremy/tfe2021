@@ -4,6 +4,15 @@
 <form action="/ateliers/{{ $workshop->id }}" method="post" class="form-edit atelier" enctype="multipart/form-data">
     @csrf
     @method('put')
+
+    @if (\Session::has('error'))
+    <div class="alert alert-danger">
+        <ul>
+            <li>{!! \Session::get('error') !!}</li>
+        </ul>
+    </div>
+    @endif
+
     <label>Nom de l'atelier:</label>
     <input type="text" name="name" value="{{ $workshop->name }}">
     <label>Description de l'atelier:</label>
@@ -18,6 +27,7 @@
     <input type="number" name="price" value="{{ $workshop->price }}">
     <label>Image de l'atelier:</label>
     <input type="file" name="image" placeholder="image">
+    <p>Taille maximale: 2Mo.</p>
     <img src="/images/atelier/{{ $workshop->image }}" width="300px"><br/>
 
     <label>Mettre en ligne?</label>

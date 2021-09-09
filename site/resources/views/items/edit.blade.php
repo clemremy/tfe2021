@@ -4,6 +4,15 @@
 <form action="/mobilier/{{ $item->id }}" method="post" class="form-edit mobilier" enctype="multipart/form-data">
     @csrf
     @method('put')
+
+    @if (\Session::has('error'))
+    <div class="alert alert-danger">
+        <ul>
+            <li>{!! \Session::get('error') !!}</li>
+        </ul>
+    </div>
+    @endif
+
     <label>Nom de l'article:</label>
     <input type="text" name="name" value="{{ $item->name }}">
     <label>Description de l'article:</label>
@@ -12,6 +21,7 @@
     <input type="number" name="price" value="{{ $item->price }}">
     <label>Image de l'article:</label>
     <input type="file" name="image" placeholder="image">
+    <p>Taille maximale: 2Mo.</p>
     <img src="/images/article/{{ $item->image }}" width="300px"><br/><br/>
 
     <label>Quantité disponible:</label>
@@ -41,8 +51,7 @@
     </select>
 
     <div class="cta">
-        <input type="submit" value="Enregistrer" class="btn-edit">
-        <a href="{{ url()->previous() }}" class="btn-back">Annuler</a>
+        <input type="submit" value="Enregistrer" class="btn-add">
     </div>
     @stop
 </form>

@@ -47,7 +47,7 @@
 <div class="lastitems">
     <div class="item-title col-12">
         <h2>
-            Ma dernière création.
+            Nouveauté.
         </h2>
         <div>
             <a href="/mobilier">
@@ -55,8 +55,9 @@
             </a>
         </div>
     </div>
-    <a href="/article/{{$items->id }}" class="col-3">
-        <div class="mobilier">
+    
+    <div class="mobilier col-3">
+        <a href="/article/{{$items->id }}">
             <figure>
                 <img src="/images/article/{{ $items->image }}" >
             </figure>
@@ -66,8 +67,9 @@
             <p>{{$items->price}}€</p>
             <p>{{$items->categories->name}}</p>
             <br/>
-        </div>
-    </a>
+        </a>
+    </div>
+    
 </div>
 
 <div class="insert col-12">

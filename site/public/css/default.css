@@ -535,28 +535,28 @@ div.footer nav.mentions ul li a:hover, div.footer nav.mentions ul li a:focus {
 .lastitems .item-title div a:hover {
   color: #1d1d1d;
 }
-.lastitems a {
+.lastitems .mobilier {
   padding: 1.5em 1.5em 0;
 }
-.lastitems a .mobilier figure {
+.lastitems .mobilier a figure {
   height: 300px;
   width: 100%;
   overflow: hidden;
   transition: all 0.5s ease-in-out;
 }
-.lastitems a .mobilier figure img {
+.lastitems .mobilier a figure img {
   -o-object-fit: cover;
      object-fit: cover;
   height: 100%;
   width: 100%;
 }
-.lastitems a .mobilier:hover figure {
+.lastitems .mobilier a:hover figure {
   border-radius: 15px;
 }
-.lastitems a .mobilier:hover p:last-of-type {
+.lastitems .mobilier a:hover p:last-of-type {
   color: #1d1d1d;
 }
-.lastitems a .mobilier p:last-of-type {
+.lastitems .mobilier a p:last-of-type {
   font-style: oblique;
   color: #808080;
   transition: all 0.2s ease-in-out;

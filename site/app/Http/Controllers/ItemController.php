@@ -55,46 +55,50 @@ class ItemController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        ]);
-  
-        $input = $request->all();
+        try{
+            $request->validate([
+                'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            ]);
+    
+            $input = $request->all();
 
-        if ($image = $request->file('image')) {
-            $destinationPath = 'images/article';
-            $articleImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-            $image->move($destinationPath, $articleImage);
-            $input['image'] = "$articleImage";
-        }
+            if ($image = $request->file('image')) {
+                $destinationPath = 'images/article';
+                $articleImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+                $image->move($destinationPath, $articleImage);
+                $input['image'] = "$articleImage";
+            }
 
-        $item = new Item();
-        $item->name = $request->has('name') && strlen($request->name) ? $request->name : 'Pas de nom';
-        $item->description = $request->has('description') && strlen($request->description) ? $request->description : 'Pas de description';
-        $item->price = $request->has('price') && strlen($request->price) ? $request->price : 'Pas de prix';
+            $item = new Item();
+            $item->name = $request->has('name') && strlen($request->name) ? $request->name : 'Pas de nom';
+            $item->description = $request->has('description') && strlen($request->description) ? $request->description : 'Pas de description';
+            $item->price = $request->has('price') && strlen($request->price) ? $request->price : 'Pas de prix';
 
-        //$item->image = $request->hasFile('image') && file($request->image) ? $request->image : 'none';
-        $item->image = $request->has('image') && strlen($request->image= date('YmdHis') . "." . $image->getClientOriginalExtension()) ? $request->image : 'none';
+            //$item->image = $request->hasFile('image') && file($request->image) ? $request->image : 'none';
+            $item->image = $request->has('image') && strlen($request->image= date('YmdHis') . "." . $image->getClientOriginalExtension()) ? $request->image : 'none';
 
-        $item->amount = $request->has('amount') && strlen($request->amount) ? $request->amount : 'Pas de quantité';
-        $item->customization = $request->has('customization') && strlen($request->customization) ? $request->customization : 'Pas de personnalisation';
-        //$item->categories_id = intval($request->categories_id) ? $request->categories_id : '';
-        //$item->active = intval($request->active) ? $request->active : '';
-        $item->active = $request->has('active') && strlen($request->active) ? $request->active : '0';
-
-
-        $category = Category::find($request->category);
-        if($category) {
-            $item->categories()->associate($category);
-        }
+            $item->amount = $request->has('amount') && strlen($request->amount) ? $request->amount : 'Pas de quantité';
+            $item->customization = $request->has('customization') && strlen($request->customization) ? $request->customization : 'Pas de personnalisation';
+            //$item->categories_id = intval($request->categories_id) ? $request->categories_id : '';
+            //$item->active = intval($request->active) ? $request->active : '';
+            $item->active = $request->has('active') && strlen($request->active) ? $request->active : '0';
 
 
-        $item->save();
+            $category = Category::find($request->category);
+            if($category) {
+                $item->categories()->associate($category);
+            }
 
-        if ($item->customization==0) { 
-            return redirect('/mobilier')->with('success', 'L\'article "' . $item->name .'" a été ajouté !');
-        } else {
-            return redirect('/mobilier-personnalisable')->with('success', 'L\'article "' . $item->name .'" a été ajouté !');
+
+            $item->save();
+
+            if ($item->customization==0) { 
+                return redirect('/mobilier')->with('success', 'L\'article "' . $item->name .'" a été ajouté !');
+            } else {
+                return redirect('/mobilier-personnalisable')->with('success', 'L\'article "' . $item->name .'" a été ajouté !');
+            }
+        }catch(Exception $e){
+            return redirect()->back()->with('error','Ajout impossible: l\'image est trop lourde');
         }
     }
 
@@ -152,41 +156,44 @@ class ItemController extends Controller
         /*$request->validate([
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);*/
+        try{
+            $input = $request->all();
 
-        $input = $request->all();
+            if ($image = $request->file('image')) {
+                $destinationPath = 'images/article';
+                $articleImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+                $image->move($destinationPath, $articleImage);
+                $input['image'] = "$articleImage";
+            }else{
+                unset($input['image']);
+            }
+            
+            
+            $item = Item::find($id);
+            $item->name = $request->has('name') && strlen($request->name) ? $request->name : $item->name;
+            $item->description = $request->has('description') && strlen($request->description) ? $request->description : $item->description;
+            $item->price = $request->has('price') && strlen($request->price) ? $request->price : $item->price;
 
-        if ($image = $request->file('image')) {
-            $destinationPath = 'images/article';
-            $articleImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-            $image->move($destinationPath, $articleImage);
-            $input['image'] = "$articleImage";
-        }else{
-            unset($input['image']);
-        }
-        
-        
-        $item = Item::find($id);
-        $item->name = $request->has('name') && strlen($request->name) ? $request->name : $item->name;
-        $item->description = $request->has('description') && strlen($request->description) ? $request->description : $item->description;
-        $item->price = $request->has('price') && strlen($request->price) ? $request->price : $item->price;
+            $item->image = $request->has('image') && strlen($request->image= date('YmdHis') . "." . $image->getClientOriginalExtension()) ? $request->image : $item->image;
 
-        $item->image = $request->has('image') && strlen($request->image= date('YmdHis') . "." . $image->getClientOriginalExtension()) ? $request->image : $item->image;
+            $item->amount = $request->has('amount') && strlen($request->amount) ? $request->amount : $item->amount;
+            $item->customization = $request->has('customization') && strlen($request->customization) ? $request->customization : $item->customization;
+            //$item->categories_id = intval($request->categories_id) ? $request->categories_id : $item->categories_id;
+            //$item->active = intval($request->active) ? $request->active : $item->active;
+            $item->active = $request->has('active') && strlen($request->active) ? $request->active : $item->active;
+            
+            $category = Category::find($request->category);
+            $item->categories()->associate($category);
 
-        $item->amount = $request->has('amount') && strlen($request->amount) ? $request->amount : $item->amount;
-        $item->customization = $request->has('customization') && strlen($request->customization) ? $request->customization : $item->customization;
-        //$item->categories_id = intval($request->categories_id) ? $request->categories_id : $item->categories_id;
-        //$item->active = intval($request->active) ? $request->active : $item->active;
-        $item->active = $request->has('active') && strlen($request->active) ? $request->active : $item->active;
-        
-        $category = Category::find($request->category);
-        $item->categories()->associate($category);
-
-        $item->save();
-        
-       if ($item->customization==0) { 
-            return redirect('/mobilier')->with('update', 'L\'article "' . $item->name .'" a été modifié !');
-        } else {
-            return redirect('/mobilier-personnalisable')->with('update', 'L\'article "' . $item->name .'" a été modifié !');
+            $item->save();
+            
+            if ($item->customization==0) { 
+                    return redirect('/mobilier')->with('update', 'L\'article "' . $item->name .'" a été modifié !');
+                } else {
+                    return redirect('/mobilier-personnalisable')->with('update', 'L\'article "' . $item->name .'" a été modifié !');
+            }
+        }catch(Exception $e){
+            return redirect()->back()->with('error','Modification impossible: l\'image trop lourde');
         }
     }
 

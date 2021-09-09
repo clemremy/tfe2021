@@ -3,6 +3,15 @@
 
 <form action="/ateliers" method="post" class="form-create atelier" enctype="multipart/form-data">
     @csrf
+
+    @if (\Session::has('error'))
+    <div class="alert alert-danger">
+        <ul>
+            <li>{!! \Session::get('error') !!}</li>
+        </ul>
+    </div>
+    @endif
+
     <label>Nom de l'atelier:</label>
     <input type="text" name="name">
     <label>Description de l'atelier:</label>
@@ -16,6 +25,7 @@
     <label>Prix par personne:</label>
     <input type="number" name="price">
     <label>Image de l'atelier:</label>
+    <p>Taille maximale: 2Mo.</p>
     <input type="file" name="image" placeholder="image">
 
     <label>Mettre en ligne?</label>

@@ -44,6 +44,7 @@ class WorkshopController extends Controller
      */
     public function store(Request $request)
     {
+    try{
         $request->validate([
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
@@ -70,7 +71,10 @@ class WorkshopController extends Controller
 
         $workshop->save();
 
-        return redirect('/ateliers')->with('success', 'L\'atelier "' . $workshop->name . '" a été ajouté !');;
+        return redirect('/ateliers')->with('success', 'L\'atelier "' . $workshop->name . '" a été ajouté !');
+    }catch(Exception $e){
+        return redirect()->back()->with('error','Modification impossible: l\'image trop lourde');
+    }
     }
 
     /**
@@ -105,6 +109,7 @@ class WorkshopController extends Controller
      */
     public function update(Request $request, $id)
     {
+    try{
         $input = $request->all();
 
         if ($image = $request->file('image')) {
@@ -130,6 +135,9 @@ class WorkshopController extends Controller
         $workshop->save();
         
        return redirect('/ateliers')->with('update', 'L\'atelier "' . $workshop->name . '" a été modifié !');
+    }catch(Exception $e){
+        return redirect()->back()->with('error','Modification impossible: l\'image trop lourde');
+    }
     }
 
     /**

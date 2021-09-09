@@ -9,7 +9,7 @@
         justify-content: flex-end;
         margin: 4em auto;
         & > *{
-            padding: 2em;
+            padding: 2em 0;
         }
         &:not(:first-child){
             margin: 1rem auto 3rem;
@@ -26,6 +26,7 @@
         }
 
         .workshop-info{
+            padding: 2em;
             flex-basis: 50%;
             height: 100%;
             display: flex;

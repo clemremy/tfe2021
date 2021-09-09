@@ -812,7 +812,7 @@ article.apropospage .container ul.galerie .picture-four {
   margin: 4em auto;
 }
 .atelier .workshop > * {
-  padding: 2em;
+  padding: 2em 0;
 }
 .atelier .workshop:not(:first-child) {
   margin: 1rem auto 3rem;
@@ -829,6 +829,7 @@ article.apropospage .container ul.galerie .picture-four {
   height: 100%;
 }
 .atelier .workshop .workshop-info {
+  padding: 2em;
   flex-basis: 50%;
   height: 100%;
   display: flex;

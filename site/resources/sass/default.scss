@@ -16,11 +16,10 @@
 @import 'pages/users';
 
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
 
-//@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
-//@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Quicksand:wght@300;400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500&display=swap');
 *{
     box-sizing: border-box;
     margin: 0;
@@ -30,7 +29,7 @@
 body{
     width: 100%;
     min-height: 100vh;
-    background-color: $background;
+    background-color: $white;
     h1, h2, h3, h4, h5, p, a, address, input, label, strong, ul, li, span, textarea{
         color: $black;
         font: $body-normal;
@@ -140,7 +139,7 @@ div.first-slide{
     .col-8{flex-basis: 100%;}
     .col-6{flex-basis: 100%;}
     .col-4{flex-basis: 100%;}
-    .col-3{flex-basis: 100%;}
+    .col-3{flex-basis: 50%;}
     .col-2{flex-basis: 100%;}
     .col-1{flex-basis: 100%;}
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Item;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Exception;
 
@@ -42,7 +43,8 @@ class ItemController extends Controller
     public function create()
     {
         $items = Item::all();
-        return view('items.form');
+        $categories = Category::all();
+        return view('items.form',  ['categories'=>$categories]);
     }
 
     /**
@@ -76,9 +78,16 @@ class ItemController extends Controller
 
         $item->amount = $request->has('amount') && strlen($request->amount) ? $request->amount : 'Pas de quantité';
         $item->customization = $request->has('customization') && strlen($request->customization) ? $request->customization : 'Pas de personnalisation';
-        $item->categories_id = intval($request->categories_id) ? $request->categories_id : '';
+        //$item->categories_id = intval($request->categories_id) ? $request->categories_id : '';
         //$item->active = intval($request->active) ? $request->active : '';
         $item->active = $request->has('active') && strlen($request->active) ? $request->active : '0';
+
+
+        $category = Category::find($request->category);
+        if($category) {
+            $item->categories()->associate($category);
+        }
+
 
         $item->save();
 
@@ -126,12 +135,9 @@ class ItemController extends Controller
     public function edit($id)
     {
         $item = Item::find($id);
-        return view('items.edit', ['item'=>$item]);
-    }
-    public function editprofil($id)
-    {
-        $item = Item::find($id);
-        return view('profil.edit', ['item'=>$item]);
+        $categories = Category::all();
+        
+        return view('items.edit', ['item'=>$item, 'categories'=>$categories]);
     }
 
     /**
@@ -168,10 +174,13 @@ class ItemController extends Controller
 
         $item->amount = $request->has('amount') && strlen($request->amount) ? $request->amount : $item->amount;
         $item->customization = $request->has('customization') && strlen($request->customization) ? $request->customization : $item->customization;
-        $item->categories_id = intval($request->categories_id) ? $request->categories_id : $item->categories_id;
+        //$item->categories_id = intval($request->categories_id) ? $request->categories_id : $item->categories_id;
         //$item->active = intval($request->active) ? $request->active : $item->active;
         $item->active = $request->has('active') && strlen($request->active) ? $request->active : $item->active;
         
+        $category = Category::find($request->category);
+        $item->categories()->associate($category);
+
         $item->save();
         
        if ($item->customization==0) { 

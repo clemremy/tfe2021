@@ -47,7 +47,7 @@
 <div class="lastitems">
     <div class="item-title col-12">
         <h2>
-            Nos derniers articles.
+            Ma dernière création.
         </h2>
         <div>
             <a href="/mobilier">

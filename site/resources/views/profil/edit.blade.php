@@ -21,7 +21,7 @@
         </select>
 
         <div class="cta">
-            <input type="submit" value="Enregistrer" class="btn-edit">
+            <input type="submit" value="Enregistrer" class="custom-button">
             <a href="{{ url()->previous() }}" class="btn-back">Annuler</a>
         </div>
     </form>

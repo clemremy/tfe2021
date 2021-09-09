@@ -16,8 +16,18 @@ article.apropospage{
             flex-flow: row wrap;
             padding: 2em 0;
             text-align: justify;
+            .author{
+            }
+            .mission{
+            }
             & > div{
                 padding: 2em;
+                h3{
+                    margin: 0 0 2em 0;
+                }
+                .text{
+                    padding-left: 3em;
+                }
             }
         }
         ul.galerie{

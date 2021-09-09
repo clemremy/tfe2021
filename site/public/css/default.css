@@ -1,5 +1,6 @@
-@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Quicksand:wght@300;400;500&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Manrope&display=swap);
 nav.navbar {
   z-index: 300;
   width: 100%;
@@ -112,7 +113,7 @@ nav.navbar.show ul.navlinks {
     right: 0;
     height: 100vh;
     width: 100%;
-    font: normal 300 1em/1 "Archivo", sans-serif;
+    font: normal 400 1em/1.2 "Manrope", sans-serif;
     font-size: 2em;
     flex-direction: column;
     justify-content: flex-start;
@@ -177,7 +178,7 @@ nav.navbar.show ul.navlinks {
     right: 0;
     height: 100vh;
     width: 100%;
-    font: normal 300 1em/1 "Archivo", sans-serif;
+    font: normal 400 1em/1.2 "Manrope", sans-serif;
     font-size: 2em;
     flex-direction: column;
     justify-content: flex-start;
@@ -228,7 +229,7 @@ div.footer {
   height: auto;
   width: 100%;
   padding: 3em 5em;
-  background-color: #ffffff;
+  background-color: #fafafa;
   display: flex;
   flex-flow: row wrap;
 }
@@ -249,7 +250,7 @@ div.footer nav.footer-nav ul li p:first-of-type {
   padding: 1em 0;
 }
 div.footer nav.footer-nav ul li a {
-  font: normal 300 1em/1 "Archivo", sans-serif;
+  font: normal 400 1em/1.2 "Manrope", sans-serif;
   font-size: 2.6em;
   line-height: 2em;
   padding: 0 1em;
@@ -653,6 +654,12 @@ article.apropospage .container div.history {
 article.apropospage .container div.history > div {
   padding: 2em;
 }
+article.apropospage .container div.history > div h3 {
+  margin: 0 0 2em 0;
+}
+article.apropospage .container div.history > div .text {
+  padding-left: 3em;
+}
 article.apropospage .container ul.galerie {
   width: 100%;
   display: flex;
@@ -871,7 +878,7 @@ article.apropospage .container ul.galerie .picture-four {
   align-self: center;
 }
 .item .mobilier {
-  padding: 1.5em;
+  padding: 2em;
 }
 .item .mobilier a figure {
   height: 300px;
@@ -1076,14 +1083,14 @@ table tr td {
 body {
   width: 100%;
   min-height: 100vh;
-  background-color: #fafafa;
+  background-color: #ffffff;
 }
 body h1, body h2, body h3, body h4, body h5, body p, body a, body address, body input, body label, body strong, body ul, body li, body span, body textarea {
   color: #1d1d1d;
   font: normal 400 0.9em/1.5 "Open Sans", sans-serif;
 }
 body h1, body h2, body h3, body h4, body h5 {
-  font: normal 300 1em/1 "Archivo", sans-serif;
+  font: normal 400 1em/1.2 "Manrope", sans-serif;
 }
 body h1 {
   font-size: 3.5em;
@@ -1237,7 +1244,7 @@ div.first-slide div.title {
   }
 
   .col-3 {
-    flex-basis: 100%;
+    flex-basis: 50%;
   }
 
   .col-2 {

@@ -12,7 +12,7 @@
     <input type="number" name="price" value="{{ $item->price }}">
     <label>Image de l'article:</label>
     <input type="file" name="image" placeholder="image">
-    <img src="/images/article/{{ $item->image }}" width="300px"><br/>
+    <img src="/images/article/{{ $item->image }}" width="300px"><br/><br/>
 
     <label>Quantité disponible:</label>
     <input type="number" name="amount" value="{{ $item->amount }}">
@@ -24,8 +24,16 @@
     </select>
 
     <label>Catégorie:</label>
-    <input type="number" name="categories_id" value="{{ $item->categories_id }}">
-      
+    <select name="category">
+        @foreach($categories as $categorie)
+           @if ($item->categorie && $categorie->id == $item->categorie->id)
+               <option value="{{ $categorie->id }}" selected >{{ $categorie->name }}</option>
+           @else
+               <option value="{{ $categorie->id }}">{{ $categorie->name }}</option>
+           @endif
+        @endforeach
+    </select>
+
     <label>Mettre en ligne?</label>
     <select name="active">
         <option value="1" {{ ($item->active == 1) ? 'selected' : '' }}>Oui</option>

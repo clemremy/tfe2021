@@ -24,7 +24,11 @@
     </br>
 
     <label>Catégories:</label>
-    <input type="number" name="categories_id">
+    <select name="category">
+        @foreach($categories as $categorie)
+          <option value="{{ $categorie->id }}">{{ $categorie->name }}</option>
+        @endforeach
+    </select>
 
     <label>Mettre en ligne?</label>
     <select name="active">

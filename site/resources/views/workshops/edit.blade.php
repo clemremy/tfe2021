@@ -28,7 +28,7 @@
     <label>Image de l'atelier:</label>
     <input type="file" name="image" placeholder="image">
     <p>Taille maximale: 2Mo.</p>
-    <img src="/images/atelier/{{ $workshop->image }}" width="300px"><br/>
+    <img src="/images/atelier/{{ $workshop->image }}" width="300px"><br/><br/>
 
     <label>Mettre en ligne?</label>
     <select name="active">

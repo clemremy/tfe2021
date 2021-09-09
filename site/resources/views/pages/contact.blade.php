@@ -13,26 +13,25 @@
                     Parce que l'humain est au cœur du projet, n'hésitez pas à me contacter, même pour dire bonjour!
                 </p>
                 <br/>
-    
+                <address>
+                    <p>
+                        <a href="mailto:gluckdesign.contact@gmail.com">gluckdesign.contact@gmail.com</a>
+                    </p>
+                    <p>
+                        <a href="tel:+32479459416">+32 479 45 94 16</a>
+                    </p>
+                    <p>
+                        <a href="https://goo.gl/maps/uXqaj33p7eq69ZSw5">
+                            28 Rue des Hannetons
+                            <br/>
+                            1170 Boitsfort, Belgium
+                        </a>
+                    </p>
+                </address>
             </div>
         </div>
         <div class="container">
-            <div class="info col-6">
-                <address>
-                    <a href="mailto:gluckdesign.contact@gmail.com">gluckdesign.contact@gmail.com</a>
-                    <br/><br/>
-                    <a href="tel:+32479459416">+32 479 45 94 16</a>
-                    <br/><br/>
-                    <a href="https://goo.gl/maps/uXqaj33p7eq69ZSw5">
-                        28 Rue des Hannetons
-                        <br/>
-                        1170 Boitsfort
-                        <br/>
-                        Belgium
-                    </a>
-                </address>
-            </div>
-            <form action="/contact" method="post" class="contact col-6">
+            <form action="/contact" method="post" class="contact col-8">
             @csrf
                 <p>
                     <label for="first_name">Prénom</label>

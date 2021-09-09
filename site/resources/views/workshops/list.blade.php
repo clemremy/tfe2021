@@ -69,7 +69,7 @@
           <br/><br/>
           <sup>* Sous réserve des places disponibles.</sup>
         </p>
-        <input type="submit" value="Confirmer l'inscription" class="btn-edit" id="sent">
+        <input type="submit" value="Confirmer l'inscription" class="custom-button" id="sent">
     </form>
   </div>
 </div>

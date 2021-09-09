@@ -16,9 +16,9 @@
     </div>
     @endif
 
-    <h1>
+    <h2>
         Réservation.
-    </h1>
+    </h2>
     
     <div class="admin-link">
         <a href="/mobilier" class="btn-back">Retour aux articles</a>

@@ -179,7 +179,7 @@ nav.navbar.show ul.navlinks {
     height: 100vh;
     width: 100%;
     font: normal 400 1em/1.2 "Manrope", sans-serif;
-    font-size: 2em;
+    font-size: 1.5em;
     flex-direction: column;
     justify-content: flex-start;
     background: #fafafa;
@@ -277,6 +277,7 @@ div.footer .footer-info div address {
 }
 div.footer .footer-info div address a {
   color: #1d1d1d;
+  font-size: 1em;
 }
 div.footer .footer-info div address a:hover, div.footer .footer-info div address a:focus {
   color: #808080;
@@ -299,9 +300,16 @@ div.footer nav.mentions ul li {
 }
 div.footer nav.mentions ul li a {
   color: #808080;
+  font-size: 1em;
 }
 div.footer nav.mentions ul li a:hover, div.footer nav.mentions ul li a:focus {
   color: #1d1d1d;
+}
+div.footer nav.mentions ul li p {
+  font-size: 1em;
+}
+div.footer nav.mentions ul li p strong {
+  font-size: 1em;
 }
 
 @media all and (max-width: 767px) {
@@ -601,6 +609,18 @@ article.contactpage .first-slide .img-background {
 article.contactpage .first-slide .title {
   left: 50%;
 }
+article.contactpage .first-slide .title address p {
+  margin: 1em 0 0;
+  font-size: 1em;
+}
+article.contactpage .first-slide .title address p a {
+  color: #1d1d1d;
+  font: normal 400 0.9em/1.5 "Open Sans", sans-serif;
+  font-size: 1em;
+}
+article.contactpage .first-slide .title address p a:hover, article.contactpage .first-slide .title address p a:focus {
+  color: #808080;
+}
 article.contactpage .container {
   display: flex;
   height: auto;
@@ -608,20 +628,9 @@ article.contactpage .container {
   align-items: flex-end;
   padding-bottom: 4em;
 }
-article.contactpage .container .info address {
-  background-color: #ffffff;
-  padding: 4em;
-  height: auto;
-}
-article.contactpage .container .info address a {
-  color: #1d1d1d;
-  font: normal 400 0.9em/1.5 "Open Sans", sans-serif;
-}
-article.contactpage .container .info address a:hover, article.contactpage .container .info address a:focus {
-  color: #808080;
-}
 article.contactpage .container .contact {
   padding-left: 4em;
+  margin: 0 auto;
 }
 article.contactpage .container .contact p textarea {
   height: 100px;
@@ -636,6 +645,28 @@ article.contactpage .container .contact p select {
   background-repeat: no-repeat;
 }
 
+@media all and (max-width: 767px) {
+  article.contactpage .first-slide .img-background {
+    width: 100%;
+  }
+  article.contactpage .first-slide .title {
+    width: 100%;
+    padding: 1em;
+    left: 0;
+  }
+  article.contactpage .first-slide .title > * {
+    color: #ffffff;
+  }
+  article.contactpage .first-slide .title address p a {
+    color: #ffffff;
+  }
+  article.contactpage .container {
+    margin: 0;
+  }
+  article.contactpage .container .contact {
+    padding: 1em;
+  }
+}
 article.apropospage .first-slide .img-background {
   background-image: url(/images/paul-weaver.jpg?ea10492dd4c55976921dc0921250fb5f);
   background-position: right center;
@@ -650,6 +681,7 @@ article.apropospage .container div.history {
   flex-flow: row wrap;
   padding: 2em 0;
   text-align: justify;
+  justify-content: center;
 }
 article.apropospage .container div.history > div {
   padding: 2em;
@@ -699,6 +731,44 @@ article.apropospage .container ul.galerie .picture-four {
   background-position: center;
 }
 
+@media all and (max-width: 767px) {
+  article.apropospage .first-slide .img-background {
+    width: 100%;
+  }
+  article.apropospage .first-slide .title {
+    width: 100%;
+    padding: 1em;
+  }
+  article.apropospage .first-slide .title > * {
+    color: #ffffff;
+  }
+  article.apropospage .container {
+    margin: 0;
+  }
+  article.apropospage .container div.history {
+    margin: 0;
+    padding: 0;
+  }
+  article.apropospage .container div.history .mission h3 {
+    text-align: left;
+  }
+  article.apropospage .container div.history .mission .text {
+    padding: 0;
+  }
+  article.apropospage .container div.history .author h3 {
+    text-align: left;
+  }
+  article.apropospage .container div.history .author .text {
+    padding: 0;
+  }
+  article.apropospage .container ul {
+    flex-flow: column wrap;
+    margin: 0;
+  }
+  article.apropospage .container ul > * {
+    flex-basis: 100%;
+  }
+}
 .legal {
   margin-bottom: 2em;
   width: 100%;
@@ -938,6 +1008,9 @@ article.apropospage .container ul.galerie .picture-four {
   }
   .item .item-title p {
     width: 100%;
+  }
+  .item .mobilier {
+    padding: 0.5em;
   }
 }
 .article {

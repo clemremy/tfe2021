@@ -28,9 +28,9 @@
     </div>
     @endif
 
-    <h1>
+    <h2>
         Les catégories.
-    </h1>
+    </h2>
     <div class="admin-link">
         <a href="/categorie/create" class="btn-add" role="button">Ajouter une catégorie</a>
         <a href="/mobilier-accueil" class="btn-back">Annuler</a>

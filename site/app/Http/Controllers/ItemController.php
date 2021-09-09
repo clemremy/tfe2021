@@ -124,11 +124,6 @@ class ItemController extends Controller
         return view('items.product', ['item'=>$item]);
     }
 
-    public function showhome(Item $item)
-    {   
-        $item = Item::all();
-        return view('welcome', ['item'=>$item]);
-    }
 
     /**
      * Show the form for editing the specified resource.

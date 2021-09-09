@@ -29,7 +29,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/', 'App\Http\Controllers\ItemController@indexhome')->name('indexhome');
-//Route::get('/', 'App\Http\Controllers\ItemController@showhome')->name('showhome');
 
 
 /// ------- PAGE ------- ///

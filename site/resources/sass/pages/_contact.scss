@@ -11,6 +11,21 @@ article.contactpage{
 
         .title{
             left:50%;
+            address{
+                p{
+                    margin: 1em 0 0;
+                    font-size: 1em;
+                    a{
+                        color: $black;
+                        font: $body-normal;
+                        font-size: 1em;
+                        &:hover, &:focus{
+                            color: $gray;  
+                        }
+                    }
+                }
+
+            }
         }
 
     }
@@ -21,22 +36,9 @@ article.contactpage{
         justify-content: flex-end;
         align-items: flex-end;
         padding-bottom: 4em;
-        .info{
-            address{
-                background-color: $white;
-                padding: 4em;
-                height: auto;
-                a{
-                    color: $black;
-                    font: $body-normal;
-                    &:hover, &:focus{
-                        color: $gray;  
-                    }
-                }
-            }
-        } 
         .contact{
             padding-left: 4em;
+            margin: 0 auto;
             p{
                 textarea{
                     height: 100px;
@@ -63,4 +65,39 @@ article.contactpage{
         }
     }
 
+}
+
+@media #{$tablet}{
+}
+
+@media #{$mobile}{
+    article.contactpage{
+        .first-slide{
+            .img-background{
+                width: 100%;
+            }
+            .title{
+                width: 100%;
+                padding: 1em;
+                left: 0;
+                &>*{
+                    color: $white;
+                }
+                address{
+                    p{
+                        a{
+                            color: $white;
+                        }
+                    }
+                }
+                
+            }
+        }
+        .container{
+            margin: 0;
+            .contact{
+                padding: 1em;
+            }
+        }
+    }
 }

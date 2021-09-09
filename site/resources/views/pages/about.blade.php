@@ -26,9 +26,8 @@
                     </h3>
                     <div class="text">
                         <p>
-                        Donnez une seconde vie aux meubles remplis d’histoires en favorisant la rénovation et
+                        Donnez une seconde vie aux meubles en favorisant la rénovation et
                         la revalorisation, tel est le défi de Glück Design.
-                        <br/>
                         Dans le respect du circuit court, de l’économie circulaire et éco-responsable, les meubles
                         sortent au compte-goutte.
                         Chaque meuble est choisi, étudié et revalorisé avec amour et passion, pour devenir une

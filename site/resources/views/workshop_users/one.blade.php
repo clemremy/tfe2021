@@ -25,7 +25,6 @@
                 <button type="submit" class="btn-delete" onclick="return confirm('Etes-vous sur de vouloir supprimer cette inscription?')">
                     <i class="fas fa-trash-alt"></i>
                 </button>
-
                 <a class="btn-edit" href="{{ route('inscription.edit', $workshop_user->id) }}">
                     <i class="fas fa-edit"></i>
                 </a>

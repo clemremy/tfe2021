@@ -16,10 +16,7 @@ article.apropospage{
             flex-flow: row wrap;
             padding: 2em 0;
             text-align: justify;
-            .author{
-            }
-            .mission{
-            }
+            justify-content: center;
             & > div{
                 padding: 2em;
                 h3{
@@ -73,9 +70,52 @@ article.apropospage{
 
 
 @media #{$tablet}{
-    
 }
 
 @media #{$mobile}{
-
+    article.apropospage{
+        .first-slide{
+            .img-background{
+                width: 100%;
+            }
+            .title{
+                width: 100%;
+                padding: 1em;
+                &>*{
+                    color: $white;
+                }
+                
+            }
+        }
+        .container{
+            margin: 0;
+            div.history{
+                margin: 0;
+                padding: 0;
+                .mission{
+                    h3{
+                        text-align: left;
+                    }
+                    .text{
+                        padding: 0;
+                    }
+                }
+                .author{
+                    h3{
+                        text-align: left;
+                    }
+                    .text{
+                        padding: 0;
+                    }
+                }
+            }
+            ul{
+                flex-flow: column wrap;
+                margin: 0;
+                &>*{
+                    flex-basis: 100%;
+                }
+            }
+        }
+    }
 }

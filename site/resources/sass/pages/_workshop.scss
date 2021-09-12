@@ -1,5 +1,20 @@
 .atelier{
     padding: 10em 4em 0;
+    h2{
+        margin: 1em 0 1em 0;
+    }
+    .admin-link{
+        display: flex;
+        margin: 1em 1em 1em 0;
+        li{
+            margin-right: 1em;
+            align-self: center;
+            a{
+                font: $body-normal;
+                font-size: 1em;
+            }
+        }
+    }
 
     .workshop{
         width: 100%;
@@ -9,10 +24,10 @@
         justify-content: flex-end;
         margin: 4em auto;
         & > *{
-            padding: 2em 0;
+            padding: 0 0;
         }
         &:not(:first-child){
-            margin: 1rem auto 3rem;
+            margin: 0 auto 3em;
         }
         figure{
             flex-basis: 50%;

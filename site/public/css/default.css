@@ -312,24 +312,23 @@ div.footer nav.mentions ul li p strong {
   font-size: 1em;
 }
 
-@media all and (max-width: 767px) {
-  .footer {
-    height: auto;
-  }
-  .footer nav.footer-nav {
-    display: none;
-  }
-}
 @media (min-width: 768px) and (max-width: 1023px) {
   div.footer {
     flex-basis: 100%;
     height: auto;
   }
-  div.footer * {
-    padding: 0;
-  }
   div.footer nav.mentions {
     height: auto;
+  }
+}
+@media all and (max-width: 767px) {
+  div.footer {
+    padding: 2em;
+    height: auto;
+    flex-basis: 100%;
+  }
+  div.footer nav.footer-nav {
+    display: none;
   }
 }
 .title-home {
@@ -596,8 +595,25 @@ div.footer nav.mentions ul li p strong {
   }
 }
 @media all and (max-width: 767px) {
+  .lastitems {
+    margin: 5em 2em 0 2em;
+    max-width: 100%;
+  }
+  .lastitems .item-title {
+    padding: 0;
+    margin: 0 0 2em 0;
+  }
+  .lastitems .mobilier {
+    padding: 0;
+    margin: 0;
+  }
+
+  .insert {
+    margin: 5em auto;
+  }
   .insert .about {
     width: 95%;
+    min-height: auto;
   }
 }
 article.contactpage .first-slide .img-background {
@@ -803,6 +819,21 @@ article.apropospage .container ul.galerie .picture-four {
 .atelier {
   padding: 10em 4em 0;
 }
+.atelier h2 {
+  margin: 1em 0 1em 0;
+}
+.atelier .admin-link {
+  display: flex;
+  margin: 1em 1em 1em 0;
+}
+.atelier .admin-link li {
+  margin-right: 1em;
+  align-self: center;
+}
+.atelier .admin-link li a {
+  font: normal 400 0.9em/1.5 "Open Sans", sans-serif;
+  font-size: 1em;
+}
 .atelier .workshop {
   width: 100%;
   display: flex;
@@ -812,10 +843,10 @@ article.apropospage .container ul.galerie .picture-four {
   margin: 4em auto;
 }
 .atelier .workshop > * {
-  padding: 2em 0;
+  padding: 0 0;
 }
 .atelier .workshop:not(:first-child) {
-  margin: 1rem auto 3rem;
+  margin: 0 auto 3em;
 }
 .atelier .workshop figure {
   flex-basis: 50%;
@@ -947,6 +978,10 @@ article.apropospage .container ul.galerie .picture-four {
 .item .admin-link li {
   margin-right: 1em;
   align-self: center;
+}
+.item .admin-link li a {
+  font: normal 400 0.9em/1.5 "Open Sans", sans-serif;
+  font-size: 1em;
 }
 .item .mobilier {
   padding: 2em;
@@ -1211,6 +1246,11 @@ input:not(.checkbox), select, textarea {
   border: 1px solid #d3d3d3;
 }
 
+input[type=submit] {
+  width: auto;
+  padding: 10px 20px;
+}
+
 input:not(.checkbox):focus, select:focus, textarea:focus {
   border: 1px solid #CBD5CC;
 }
@@ -1338,7 +1378,6 @@ div.first-slide div.title {
   font-size: 0.75em;
   text-align: center;
   letter-spacing: 2px;
-  width: 160px;
   padding: 10px 20px;
   border: 2px solid #CBD5CC;
   background: #CBD5CC;
@@ -1347,6 +1386,7 @@ div.first-slide div.title {
   transition: all 0.3s ease;
   position: relative;
   z-index: 1;
+  width: 160px;
 }
 .custom-button::after {
   position: absolute;
@@ -1389,33 +1429,35 @@ div.first-slide div.title {
 }
 
 .btn-delete {
-  background-color: #ff3b3b;
+  color: #ff3b3b;
+  background-color: transparent;
   cursor: pointer;
-  color: #ffffff;
   font: normal 400 0.9em/1.5 "Open Sans", sans-serif;
-  padding: 10px 20px;
+  font-size: 1.3em;
+  margin-right: 10px;
   text-decoration: none;
   border: none;
   outline: none;
+  transition: all 0.3s ease;
 }
 .btn-delete:hover {
-  background-color: #ff2222;
-  color: #ffffff;
+  color: #ff0808;
 }
 
 .btn-edit {
-  background-color: #fad43d;
+  color: #fad43d;
+  background-color: transparent;
   cursor: pointer;
-  color: #ffffff;
   font: normal 400 0.9em/1.5 "Open Sans", sans-serif;
-  padding: 10px 20px;
+  font-size: 1.3em;
+  margin-right: 10px;
   text-decoration: none;
   border: none;
   outline: none;
+  transition: all 0.3s ease;
 }
 .btn-edit:hover {
-  background-color: #f9ce24;
-  color: #ffffff;
+  color: #f9c90b;
 }
 
 .btn-back {

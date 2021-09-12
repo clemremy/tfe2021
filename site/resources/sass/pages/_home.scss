@@ -237,9 +237,24 @@
     }
 }
 @media #{$mobile}{
+    .lastitems{
+        margin: 5em 2em 0 2em;
+        max-width: 100%;
+        .item-title{
+            padding: 0;
+            margin: 0 0 2em 0;
+        }
+        .mobilier{
+            padding: 0;
+            margin: 0;
+        }
+    }
     .insert{
+        margin: 5em auto;
         .about{
             width: 95%;
+            min-height: auto;
+            
         }
     }
 }

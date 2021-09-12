@@ -35,7 +35,7 @@
     </select>
 
     <div class="cta">
-        <input type="submit" value="Envoyer" class="btn-edit">
+        <input type="submit" value="Envoyer" class="btn-add">
         <a href="/ateliers" class="btn-back">Annuler</a>
     </div>
 </form>

@@ -20,7 +20,7 @@
     </select>
 
     <div class="cta">
-        <input type="submit" value="Enregistrer" class="btn-edit">
+        <input type="submit" value="Enregistrer" class="btn-add">
         <a href="/reservation" class="btn-back">Annuler</a>
     </div>
     @stop

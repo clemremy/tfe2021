@@ -8,7 +8,7 @@
     <input type="text" name="name" value="{{ $category->name }}">
    
     <div class="cta">
-        <input type="submit" value="Enregistrer" class="btn-edit">
+        <input type="submit" value="Enregistrer" class="btn-add">
         <a href="/categorie" class="btn-back">Annuler</a>
     </div>
     @stop

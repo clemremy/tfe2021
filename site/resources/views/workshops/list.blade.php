@@ -37,9 +37,15 @@
     <h2>
         Nos ateliers.
     </h2>
-    @if( Auth::user() && Auth::user()->role=='admin') 
-    <a href="/ateliers/create" class="btn-add" role="button">Ajouter</a>
-    <a href="/inscription" role="button" class="btn-back">Voir les inscriptions</a>
+    @if( Auth::user() && Auth::user()->role=='admin')
+    <ul class="admin-link col-12">
+        <li>
+            <a href="/ateliers/create" class="btn-add" role="button">Ajouter</a>
+        </li>
+        <li>
+            <a href="/inscription" role="button" class="btn-back">Voir les inscriptions</a>
+        </li>
+    </ul>
     @endif
     @each('workshops.one', $workshops, 'workshop')
 </article>

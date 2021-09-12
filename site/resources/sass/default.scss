@@ -82,9 +82,14 @@ input:not(.checkbox), select, textarea{
     outline: none;
     border: 1px solid $lightgray;
 }
+input[type="submit"]{
+    width: auto;
+    padding:10px 20px;
+}
 input:not(.checkbox):focus, select:focus, textarea:focus{
     border: 1px solid $hover;
 }
+
 .checkboxlabel a {
     text-decoration: none;
     font: $body-normal;
@@ -154,7 +159,7 @@ div.first-slide{
     font-size: 0.75em;
     text-align: center;
     letter-spacing: 2px;
-    width: 160px;
+    //width: 160px;
 	padding:10px 20px;
     border: 2px solid $hover;
     background: $hover;
@@ -163,6 +168,7 @@ div.first-slide{
     transition: all 0.3s ease;
     position: relative;
     z-index:1;
+    width: 160px;
     &::after {
         position: absolute;
         content: "";
@@ -205,32 +211,40 @@ div.first-slide{
 }
 
 .btn-delete {
-	background-color:$red;
+	color:$red;
+    background-color: transparent;
 	cursor:pointer;
-	color:$white;
+    //padding:10px 20px;
+	//color :$white;
     font: $body-normal;
-	padding:10px 20px;
+    font-size: 1.3em;
+    margin-right: 10px;
 	text-decoration:none;
     border: none;
     outline: none;
+    transition: all 0.3s ease;
     &:hover {
-        background-color:$dark-red;
-        color:$white;
+        color:$dark-red;
+        //color:$white;
     }
 }
 
 .btn-edit {
-	background-color:$edit;
+	color:$edit;
+    background-color: transparent;
 	cursor:pointer;
-	color:$white;
+    //padding:10px 20px;
+	//color:$white;
     font: $body-normal;
-	padding:10px 20px;
+    font-size: 1.3em;
+    margin-right: 10px;
 	text-decoration:none;
     border: none;
     outline: none;
+    transition: all 0.3s ease;
     &:hover {
-        background-color:$dark-edit;
-        color:$white;
+        color:$dark-edit;
+        //color:$white;
     }
 }
 

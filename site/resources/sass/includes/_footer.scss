@@ -93,24 +93,23 @@ div.footer{
     }
 }
 
-@media #{$mobile}{
-    .footer{
-        height: auto;
-        nav.footer-nav{
-            display: none;
-        }
-    }
-}
-
 @media #{$tablet}{
     div.footer {
         flex-basis: 100%;
         height: auto;
-        *{
-        padding: 0;
-        }
         nav.mentions{
             height: auto;
+        }
+    }
+}
+
+@media #{$mobile}{
+    div.footer{
+        padding: 2em;
+        height: auto;
+        flex-basis: 100%;
+        nav.footer-nav{
+            display: none;
         }
     }
 }

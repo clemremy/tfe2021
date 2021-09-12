@@ -60,6 +60,10 @@
         li{
             margin-right: 1em;
             align-self: center;
+            a{
+                font: $body-normal;
+                font-size: 1em;
+            }
         }
     }
     .mobilier{

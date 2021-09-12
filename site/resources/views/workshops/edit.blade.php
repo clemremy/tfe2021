@@ -37,7 +37,7 @@
     </select>
 
     <div class="cta">
-        <input type="submit" value="Enregistrer" class="btn-edit">
+        <input type="submit" value="Enregistrer" class="btn-add">
         <a href="/ateliers" class="btn-back">Annuler</a>
     </div>
     @stop

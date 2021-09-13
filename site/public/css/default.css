@@ -1145,7 +1145,43 @@ table tr td {
   background-color: #ffffff;
   flex-basis: 100%;
 }
+.profile .profil .cta a {
+  color: #ffffff;
+  background-color: #fad43d;
+  cursor: pointer;
+  font: normal 400 0.9em/1.5 "Open Sans", sans-serif;
+  font-size: 1em;
+  margin-right: 10px;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  transition: all 0.3s ease;
+  padding: 10px 20px;
+  width: auto;
+}
+.profile .profil .cta a:hover {
+  background-color: #f9c90b;
+  color: #ffffff;
+}
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  .profile {
+    width: 100%;
+  }
+  .profile .profil {
+    margin: 8em 1em 1em;
+    padding: 0;
+  }
+}
+@media all and (max-width: 767px) {
+  .profile {
+    width: 100%;
+  }
+  .profile .profil {
+    margin: 8em 1em 1em;
+    padding: 0;
+  }
+}
 .category {
   padding: 8em 4em 4em;
 }

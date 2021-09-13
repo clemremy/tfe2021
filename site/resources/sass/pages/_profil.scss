@@ -6,5 +6,42 @@
         padding: 4em;
         background-color: $white;
         flex-basis: 100%;
+        .cta a{
+            color: $white;
+            background-color: $edit;
+            cursor:pointer;
+            font: $body-normal;
+            font-size: 1em;
+            margin-right: 10px;
+            text-decoration:none;
+            border: none;
+            outline: none;
+            transition: all 0.3s ease;
+            padding: 10px 20px;
+            width: auto;
+            &:hover {
+                background-color:$dark-edit;
+                color:$white;
+            }
+        }
+    }
+}
+
+@media #{$tablet}{
+    .profile{
+        width: 100%;
+        .profil{
+            margin: 8em 1em 1em;
+            padding: 0;
+        }
+    }
+}
+@media #{$mobile}{
+    .profile{
+        width: 100%;
+        .profil{
+            margin: 8em 1em 1em;
+            padding: 0;
+        }
     }
 }

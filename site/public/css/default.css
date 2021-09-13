@@ -916,6 +916,15 @@ article.apropospage .container ul.galerie .picture-four {
   .atelier .workshop figure {
     width: 100%;
   }
+
+  .form-create, .form-edit {
+    padding: 8em 1em 1em;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .form-create img, .form-edit img {
+    max-width: 70%;
+  }
 }
 .allitems {
   display: flex;
@@ -1048,6 +1057,25 @@ article.apropospage .container ul.galerie .picture-four {
   .item .mobilier {
     padding: 0.5em;
   }
+
+  .admin-link {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+  }
+  .admin-link li {
+    margin-top: 2em;
+  }
+
+  .form-create.mobilier, .form-edit.mobilier {
+    padding: 8em 1em 1em;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .form-create.mobilier img, .form-edit.mobilier img {
+    max-width: 70%;
+  }
 }
 .article {
   width: 100%;
@@ -1135,6 +1163,13 @@ table tr td {
   padding: 1em;
 }
 
+@media all and (max-width: 767px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
 .profile {
   min-height: 100vh;
   display: flex;

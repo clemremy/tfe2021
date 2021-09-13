@@ -138,4 +138,24 @@
             padding: 0.5em;
         }
     }
+
+    .admin-link{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: flex-start;
+        align-content: flex-start;
+        
+       li{
+            margin-top: 2em;
+       }
+    }
+
+    .form-create.mobilier, .form-edit.mobilier{
+        padding: 8em 1em 1em;
+        margin: 0 auto;
+        width: 100%;
+        img{
+            max-width: 70%;
+        }
+    }
 }

@@ -105,4 +105,12 @@
             }
         }
     }
+    .form-create, .form-edit{
+        padding: 8em 1em 1em;
+        margin: 0 auto;
+        width: 100%;
+        img{
+            max-width: 70%;
+        }
+    }
 }

@@ -17,3 +17,15 @@ table{
         }
     }
 }
+
+
+@media #{$tablet}{
+
+}
+@media #{$mobile}{
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
